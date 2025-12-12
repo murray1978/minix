@@ -1,8 +1,8 @@
-#The Friday Branch.
+# The Friday Branch.
 
 Lets see - Our goals are ....
 
-#AND
+# AND
 
 TODO 
 + Create a Directory Tree and add as a file?
