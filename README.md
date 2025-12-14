@@ -15,22 +15,22 @@ TODO
 # build notes - raw stuff and things
 `
 rpi_sdimage.sh</br>
- ├── sanity checks
- │    ├── CROSS_COMPILE exists
- │    ├── objcopy exists
- │    └── firmware files present
- ├── build boot objects
- │    ├── entry.S (ARMv6)
- │    ├── boot monitor
- │    └── kernel
- ├── link with custom linker script
- │    └── output kernel.elf
- ├── objcopy → kernel.img
- ├── prepare FAT filesystem
- │    ├── start.elf
- │    ├── bootcode.bin
- │    ├── config.txt
- │    └── kernel.img
+ ├── sanity checks</br>
+ │    ├── CROSS_COMPILE exists</br>
+ │    ├── objcopy exists</br>
+ │    └── firmware files present</br>
+ ├── build boot objects</br>
+ │    ├── entry.S (ARMv6)</br>
+ │    ├── boot monitor</br>
+ │    └── kernel</br>
+ ├── link with custom linker script</br>
+ │    └── output kernel.elf</br>
+ ├── objcopy → kernel.img<//br>
+ ├── prepare FAT filesystem</br>
+ │    ├── start.elf</br>
+ │    ├── bootcode.bin</br>
+ │    ├── config.txt</br>
+ │    └── kernel.img</br>
  └── done
 
 `
