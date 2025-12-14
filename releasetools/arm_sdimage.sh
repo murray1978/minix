@@ -19,7 +19,8 @@ then
 	. ${SETTINGS_MINIX}
 fi
 
-: ${ARCH=evbearm-el}
+: ${ARCH=evbarm}
+: ${MACHINE_ARCH=earmv7hf}    # or earmv6hf for Pi 1
 : ${OBJ=../obj.${ARCH}}
 : ${CROSS_TOOLS=${OBJ}/"tooldir.`uname -s`-`uname -r`-`uname -m`"/bin}
 : ${CROSS_PREFIX=${CROSS_TOOLS}/arm-elf32-minix-}
@@ -50,10 +51,6 @@ MODDIR=${DESTDIR}/boot/minix/.temp
 #: ${U_BOOT_BIN_DIR=build/am335x_evm/}
 #: ${CONSOLE=tty00}
 
-#
-# We host u-boot binaries.
-#
-U_BOOT_GIT_VERSION=cb5178f12787c690cb1c888d88733137e5a47b15
 
 #
 # All sized are written in 512 byte blocks
@@ -146,6 +143,12 @@ fi
 mkdir -p ${IMG_DIR}
 
 #
+# We host u-boot binaries.
+#
+#U_BOOT_GIT_VERSION=cb5178f12787c690cb1c888d88733137e5a47b15
+U_BOOT_GIT_VERSION=87d85139a96a39429120cca838e739408ef971a2
+
+#
 # Download the stage 1 bootloader  and u-boot
 #
 ${RELEASETOOLSDIR}/fetch_u-boot.sh -o ${RELEASETOOLSDIR}/u-boot -n $U_BOOT_GIT_VERSION
@@ -163,7 +166,8 @@ then
 	#
 	# Now start the build.
 	#
-	sh ${BUILDSH} -j ${JOBS} -m ${ARCH} -O ${OBJ} -D ${DESTDIR} ${BUILDVARS} -U -u distribution
+	echo ${ARCH}
+	sh ${BUILDSH} -j ${JOBS} -m ${ARCH} -a ${MACHINE_ARCH} -O ${OBJ} -D ${DESTDIR} ${BUILDVARS} -U -u distribution
 
 fi
 

@@ -83,6 +83,8 @@ __RCSID("$NetBSD: glob.c,v 1.35 2013/03/20 23:44:47 lukem Exp $");
 #include <string.h>
 #include <unistd.h>
 
+#define alloca __builtin_alloca
+
 #ifdef HAVE_NBTOOL_CONFIG_H
 #define NO_GETPW_R
 #endif

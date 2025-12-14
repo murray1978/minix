@@ -38,7 +38,8 @@ fi
 #
 if  [ ! -e "$OUTPUT_DIR" ]
 then
-	git clone git://git.minix3.org/u-boot -b minix $OUTPUT_DIR
+	#git clone git://git.minix3.org/u-boot -b minix $OUTPUT_DIR
+	git clone https://source.denx.de/u-boot/u-boot $OUTPUT_DIR
 fi
 
 (
