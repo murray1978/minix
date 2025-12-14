@@ -14,7 +14,7 @@ TODO
   
 # build notes - raw stuff and things
 `
-rpi_sdimage.sh
+rpi_sdimage.sh</br>
  ├── sanity checks
  │    ├── CROSS_COMPILE exists
  │    ├── objcopy exists
