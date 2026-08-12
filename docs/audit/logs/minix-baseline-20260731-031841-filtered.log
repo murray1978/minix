@@ -1,0 +1,83 @@
+46:Jul 25 17:59:33 10 syslogd: restart
+51:Jul 25 17:59:33 10 kernel: Started VFS: 9 worker thread(s)
+56:Jul 25 18:00:06 10 syslogd: exiting on signal 15 - Undefined error: 0
+57:Jul 25 18:02:13 10 syslogd: restart
+62:Jul 25 18:02:13 10 kernel: Started VFS: 9 worker thread(s)
+67:Jul 25 18:06:35 10 1 2026-07-25T18:06:35.916666+00:00 10.0.2.15 sshd 405 - - error: Couldn't create pid file "/usr/pkg/var/run/sshd.pid": No such file or directory
+69:Jul 25 18:07:23 10 syslogd: exiting on signal 15 - Undefined error: 0
+70:Jul 25 18:09:17 10 syslogd: restart
+75:Jul 25 18:09:17 10 kernel: Started VFS: 9 worker thread(s)
+78:Jul 25 18:09:28 10 1 2026-07-25T18:09:28.466666+00:00 10.0.2.15 sshd 192 - - Failed none for invalid user username from 10.0.2.2 port 50967 ssh2
+79:Jul 25 18:09:28 10 1 2026-07-25T18:09:28.466666+00:00 10.0.2.15 sshd 192 - - Failed keyboard-interactive for invalid user username from 10.0.2.2 port 50967 ssh2
+80:Jul 25 18:09:33 10 1 2026-07-25T18:09:33.683333+00:00 10.0.2.15 sshd 192 - - Failed password for invalid user username from 10.0.2.2 port 50967 ssh2
+81:Jul 25 18:09:34 10 1 2026-07-25T18:09:34.316666+00:00 10.0.2.15 sshd 192 - - Failed password for invalid user username from 10.0.2.2 port 50967 ssh2
+82:Jul 25 18:09:34 10 1 2026-07-25T18:09:34.583333+00:00 10.0.2.15 sshd 192 - - Failed password for invalid user username from 10.0.2.2 port 50967 ssh2
+83:Jul 25 18:09:34 10 1 2026-07-25T18:09:34.583333+00:00 10.0.2.15 sshd 192 - - fatal: Read from socket failed: Connection reset by peer
+84:Jul 25 18:09:42 10 1 2026-07-25T18:09:42.900000+00:00 10.0.2.15 sshd 193 - - Failed password for root from 10.0.2.2 port 50976 ssh2
+85:Jul 25 18:09:45 10 1 2026-07-25T18:09:45.633333+00:00 10.0.2.15 sshd 193 - - Failed password for root from 10.0.2.2 port 50976 ssh2
+86:Jul 25 18:09:46 10 1 2026-07-25T18:09:46.400000+00:00 10.0.2.15 sshd 193 - - Failed password for root from 10.0.2.2 port 50976 ssh2
+87:Jul 25 18:09:46 10 1 2026-07-25T18:09:46.400000+00:00 10.0.2.15 sshd 193 - - fatal: Read from socket failed: Connection reset by peer
+94:Jul 25 18:13:33 10 1 2026-07-25T18:13:33.600000+00:00 10.0.2.15 sshd 213 - - error: setsockopt TCP_NODELAY: Function not implemented
+95:Jul 25 18:13:33 10 1 2026-07-25T18:13:33.600000+00:00 10.0.2.15 sshd 213 - - error: setsockopt IP_TOS 16: Function not implemented:
+106:Jul 25 18:35:34 10 1 2026-07-25T18:35:34.550000+00:00 10.0.2.15 sshd 1614 - - Failed none for invalid user murray from 10.0.2.2 port 52060 ssh2
+107:Jul 25 18:35:34 10 1 2026-07-25T18:35:34.550000+00:00 10.0.2.15 sshd 1614 - - Failed keyboard-interactive for invalid user murray from 10.0.2.2 port 52060 ssh2
+108:Jul 25 18:35:39 10 1 2026-07-25T18:35:39.066666+00:00 10.0.2.15 sshd 1614 - - Failed password for invalid user murray from 10.0.2.2 port 52060 ssh2
+109:Jul 25 18:35:43 10 1 2026-07-25T18:35:43.966666+00:00 10.0.2.15 sshd 1614 - - Failed password for invalid user murray from 10.0.2.2 port 52060 ssh2
+110:Jul 25 18:35:44 10 1 2026-07-25T18:35:44.816666+00:00 10.0.2.15 sshd 1614 - - Failed password for invalid user murray from 10.0.2.2 port 52060 ssh2
+111:Jul 25 18:35:44 10 1 2026-07-25T18:35:44.816666+00:00 10.0.2.15 sshd 1614 - - fatal: Read from socket failed: Connection reset by peer
+113:Jul 25 18:36:04 10 1 2026-07-25T18:36:04.350000+00:00 10.0.2.15 sshd 1615 - - error: setsockopt TCP_NODELAY: Function not implemented
+114:Jul 25 18:36:04 10 1 2026-07-25T18:36:04.350000+00:00 10.0.2.15 sshd 1615 - - error: setsockopt IP_TOS 8: Function not implemented:
+118:Jul 25 18:45:20 10 1 2026-07-25T18:45:20.533333+00:00 10.0.2.15 root - - - kadmind: WARNING: $kadmind is not set properly - see rc.conf(5).
+119:Jul 25 18:45:20 10 1 2026-07-25T18:45:20.550000+00:00 10.0.2.15 root - - - kcm: WARNING: $kcm is not set properly - see rc.conf(5).
+120:Jul 25 18:45:20 10 1 2026-07-25T18:45:20.566666+00:00 10.0.2.15 root - - - kdc: WARNING: $kdc is not set properly - see rc.conf(5).
+121:Jul 25 18:45:20 10 1 2026-07-25T18:45:20.566666+00:00 10.0.2.15 root - - - kpasswdd: WARNING: $kpasswdd is not set properly - see rc.conf(5).
+122:Jul 25 18:45:25 10 syslogd: exiting on signal 15 - Undefined error: 0
+123:Jul 25 18:46:28 10 syslogd: restart
+128:Jul 25 18:46:28 10 kernel: Started VFS: 9 worker thread(s)
+135:Jul 25 19:09:27 10 1 2026-07-25T19:09:27.066666+00:00 10.0.2.15 sshd 25384 - - Failed none for invalid user murray from 10.0.2.2 port 53345 ssh2
+136:Jul 25 19:09:27 10 1 2026-07-25T19:09:27.066666+00:00 10.0.2.15 sshd 25384 - - Failed keyboard-interactive for invalid user murray from 10.0.2.2 port 53345 ssh2
+137:Jul 25 19:09:28 10 1 2026-07-25T19:09:28.183333+00:00 10.0.2.15 sshd 25384 - - Failed password for invalid user murray from 10.0.2.2 port 53345 ssh2
+138:Jul 25 19:09:28 10 1 2026-07-25T19:09:28.366666+00:00 10.0.2.15 sshd 25384 - - Failed password for invalid user murray from 10.0.2.2 port 53345 ssh2
+139:Jul 25 19:09:28 10 1 2026-07-25T19:09:28.550000+00:00 10.0.2.15 sshd 25384 - - Failed password for invalid user murray from 10.0.2.2 port 53345 ssh2
+140:Jul 25 19:09:28 10 1 2026-07-25T19:09:28.566666+00:00 10.0.2.15 sshd 25384 - - fatal: Read from socket failed: Connection reset by peer
+142:Jul 25 19:09:49 10 1 2026-07-25T19:09:49.483333+00:00 10.0.2.15 sshd 28675 - - error: setsockopt TCP_NODELAY: Function not implemented
+143:Jul 25 19:09:49 10 1 2026-07-25T19:09:49.483333+00:00 10.0.2.15 sshd 28675 - - error: setsockopt IP_TOS 16: Function not implemented:
+147:Jul 25 19:12:21 10 kernel: VFS dupvm: getfd failed
+149:Jul 25 19:25:51 10 1 2026-07-25T19:25:51.366666+00:00 10.0.2.15 sshd 28680 - - Failed password for msmith from 10.0.2.2 port 54006 ssh2
+152:Jul 25 19:26:08 10 1 2026-07-25T19:26:08.733333+00:00 10.0.2.15 sshd 29509 - - error: setsockopt TCP_NODELAY: Function not implemented
+153:Jul 25 19:26:08 10 1 2026-07-25T19:26:08.733333+00:00 10.0.2.15 sshd 29509 - - error: setsockopt IP_TOS 8: Function not implemented:
+157:Jul 25 19:28:35 10 1 2026-07-25T19:28:35.916666+00:00 10.0.2.15 sshd 9642 - - error: setsockopt TCP_NODELAY: Function not implemented
+158:Jul 25 19:28:35 10 1 2026-07-25T19:28:35.983333+00:00 10.0.2.15 sshd 9642 - - error: setsockopt IP_TOS 16: Function not implemented:
+159:Jul 25 19:28:38 10 kernel: VFS: exec: dynamic: open main exec failed pkg/bin/su (-13)
+164:Jul 25 19:33:22 10 1 2026-07-25T19:33:22.850000+00:00 10.0.2.15 sshd 28038 - - error: setsockopt TCP_NODELAY: Function not implemented
+165:Jul 25 19:33:22 10 1 2026-07-25T19:33:22.850000+00:00 10.0.2.15 sshd 28038 - - error: setsockopt IP_TOS 16: Function not implemented:
+171:Jul 25 19:37:20 10 1 2026-07-25T19:37:20.883333+00:00 10.0.2.15 sshd 16740 - - error: setsockopt TCP_NODELAY: Function not implemented
+172:Jul 25 19:37:20 10 1 2026-07-25T19:37:20.883333+00:00 10.0.2.15 sshd 16740 - - error: setsockopt IP_TOS 16: Function not implemented:
+178:Jul 25 19:57:58 10 1 2026-07-25T19:57:58.800000+00:00 10.0.2.15 sshd 13027 - - error: setsockopt TCP_NODELAY: Function not implemented
+179:Jul 25 19:57:58 10 1 2026-07-25T19:57:58.800000+00:00 10.0.2.15 sshd 13027 - - error: setsockopt IP_TOS 16: Function not implemented:
+185:Jul 25 20:29:11 10 syslogd: exiting on signal 15 - Undefined error: 0
+186:Jul 25 20:30:22 10 syslogd: restart
+190:Jul 25 20:30:22 10 kernel: Started VFS: 9 worker thread(s)
+196:Jul 25 20:31:59 10 1 2026-07-25T20:31:59.466666+00:00 10.0.2.15 sshd 220 - - error: setsockopt TCP_NODELAY: Function not implemented
+197:Jul 25 20:31:59 10 1 2026-07-25T20:31:59.466666+00:00 10.0.2.15 sshd 220 - - error: setsockopt IP_TOS 16: Function not implemented:
+202:Jul 25 20:32:58 10 1 2026-07-25T20:32:58.600000+00:00 10.0.2.15 sshd 224 - - error: setsockopt TCP_NODELAY: Function not implemented
+203:Jul 25 20:32:58 10 1 2026-07-25T20:32:58.600000+00:00 10.0.2.15 sshd 224 - - error: setsockopt IP_TOS 8: Function not implemented:
+205:Jul 25 20:33:37 10 1 2026-07-25T20:33:37.366666+00:00 10.0.2.15 root - - - kadmind: WARNING: $kadmind is not set properly - see rc.conf(5).
+206:Jul 25 20:33:37 10 1 2026-07-25T20:33:37.366666+00:00 10.0.2.15 root - - - kcm: WARNING: $kcm is not set properly - see rc.conf(5).
+207:Jul 25 20:33:37 10 1 2026-07-25T20:33:37.400000+00:00 10.0.2.15 root - - - kpasswdd: WARNING: $kpasswdd is not set properly - see rc.conf(5).
+208:Jul 25 20:33:42 10 syslogd: exiting on signal 15 - Undefined error: 0
+209:Jul 30 22:39:34 10 syslogd: restart
+213:Jul 30 22:39:34 10 kernel: Started VFS: 9 worker thread(s)
+214:Jul 30 22:39:35 10 1 2026-07-30T22:39:35.233333+00:00 10.0.2.15 root - - - kadmind: WARNING: $kadmind is not set properly - see rc.conf(5).
+215:Jul 30 22:39:35 10 1 2026-07-30T22:39:35.350000+00:00 10.0.2.15 root - - - kcm: WARNING: $kcm is not set properly - see rc.conf(5).
+216:Jul 30 22:39:35 10 1 2026-07-30T22:39:35.483333+00:00 10.0.2.15 root - - - kdc: WARNING: $kdc is not set properly - see rc.conf(5).
+217:Jul 30 22:39:35 10 1 2026-07-30T22:39:35.633333+00:00 10.0.2.15 root - - - kpasswdd: WARNING: $kpasswdd is not set properly - see rc.conf(5).
+219:Jul 30 22:39:37 10 1 2026-07-30T22:39:37.500000+00:00 10.0.2.15 sshd 217 - - error: Couldn't create pid file "/usr/pkg/var/run/sshd.pid": No such file or directory
+224:Jul 30 22:40:14 10 1 2026-07-30T22:40:14.150000+00:00 10.0.2.15 sshd 359 - - error: setsockopt TCP_NODELAY: Function not implemented
+225:Jul 30 22:40:14 10 1 2026-07-30T22:40:14.166666+00:00 10.0.2.15 sshd 359 - - error: setsockopt IP_TOS 8: Function not implemented:
+229:Jul 30 23:06:10 10 1 2026-07-30T23:06:10.633333+00:00 10.0.2.15 sshd 372 - - error: setsockopt TCP_NODELAY: Function not implemented
+230:Jul 30 23:06:10 10 1 2026-07-30T23:06:10.633333+00:00 10.0.2.15 sshd 372 - - error: setsockopt IP_TOS 16: Function not implemented:
+233:Jul 30 23:07:18 10 kernel: VFS: exec: dynamic: open main exec failed pkg/bin/su (-13)
+240:Jul 31 03:14:15 10 1 2026-07-31T03:14:15.500000+00:00 10.0.2.15 sshd 392 - - error: setsockopt TCP_NODELAY: Function not implemented
+241:Jul 31 03:14:15 10 1 2026-07-31T03:14:15.500000+00:00 10.0.2.15 sshd 392 - - error: setsockopt IP_TOS 16: Function not implemented:
+244:Jul 31 03:18:41 10 kernel: VFS: exec: dynamic: open main exec failed pkg/bin/su (-13)

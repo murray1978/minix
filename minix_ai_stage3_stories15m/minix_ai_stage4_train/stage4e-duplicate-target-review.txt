@@ -1,0 +1,50 @@
+stage=Stage4E-A_duplicate_target_review
+review_date=2026-08-06
+reviewer=manual-review
+source_dataset=stage4e-approved.records
+source_dataset_sha256=a6987cd30bc57934367592d52cda2f37135012a59724bc87ad8e4506fceda297
+
+summary.duplicate_target_same_split=3
+summary.duplicate_target_cross_split=2
+
+entry=1
+visible_target_text=priority 4
+record_ids=sysconf-ai-model-priority-val-021,sysconf-ai-driver-priority-val-023
+splits=validation,validation
+tasks=source_navigation,source_navigation
+source_units=system-conf:ai-model-priority,system-conf:ai-driver-priority
+prompt_relationship=independent
+leakage_classification=independent_prompts_with_legitimately_identical_answer
+analysis=Both prompts ask service-specific priority values from different service stanzas in the same config file, and both factual answers are exactly "priority 4".
+review_decision=accepted
+
+entry=2
+visible_target_text=quantum 500
+record_ids=sysconf-ai-model-quantum-val-022,sysconf-ai-driver-quantum-val-024
+splits=validation,validation
+tasks=source_navigation,source_navigation
+source_units=system-conf:ai-model-quantum,system-conf:ai-driver-quantum
+prompt_relationship=independent
+leakage_classification=independent_prompts_with_legitimately_identical_answer
+analysis=Both prompts ask service-specific quantum values from different service stanzas, and both factual answers are exactly "quantum 500".
+review_decision=accepted
+
+entry=3
+visible_target_text=EINVAL
+record_ids=driver-invalid-command-val-025,model-empty-prompt-test-026,model-null-byte-prompt-test-028
+splits=validation,test,test
+tasks=diagnosis,command_review,diagnosis
+source_units=ai_driver:unknown-command-return,ai_model:prompt-len-check,ai_model:null-byte-reject
+prompt_relationship=independent
+leakage_classification=independent_prompts_with_legitimately_identical_answer_cross_split
+analysis=The shared target "EINVAL" arises from three independent guard conditions in different code paths (unknown command, zero prompt length, embedded null byte). Prompts are not duplicates or paraphrases; they reference distinct preconditions and symbols.
+cross_split_assessment=accepted_no_prompt_leakage
+review_decision=accepted
+
+leakage_screen.identical_prompt_leakage=none
+leakage_screen.paraphrased_prompt_leakage=none
+leakage_screen.common_command_target_case=none
+leakage_screen.low_target_diversity_cause=not_primary
+
+overall_decision=accepted
+overall_reason=All repeated targets are caused by independent prompts with distinct source units and semantics; no prompt duplication or cross-split near-duplicate leakage was found.

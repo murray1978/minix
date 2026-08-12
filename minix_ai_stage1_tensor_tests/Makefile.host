@@ -1,0 +1,12 @@
+CC?=cc
+CFLAGS?=-O2 -std=c99 -Wall -Wextra -Wpedantic
+LDFLAGS?=
+LDLIBS?=-lm
+
+all: ai_stage1_tensor
+
+ai_stage1_tensor: ai_stage1_tensor.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ ai_stage1_tensor.c $(LDLIBS)
+
+clean:
+	rm -f ai_stage1_tensor *.o

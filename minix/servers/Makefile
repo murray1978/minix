@@ -3,7 +3,7 @@
 SUBDIR+=	ds input pm rs sched vfs vm
 
 .if ${MKIMAGEONLY} == "no"
-SUBDIR+=	ipc is devman
+SUBDIR+=	ipc is devman ai_model
 .endif
 
 .include <bsd.subdir.mk>

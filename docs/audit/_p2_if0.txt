@@ -1,0 +1,238 @@
+﻿M:\minix\kernel\proc.c:444: #if 0
+M:\minix\kernel\proc.c:457: #if 0
+M:\minix\kernel\utility.c:40: #if 0
+M:\minix\kernel\arch\earm\pre_init.c:328: #if 0
+M:\minix\kernel\arch\earm\include\cpufunc.h:4: #if 0
+M:\minix\kernel\arch\earm\include\cpufunc.h:169: #if 0
+M:\minix\kernel\arch\i386\acpi.c:173: #if 0
+M:\minix\kernel\arch\i386\apic.c:208: #if 0
+M:\minix\kernel\arch\i386\apic.c:225: #if 0
+M:\minix\kernel\arch\i386\apic.c:654: #if 0
+M:\minix\kernel\arch\i386\arch_system.c:574: #if 0
+M:\minix\kernel\arch\i386\exception.c:61: #if 0
+M:\minix\kernel\arch\i386\exception.c:74: #if 0
+M:\minix\kernel\arch\i386\exception.c:263: #if 0
+M:\minix\kernel\arch\i386\memory.c:242: #if 0
+M:\minix\kernel\arch\i386\memory.c:507: #if 0
+M:\minix\kernel\arch\i386\pre_init.c:210: #if 0
+M:\minix\kernel\system\do_clear.c:70: #if 0
+M:\minix\kernel\system\do_copy.c:33: #if 0
+M:\minix\kernel\system\do_privctl.c:183: #if 0 /* XXX -- do we need a call for this? */
+M:\minix\servers\devman\device.c:445: #if 0
+M:\minix\servers\ipc\sem.c:131: #if 0
+M:\minix\servers\ipc\shm.c:329: #if 0
+M:\minix\servers\is\dmp_kernel.c:137: #if 0
+M:\minix\servers\pm\misc.c:71: #if 0 /* for updates */
+M:\minix\servers\pm\misc.c:101: #if 0	/* no updates yet */
+M:\minix\servers\pm\signal.c:304: #if 0
+M:\minix\servers\pm\trace.c:117: #if 0
+M:\minix\servers\vfs\exec.c:482: #if 0
+M:\minix\servers\vfs\filedes.c:65: #if 0
+M:\minix\servers\vfs\misc.c:322: #if 0	/* Noisy diagnostic for mmap() by ld.so */
+M:\minix\servers\vfs\misc.c:402: #if 0   /* Noisy diagnostic for mmap() by ld.so */
+M:\minix\servers\vfs\vmnt.c:56: #if 0
+M:\minix\servers\vfs\vnode.c:75: #if 0
+M:\minix\servers\vfs\worker.c:271: #if 0
+M:\minix\servers\vm\mem_file.c:127: #if 0
+M:\minix\servers\vm\mem_file.c:144: #if 0
+M:\minix\servers\vm\mmap.c:111: #if 0
+M:\minix\servers\vm\mmap.c:174: #if 0   /* Noisy diagnostic for mmap() by ld.so */
+M:\minix\servers\vm\region.c:726: #if 0
+M:\minix\servers\vm\rs.c:197: #if 0
+M:\minix\drivers\audio\es1370\ak4531.c:45: #if 0
+M:\minix\drivers\audio\es1371\AC97.c:58: #if 0
+M:\minix\drivers\audio\es1371\AC97.c:135: #if 0
+M:\minix\drivers\bus\pci\main.c:370: #if 0
+M:\minix\drivers\bus\pci\pci.c:120: #if 0
+M:\minix\drivers\bus\pci\pci.c:291: #if 0
+M:\minix\drivers\bus\pci\pci.c:313: #if 0
+M:\minix\drivers\bus\pci\pci.c:343: #if 0
+M:\minix\drivers\bus\pci\pci.c:698: #if 0
+M:\minix\drivers\bus\pci\pci.c:809: #if 0
+M:\minix\drivers\bus\pci\pci.c:920: #if 0
+M:\minix\drivers\bus\pci\pci.c:1537: #if 0
+M:\minix\drivers\bus\pci\pci.c:1859: #if 0
+M:\minix\drivers\bus\pci\pci.c:1867: #if 0
+M:\minix\drivers\bus\pci\pci.c:1894: #if 0
+M:\minix\drivers\bus\pci\pci.c:2193: #if 0
+M:\minix\drivers\bus\pci\pci.c:2355: #if 0
+M:\minix\drivers\bus\pci\pci.c:2382: #if 0
+M:\minix\drivers\bus\pci\pci.c:2405: #if 0
+M:\minix\drivers\bus\pci\pci.c:2440: #if 0
+M:\minix\drivers\bus\pci\pci.c:2462: #if 0
+M:\minix\drivers\bus\pci\pci.c:2484: #if 0
+M:\minix\drivers\bus\pci\pci.c:2504: #if 0
+M:\minix\drivers\bus\pci\pci.c:2528: #if 0
+M:\minix\drivers\bus\pci\pci.c:2552: #if 0
+M:\minix\drivers\bus\pci\pci.c:2705: #if 0
+M:\minix\drivers\bus\pci\pci.c:2736: #if 0
+M:\minix\drivers\bus\pci\pci.h:90: #if 0
+M:\minix\drivers\bus\pci\pci_table.c:270: #if 0
+M:\minix\drivers\bus\pci\pci_table.c:316: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:59: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:109: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:150: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:162: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:334: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:347: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:421: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:442: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:453: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:458: #if 0
+M:\minix\drivers\net\dp8390\dp8390.c:265: #if 0
+M:\minix\drivers\net\dp8390\dp8390.c:874: #if 0	/* Reserved in later manuals, should be ignored */
+M:\minix\drivers\net\dp8390\dp8390.c:948: #if 0
+M:\minix\drivers\net\dp8390\dp8390.c:970: #if 0
+M:\minix\drivers\net\dp8390\dp8390.c:1688: #if 0
+M:\minix\drivers\net\dp8390\dp8390.h:186: #if 0
+M:\minix\drivers\net\dp8390\rtl8029.c:26: #if 0
+M:\minix\drivers\net\dp8390\rtl8029.c:138: #if 0
+M:\minix\drivers\net\dp8390\rtl8029.c:144: #if 0
+M:\minix\drivers\net\dp8390\rtl8029.c:175: #if 0
+M:\minix\drivers\net\dpeth\8390.c:26: #if 0
+M:\minix\drivers\net\dpeth\8390.c:31: #if 0
+M:\minix\drivers\net\dpeth\8390.c:78: #if 0
+M:\minix\drivers\net\dpeth\8390.c:91: #if 0
+M:\minix\drivers\net\dpeth\8390.c:458: #if 0
+M:\minix\drivers\net\dpeth\dp.c:414: #if 0
+M:\minix\drivers\net\fxp\fxp.c:744: #if 0
+M:\minix\drivers\net\fxp\fxp.c:2173: #if 0
+M:\minix\drivers\net\orinoco\orinoco.c:571: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:90: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:600: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:644: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:651: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:667: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:823: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:851: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:892: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:949: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1085: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1110: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1486: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1591: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1713: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1766: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1795: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1931: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1950: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:2014: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:2254: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.h:104: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.h:352: #if 0
+M:\minix\drivers\net\rtl8169\rtl8169.c:445: #if 0
+M:\minix\drivers\net\virtio_net\virtio_net.h:28: #if 0
+M:\minix\drivers\power\acpi\pci.c:94: #if 0
+M:\minix\drivers\power\acpi\include\acpredef.h:588: #if 0
+M:\minix\drivers\power\acpi\parser\psloop.c:950: #if 0
+M:\minix\drivers\power\acpi\parser\psparse.c:449: #if 0
+M:\minix\drivers\power\acpi\resources\rsmisc.c:640: #if 0
+M:\minix\drivers\storage\at_wini\at_wini.c:1060: #if 0
+M:\minix\drivers\storage\at_wini\at_wini.c:1965: #if 0
+M:\minix\drivers\storage\floppy\floppy.c:484: #if 0	/* XXX hack to create a disk driver that crashes */
+M:\minix\drivers\storage\floppy\floppy.c:930: #if 0
+M:\minix\drivers\storage\memory\memory.c:135: #if 0
+M:\minix\drivers\storage\mmc\mmchost.h:139: #if 0
+M:\minix\drivers\storage\mmc\mmchost_mmchs.c:1008: #if 0
+M:\minix\drivers\storage\virtio_blk\virtio_blk.h:28: #if 0
+M:\minix\drivers\system\random\random.c:71: #if 0
+M:\minix\drivers\system\random\random.c:158: #if 0
+M:\minix\drivers\system\random\random.c:164: #if 0
+M:\minix\drivers\tty\tty\arch\earm\rs232.c:16: #if 0
+M:\minix\drivers\tty\tty\arch\earm\rs232.c:337: #if 0
+M:\minix\drivers\tty\tty\arch\i386\console.c:141: #if 0
+M:\minix\drivers\tty\tty\arch\i386\console.c:751: #if 0
+M:\minix\drivers\tty\tty\arch\i386\rs232.c:737: #if 0	/* Enable this if you want serial input in the kernel */
+M:\minix\drivers\usb\usb_storage\scsi.h:8: #if 0
+M:\minix\drivers\usb\usbd\hcd\hcd.c:1019: #if 0
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:164: #if 0
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:517: #if 0
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:607: #if 0
+M:\minix\drivers\usb\usbd\include\usbd\usbd_common.h:15: #if 0
+M:\minix\fs\ext2\read.c:681: #if 0
+M:\minix\fs\ext2\super.c:311: #if 0
+M:\minix\fs\iso9660fs\table.c:43: #if 0
+M:\minix\fs\mfs\main.c:183: #if 0
+M:\minix\lib\libaudiodriver\audio_fw.c:569: #if 0
+M:\minix\lib\libaudiodriver\audio_fw.c:622: #if 0
+M:\minix\lib\libaudiodriver\audio_fw.c:845: #if 0
+M:\minix\lib\libc\gen\uname.c:38: #if 0
+M:\minix\lib\libchardriver\chardriver.c:213: #if 0
+M:\minix\lib\libddekit\src\pci.c:443: #if 0
+M:\minix\lib\libddekit\src\usb_server.c:18: #if 0
+M:\minix\lib\libdevman\generic.c:74: #if 0
+M:\minix\lib\libexec\exec_elf.c:72: #if 0
+M:\minix\lib\liblwip\core\dhcp.c:1034: #if 0
+M:\minix\lib\liblwip\core\dhcp.c:1039: #if 0
+M:\minix\lib\liblwip\core\dhcp.c:1092: #if 0
+M:\minix\lib\liblwip\core\pbuf.c:528: #if 0
+M:\minix\lib\liblwip\core\udp.c:122: #if 0
+M:\minix\lib\liblwip\core\ipv6\ip6.c:350: #if 0 /*IP_ACCEPT_LINK_LAYER_ADDRESSING*/
+M:\minix\lib\liblwip\include\lwip\tcp_impl.h:100: #if 0 /* see bug #10548 */
+M:\minix\lib\liblwip\netif\ethernetif.c:48: #if 0 /* don't build, this is only a skeleton, see previous comment */
+M:\minix\lib\liblwip\netif\ppp\auth.c:89: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:114: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:134: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:205: #if 0
+M:\minix\lib\liblwip\netif\ppp\auth.c:215: #if 0 /* PAP_SUPPORT || CHAP_SUPPORT */
+M:\minix\lib\liblwip\netif\ppp\auth.c:230: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:282: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:324: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:349: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:779: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:932: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:946: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:1133: #if 0 /* PAP_SUPPORT || CHAP_SUPPORT */
+M:\minix\lib\liblwip\netif\ppp\auth.c:1145: #if 0
+M:\minix\lib\liblwip\netif\ppp\auth.c:1211: #if 0 /* UNUSED */ /* PAP_SUPPORT || CHAP_SUPPORT */
+M:\minix\lib\liblwip\netif\ppp\chap.c:87: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\chpms.c:152: #if 0
+M:\minix\lib\liblwip\netif\ppp\chpms.c:160: #if 0
+M:\minix\lib\liblwip\netif\ppp\chpms.c:181: #if 0
+M:\minix\lib\liblwip\netif\ppp\chpms.c:190: #if 0
+M:\minix\lib\liblwip\netif\ppp\chpms.c:210: #if 0
+M:\minix\lib\liblwip\netif\ppp\chpms.c:217: #if 0
+M:\minix\lib\liblwip\netif\ppp\chpms.c:296: #if 0
+M:\minix\lib\liblwip\netif\ppp\chpms.c:373: #if 0
+M:\minix\lib\liblwip\netif\ppp\fsm.c:250: #if 0 /* backport pppd 2.4.4b1; */
+M:\minix\lib\liblwip\netif\ppp\ipcp.c:1192: #if 0
+M:\minix\lib\liblwip\netif\ppp\lcp.c:75: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\lcp.c:204: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\md5.c:140: #if 0
+M:\minix\lib\liblwip\netif\ppp\pap.c:66: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1209: #if 0
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1755: #if 0
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1914: #if 0
+M:\minix\lib\liblwip\netif\ppp\ppp_impl.h:51: *  These are just here to minimise the use of the ugly "#if 0". */
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:758: #if 0
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:1082: #if 0 /*def PFIL_HOOKS*/
+M:\minix\lib\liblwip\netif\ppp\randm.c:184: #if 0
+M:\minix\lib\libnetsock\socket.c:25: #if 0
+M:\minix\lib\libnetsock\socket.c:31: #if 0
+M:\minix\lib\libsys\pci_next_dev.c:32: #if 0
+M:\minix\lib\libusb\usb.c:184: #if 0
+M:\minix\lib\libvirtio\virtio_ring.h:148: #if 0
+M:\minix\tests\t40d.c:120: #if 0
+M:\minix\tests\t40d.c:153: #if 0
+M:\minix\tests\t40e.c:79: #if 0
+M:\minix\tests\t40e.c:112: #if 0
+M:\minix\tests\t40e.c:151: #if 0
+M:\minix\tests\test20.c:277: #if 0
+M:\minix\tests\test20.c:299: #if 0 /* XXX - see test7.c */
+M:\minix\tests\test20.c:308: #if 0 /* XXX - see test7.c */
+M:\minix\tests\test20.c:313: #if 0
+M:\minix\tests\test28.c:227: #if 0
+M:\minix\tests\test29.c:122: #if 0 /* XXX - see test7.c */
+M:\minix\tests\test29.c:128: #if 0 /* XXX - see test7.c */
+M:\minix\tests\test37.c:472: #if 0
+M:\minix\tests\test42.c:906: #if 0
+M:\minix\tests\test47.c:150: #if 0
+M:\minix\tests\test56.c:3395: #if 0
+M:\minix\tests\test56.c:3473: #if 0
+M:\minix\tests\test57.c:83: #if 0
+M:\minix\tests\ddekit\ddekittest_driver.c:32: #if 0
+M:\minix\tests\ddekit\ddekittest_driver.c:41: #if 0
+M:\minix\tests\ipc\lib\libipc.c:39: #if 0
+M:\minix\tests\ipc\lib\libipc.c:93: #if 0
+M:\minix\tests\ipc\lib\libipc.c:112: #if 0
+M:\minix\tests\ipc\semctl\semctl03.c:101: #if 0

@@ -1,0 +1,432 @@
+﻿M:\minix\kernel\clock.c:87: /* FIXME watchdog for slave cpus! */
+M:\minix\kernel\cpulocals.h:18: /* FIXME - padd the structure so that items in the array do not share cacheline
+M:\minix\kernel\ipc.h:23: * XXX: the following check is used to set the status code only on RECEIVE.
+M:\minix\kernel\main.c:86: FIXME("DEBUG_SCHED_CHECK enabled");
+M:\minix\kernel\main.c:89: FIXME("DEBUG_VMASSERT enabled");
+M:\minix\kernel\main.c:92: FIXME("PROC check enabled");
+M:\minix\kernel\main.c:371: * FIXME
+M:\minix\kernel\proc.c:1214: /* XXX: RTS_NO_ENDPOINT should be removed */
+M:\minix\kernel\proc.h:33: FIXME remove this */
+M:\minix\kernel\proto.h:3: /* FIXME this is a hack how to avoid inclusion conflicts */
+M:\minix\kernel\system.c:645: /* FIXME this preempts the process, do we really want to do that ?*/
+M:\minix\kernel\system.c:647: /* FIXME this is a problem for SMP if the processes currently runs on a
+M:\minix\kernel\watchdog.c:17: /* FIXME this should be CPU local */
+M:\minix\kernel\arch\earm\mpx.S:278: .space	K_STACK_SIZE	/* kernel stack */ /* FIXME use macro here */
+M:\minix\kernel\arch\earm\pg_utils.c:175: /* mark mormal memory as cacheable. TODO: fix hard coded values */
+M:\minix\kernel\arch\earm\phys_copy.S:110: /* XXX for really big copies perhaps we should use more registers */
+M:\minix\kernel\arch\earm\pre_init.c:180: /* XXX: hard-coded stuff for modules */
+M:\minix\kernel\arch\i386\apic.c:97: /* FIXME we should spread the irqs across as many priority levels as possible
+M:\minix\kernel\arch\i386\apic.c:166: * FIXME this should be a cpulocal variable but there are some problems with
+M:\minix\kernel\arch\i386\apic.c:395: /* FIXME unlikely */
+M:\minix\kernel\arch\i386\apic.c:404: /* FIXME unlikely */
+M:\minix\kernel\arch\i386\apic.c:656: /*FIXME this is a problem on AP */
+M:\minix\kernel\arch\i386\apic.c:658: * FIXME if the location is different (unlikely) then the one we expect,
+M:\minix\kernel\arch\i386\arch_smp.c:112: /* TODO hack around the alignment problem */
+M:\minix\kernel\arch\i386\arch_smp.c:247: /* FIXME assign CPU local idle structure */
+M:\minix\kernel\arch\i386\arch_system.c:647: fr->sf_code = 0;  /* XXX - probably should be used for FPE_INTOVF or
+M:\minix\kernel\arch\i386\arch_watchdog.c:70: /* FIXME currently we support only watchdog based on the intel
+M:\minix\kernel\arch\i386\arch_watchdog.c:160: /* FIXME works only if all CPUs have the same freq */
+M:\minix\kernel\arch\i386\arch_watchdog.c:224: /* FIXME works only if all CPUs have the same freq */
+M:\minix\kernel\arch\i386\klib.S:663: /* FIXME don't use the byte code */
+M:\minix\kernel\arch\i386\klib.S:687: /* FIXME don't use the byte code */
+M:\minix\kernel\arch\i386\klib.S:713: /* FIXME don't use the byte code */
+M:\minix\kernel\arch\i386\mpx.S:629: .space	K_STACK_SIZE	/* kernel stack */ /* FIXME use macro here */
+M:\minix\kernel\system\do_privctl.c:183: #if 0 /* XXX -- do we need a call for this? */
+M:\minix\servers\devman\device.c:403: /* FUTURE TODO: create links(BUS, etc) */
+M:\minix\servers\devman\device.c:421: /* TODO */
+M:\minix\servers\ipc\shm.c:70: /* TODO: shmmni should be changed... */
+M:\minix\servers\is\dmp_kernel.c:347: /* LSC FIXME: Not implemented for arm */
+M:\minix\servers\is\main.c:54: /* FIXME: error message. */
+M:\minix\servers\pm\trace.c:100: case T_READB_INS:	/* special hack for reading text segments */
+M:\minix\servers\pm\trace.c:112: case T_WRITEB_INS:	/* special hack for patching text segments */
+M:\minix\servers\rs\manager.c:652: * refuse to add the driver entry. The following temporary hack works
+M:\minix\servers\rs\manager.c:654: * has been made non-blocking towards MFS instances, this hack and the
+M:\minix\servers\rs\manager.c:1148: /* This hack disables restarting of file servers, which at the moment always
+M:\minix\servers\sched\schedule.c:188: /* FIXME set the cpu mask */
+M:\minix\servers\vfs\device.c:290: * TODO: cleaner implementation work in progress.
+M:\minix\servers\vfs\exec.c:483: AUXINFO(aux_vec, AT_PHDR, XXX ); /* should be &phdr[0] */
+M:\minix\servers\vfs\exec.c:487: AUXINFO(aux_vec, AT_RUID, XXX);
+M:\minix\servers\vfs\exec.c:488: AUXINFO(aux_vec, AT_RGID, XXX);
+M:\minix\servers\vfs\filedes.c:439: /* FIXME: we should now check that the user process is indeed blocked on an
+M:\minix\servers\vfs\main.c:398: char *mount_type = "mfs"; /* FIXME: use boot image process name instead */
+M:\minix\servers\vfs\main.c:399: char *mount_label = "fs_imgrd"; /* FIXME: obtain this from RS */
+M:\minix\servers\vfs\misc.c:671: /* FIXME: missing select check */
+M:\minix\servers\vfs\read.c:180: /* FIXME: multiple read/write operations on a single filp
+M:\minix\servers\vfs\read.c:196: * suboptimal - so we settle for this hack for now.
+M:\minix\servers\vm\mmap.c:112: /* XXX ld.so relies on longer-than-file mapping */
+M:\minix\servers\vm\pagetable.c:530: | ARCH_VM_PDE_PRESENT | ARM_VM_PDE_DOMAIN; //LSC FIXME
+M:\minix\servers\vm\pagetable.c:791: /* FIXME
+M:\minix\servers\vm\pagetable.c:1213: | ARM_VM_PDE_DOMAIN; //LSC FIXME
+M:\minix\servers\vm\pagetable.c:1340: | ARCH_VM_PTE_USER; //LSC FIXME
+M:\minix\servers\vm\utility.c:59: /* XXX Any memory chunk in excess of NR_MEMS is silently ignored. */
+M:\minix\drivers\audio\es1370\es1370.c:620: /* TODO: is this inw useful? */
+M:\minix\drivers\audio\es1371\AC97.c:89: /* todo: why are we writing an undefined register? */
+M:\minix\drivers\audio\es1371\AC97.c:156: /* todo: how do we solve the lock() problem? */
+M:\minix\drivers\audio\es1371\AC97.c:175: /* todo: why are we putting data in the mem page register??? */
+M:\minix\drivers\audio\es1371\codec.c:47: /* todo: why are we writing an undefined register? */
+M:\minix\drivers\audio\es1371\codec.c:112: /* todo: how do we solve the lock() problem? */
+M:\minix\drivers\audio\es1371\codec.c:131: /* todo: why are we putting data in the mem page register??? */
+M:\minix\drivers\audio\es1371\es1371.c:622: /* TODO: is this statement useful? */
+M:\minix\drivers\bus\i2c\README.txt:4: TODO: this probably belongs on the wiki
+M:\minix\drivers\net\atl2\atl2.c:142: #ifdef PCI_CAP_VPD	/* FIXME: just a guess at the future name */
+M:\minix\drivers\net\dec21140A\dec21140A.c:230: /* TODO CHECK PROMISC AND MULTI */
+M:\minix\drivers\net\dec21140A\dec21140A.c:339: /* TODO: validate SROM content */
+M:\minix\drivers\net\dec21140A\dec21140A.c:451: /*TODO: multi-descr msgs...*/
+M:\minix\drivers\net\dec21140A\dec21140A.c:486: /*TODO: Complain to MS */
+M:\minix\drivers\net\dec21140A\dec21140A.c:487: /*HACK: VPC2007 returns packet of invalid size. Ethernet standard
+M:\minix\drivers\net\dec21140A\dec21140A.c:497: incomplete frames to us, so this hack is safe
+M:\minix\drivers\net\dec21140A\dec21140A.c:503: /* End ugly hack */
+M:\minix\drivers\net\dp8390\dp8390.c:277: #if XXX
+M:\minix\drivers\net\dp8390\dp8390.c:1619: /* XXX */ if (dep->de_linmem == 0) dep->de_linmem= 0xFFFF0000;
+M:\minix\drivers\net\dpeth\8390.c:428: /* Hack: ignore packets of a given protocol */
+M:\minix\drivers\net\e1000\e1000.c:307: /* FIXME: enable DMA bus mastering if necessary. This is disabled by
+M:\minix\drivers\net\lance\lance.c:575: /* XXX */ if (ec->ec_linmem == 0) ec->ec_linmem= 0xFFFF0000;
+M:\minix\drivers\net\orinoco\orinoco.c:292: /* TODO: send a signal to the card to shut it down */
+M:\minix\drivers\net\orinoco\orinoco.c:903: /* TODO */
+M:\minix\drivers\net\orinoco\orinoco.c:1403: /* TODO: do something with the tallies structure */
+M:\minix\drivers\net\uds\ioc_uds.c:560: /* FIXME: actually shrink the buffer. */
+M:\minix\drivers\net\uds\ioc_uds.c:591: /* FIXME: actually shrink the buffer. */
+M:\minix\drivers\net\virtio_net\virtio_net.c:38: /* TODO: This should be an argument to the driver and possibly also
+M:\minix\drivers\net\virtio_net\virtio_net.c:113: /* TODO: Features are pretty much ignored */
+M:\minix\drivers\net\virtio_net\virtio_net.c:335: /* Hmm, this looks so similar to cpy_from_user... TODO */
+M:\minix\drivers\net\virtio_net\virtio_net.c:523: /* TODO: Add the multicast, broadcast filtering etc. */
+M:\minix\drivers\power\acpi\osminixxf.c:895: /* FIXME this operation is ignored */
+M:\minix\drivers\power\acpi\osminixxf.c:922: /* FIXME this operation is ignored */
+M:\minix\drivers\power\acpi\include\platform\acnetbsd.h:179: /* XXX */
+M:\minix\drivers\storage\at_wini\at_wini.c:1733: * SCSI layer that does all this stuff for ATAPI and SCSI devices (kjb). (XXX)
+M:\minix\drivers\storage\at_wini\at_wini.c:1744: /* Should unlock the device.  For now do nothing.  (XXX) */
+M:\minix\drivers\storage\floppy\floppy.c:484: #if 0	/* XXX hack to create a disk driver that crashes */
+M:\minix\drivers\storage\mmc\README.txt:50: * TODO removal
+M:\minix\drivers\storage\mmc\README.txt:51: The driver contains (quite a few) TODO's where the code need to be improved.
+M:\minix\drivers\storage\mmc\mmcblk.c:174: // * TODO: set card state to INVALID until removed? */
+M:\minix\drivers\storage\mmc\mmcblk.c:456: // TODO: add a check for card validity */
+M:\minix\drivers\storage\mmc\mmchost.h:35: //TODO Add more modes like INACTIVE STATE and such
+M:\minix\drivers\storage\mmc\mmchost.h:154: /* Hack done for driver registration */
+M:\minix\drivers\storage\mmc\mmchost_dummy.c:123: /* TODO:Set card state */
+M:\minix\drivers\storage\mmc\mmchost_dummy.c:165: // @TODO set initial card and slot state
+M:\minix\drivers\storage\mmc\mmchost_mmchs.c:1108: /* @TODO implement proper card detect */
+M:\minix\drivers\storage\mmc\mmchost_mmchs.c:1224: /* TODO:Set card state */
+M:\minix\drivers\storage\mmc\mmchost_mmchs.c:1263: // @TODO set initial card and slot state
+M:\minix\drivers\storage\virtio_blk\virtio_blk.c:598: * FIXME: Besides the geometry, everything is just debug output
+M:\minix\drivers\tty\pty\tty.c:410: * the larger of the two. TODO: revisit queue sizes altogether.
+M:\minix\drivers\tty\tty\arch\i386\console.c:501: /* Some of these things hack on screen RAM, so it had better be up to date */
+M:\minix\drivers\tty\tty\arch\i386\console.c:964: /* FIXME: How about error checking? What to do on failure??? */
+M:\minix\drivers\usb\usb_hub\usb_hub.c:12: #include <minix/usb.h>			/* usb_ctrlrequest TODO: remove me */
+M:\minix\drivers\usb\usb_hub\usb_hub.c:21: /* TODO: these are missing from DDE header files */
+M:\minix\drivers\usb\usb_hub\usb_hub.c:269: /* TODO: No ddekit_deinit for proper cleanup? */
+M:\minix\drivers\usb\usb_hub\usb_hub.c:311: /* TODO: Any signal means shutdown for now (it may be OK anyway) */
+M:\minix\drivers\usb\usb_hub\usb_hub.c:328: /* TODO: This call was meant to return 'int' but loops forever instead,
+M:\minix\drivers\usb\usb_hub\usb_hub.c:581: /* TODO: Add more checks when needed */
+M:\minix\drivers\usb\usb_storage\usb_storage.c:40: /* TODO: these are missing from DDE header files */
+M:\minix\drivers\usb\usb_storage\usb_storage.c:218: /* TODO: no ddekit_deinit for proper cleanup? */
+M:\minix\drivers\usb\usb_storage\usb_storage.c:422: bulk_setup.wIndex = 0x00; /* TODO: hard-coded interface 0 */
+M:\minix\drivers\usb\usb_storage\usb_storage.c:567: /* TODO: This call was meant to return 'int' but loops forever instead,
+M:\minix\drivers\usb\usb_storage\usb_storage.c:617: /* TODO: Only CSW failure should normally contribute to retry */
+M:\minix\drivers\usb\usb_storage\usb_storage.c:1402: /* TODO:PERIPH
+M:\minix\drivers\usb\usb_storage\usb_storage.c:1438: /* TODO:PERIPH
+M:\minix\drivers\usb\usb_storage\usb_storage.c:1537: /* TODO:PERIPH
+M:\minix\drivers\usb\usb_storage\usb_storage.c:1560: /* TODO:PERIPH
+M:\minix\drivers\usb\usb_storage\usb_storage.c:1610: setup_buf.wValue = UDESC_CONFIG << 8; /* TODO: configuration 0 */
+M:\minix\drivers\usb\usb_storage\usb_storage.h:10: /* TODO: no header for ddekit_usb_dev */
+M:\minix\drivers\usb\usbd\base\usbd.c:27: /* TODO: No headers for these... */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:50: /* TODO: This is not meant to be explicitly visible outside DDEKit library
+M:\minix\drivers\usb\usbd\hcd\hcd.c:58: /* TODO: This was added for compatibility with DDELinux drivers that
+M:\minix\drivers\usb\usbd\hcd\hcd.c:434: /* TODO: ENODEV selected for that */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:549: /* TODO: Always use first configuration, as there is no support for
+M:\minix\drivers\usb\usbd\hcd\hcd.c:576: /* TODO: magic numbers, no header for these */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:630: /* TODO: magic numbers, no header for these */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:691: /* TODO: Default configuration is hard-coded
+M:\minix\drivers\usb\usbd\hcd\hcd.c:693: /* TODO: magic numbers, no header for these */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:745: /* TODO: Default configuration is hard-coded
+M:\minix\drivers\usb\usbd\hcd\hcd.c:747: /* TODO: magic numbers, no header for these */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:813: /* TODO: magic numbers, no header for these */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:927: /* TODO: Only EP0 can have control transfer */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:1016: /* TODO: This was changed to allow software scheduler to work correctly
+M:\minix\drivers\usb\usbd\hcd\hcd.c:1093: /* TODO: magic number */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:1142: /* TODO: Unimplemented OUT DATA stage */
+M:\minix\drivers\usb\usbd\hcd\hcd_common.c:195: /* TODO: Since it is not likely to be ever interrupted, we do not try
+M:\minix\drivers\usb\usbd\hcd\hcd_common.c:264: /* TODO: This should disconnect all the children if they exist */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:57: /* TODO: UNUSED for argument won't work */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:71: /* TODO: UNUSED for argument won't work */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:85: /* TODO: UNUSED for argument won't work */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:163: /* TODO: This was in 'ddekit/usb.h' header file, but is not used anywhere */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:173: /* TODO: UNUSED for argument won't work */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:210: /* TODO: UNUSED for argument won't work */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:212: /* TODO: No driver will require this any time soon */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:274: /* TODO: Magic numbers like in ddekit/devman */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:389: /* TODO: Alignment of setup packet. Can DDE client guarantee that? */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:394: /* TODO: Sane size check? */
+M:\minix\drivers\usb\usbd\hcd\hcd_schedule.c:18: /* TODO: Like in DDEKit but power of 2 */
+M:\minix\drivers\usb\usbd\hcd\hcd_schedule.c:21: /* TODO: Structure to hold URBs in DDEKit is limited so this is no better
+M:\minix\drivers\usb\usbd\hcd\hcd_schedule.c:204: /* TODO: Not enough DDEKit thread priorities
+M:\minix\drivers\usb\usbd\hcd\hcd_schedule.c:292: /* TODO: Some priority checking may be here */
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:14: /* TODO: BeagleBone white uses USB0 for PC connection as peripheral,
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:410: /* TODO: DDEKit has no checks on NULL IRQ and may crash on detach
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:505: /* TODO: This function does nothing and is not needed by MUSB but
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:210: /* TODO: Apparently, FIFO can only be read by:
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:257: /* TODO: Apparently, FIFO can only be written by:
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:530: /* TODO: One reusable FIFO, no double buffering */
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:531: /* TODO: With this, only one device/EP can work at a time. Should this
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:620: /* TODO: One reusable FIFO, no double buffering */
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:621: /* TODO: With this, only one device/EP can work at a time. Should this
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:637: /* TODO: May have no effect */
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:691: /* TODO: Not needed for enumeration but may be needed later, if
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:804: /* TODO: ISO transfer */
+M:\minix\drivers\usb\usbd\include\usbd\hcd_common.h:13: /* TODO: usb.h is for DDEKit's IPC and should not be used here */
+M:\minix\drivers\usb\usbd\include\usbd\hcd_common.h:179: /* TODO: This has corresponding redefinition in hub driver */
+M:\minix\drivers\usb\usbd\include\usbd\hcd_interface.h:52: /* TODO: Only one port for each driver */
+M:\minix\fs\ext2\glo.h:43: /* Little hack for syncing group descriptors. */
+M:\minix\fs\ext2\path.c:592: * @TODO: actually we could just reset it for
+M:\minix\fs\ext2\read.c:362: } else if (block_pos >= out_range_s) { /* TODO: do we need it? */
+M:\minix\fs\ext2\read.c:430: /* TODO: use conv call */
+M:\minix\fs\ext2\read.c:546: * The current solution below is a bit of a hack, it just reads blocks from
+M:\minix\fs\ext2\super.c:122: /* TODO: this code is for revision 1 (but bw compatible with 0)
+M:\minix\fs\ext2\super.c:178: /* TODO: check descriptors we just read */
+M:\minix\fs\ext2\super.c:273: continue; /* TODO: fail? */
+M:\minix\fs\ext2\utility.c:141: /* TODO: do we need to add 1? I saw a situation, when it was
+M:\minix\fs\ext2\utility.c:191: /* TODO: do we need to add 1? I saw a situation, when it was
+M:\minix\fs\ext2\write.c:87: } else if (block_pos >= out_range_s) { /* TODO: do we need it? */
+M:\minix\fs\mfs\read.c:526: * The current solution below is a bit of a hack, it just reads blocks from
+M:\minix\fs\mfs\type.h:9: u16_t d2_nlinks;		/* how many links to this file. HACK! */
+M:\minix\fs\mfs\type.h:11: u16_t d2_gid;			/* group number HACK! */
+M:\minix\lib\libasyn\asyn_special.c:13: * asyn_result() it is a set of brackets around a system call xxx that has
+M:\minix\lib\libaudiodriver\audio_fw.c:157: /* TODO: execute the rest of this function only once
+M:\minix\lib\libbdev\bdev.c:579: /* FIXME: we assume all reasonable ssize_t values can be stored in an int. */
+M:\minix\lib\libbdev\minor.c:21: * FIXME: if reopening fails with a non-IPC error, we should attempt to close
+M:\minix\lib\libc\sys\poll.c:93: /* XXX: POLLHUP/POLLNVAL? */
+M:\minix\lib\libc\sys\syscall.c:17: /* XXX - strerror doesn't know all the codes */
+M:\minix\lib\libchardriver\chardriver.c:208: /* FIXME: we should be able to check FLAGS against
+M:\minix\lib\libddekit\src\irq.c:31: static int next_notify_id = 0; /* TODO: This is only incremented and after
+M:\minix\lib\libddekit\src\msg_queue.c:50: /* TODO: check for overlapping message ranges */
+M:\minix\lib\libddekit\src\msg_queue.c:100: /* XXX should reply to the sender with EIO or so, but for that
+M:\minix\lib\libddekit\src\pci.c:340: * XXX: Those are neither used be DDEFBSD or DDELinux implement them
+M:\minix\lib\libddekit\src\thread.c:322: /* TODO: Whether or not this is an error, is to be decided.
+M:\minix\lib\libddekit\src\usb_client.c:41: /* XXX: copy stuff back into d_urb */
+M:\minix\lib\libddekit\src\usb_server.c:594: /* TODO: ERROR */
+M:\minix\lib\libddekit\src\usb_server.c:603: /* TODO: Error*/
+M:\minix\lib\libddekit\src\usb_server.c:640: /* TODO: error */
+M:\minix\lib\libdevman\generic.c:85: entry->type = 0; /* TODO: use macro */
+M:\minix\lib\libfetch\common.c:132: case EISDIR: /* XXX */
+M:\minix\lib\libfetch\common.c:943: /* XXX not supported! */
+M:\minix\lib\libfetch\ftp.c:789: e = FTP_PROTOCOL_ERROR; /* XXX: error code should be prepared */
+M:\minix\lib\libfetch\ftp.c:874: e = FTP_PROTOCOL_ERROR; /* XXX: error code should be prepared */
+M:\minix\lib\libfetch\ftp.c:981: e = FTP_PROTOCOL_ERROR; /* XXX: error code should be prepared */
+M:\minix\lib\libfetch\ftp.c:1045: /* XXX FTP_AUTH, and maybe .netrc */
+M:\minix\lib\libfetch\ftp.c:1112: /* XXX proxy authentication! */
+M:\minix\lib\libfetch\ftp.c:1113: /* XXX connetion caching */
+M:\minix\lib\libfetch\ftp.c:1146: /* TODO: Request extended features supported, if any (RFC 3659). */
+M:\minix\lib\libfetch\ftp.c:1324: /* XXX What about proxies? */
+M:\minix\lib\libfetch\http.c:560: /* XXX should add support for date-2 and date-3 */
+M:\minix\lib\libfetch\http.c:737: return (-1); /* XXX */
+M:\minix\lib\libfetch\http.c:785: /* XXX should set an error code */
+M:\minix\lib\libfetch\http.c:863: * XXX This function is way too long, the do..while loop should be split
+M:\minix\lib\libfetch\http.c:864: * XXX off into a separate function.
+M:\minix\lib\libfetch\http.c:1089: /* XXX too weak? */
+M:\minix\lib\libfetch\http.c:1115: /* XXX should set an error code */
+M:\minix\lib\libfetch\http.c:1126: /* XXX weak test*/
+M:\minix\lib\libgpio\gpio_omap.c:334: /* TODO: check if interrupt where enabled?? */
+M:\minix\lib\libgpio\gpio_omap.c:433: return EPERM;	/* fixme */
+M:\minix\lib\libgpio\gpio_omap.c:443: return EPERM;	/* fixme */
+M:\minix\lib\libhgfs\time.c:20: /* FIXME: we currently do not take into account timezones. */
+M:\minix\lib\liblwip\api\api_lib.c:230: * @return TODO: return value is not set here...
+M:\minix\lib\liblwip\api\api_lib.c:373: /* @todo: this does not allow us to fetch data that has been put into recvmbox
+M:\minix\lib\liblwip\api\api_lib.c:394: /* TODO: Speedup: Don't block and wait for the answer here
+M:\minix\lib\liblwip\api\api_lib.c:536: /* TODO: Speedup: Don't block and wait for the answer here
+M:\minix\lib\liblwip\api\api_msg.c:289: /* @todo: implement connect timeout here? */
+M:\minix\lib\liblwip\api\api_msg.c:834: /* @todo TCP: abort running write/connect? */
+M:\minix\lib\liblwip\api\api_msg.c:881: /* @todo: this lets select make the socket readable and writable,
+M:\minix\lib\liblwip\api\api_msg.c:1106: /** @todo: should we drain the recvmbox here? */
+M:\minix\lib\liblwip\api\api_msg.c:1480: /* @todo: abort running write/connect? */
+M:\minix\lib\liblwip\api\netdb.c:288: * @todo?: currently, only ASCII integers (port numbers) are supported! */
+M:\minix\lib\liblwip\api\sockets.c:750: /* @todo: this does not work for IPv6, yet */
+M:\minix\lib\liblwip\api\sockets.c:884: /* @todo: split into multiple sendto's? */
+M:\minix\lib\liblwip\api\sockets.c:1024: LWIP_UNUSED_ARG(domain); /* @todo: check this */
+M:\minix\lib\liblwip\api\sockets.c:1493: /* @todo: this does not work for IPv6, yet */
+M:\minix\lib\liblwip\api\sockets.c:1676: /* @todo: this does not work for datagram sockets, yet */
+M:\minix\lib\liblwip\api\sockets.c:2132: /* @todo: this does not work for datagram sockets, yet */
+M:\minix\lib\liblwip\core\dhcp.c:45: * TODO:
+M:\minix\lib\liblwip\core\dhcp.c:128: @todo: move this into struct dhcp? */
+M:\minix\lib\liblwip\core\dhcp.c:132: @todo: move this into struct dhcp? */
+M:\minix\lib\liblwip\core\dhcp.c:1689: /* TODO: make link layer independent */
+M:\minix\lib\liblwip\core\dns.c:67: /** @todo: define good default values (rfc compliance) */
+M:\minix\lib\liblwip\core\dns.c:68: /** @todo: improve answer parsing, more checkings... */
+M:\minix\lib\liblwip\core\dns.c:69: /** @todo: check RFC1035 - 7.3. Processing responses */
+M:\minix\lib\liblwip\core\mem.c:453: * @todo we could leave out MIN_SIZE_ALIGNED. We would create an empty
+M:\minix\lib\liblwip\core\mem.c:560: * @todo we could leave out MIN_SIZE_ALIGNED. We would create an empty
+M:\minix\lib\liblwip\core\memp.c:156: * XXX is the name of the pool defined in memp_std.h).
+M:\minix\lib\liblwip\core\netif.c:364: /* TODO: Handling of obsolete pcbs */
+M:\minix\lib\liblwip\core\pbuf.c:1019: /* @todo: what do we do now? */
+M:\minix\lib\liblwip\core\raw.c:277: /* @todo: why does IPv6 not filter broadcast with SOF_BROADCAST enabled? */
+M:\minix\lib\liblwip\core\tcp.c:265: /* @todo: When implementing SO_LINGER, this must be changed somehow:
+M:\minix\lib\liblwip\core\tcp.c:475: /* @todo: check accept_any_ip_version */
+M:\minix\lib\liblwip\core\tcp.c:1630: iss += tcp_ticks;       /* XXX */
+M:\minix\lib\liblwip\core\tcp_in.c:1184: What is done is really quite a nasty hack: the first pbuf in
+M:\minix\lib\liblwip\core\tcp_out.c:429: /* @todo: this could be sped up by keeping last_unsent in the pcb */
+M:\minix\lib\liblwip\core\udp.c:46: /* @todo Check the use of '(struct udp_pcb).chksum_len_rx'!
+M:\minix\lib\liblwip\core\udp.c:846: /* TODO: must this be increased even if error occured? */
+M:\minix\lib\liblwip\core\udp.c:981: /** TODO: this functionality belongs in upper layers */
+M:\minix\lib\liblwip\core\udp.c:997: /** TODO: this will bind the udp pcb locally, to the interface which
+M:\minix\lib\liblwip\core\ipv4\autoip.c:173: /* TODO: close all TCP sessions */
+M:\minix\lib\liblwip\core\ipv4\autoip.c:184: /* TODO: close all TCP sessions */
+M:\minix\lib\liblwip\core\ipv4\igmp.c:563: /** @todo undo any other netif already joined */
+M:\minix\lib\liblwip\core\ipv4\ip4.c:214: /* @todo: send ICMP_DUR_NET? */
+M:\minix\lib\liblwip\core\ipv4\ip4.c:262: /* @todo: send ICMP Destination Unreacheable code 13 "Communication administratively prohibited"? */
+M:\minix\lib\liblwip\core\ipv4\ip4.c:599: /* @todo: this is not really necessary... */
+M:\minix\lib\liblwip\core\ipv4\ip_frag.c:60: * @todo: work with IP header options
+M:\minix\lib\liblwip\core\ipv4\ip_frag.c:223: /* @todo Can't we simply remove the last datagram in the
+M:\minix\lib\liblwip\core\ipv4\ip_frag.c:294: /* @todo: no ip options supported? */
+M:\minix\lib\liblwip\core\ipv4\ip_frag.c:512: /* @todo: send ICMP time exceeded here? */
+M:\minix\lib\liblwip\core\ipv4\ip_frag.c:566: /* @todo: trim pbufs if fragments are overlapping */
+M:\minix\lib\liblwip\core\ipv4\ip_frag.c:581: /* @todo: do we need to set calculate the correct checksum? */
+M:\minix\lib\liblwip\core\ipv6\ethip6.c:125: * @TODO anycast addresses
+M:\minix\lib\liblwip\core\ipv6\ethip6.c:164: /* TODO anycast? */
+M:\minix\lib\liblwip\core\ipv6\ethip6.c:178: /* TODO should we send or queue if PROBE? send for now, to let unicast NS pass. */
+M:\minix\lib\liblwip\core\ipv6\icmp6.c:120: /* TODO implement router functionality */
+M:\minix\lib\liblwip\core\ipv6\ip6.c:206: /* TODO find longest matching prefix. */
+M:\minix\lib\liblwip\core\ipv6\ip6.c:351: @todo
+M:\minix\lib\liblwip\core\ipv6\ip6.c:805: /* TODO implement loopback for v6
+M:\minix\lib\liblwip\core\ipv6\ip6_frag.c:327: /* @todo: send ICMPv6 time exceeded here? */
+M:\minix\lib\liblwip\core\ipv6\ip6_frag.c:598: /* TODO we assume there are no options in the unfragmentable part (IPv6 header). */
+M:\minix\lib\liblwip\core\ipv6\mld6.c:246: /* TODO debug message */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:71: u32_t retrans_timer = LWIP_ND6_RETRANS_TIMER; /* TODO implement this value in timer */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:134: /* TODO debug message */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:151: /* TODO debug message */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:228: /* TODO debug message */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:257: /* TODO debug message */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:367: /* TODO debug message */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:408: /* TODO set default hop limit... */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:484: /* TODO implement preferred routes.
+M:\minix\lib\liblwip\core\ipv6\nd6.c:507: /* TODO debug message */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:755: /* TODO implement preferred and valid lifetimes. */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:768: /* TODO send max 1 NS per tmr call? enable return*/
+M:\minix\lib\liblwip\core\ipv6\nd6.c:1239: (void)ip6addr; /* TODO match preferred routes!! (must implement ND6_OPTION_TYPE_ROUTE_INFO) */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:1241: /* TODO: implement default router preference */
+M:\minix\lib\liblwip\core\snmp\asn1_dec.c:5: * @todo not optimised (yet), favor correctness over speed, favor speed over size
+M:\minix\lib\liblwip\core\snmp\asn1_dec.c:214: /**  @todo: do we need to accept inefficient codings with many leading zero's? */
+M:\minix\lib\liblwip\core\snmp\asn1_enc.c:5: * @todo not optimised (yet), favor correctness over speed, favor speed over size
+M:\minix\lib\liblwip\core\snmp\mib2.c:272: /** @todo update maxlength when inserting / deleting from table
+M:\minix\lib\liblwip\core\snmp\mib2.c:1436: * @todo record sysuptime for _this_ route when it is installed
+M:\minix\lib\liblwip\core\snmp\mib2.c:2383: /** @todo this should be some sort of sizeof(struct netif.name) */
+M:\minix\lib\liblwip\core\snmp\mib2.c:2566: /** @todo add these counters! */
+M:\minix\lib\liblwip\core\snmp\mib2.c:2597: /** @todo add this counter! */
+M:\minix\lib\liblwip\core\snmp\mib2.c:2604: /** @todo figure out if this must be 0 (no queue) or 1? */
+M:\minix\lib\liblwip\core\snmp\mib2.c:2699: od->v_len = 6; /** @todo try to use netif::hwaddr_len */
+M:\minix\lib\liblwip\core\snmp\mib2.c:2737: #if LWIP_ARP /** @todo implement a netif_find_addr */
+M:\minix\lib\liblwip\core\snmp\mib2.c:2970: /** @todo can lwIP discard routes at all?? hardwire this to 0?? */
+M:\minix\lib\liblwip\core\snmp\mib2.c:3123: /* @todo The theoretical maximum is IP_REASS_MAX_PBUFS * size of the pbufs,
+M:\minix\lib\liblwip\core\snmp\mib2.c:3130: /** @todo returning MTU would be a bad thing and
+M:\minix\lib\liblwip\core\snmp\mib2.c:3333: /** @todo (sysuptime - timestamp last change) / 100
+M:\minix\lib\liblwip\core\snmp\mib2.c:3390: od->v_len = 6; /** @todo try to use netif::hwaddr_len */
+M:\minix\lib\liblwip\core\snmp\mib2.c:3428: #if LWIP_ARP /** @todo implement a netif_find_addr */
+M:\minix\lib\liblwip\core\snmp\mib2.c:3584: /** @todo tcp grp */
+M:\minix\lib\liblwip\core\snmp\mib2.c:3662: /* @todo not the actual value, a guess,
+M:\minix\lib\liblwip\core\snmp\mib2.c:3667: /* @todo not the actual value, a guess,
+M:\minix\lib\liblwip\core\snmp\mib2.c:3785: /** @todo find matching PCB */
+M:\minix\lib\liblwip\core\snmp\mib2.c:4140: /* @todo @fixme: which kind of pointer is 'value'? s32_t or u8_t??? */
+M:\minix\lib\liblwip\core\snmp\msg_in.c:628: /** @todo use set_value_pc() if toobig */
+M:\minix\lib\liblwip\core\snmp\msg_in.c:779: @todo do we need to return the actual value?
+M:\minix\lib\liblwip\core\snmp\msg_in.c:977: /** @todo: move this if we need to check more names */
+M:\minix\lib\liblwip\core\snmp\msg_out.c:168: /** @todo do we need separate rx and tx pcbs for threaded case? */
+M:\minix\lib\liblwip\core\snmp\msg_out.c:174: /** @todo release some memory, retry and return tooBig? tooMuchHassle? */
+M:\minix\lib\liblwip\core\snmp\msg_out.c:232: /* @todo: what about IPv6? */
+M:\minix\lib\liblwip\include\ipv6\lwip\dhcp6.h:53: /*TODO: implement DHCP6*/
+M:\minix\lib\liblwip\include\ipv6\lwip\ip6.h:165: #define ip6_init() /* TODO should we init current addresses and header pointer? */
+M:\minix\lib\liblwip\include\ipv6\lwip\ip6_addr.h:204: /* TODO define get/set for well-know multicast addresses, e.g. ff02::1 */
+M:\minix\lib\liblwip\include\ipv6\lwip\mld6.h:102: #define mld6_init() /* TODO should we init tables? */
+M:\minix\lib\liblwip\include\ipv6\lwip\nd6.h:342: /* TODO make these static? and entries accessible through API? */
+M:\minix\lib\liblwip\include\ipv6\lwip\nd6.h:352: #define nd6_init() /* TODO should we init tables? */
+M:\minix\lib\liblwip\include\lwip\api.h:297: /** Set the blocking status of netconn calls (@todo: write/send is missing) */
+M:\minix\lib\liblwip\include\lwip\api.h:302: /** Get the blocking status of netconn calls (@todo: write/send is missing) */
+M:\minix\lib\liblwip\include\lwip\dhcp.h:60: /* @todo: LWIP_DHCP_BOOTP_FILE configuration option?
+M:\minix\lib\liblwip\include\lwip\dns.h:73: /* The size used for the next line is rather a hack, but it prevents including socket.h in all files
+M:\minix\lib\liblwip\include\lwip\opt.h:1202: * @todo: TCP and IP-frag do not work with this, yet:
+M:\minix\lib\liblwip\include\lwip\opt.h:1809: * (XXX - these constants should simply be shared by lcp.c instead
+M:\minix\lib\liblwip\include\lwip\pbuf.h:47: /* @todo: We need a mechanism to prevent wasting memory in every pbuf
+M:\minix\lib\liblwip\include\lwip\snmp_structs.h:5: * @todo namespace prefixes
+M:\minix\lib\liblwip\include\lwip\tcp.h:120: * @param err An unused error code, always ERR_OK currently ;-) TODO!
+M:\minix\lib\liblwip\include\lwip\tcp.h:146: * @param err an error argument (TODO: that is current always ERR_OK?)
+M:\minix\lib\liblwip\include\lwip\tcp.h:211: s16_t sa, sv; /* @todo document this */
+M:\minix\lib\liblwip\netif\etharp.c:667: /* @todo We could use ETHARP_FLAG_TRY_HARD if we think we are going to talk
+M:\minix\lib\liblwip\netif\etharp.c:826: * @todo How should we handle redundant (fail-over) interfaces? */
+M:\minix\lib\liblwip\netif\ppp\auth.c:109: static int did_authup; /* @todo, we don't need this in lwip*/
+M:\minix\lib\liblwip\netif\ppp\auth.c:190: /* @todo, move this somewhere */
+M:\minix\lib\liblwip\netif\ppp\auth.c:415: /* XXX Do link down processing. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:535: /* XXX Do setup for peer authentication. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:565: /* @todo: add void start_networks(void) here (pppd 2.3.11) */
+M:\minix\lib\liblwip\netif\ppp\auth.c:864: #if 1 /* XXX Assume all entries OK. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:872: return UPAP_AUTHACK;     /* XXX Assume all entries OK. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:889: /* XXX Validate user name and password. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:890: ret = UPAP_AUTHACK;     /* XXX Assume all entries OK. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:907: /* @todo: this was sleep(), i.e. seconds, not milliseconds
+M:\minix\lib\liblwip\netif\ppp\auth.c:984: /* XXX Fail until we decide that we want to support logins. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:1009: /* XXX Fail until we decide that we want to support logins. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:1028: @todo: This should be configured by the user, instead of being hardcoded here!
+M:\minix\lib\liblwip\netif\ppp\auth.c:1046: /* XXX Fail until we set up our passwords. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:1063: /* XXX Fail until we set up our passwords. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:1108: /* XXX Find secret. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:1182: static int /* @todo: integrate this funtion into auth_ip_addr()*/
+M:\minix\lib\liblwip\netif\ppp\auth.c:1194: /* XXX All other addresses allowed. */
+M:\minix\lib\liblwip\netif\ppp\chap.c:750: char msg[256]; /* @todo: this can be a char*, no strcpy needed */
+M:\minix\lib\liblwip\netif\ppp\chpms.c:113: /* XXX Don't know what to do with these. */
+M:\minix\lib\liblwip\netif\ppp\chpms.c:331: /* @todo: arg type - u_long* or u_int* ? */
+M:\minix\lib\liblwip\netif\ppp\fsm.c:53: * TODO:
+M:\minix\lib\liblwip\netif\ppp\fsm.c:108: f->id = 0;        /* XXX Start with random id? */
+M:\minix\lib\liblwip\netif\ppp\fsm.c:260: /* @todo */
+M:\minix\lib\liblwip\netif\ppp\lcp.c:109: /* @todo: do we really need such a large buffer? The typical 1500 bytes seem too much. */
+M:\minix\lib\liblwip\netif\ppp\lcp.c:931: * If they Nak the reporting period, take their value XXX ?
+M:\minix\lib\liblwip\netif\ppp\lcp.c:1471: * XXX When should we Nak this, and what with?
+M:\minix\lib\liblwip\netif\ppp\pap.c:379: default:        /* XXX Need code reject */
+M:\minix\lib\liblwip\netif\ppp\pap.c:475: if (u->us_clientstate != UPAPCS_AUTHREQ) { /* XXX */
+M:\minix\lib\liblwip\netif\ppp\pap.c:517: if (u->us_clientstate != UPAPCS_AUTHREQ) { /* XXX */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:293: * @todo: smaller, slower implementation for lower memory footprint?
+M:\minix\lib\liblwip\netif\ppp\ppp.c:553: /* @todo: is this correct or do I overwrite something? */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:770: /* @todo: try to use pbuf_header() here! */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1200: /* @todo: does this work? ext_accm has been modified from pppd! */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1219: return 0; /* XXX Currently no compression. */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1228: /* XXX */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1239: /* XXX */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1250: /* XXX */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1283: /* XXX
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1327: /* @todo: Initialize interface hostname */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1479: /* TODO: check how PPP handled the netMask, previously not set by ipSetDefault */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1805: /* XXX Note that this does not handle an escaped 0x5d character which
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:674: int l1 = 0, l2 = 0; /* XXX: gcc */
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:895: size_t l1 = 0; /* XXX: gcc */
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:1015: size_t len, l1 = 0;  /* XXX: gcc */
+M:\minix\lib\liblwip\netif\ppp\randm.c:115: * XXX Why does he not just call churnRand() for each block?  Probably
+M:\minix\lib\liblwip\netif\ppp\randm.c:118: * XXX Why don't we preserve md5 between blocks and just update it with
+M:\minix\lib\liblwip\netif\ppp\randm.c:202: avRandomSeed += sys_jiffies(); /* XXX */
+M:\minix\lib\liblwip\netif\ppp\randm.c:227: avRandomSeed += (sys_jiffies() - last_jiffies); /* XXX */
+M:\minix\lib\libminc\Makefile:5: # LSC: TODO: Explaination of how this works
+M:\minix\lib\libminc\Makefile:254: # LSC FIXME: Try to get this out of the loop
+M:\minix\lib\libnetsock\socket.c:164: /* FIXME: shouldn't this return (!!mq) ? */
+M:\minix\lib\libnetsock\socket.c:518: /* FIXME we do not monitor error */
+M:\minix\lib\libnetsock\socket.c:529: /* FIXME generic packet socket never blocks on write */
+M:\minix\lib\libnetsock\socket.c:532: /* FIXME CDEV_OP_ERR is ignored, we do not generate exceptions */
+M:\minix\lib\libsffs\read.c:154: /* FIXME: what if the error is ENAMETOOLONG? */
+M:\minix\lib\libsffs\stat.c:162: /* XXX VFS should have time() into ACTIME, for compat; we trust it! */
+M:\minix\lib\libsffs\stat.c:178: /* XXX VFS should have time() into MODTIME, for compat; we trust it! */
+M:\minix\lib\libvassert\vassert.h:27: * XXX: Document these, in coordination with the SDK docs.
+M:\minix\lib\libvassert\vassert.h:68: // XXX need to automatic de-register trigger page when the program quits
+M:\minix\lib\libvboxfs\link.c:38: /* FIXME: symbolic links are not supported at all yet */
+M:\minix\lib\libvboxfs\path.c:18: /* FIXME: missing UTF-8 conversion */
+M:\minix\lib\libvboxfs\path.c:40: /* FIXME: missing UTF-8 conversion */
+M:\minix\lib\libvirtio\virtio.c:688: * FIXME: Protect from endless loop
+M:\minix\tests\Makefile:27: # LSC FIXME: Compilation error for now on ARM with that!
+M:\minix\tests\test18.c:305: * HACK DEBUG FIXME: this appears to duplicate
+M:\minix\tests\test20.c:299: #if 0 /* XXX - see test7.c */
+M:\minix\tests\test20.c:308: #if 0 /* XXX - see test7.c */
+M:\minix\tests\test23.c:260: /* XXX - this comment was botched by 'pretty'. */
+M:\minix\tests\test29.c:122: #if 0 /* XXX - see test7.c */
+M:\minix\tests\test29.c:128: #if 0 /* XXX - see test7.c */
+M:\minix\tests\test42.c:389: /* Quick hack to clean up detached children */
+M:\minix\tests\test42.c:907: /* FIXME: disabled until we can reliably determine PM's pid */
+M:\minix\tests\test48.c:343: { "XXX",       0, 0, 0,           (1 << EAI_SERVICE) }};
+M:\minix\tests\test5.c:289: unlink("XXX.test5");
+M:\minix\tests\test5.c:295: while (access("XXX.test5", 0) != 0) /* just wait */ ;
+M:\minix\tests\test5.c:297: unlink("XXX.test5");
+M:\minix\tests\test5.c:304: if (creat("XXX.test5", 0777) < 0) e(7);
+M:\minix\tests\test56.c:3383: /* Yes, you fucked up the fix for the FIXME below. */
+M:\minix\tests\test56.c:3391: * FIXME: currently UDS cannot distinguish between sockets that have
+M:\minix\tests\test56.c:3469: * FIXME: currently UDS cannot distinguish between sockets that have
+M:\minix\tests\ipc\lib\tst_tmpdir.c:123: /* This is an AWEFUL hack to figure out if mkdtemp() is available */

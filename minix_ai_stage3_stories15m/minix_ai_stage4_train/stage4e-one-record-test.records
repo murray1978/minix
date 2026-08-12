@@ -1,0 +1,15 @@
+%%BEGIN
+id=service-status-001
+task=command
+source=project-authored
+source_unit=stage4e-one-record-fixture
+split=train
+weight=1.0
+
+%%PROMPT
+Which command inspects managed MINIX services?
+
+%%TARGET
+service status
+
+%%END

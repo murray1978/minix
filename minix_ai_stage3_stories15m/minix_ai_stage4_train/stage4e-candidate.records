@@ -1,0 +1,483 @@
+# Stage 4E candidate records
+# Required fields: id, task, source, source_unit, split, weight
+# Visible target is single-line only.
+
+%%BEGIN
+id=svc-status-basic-train-001
+task=command
+source=man:service(8)
+source_unit=manual:service-status
+split=train
+weight=1.0
+
+%%PROMPT
+Which command prints the status of managed services?
+
+%%TARGET
+service status
+
+%%END
+
+%%BEGIN
+id=svc-up-model-train-002
+task=command
+source=man:service(8)
+source_unit=manual:service-up-ai-model
+split=train
+weight=1.0
+
+%%PROMPT
+Which command starts ai_model through the service manager?
+
+%%TARGET
+service up /service/ai_model
+
+%%END
+
+%%BEGIN
+id=svc-up-driver-train-003
+task=command
+source=man:service(8)
+source_unit=manual:service-up-ai-driver
+split=train
+weight=1.0
+
+%%PROMPT
+Which command starts ai_driver through the service manager?
+
+%%TARGET
+service up /service/ai_driver
+
+%%END
+
+%%BEGIN
+id=driver-verbose-on-train-004
+task=command
+source=source:/minix/drivers/ai_driver/ai_driver.c:ai_handle_command
+source_unit=ai_driver:verbose-toggle-on
+split=train
+weight=1.0
+
+%%PROMPT
+What command string enables verbose logging in ai_driver?
+
+%%TARGET
+-v on
+
+%%END
+
+%%BEGIN
+id=driver-verbose-off-train-005
+task=command
+source=source:/minix/drivers/ai_driver/ai_driver.c:ai_handle_command
+source_unit=ai_driver:verbose-toggle-off
+split=train
+weight=1.0
+
+%%PROMPT
+What command string disables verbose logging in ai_driver?
+
+%%TARGET
+-v off
+
+%%END
+
+%%BEGIN
+id=driver-status-command-train-006
+task=command_review
+source=source:/minix/drivers/ai_driver/ai_driver.c:ai_handle_command
+source_unit=ai_driver:status-command
+split=train
+weight=1.0
+
+%%PROMPT
+If a user wants ai_driver state, request number, and last error fields, which command should be written to the device?
+
+%%TARGET
+status
+
+%%END
+
+%%BEGIN
+id=driver-reset-command-train-007
+task=command_review
+source=source:/minix/drivers/ai_driver/ai_driver.c:ai_handle_command
+source_unit=ai_driver:reset-command
+split=train
+weight=1.0
+
+%%PROMPT
+Which command resets ai_driver text state and generation settings?
+
+%%TARGET
+reset
+
+%%END
+
+%%BEGIN
+id=driver-temp-arg-train-008
+task=source_navigation
+source=source:/minix/drivers/ai_driver/ai_driver.c:ai_handle_command
+source_unit=ai_driver:temperature-option
+split=train
+weight=1.0
+
+%%PROMPT
+In ai_handle_command, which command prefix updates temperature via ai_parse_decimal_milli?
+
+%%TARGET
+-t 
+
+%%END
+
+%%BEGIN
+id=driver-top-p-arg-train-009
+task=source_navigation
+source=source:/minix/drivers/ai_driver/ai_driver.c:ai_handle_command
+source_unit=ai_driver:top-p-option
+split=train
+weight=1.0
+
+%%PROMPT
+In ai_handle_command, which command prefix updates top_p via ai_parse_decimal_milli?
+
+%%TARGET
+-p 
+
+%%END
+
+%%BEGIN
+id=driver-steps-arg-train-010
+task=source_navigation
+source=source:/minix/drivers/ai_driver/ai_driver.c:ai_handle_command
+source_unit=ai_driver:steps-option
+split=train
+weight=1.0
+
+%%PROMPT
+In ai_handle_command, which command prefix updates generation step count with ai_parse_u32?
+
+%%TARGET
+-n 
+
+%%END
+
+%%BEGIN
+id=driver-seed-arg-train-011
+task=source_navigation
+source=source:/minix/drivers/ai_driver/ai_driver.c:ai_handle_command
+source_unit=ai_driver:seed-option
+split=train
+weight=1.0
+
+%%PROMPT
+In ai_handle_command, which command prefix updates the random seed using ai_parse_u64?
+
+%%TARGET
+-s 
+
+%%END
+
+%%BEGIN
+id=driver-infer-prefix-train-012
+task=command
+source=source:/minix/drivers/ai_driver/ai_driver.c:ai_handle_command
+source_unit=ai_driver:infer-prefix
+split=train
+weight=1.0
+
+%%PROMPT
+Which write command prefix triggers inference after parsing a prompt?
+
+%%TARGET
+i 
+
+%%END
+
+%%BEGIN
+id=driver-prompt-limit-train-013
+task=explanation
+source=source:/minix/drivers/ai_driver/ai_driver.c:AI_MAX_PROMPT_LEN
+source_unit=ai_driver:prompt-limit
+split=train
+weight=1.0
+
+%%PROMPT
+What is the maximum accepted prompt length in ai_parse_prompt?
+
+%%TARGET
+768 bytes
+
+%%END
+
+%%BEGIN
+id=driver-command-limit-train-014
+task=explanation
+source=source:/minix/drivers/ai_driver/ai_driver.c:AI_MAX_COMMAND_LEN
+source_unit=ai_driver:command-limit
+split=train
+weight=1.0
+
+%%PROMPT
+What write-size limit does ai_write enforce before returning command too long?
+
+%%TARGET
+1024 bytes
+
+%%END
+
+%%BEGIN
+id=driver-response-cap-train-015
+task=explanation
+source=source:/minix/drivers/ai_driver/ai_driver.c:AI_MAX_RESPONSE_LEN
+source_unit=ai_driver:response-cap
+split=train
+weight=1.0
+
+%%PROMPT
+What is AI_MAX_RESPONSE_LEN in ai_driver state storage?
+
+%%TARGET
+4096 bytes
+
+%%END
+
+%%BEGIN
+id=model-default-checkpoint-train-016
+task=source_navigation
+source=source:/minix/servers/ai_model/ai_model.c:AI_DEFAULT_CHECKPOINT
+source_unit=ai_model:default-checkpoint
+split=train
+weight=1.0
+
+%%PROMPT
+Which compile-time constant stores the default checkpoint path for ai_model?
+
+%%TARGET
+AI_DEFAULT_CHECKPOINT
+
+%%END
+
+%%BEGIN
+id=model-default-tokenizer-train-017
+task=source_navigation
+source=source:/minix/servers/ai_model/ai_model.c:AI_DEFAULT_TOKENIZER
+source_unit=ai_model:default-tokenizer
+split=train
+weight=1.0
+
+%%PROMPT
+Which compile-time constant stores the default tokenizer path for ai_model?
+
+%%TARGET
+AI_DEFAULT_TOKENIZER
+
+%%END
+
+%%BEGIN
+id=model-op-generate-train-018
+task=diagnosis
+source=source:/minix/servers/ai_model/ai_model.c:ai_model_handle_generate
+source_unit=ai_model:operation-check
+split=train
+weight=1.0
+
+%%PROMPT
+In ai_model_handle_generate, which operation must req.operation match?
+
+%%TARGET
+AI_MODEL_GENERATE
+
+%%END
+
+%%BEGIN
+id=model-protocol-train-019
+task=diagnosis
+source=source:/minix/servers/ai_model/ai_model.c:ai_model_handle_generate
+source_unit=ai_model:protocol-check
+split=train
+weight=1.0
+
+%%PROMPT
+If message or request protocol versions mismatch in ai_model_handle_generate, what error is returned?
+
+%%TARGET
+EPROTO
+
+%%END
+
+%%BEGIN
+id=stage4d-exact-match-train-020
+task=continuation
+source=observed-stage4-result
+source_unit=stage4d:latest-overfit-result
+split=train
+weight=1.0
+
+%%PROMPT
+From the latest Stage 4D run, what was the exact_target_match status?
+
+%%TARGET
+exact_target_match=yes
+
+%%END
+
+%%BEGIN
+id=sysconf-ai-model-priority-val-021
+task=source_navigation
+source=source:/etc/system.conf:service ai_model
+source_unit=system-conf:ai-model-priority
+split=validation
+weight=1.0
+
+%%PROMPT
+In the ai_model service stanza, what priority value is configured?
+
+%%TARGET
+priority 4
+
+%%END
+
+%%BEGIN
+id=sysconf-ai-model-quantum-val-022
+task=source_navigation
+source=source:/etc/system.conf:service ai_model
+source_unit=system-conf:ai-model-quantum
+split=validation
+weight=1.0
+
+%%PROMPT
+In the ai_model service stanza, what quantum value is configured?
+
+%%TARGET
+quantum 500
+
+%%END
+
+%%BEGIN
+id=sysconf-ai-driver-priority-val-023
+task=source_navigation
+source=source:/etc/system.conf:service ai_driver
+source_unit=system-conf:ai-driver-priority
+split=validation
+weight=1.0
+
+%%PROMPT
+In the ai_driver service stanza, what priority value is configured?
+
+%%TARGET
+priority 4
+
+%%END
+
+%%BEGIN
+id=sysconf-ai-driver-quantum-val-024
+task=source_navigation
+source=source:/etc/system.conf:service ai_driver
+source_unit=system-conf:ai-driver-quantum
+split=validation
+weight=1.0
+
+%%PROMPT
+In the ai_driver service stanza, what quantum value is configured?
+
+%%TARGET
+quantum 500
+
+%%END
+
+%%BEGIN
+id=driver-invalid-command-val-025
+task=diagnosis
+source=source:/minix/drivers/ai_driver/ai_driver.c:ai_handle_command
+source_unit=ai_driver:unknown-command-return
+split=validation
+weight=1.0
+
+%%PROMPT
+What does ai_handle_command return when no known command pattern matches?
+
+%%TARGET
+EINVAL
+
+%%END
+
+%%BEGIN
+id=model-empty-prompt-test-026
+task=command_review
+source=source:/minix/servers/ai_model/ai_model.c:ai_model_handle_generate
+source_unit=ai_model:prompt-len-check
+split=test
+weight=1.0
+
+%%PROMPT
+When req.prompt_len is zero in ai_model_handle_generate, which errno-style result is returned?
+
+%%TARGET
+EINVAL
+
+%%END
+
+%%BEGIN
+id=model-response-cap-test-027
+task=command_review
+source=source:/minix/servers/ai_model/ai_model.c:ai_model_handle_generate
+source_unit=ai_model:response-cap-check
+split=test
+weight=1.0
+
+%%PROMPT
+When req.response_cap exceeds AI_MODEL_MAX_RESPONSE, which result does ai_model_handle_generate return?
+
+%%TARGET
+E2BIG
+
+%%END
+
+%%BEGIN
+id=model-null-byte-prompt-test-028
+task=diagnosis
+source=source:/minix/servers/ai_model/ai_model.c:ai_model_handle_generate
+source_unit=ai_model:null-byte-reject
+split=test
+weight=1.0
+
+%%PROMPT
+If memchr finds a null byte inside the copied prompt buffer, what result is returned?
+
+%%TARGET
+EINVAL
+
+%%END
+
+%%BEGIN
+id=driver-state-labels-test-029
+task=explanation
+source=source:/minix/drivers/ai_driver/ai_driver.c:ai_state_name
+source_unit=ai_driver:state-name-map
+split=test
+weight=1.0
+
+%%PROMPT
+What three textual state labels can ai_state_name emit for known states?
+
+%%TARGET
+idle done error
+
+%%END
+
+%%BEGIN
+id=system-bridge-test-030
+task=continuation
+source=source:/etc/system.conf:service ai_model
+source_unit=system-conf:ai-model-ai-driver-ipc
+split=test
+weight=1.0
+
+%%PROMPT
+Which service name appears in ai_model IPC permissions to support direct communication with the driver?
+
+%%TARGET
+ai_driver
+
+%%END

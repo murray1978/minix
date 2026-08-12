@@ -1,0 +1,11 @@
+CC?=cc
+CFLAGS?=-O2 -std=c99 -D_POSIX_C_SOURCE=200112L -D_LARGEFILE_SOURCE -Wall -Wextra -Wpedantic
+LDLIBS?=-lm
+
+all: minix_llama
+
+minix_llama: minix_llama.c
+	$(CC) $(CFLAGS) -o $@ $< $(LDLIBS)
+
+clean:
+	rm -f minix_llama *.o *.trace

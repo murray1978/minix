@@ -1,0 +1,73 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "MINIX: Incremental build",
+            "type": "process",
+            "command": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+            "args": [
+                "-tt",
+                "minix330",
+                "su root -c 'PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/pkg/bin:/usr/pkg/sbin; export PATH; cd /usr/src && make build MKUPDATE=yes'"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated",
+                "clear": false
+            }
+        },
+        {
+            "label": "MINIX: Clean full build",
+            "type": "process",
+            "command": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+            "args": [
+                "-tt",
+                "minix330",
+                "su root -c 'PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/pkg/bin:/usr/pkg/sbin; export PATH; cd /usr/src && make build'"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated",
+                "clear": true
+            }
+        },
+        {
+            "label": "MINIX: SSH shell",
+            "type": "process",
+            "command": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+            "args": [
+                "-tt",
+                "minix330"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "MINIX: Reboot",
+            "type": "process",
+            "command": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+            "args": [
+                "-tt",
+                "minix330",
+                "su root -c reboot"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

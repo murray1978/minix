@@ -2,6 +2,7 @@
 
 .if ${MKIMAGEONLY} == "no"
 SUBDIR+=	audio
+SUBDIR+=	ai_driver
 SUBDIR+=	clock
 SUBDIR+=	eeprom
 SUBDIR+=	examples

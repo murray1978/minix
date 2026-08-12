@@ -1,0 +1,49 @@
+diag start max_positions=4
+diag pos=0 input_token=1
+diag pos=0 embedding count=288 checksum=0bf2a0ac7b1c9905
+diag pos=0 layer=0 layer0_rmsnorm count=288 checksum=5a82c1b6269e327a
+diag pos=0 layer=0 layer0_q_pre_rope count=288 checksum=95d596d3043255cc
+diag pos=0 layer=0 layer0_k_pre_rope count=288 checksum=53c9a37030fee011
+diag pos=0 layer=0 layer0_v count=288 checksum=e4fd8a34d025cee6
+diag pos=0 layer=0 layer0_q_post_rope count=288 checksum=95d596d3043255cc
+diag pos=0 layer=0 layer0_k_post_rope count=288 checksum=53c9a37030fee011
+diag pos=0 layer=0 layer0_attention_out count=288 checksum=e4fd8a34d025cee6
+diag pos=0 layer=0 layer0_ffn_out count=288 checksum=91351db56b173ae3
+diag pos=0 final_logits count=32000 checksum=951c1e56a2190bc4
+diag pos=0 top10 [9038]=12.2900305 [3118]=10.5333033 [365]=8.49836826 [4335]=8.06494999 [11230]=7.61990261 [317]=7.40454435 [4111]=7.26978779 [2259]=6.77985287 [341]=6.72743559 [7870]=6.55372715
+diag pos=1 input_token=9038
+diag pos=1 embedding count=288 checksum=f8801afba3d7302e
+diag pos=1 layer=0 layer0_rmsnorm count=288 checksum=b96597aa35d73600
+diag pos=1 layer=0 layer0_q_pre_rope count=288 checksum=092a776f22606dfd
+diag pos=1 layer=0 layer0_k_pre_rope count=288 checksum=856d523bbc0032b9
+diag pos=1 layer=0 layer0_v count=288 checksum=e6250a1dba6b68b0
+diag pos=1 layer=0 layer0_q_post_rope count=288 checksum=87dd7ea8aa90c53c
+diag pos=1 layer=0 layer0_k_post_rope count=288 checksum=3cbf09a1dafbde2b
+diag pos=1 layer=0 layer0_attention_out count=288 checksum=3ccd0c26a4403e40
+diag pos=1 layer=0 layer0_ffn_out count=288 checksum=aabc9f41bcc46fba
+diag pos=1 final_logits count=32000 checksum=8fb487bcbf88f282
+diag pos=1 top10 [2501]=25.3725014 [727]=21.4570255 [29892]=20.0657272 [263]=15.9516859 [297]=14.742341 [472]=11.7836342 [1244]=11.3243074 [2462]=10.4490499 [322]=10.4084167 [373]=10.355382
+diag pos=2 input_token=2501
+diag pos=2 embedding count=288 checksum=b76a4551eccb4efe
+diag pos=2 layer=0 layer0_rmsnorm count=288 checksum=2f4516113819a46a
+diag pos=2 layer=0 layer0_q_pre_rope count=288 checksum=b2e05783dba5aedb
+diag pos=2 layer=0 layer0_k_pre_rope count=288 checksum=33d9871f123694d3
+diag pos=2 layer=0 layer0_v count=288 checksum=f5b138da608d30b4
+diag pos=2 layer=0 layer0_q_post_rope count=288 checksum=ad6cde4da99f801e
+diag pos=2 layer=0 layer0_k_post_rope count=288 checksum=4407062ed463ba83
+diag pos=2 layer=0 layer0_attention_out count=288 checksum=76d971017b9ae325
+diag pos=2 layer=0 layer0_ffn_out count=288 checksum=39f19b1f7bb10194
+diag pos=2 final_logits count=32000 checksum=aeced855b290cf26
+diag pos=2 top10 [263]=20.238472 [931]=10.7215061 [278]=10.4394579 [385]=9.36875248 [388]=9.24709892 [29892]=9.16275311 [2030]=8.6495018 [2501]=8.52154732 [727]=8.32710457 [319]=8.31398392
+diag pos=3 input_token=263
+diag pos=3 embedding count=288 checksum=30038a49e6b76319
+diag pos=3 layer=0 layer0_rmsnorm count=288 checksum=61119aa5247865a1
+diag pos=3 layer=0 layer0_q_pre_rope count=288 checksum=aef97fc2ca7a862d
+diag pos=3 layer=0 layer0_k_pre_rope count=288 checksum=9f0ab0db039e9af1
+diag pos=3 layer=0 layer0_v count=288 checksum=8af879cf08dd6773
+diag pos=3 layer=0 layer0_q_post_rope count=288 checksum=5c55fe19a960387d
+diag pos=3 layer=0 layer0_k_post_rope count=288 checksum=de6b4303c6af4ae5
+diag pos=3 layer=0 layer0_attention_out count=288 checksum=04339bc982d5e796
+diag pos=3 layer=0 layer0_ffn_out count=288 checksum=a4bb2f1c5d215694
+diag pos=3 final_logits count=32000 checksum=b53d06f75fa97e05
+diag pos=3 top10 [931]=20.8713074 [16340]=9.06178856 [7146]=8.96498966 [4646]=8.37593842 [15050]=8.28057003 [5418]=8.27376461 [2462]=8.19254303 [5974]=8.0537796 [11801]=7.97940016 [265]=7.95729065

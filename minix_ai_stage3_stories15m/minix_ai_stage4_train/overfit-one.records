@@ -1,0 +1,13 @@
+%%BEGIN
+id=overfit-service-status-001
+task=instruction
+split=train
+weight=1.0
+
+%%PROMPT
+MINIX service status command:
+
+%%TARGET
+service status
+
+%%END

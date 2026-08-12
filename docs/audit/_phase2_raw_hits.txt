@@ -1,0 +1,2365 @@
+﻿M:\minix\kernel\clock.c:87: /* FIXME watchdog for slave cpus! */
+M:\minix\kernel\cpulocals.h:18: /* FIXME - padd the structure so that items in the array do not share cacheline
+M:\minix\kernel\debug.c:28: if (l++ > MAX_LOOP) panic("check error");
+M:\minix\kernel\extracted-errno.h:73: IDENT(ENOSYS)
+M:\minix\kernel\interrupt.c:38: panic("invalid call to put_irq_handler: %d",  irq);
+M:\minix\kernel\interrupt.c:54: panic("Too many handlers for irq: %d",  irq);
+M:\minix\kernel\interrupt.c:82: panic("invalid call to rm_irq_handler: %d",  irq);
+M:\minix\kernel\ipc.h:23: * XXX: the following check is used to set the status code only on RECEIVE.
+M:\minix\kernel\main.c:75: panic("FATAL : failed to initialize timer interrupts, "
+M:\minix\kernel\main.c:86: FIXME("DEBUG_SCHED_CHECK enabled");
+M:\minix\kernel\main.c:89: FIXME("DEBUG_VMASSERT enabled");
+M:\minix\kernel\main.c:92: FIXME("PROC check enabled");
+M:\minix\kernel\main.c:161: panic("expecting %d boot processes/modules, found %d",
+M:\minix\kernel\main.c:371: * FIXME
+M:\minix\kernel\proc.c:444: #if 0
+M:\minix\kernel\proc.c:457: #if 0
+M:\minix\kernel\proc.c:577: panic("sys_call: MF_DELIVERMSG on for %s / %d\n",
+M:\minix\kernel\proc.c:1214: /* XXX: RTS_NO_ENDPOINT should be removed */
+M:\minix\kernel\proc.c:1789: panic("invalid endpoint: %d",  e);
+M:\minix\kernel\proc.c:1822: panic("WARNING: Scheduling: mini_send returned %d\n", err);
+M:\minix\kernel\proc.h:33: FIXME remove this */
+M:\minix\kernel\proto.h:3: /* FIXME this is a hack how to avoid inclusion conflicts */
+M:\minix\kernel\system.c:433: panic("cause_sig: sig manager %d gets lethal signal %d for itself",
+M:\minix\kernel\system.c:438: panic("send_sig failed");
+M:\minix\kernel\system.c:443: panic("sigismember failed");
+M:\minix\kernel\system.c:451: panic("send_sig failed");
+M:\minix\kernel\system.c:527: if(isemptyp(rc)) panic("clear_proc: empty process: %d",  rc->p_endpoint);
+M:\minix\kernel\system.c:645: /* FIXME this preempts the process, do we really want to do that ?*/
+M:\minix\kernel\system.c:647: /* FIXME this is a problem for SMP if the processes currently runs on a
+M:\minix\kernel\utility.c:22: void panic(const char *fmt, ...)
+M:\minix\kernel\utility.c:40: #if 0
+M:\minix\kernel\utility.c:89: panic("_exit called from within the kernel, should not happen. (err %i)", e);
+M:\minix\kernel\watchdog.c:17: /* FIXME this should be CPU local */
+M:\minix\kernel\arch\earm\Makefile.inc:52: # LSC: putchar and kputc have the same signature. A bit hackish.
+M:\minix\kernel\arch\earm\arch_clock.c:36: panic("Can not do the clock setup. machine (0x%08x) is unknown\n",machine.board_id);
+M:\minix\kernel\arch\earm\arch_do_vmctl.c:27: panic("arch_enable_paging failed");
+M:\minix\kernel\arch\earm\exception.c:90: panic("pagefault in VM");
+M:\minix\kernel\arch\earm\exception.c:106: panic("WARNING: pagefault: mini_send returned %d\n", err);
+M:\minix\kernel\arch\earm\exception.c:127: panic("Unhandled kernel exception");
+M:\minix\kernel\arch\earm\exception.c:131: panic("exception in kernel while booting, no saved_proc yet");
+M:\minix\kernel\arch\earm\exception.c:168: panic("Copy involving a user pointer failed unexpectedly!");
+M:\minix\kernel\arch\earm\exception.c:205: panic("return from inkernel_disaster");
+M:\minix\kernel\arch\earm\memory.c:219: panic("lin_lin_copy fault out of range");
+M:\minix\kernel\arch\earm\memory.c:246: panic("lin_lin_copy for phys_get32 failed: %d",  r);
+M:\minix\kernel\arch\earm\memory.c:268: panic("vm_lookup returned phys: 0x%lx",  phys);
+M:\minix\kernel\arch\earm\memory.c:422: panic("send_sig failed");
+M:\minix\kernel\arch\earm\memory.c:532: panic("vm_memset: pf %lx addr=%lx len=%lu\n",
+M:\minix\kernel\arch\earm\memory.c:598: panic("lin_lin_copy failed: %d",  r);
+M:\minix\kernel\arch\earm\memory.c:612: panic("r strange: %d",  r);
+M:\minix\kernel\arch\earm\mpx.S:278: .space	K_STACK_SIZE	/* kernel stack */ /* FIXME use macro here */
+M:\minix\kernel\arch\earm\pg_utils.c:110: panic("no available memmap slot");
+M:\minix\kernel\arch\earm\pg_utils.c:120: panic("no more pagetables");
+M:\minix\kernel\arch\earm\pg_utils.c:155: panic("can't find free memory");
+M:\minix\kernel\arch\earm\pg_utils.c:175: /* mark mormal memory as cacheable. TODO: fix hard coded values */
+M:\minix\kernel\arch\earm\phys_copy.S:110: /* XXX for really big copies perhaps we should use more registers */
+M:\minix\kernel\arch\earm\pre_init.c:180: /* XXX: hard-coded stuff for modules */
+M:\minix\kernel\arch\earm\pre_init.c:328: #if 0
+M:\minix\kernel\arch\earm\pre_init.c:333: panic("overlapping boot modules/kernel");
+M:\minix\kernel\arch\earm\pre_init.c:423: int raise(int n) { panic("raise(%d)\n", n); }
+M:\minix\kernel\arch\earm\protect.c:72: panic("boot module %d not found", pnr);
+M:\minix\kernel\arch\earm\protect.c:153: panic("VM loading failed");
+M:\minix\kernel\arch\earm\include\cpufunc.h:4: #if 0
+M:\minix\kernel\arch\earm\include\cpufunc.h:169: #if 0
+M:\minix\kernel\arch\i386\Makefile.inc:42: # LSC: putchar and kputc have the same signature. A bit hackish.
+M:\minix\kernel\arch\i386\acpi.c:66: panic("acpi: can't get virtual address of arbitrary physical address");
+M:\minix\kernel\arch\i386\acpi.c:75: panic("can't acpi_phys_copy with vm");
+M:\minix\kernel\arch\i386\acpi.c:173: #if 0
+M:\minix\kernel\arch\i386\apic.c:97: /* FIXME we should spread the irqs across as many priority levels as possible
+M:\minix\kernel\arch\i386\apic.c:166: * FIXME this should be a cpulocal variable but there are some problems with
+M:\minix\kernel\arch\i386\apic.c:208: #if 0
+M:\minix\kernel\arch\i386\apic.c:225: #if 0
+M:\minix\kernel\arch\i386\apic.c:259: panic("EDGE instead of LEVEL!");
+M:\minix\kernel\arch\i386\apic.c:395: /* FIXME unlikely */
+M:\minix\kernel\arch\i386\apic.c:404: /* FIXME unlikely */
+M:\minix\kernel\arch\i386\apic.c:654: #if 0
+M:\minix\kernel\arch\i386\apic.c:656: /*FIXME this is a problem on AP */
+M:\minix\kernel\arch\i386\apic.c:658: * FIXME if the location is different (unlikely) then the one we expect,
+M:\minix\kernel\arch\i386\arch_clock.c:30: #define LATCH_COUNT     0x00    /* cc00xxxx, c = channel, x = any */
+M:\minix\kernel\arch\i386\arch_do_vmctl.c:31: panic("arch_enable_paging failed");
+M:\minix\kernel\arch\i386\arch_smp.c:112: /* TODO hack around the alignment problem */
+M:\minix\kernel\arch\i386\arch_smp.c:243: panic("FATAL : failed to initialize timer interrupts CPU %d, "
+M:\minix\kernel\arch\i386\arch_smp.c:247: /* FIXME assign CPU local idle structure */
+M:\minix\kernel\arch\i386\arch_system.c:574: #if 0
+M:\minix\kernel\arch\i386\arch_system.c:604: panic("no entry trap style known");
+M:\minix\kernel\arch\i386\arch_system.c:612: panic("unknown trap style recorded");
+M:\minix\kernel\arch\i386\arch_system.c:647: fr->sf_code = 0;  /* XXX - probably should be used for FPE_INTOVF or
+M:\minix\kernel\arch\i386\arch_watchdog.c:70: /* FIXME currently we support only watchdog based on the intel
+M:\minix\kernel\arch\i386\arch_watchdog.c:139: panic("Kernel lockup");
+M:\minix\kernel\arch\i386\arch_watchdog.c:160: /* FIXME works only if all CPUs have the same freq */
+M:\minix\kernel\arch\i386\arch_watchdog.c:224: /* FIXME works only if all CPUs have the same freq */
+M:\minix\kernel\arch\i386\breakpoints.c:49: default: panic("%s:%d: invalid breakpoint index", __FILE__,  __LINE__);
+M:\minix\kernel\arch\i386\exception.c:61: #if 0
+M:\minix\kernel\arch\i386\exception.c:74: #if 0
+M:\minix\kernel\arch\i386\exception.c:110: panic("pagefault in VM");
+M:\minix\kernel\arch\i386\exception.c:126: panic("WARNING: pagefault: mini_send returned %d\n", err);
+M:\minix\kernel\arch\i386\exception.c:169: panic("Unhandled kernel exception");
+M:\minix\kernel\arch\i386\exception.c:173: panic("exception in kernel while booting, no saved_proc yet");
+M:\minix\kernel\arch\i386\exception.c:217: panic("Copy involving a user pointer failed unexpectedly!");
+M:\minix\kernel\arch\i386\exception.c:263: #if 0
+M:\minix\kernel\arch\i386\exception.c:282: panic("return from inkernel_disaster");
+M:\minix\kernel\arch\i386\klib.S:663: /* FIXME don't use the byte code */
+M:\minix\kernel\arch\i386\klib.S:687: /* FIXME don't use the byte code */
+M:\minix\kernel\arch\i386\klib.S:713: /* FIXME don't use the byte code */
+M:\minix\kernel\arch\i386\memory.c:208: panic("lin_lin_copy fault out of range");
+M:\minix\kernel\arch\i386\memory.c:236: panic("lin_lin_copy for phys_get32 failed: %d",  r);
+M:\minix\kernel\arch\i386\memory.c:242: #if 0
+M:\minix\kernel\arch\i386\memory.c:292: panic("vm_lookup returned phys: 0x%lx",  phys);
+M:\minix\kernel\arch\i386\memory.c:447: panic("send_sig failed");
+M:\minix\kernel\arch\i386\memory.c:507: #if 0
+M:\minix\kernel\arch\i386\memory.c:631: panic("vm_memset: pf %lx addr=%lx len=%lu\n",
+M:\minix\kernel\arch\i386\memory.c:697: panic("lin_lin_copy failed: %d",  r);
+M:\minix\kernel\arch\i386\memory.c:711: panic("r strange: %d",  r);
+M:\minix\kernel\arch\i386\mpx.S:629: .space	K_STACK_SIZE	/* kernel stack */ /* FIXME use macro here */
+M:\minix\kernel\arch\i386\pg_utils.c:120: panic("no available memmap slot");
+M:\minix\kernel\arch\i386\pg_utils.c:129: if(pt_inuse >= PG_PAGETABLES) panic("no more pagetables");
+M:\minix\kernel\arch\i386\pg_utils.c:159: panic("can't find free memory");
+M:\minix\kernel\arch\i386\pre_init.c:210: #if 0
+M:\minix\kernel\arch\i386\pre_init.c:215: panic("overlapping boot modules/kernel");
+M:\minix\kernel\arch\i386\pre_init.c:251: int raise(int sig) { panic("raise(%d)\n", sig); }
+M:\minix\kernel\arch\i386\protect.c:295: panic("boot module %d not found", pnr);
+M:\minix\kernel\arch\i386\protect.c:428: panic("VM loading failed");
+M:\minix\kernel\system\do_clear.c:70: #if 0
+M:\minix\kernel\system\do_copy.c:33: #if 0
+M:\minix\kernel\system\do_irqctl.c:163: panic("invalid interrupt handler: %d", hook->proc_nr_e);
+M:\minix\kernel\system\do_privctl.c:183: #if 0 /* XXX -- do we need a call for this? */
+M:\minix\kernel\system\do_umap_remote.c:99: panic("vm_lookup returned zero physical address");
+M:\minix\kernel\system\do_vdevio.c:161: panic("do_vdevio: unaligned port: %d", port);
+M:\minix\kernel\system\do_vmctl.c:63: panic("VMREQUEST wrong type");
+M:\minix\kernel\system\do_vmctl.c:97: panic("strange request type: %d",p->p_vmrequest.type);
+M:\minix\servers\devman\device.c:78: char buf[12]; /* this fits the device ID " 0xXXXXXXXX" */
+M:\minix\servers\devman\device.c:84: panic("devman_device_remove_event: out of memory\n");
+M:\minix\servers\devman\device.c:94: panic("devman_device_add_event: "
+M:\minix\servers\devman\device.c:111: char buf[12]; /* this fits the device ID " 0xXXXXXXXX" */
+M:\minix\servers\devman\device.c:117: panic("devman_device_remove_event: out of memory\n");
+M:\minix\servers\devman\device.c:127: panic("devman_device_remove_event: "
+M:\minix\servers\devman\device.c:363: panic("devman_dev_add_child: out of memory\n");
+M:\minix\servers\devman\device.c:403: /* FUTURE TODO: create links(BUS, etc) */
+M:\minix\servers\devman\device.c:421: /* TODO */
+M:\minix\servers\devman\device.c:445: #if 0
+M:\minix\servers\ds\main.c:114: panic("failed to receive message!: %d", status);
+M:\minix\servers\ds\store.c:123: panic("ds_getprocep: process endpoint not found");
+M:\minix\servers\ds\store.c:257: panic("sys_safecopyfrom failed: %d", r);
+M:\minix\servers\ds\store.c:262: panic("unable to map service: %d", r);
+M:\minix\servers\input\input.c:79: panic("reverse-mapping invalid ID %d", id);
+M:\minix\servers\input\input.c:138: panic("input_copy_events: not enough input is ready");
+M:\minix\servers\input\input.c:666: panic("INPUT: can't subscribe to driver events (%d)", r);
+M:\minix\servers\ipc\main.c:78: panic("IPC: call table order mismatch");
+M:\minix\servers\ipc\sem.c:131: #if 0
+M:\minix\servers\ipc\shm.c:70: /* TODO: shmmni should be changed... */
+M:\minix\servers\ipc\shm.c:329: #if 0
+M:\minix\servers\is\dmp_kernel.c:137: #if 0
+M:\minix\servers\is\dmp_kernel.c:347: /* LSC FIXME: Not implemented for arm */
+M:\minix\servers\is\main.c:54: /* FIXME: error message. */
+M:\minix\servers\is\main.c:129: panic("sef_receive failed!: %d", status);
+M:\minix\servers\is\main.c:145: panic("unable to send reply!: %d", send_status);
+M:\minix\servers\pm\alarm.c:141: panic("invalid timer type: %d", which);
+M:\minix\servers\pm\alarm.c:200: default:             panic("invalid vtimer type: %d", which);
+M:\minix\servers\pm\alarm.c:207: panic("sys_vtimer failed: %d", r);
+M:\minix\servers\pm\alarm.c:235: default: panic("invalid vtimer signal: %d", sig);
+M:\minix\servers\pm\alarm.c:260: panic("get_realtimer couldn't get uptime: %d", s);
+M:\minix\servers\pm\exec.c:74: panic("do_newexec: got bad endpoint: %d", proc_e);
+M:\minix\servers\pm\exec.c:80: panic("do_newexec: sys_datacopy failed: %d", r);
+M:\minix\servers\pm\exec.c:136: panic("do_execrestart: got bad endpoint: %d", proc_e);
+M:\minix\servers\pm\exec.c:193: if (r != OK) panic("sys_exec failed: %d", r);
+M:\minix\servers\pm\forkexit.c:72: panic("do_fork can't find child slot");
+M:\minix\servers\pm\forkexit.c:74: panic("do_fork finds wrong child slot: %d", next_child);
+M:\minix\servers\pm\forkexit.c:172: panic("do_fork can't find child slot");
+M:\minix\servers\pm\forkexit.c:174: panic("do_fork finds wrong child slot: %d", next_child);
+M:\minix\servers\pm\forkexit.c:289: panic("exit_proc: sys_times failed: %d", r);
+M:\minix\servers\pm\forkexit.c:307: panic("sys_stop failed: %d", r);
+M:\minix\servers\pm\forkexit.c:312: panic("exit_proc: vm_willexit failed: %d", r);
+M:\minix\servers\pm\forkexit.c:323: panic("exit_proc: VFS died: %d", r);
+M:\minix\servers\pm\forkexit.c:345: panic("exit_proc: sys_clear failed: %d", r);
+M:\minix\servers\pm\forkexit.c:430: panic("exit_restart: sys_clear failed: %d", r);
+M:\minix\servers\pm\forkexit.c:435: panic("exit_restart: vm_exit failed: %d", r);
+M:\minix\servers\pm\forkexit.c:572: panic("zombify: process was already a zombie");
+M:\minix\servers\pm\forkexit.c:643: panic("tell_parent: bad value in mp_parent: %d", mp_parent);
+M:\minix\servers\pm\forkexit.c:645: panic("tell_parent: child not a zombie");
+M:\minix\servers\pm\forkexit.c:647: panic("tell_parent: telling parent again");
+M:\minix\servers\pm\forkexit.c:670: panic("tell_tracer: bad value in mp_tracer: %d", mp_tracer);
+M:\minix\servers\pm\forkexit.c:672: panic("tell_tracer: child not a zombie");
+M:\minix\servers\pm\main.c:63: panic("PM sef_receive_status error");
+M:\minix\servers\pm\main.c:77: panic("PM got message from invalid endpoint: %d", who_e);
+M:\minix\servers\pm\main.c:100: result = ENOSYS;
+M:\minix\servers\pm\main.c:102: result = ENOSYS;
+M:\minix\servers\pm\main.c:168: panic("get monitor params failed: %d", s);
+M:\minix\servers\pm\main.c:174: panic("couldn't get image table: %d", s);
+M:\minix\servers\pm\main.c:225: panic("can't sync up with VFS: %d", s);
+M:\minix\servers\pm\main.c:234: panic("can't sync up with VFS");
+M:\minix\servers\pm\main.c:258: panic("reply arg out of range: %d", proc_nr);
+M:\minix\servers\pm\main.c:311: panic("handle_vfs_reply: got bad endpoint from VFS: %d", proc_e);
+M:\minix\servers\pm\main.c:318: panic("handle_vfs_reply: reply without request: %d", call_nr);
+M:\minix\servers\pm\main.c:324: panic("handle_vfs_reply: UNPAUSED set on entry: %d", call_nr);
+M:\minix\servers\pm\main.c:408: panic("handle_vfs_reply: unknown reply code: %d", call_nr);
+M:\minix\servers\pm\misc.c:71: #if 0 /* for updates */
+M:\minix\servers\pm\misc.c:89: return EINVAL;	/* Unsupported field */
+M:\minix\servers\pm\misc.c:101: #if 0	/* no updates yet */
+M:\minix\servers\pm\profile.c:44: return ENOSYS;
+M:\minix\servers\pm\profile.c:72: return ENOSYS;
+M:\minix\servers\pm\signal.c:252: panic("stop_proc: unexpected delay call");
+M:\minix\servers\pm\signal.c:259: panic("sys_delay_stop failed: %d", r);
+M:\minix\servers\pm\signal.c:281: panic("sys_resume failed: %d", r);
+M:\minix\servers\pm\signal.c:304: #if 0
+M:\minix\servers\pm\signal.c:403: panic("PM: signal %d sent to exiting process %d\n", signo, slot);
+M:\minix\servers\pm\signal.c:819: panic("sys_sigsend failed: %d", r);
+M:\minix\servers\pm\time.c:28: panic("do_time couldn't get uptime: %d", s);
+M:\minix\servers\pm\time.c:38: return EINVAL; /* invalid/unsupported clock_id */
+M:\minix\servers\pm\time.c:61: return EINVAL; /* invalid/unsupported clock_id */
+M:\minix\servers\pm\time.c:83: return EINVAL; /* invalid/unsupported clock_id */
+M:\minix\servers\pm\time.c:102: panic("do_time couldn't get uptime: %d", s);
+M:\minix\servers\pm\time.c:126: panic("do_stime couldn't get uptime: %d", s);
+M:\minix\servers\pm\time.c:131: panic("pm: sys_stime failed: %d", s);
+M:\minix\servers\pm\trace.c:100: case T_READB_INS:	/* special hack for reading text segments */
+M:\minix\servers\pm\trace.c:112: case T_WRITEB_INS:	/* special hack for patching text segments */
+M:\minix\servers\pm\trace.c:117: #if 0
+M:\minix\servers\pm\trace.c:264: if (r != OK) panic("sys_trace failed: %d", r);
+M:\minix\servers\pm\utility.c:131: panic("tell_vfs: not idle: %d", m_ptr->m_type);
+M:\minix\servers\pm\utility.c:135: panic("unable to send to VFS: %d", r);
+M:\minix\servers\rs\error.c:16: { ENOSYS,     "service does not support the requested initialization type"  }
+M:\minix\servers\rs\error.c:22: { ENOSYS,     "service does not support live update"                        },
+M:\minix\servers\rs\main.c:50: panic("couldn't get machine info: %d", s);
+M:\minix\servers\rs\main.c:53: panic("couldn't get kernel kinfo: %d", s);
+M:\minix\servers\rs\main.c:62: panic("message from bogus source: %d", who_e);
+M:\minix\servers\rs\main.c:115: result = ENOSYS;
+M:\minix\servers\rs\main.c:172: panic("Cannot get system timer frequency\n");
+M:\minix\servers\rs\main.c:178: panic("unable to create rprocpub table grant: %d", rinit.rproctab_gid);
+M:\minix\servers\rs\main.c:187: panic("unable to get copy of boot image table: %d", s);
+M:\minix\servers\rs\main.c:216: panic("boot image table and boot image priv table mismatch");
+M:\minix\servers\rs\main.c:275: panic("unable to set privilege structure: %d", s);
+M:\minix\servers\rs\main.c:281: panic("unable to synch privilege structure: %d", s);
+M:\minix\servers\rs\main.c:349: panic("unable to initialize %d: %d", boot_image_priv->endpoint, s);
+M:\minix\servers\rs\main.c:360: panic("unable to initialize scheduling: %d", s);
+M:\minix\servers\rs\main.c:363: panic("unable to initialize privileges: %d", s);
+M:\minix\servers\rs\main.c:371: panic("unable to initialize service: %d", s);
+M:\minix\servers\rs\main.c:411: panic("unable to get pid: %d", rp->r_pid);
+M:\minix\servers\rs\main.c:417: panic("couldn't set alarm: %d", s);
+M:\minix\servers\rs\main.c:425: panic("unable to clone current RS instance: %d", s);
+M:\minix\servers\rs\main.c:431: panic("unable to fork a new RS instance: %d", pid);
+M:\minix\servers\rs\main.c:435: panic("unable to get replica endpoint: %d", s);
+M:\minix\servers\rs\main.c:445: panic("unable to live update RS: %d", s);
+M:\minix\servers\rs\main.c:454: panic("unable to pin memory for the new RS instance: %d", s);
+M:\minix\servers\rs\main.c:463: panic("unable to set privileges for the new RS instance: %d", s);
+M:\minix\servers\rs\main.c:466: panic("unable to initialize RS replica scheduling: %d", s);
+M:\minix\servers\rs\main.c:470: panic("unable to yield control to the new RS instance: %d", s);
+M:\minix\servers\rs\main.c:579: panic("boot image table lookup failed");
+M:\minix\servers\rs\main.c:594: panic("boot image priv table lookup failed");
+M:\minix\servers\rs\main.c:644: panic("unable to receive init reply: %d", r);
+M:\minix\servers\rs\main.c:647: panic("unexpected reply from service: %d", m.m_source);
+M:\minix\servers\rs\main.c:654: panic("unable to complete init for service: %d", m.m_source);
+M:\minix\servers\rs\main.c:676: panic("sef_receive_status failed: %d", r);
+M:\minix\servers\rs\manager.c:470: panic("unable to get child endpoint: %d", s);
+M:\minix\servers\rs\manager.c:652: * refuse to add the driver entry. The following temporary hack works
+M:\minix\servers\rs\manager.c:654: * has been made non-blocking towards MFS instances, this hack and the
+M:\minix\servers\rs\manager.c:1116: panic("unable to get child endpoint: %d", r);
+M:\minix\servers\rs\manager.c:1148: /* This hack disables restarting of file servers, which at the moment always
+M:\minix\servers\rs\manager.c:1153: kill_service(rp, "file servers cannot be restarted yet", ENOSYS);
+M:\minix\servers\rs\manager.c:1665: panic("unable to synch privilege structure: %d", r);
+M:\minix\servers\rs\memory.c:21: return ENOSYS;
+M:\minix\servers\rs\request.c:690: panic("unable to initialize the new RS instance: %d", r);
+M:\minix\servers\rs\request.c:694: panic("unable to yield control to the new RS instance: %d", r);
+M:\minix\servers\rs\request.c:820: panic("couldn't set alarm: %d", s);
+M:\minix\servers\sched\main.c:35: panic("couldn't get machine info: %d", s);
+M:\minix\servers\sched\main.c:45: panic("SCHED sef_receive error");
+M:\minix\servers\sched\main.c:56: result = ENOSYS;
+M:\minix\servers\sched\schedule.c:188: /* FIXME set the cpu mask */
+M:\minix\servers\sched\utility.c:21: /* A system call number not implemented by PM has been requested. */
+M:\minix\servers\sched\utility.c:23: return(ENOSYS);
+M:\minix\servers\vfs\comm.c:105: panic("driver endpoint %d invalid", drv_e);
+M:\minix\servers\vfs\comm.c:109: panic("driver locking inconsistency");
+M:\minix\servers\vfs\device.c:193: panic("VFS: unknown operation %d", op);
+M:\minix\servers\vfs\device.c:197: panic("VFS: cpf_grant_magic failed");
+M:\minix\servers\vfs\device.c:290: * TODO: cleaner implementation work in progress.
+M:\minix\servers\vfs\device.c:318: panic("VFS: asynsend in cdev_io failed: %d", r);
+M:\minix\servers\vfs\device.c:439: panic("VFS: asynsend in cdev_opcl failed: %d", r);
+M:\minix\servers\vfs\device.c:577: panic("VFS: asynsend in cdev_select failed: %d", r);
+M:\minix\servers\vfs\device.c:607: panic("VFS: asynsend in cdev_cancel failed: %d", r);
+M:\minix\servers\vfs\device.c:671: panic("block_io: can't send/receive: %d", r);
+M:\minix\servers\vfs\device.c:692: if (maj < 0 || maj >= NR_DEVICES) panic("VFS: out-of-bound major");
+M:\minix\servers\vfs\dmap.c:39: panic("unable to get a lock on dmap: %d\n", r);
+M:\minix\servers\vfs\dmap.c:55: panic("unable to unlock dmap lock: %d\n", r);
+M:\minix\servers\vfs\dmap.c:227: panic("unable to initialize dmap lock");
+M:\minix\servers\vfs\dmap.c:232: panic("map_driver(CTTY_MAJOR) failed");
+M:\minix\servers\vfs\exec.c:461: * It would take some very unpleasant hackery to insert the aux vectors
+M:\minix\servers\vfs\exec.c:482: #if 0
+M:\minix\servers\vfs\exec.c:483: AUXINFO(aux_vec, AT_PHDR, XXX ); /* should be &phdr[0] */
+M:\minix\servers\vfs\exec.c:487: AUXINFO(aux_vec, AT_RUID, XXX);
+M:\minix\servers\vfs\exec.c:488: AUXINFO(aux_vec, AT_RGID, XXX);
+M:\minix\servers\vfs\filedes.c:35: panic("Thread %d still holds filp lock on filp %p call_nr=%d\n",
+M:\minix\servers\vfs\filedes.c:62: panic("filp_lock weird state");
+M:\minix\servers\vfs\filedes.c:64: if (count) panic("locked filps");
+M:\minix\servers\vfs\filedes.c:65: #if 0
+M:\minix\servers\vfs\filedes.c:80: panic("Failed to initialize filp mutex");
+M:\minix\servers\vfs\filedes.c:281: panic("unable to obtain lock on filp");
+M:\minix\servers\vfs\filedes.c:309: panic("unable to release lock on filp");
+M:\minix\servers\vfs\filedes.c:339: panic("unable to release filp lock on filp2");
+M:\minix\servers\vfs\filedes.c:341: panic("unable to release filp lock on filp1");
+M:\minix\servers\vfs\filedes.c:406: panic("VFS: invalid filp count: %d ino %llx/%llu", f->filp_count,
+M:\minix\servers\vfs\filedes.c:439: /* FIXME: we should now check that the user process is indeed blocked on an
+M:\minix\servers\vfs\main.c:71: panic("couldn't get kernel kinfo");
+M:\minix\servers\vfs\main.c:189: panic("Couldn't find vmnt for endpoint %d", who_e);
+M:\minix\servers\vfs\main.c:258: error = ENOSYS;
+M:\minix\servers\vfs\main.c:260: error = ENOSYS;
+M:\minix\servers\vfs\main.c:309: panic("VFS: couldn't receive from PM: %d", s);
+M:\minix\servers\vfs\main.c:312: panic("unexpected message from PM: %d", mess.m_type);
+M:\minix\servers\vfs\main.c:335: if (s != OK) panic("VFS: can't subscribe to driver events (%d)", s);
+M:\minix\servers\vfs\main.c:342: panic("VFS: couldn't initialize block special file lock");
+M:\minix\servers\vfs\main.c:349: panic("sys_safecopyfrom failed: %d", s);
+M:\minix\servers\vfs\main.c:354: panic("VFS: unable to map service: %d", s);
+M:\minix\servers\vfs\main.c:362: panic("unable to initialize fproc lock");
+M:\minix\servers\vfs\main.c:398: char *mount_type = "mfs"; /* FIXME: use boot image process name instead */
+M:\minix\servers\vfs\main.c:399: char *mount_label = "fs_imgrd"; /* FIXME: obtain this from RS */
+M:\minix\servers\vfs\main.c:404: panic("Failed to initialize root");
+M:\minix\servers\vfs\main.c:422: panic("unable to lock fproc lock: %d", r);
+M:\minix\servers\vfs\main.c:435: panic("Failed to unlock: %d", r);
+M:\minix\servers\vfs\main.c:484: panic("VFS: get_work couldn't revive anyone");
+M:\minix\servers\vfs\main.c:490: panic("VFS: sef_receive error: %d", r);
+M:\minix\servers\vfs\main.c:518: panic("VFS: receive endpoint inconsistent (source %d, who_p "
+M:\minix\servers\vfs\main.c:637: panic("Unhandled postponed PM call %d", job_m_in.m_type);
+M:\minix\servers\vfs\main.c:642: panic("service_pm_postponed: ipc_send failed: %d", r);
+M:\minix\servers\vfs\main.c:798: panic("service_pm: ipc_send failed: %d", r);
+M:\minix\servers\vfs\main.c:837: panic("unblocking call %d blocked on %d ??", m_in.m_type, blocked_on);
+M:\minix\servers\vfs\misc.c:322: #if 0	/* Noisy diagnostic for mmap() by ld.so */
+M:\minix\servers\vfs\misc.c:379: return ENOSYS;
+M:\minix\servers\vfs\misc.c:402: #if 0   /* Noisy diagnostic for mmap() by ld.so */
+M:\minix\servers\vfs\misc.c:449: panic("VFS: bad request code from VM\n");
+M:\minix\servers\vfs\misc.c:544: panic("pm_reboot: ipc_send failed: %d", r);
+M:\minix\servers\vfs\misc.c:571: panic("VFS: bogus child for forking: %d", cproc);
+M:\minix\servers\vfs\misc.c:573: panic("VFS: forking on top of in-use child: %d", childno);
+M:\minix\servers\vfs\misc.c:595: panic("VFS: fork: pp (endpoint %d) has grant %d\n", pp->fp_endpoint,
+M:\minix\servers\vfs\misc.c:599: panic("VFS: fork: cp (endpoint %d) has grant %d\n", cp->fp_endpoint,
+M:\minix\servers\vfs\misc.c:623: panic("free_proc: already free");
+M:\minix\servers\vfs\misc.c:671: /* FIXME: missing select check */
+M:\minix\servers\vfs\misc.c:729: panic("VFS: pm_setgroups: too much data to copy");
+M:\minix\servers\vfs\misc.c:734: panic("VFS: pm_setgroups: datacopy failed");
+M:\minix\servers\vfs\misc.c:949: /* A function to be called on panic(). */
+M:\minix\servers\vfs\mount.c:400: panic("VFS: no nonedev to initialize PFS");
+M:\minix\servers\vfs\mount.c:403: panic("VFS: no vmnt to initialize PFS");
+M:\minix\servers\vfs\mount.c:470: if(vmp) panic("device mounted more than once: %llx", dev);
+M:\minix\servers\vfs\mount.c:569: panic("vmp still mounted: %s %d %llx\n", vmp->m_label,
+M:\minix\servers\vfs\path.c:108: panic("advance: vmnt not found");
+M:\minix\servers\vfs\path.c:512: panic("VFS lookup: can't find parent vmnt");
+M:\minix\servers\vfs\path.c:740: panic("failed to lock vmnt");
+M:\minix\servers\vfs\path.c:742: panic("failed to lock vnode");
+M:\minix\servers\vfs\pipe.c:70: if ((vmp = find_vmnt(PFS_PROC_NR)) == NULL) panic("PFS gone");
+M:\minix\servers\vfs\pipe.c:161: panic("Can't map to unknown endpoint");
+M:\minix\servers\vfs\pipe.c:319: panic("suspend on NONE or ANY");
+M:\minix\servers\vfs\pipe.c:431: panic("susp_count now negative: %d", susp_count);
+M:\minix\servers\vfs\pipe.c:485: panic("VFS: revoke failed for grant: %d",
+M:\minix\servers\vfs\pipe.c:550: panic("file descriptor out-of-range");
+M:\minix\servers\vfs\pipe.c:554: panic("process %d blocked on empty fd %d",
+M:\minix\servers\vfs\pipe.c:563: panic("VFS: unknown block reason: %d", blocked_on);
+M:\minix\servers\vfs\read.c:51: panic("unable to lock block special file lock");
+M:\minix\servers\vfs\read.c:62: panic("failed to unlock block special file lock");
+M:\minix\servers\vfs\read.c:73: panic("bsf_lock locked");
+M:\minix\servers\vfs\read.c:75: panic("bsf_lock weird state");
+M:\minix\servers\vfs\read.c:154: panic("VFS: read_write: fp_cum_io_partial not clear");
+M:\minix\servers\vfs\read.c:168: panic("VFS: read_write tries to access char dev NO_DEV");
+M:\minix\servers\vfs\read.c:180: /* FIXME: multiple read/write operations on a single filp
+M:\minix\servers\vfs\read.c:196: * suboptimal - so we settle for this hack for now.
+M:\minix\servers\vfs\read.c:202: panic("VFS: read_write tries to access block dev NO_DEV");
+M:\minix\servers\vfs\read.c:345: panic("unmapped pipe");
+M:\minix\servers\vfs\request.c:41: panic("req_breadwrite: cpf_grant_magic failed");
+M:\minix\servers\vfs\request.c:185: panic("req_create: cpf_grant_direct failed");
+M:\minix\servers\vfs\request.c:242: panic("req_statvfs: cpf_grant_direct failed");
+M:\minix\servers\vfs\request.c:313: panic("req_getdents: cpf_grant_direct/cpf_grant_magic failed: %d",
+M:\minix\servers\vfs\request.c:399: panic("req_link: cpf_grant_direct failed");
+M:\minix\servers\vfs\request.c:442: panic("req_lookup: cpf_grant_direct failed");
+M:\minix\servers\vfs\request.c:468: panic("req_lookup: cpf_grant_direct failed");
+M:\minix\servers\vfs\request.c:540: panic("req_mkdir: cpf_grant_direct failed");
+M:\minix\servers\vfs\request.c:580: panic("req_mknod: cpf_grant_direct failed");
+M:\minix\servers\vfs\request.c:674: panic("req_newdriver: cpf_grant_direct failed");
+M:\minix\servers\vfs\request.c:729: panic("req_rdlink: cpf_grant_magic failed");
+M:\minix\servers\vfs\request.c:795: panic("req_readsuper: cpf_grant_direct failed");
+M:\minix\servers\vfs\request.c:843: panic("req_readwrite: cpf_grant_magic failed");
+M:\minix\servers\vfs\request.c:903: panic("req_peek: pos too large");
+M:\minix\servers\vfs\request.c:934: panic("req_rename: cpf_grant_direct failed");
+M:\minix\servers\vfs\request.c:939: panic("req_rename: cpf_grant_direct failed");
+M:\minix\servers\vfs\request.c:976: panic("req_rmdir: cpf_grant_direct failed");
+M:\minix\servers\vfs\request.c:1015: panic("req_slink: cpf_grant_direct failed");
+M:\minix\servers\vfs\request.c:1022: panic("req_slink: cpf_grant_magic failed");
+M:\minix\servers\vfs\request.c:1090: panic("req_stat: cpf_grant_* failed");
+M:\minix\servers\vfs\request.c:1159: panic("req_unlink: cpf_grant_direct failed");
+M:\minix\servers\vfs\select.c:560: panic("select copy_fdsets: nfds wrong: %d", nfds);
+M:\minix\servers\vfs\tll.c:106: default: panic("VFS: Incorrect lock state");
+M:\minix\servers\vfs\tll.c:150: panic("Invalid lock type %d\n", locktype);
+M:\minix\servers\vfs\utility.c:121: panic("isokendpt_f failed");
+M:\minix\servers\vfs\utility.c:145: panic("clock_timespec err: %d", r);
+M:\minix\servers\vfs\vmnt.c:18: BADVMP(v, __FILE__, __LINE__); panic("bad vmp"); }
+M:\minix\servers\vfs\vmnt.c:31: panic("Thread %d still holds vmnt lock on vmp %p call_nr=%d\n",
+M:\minix\servers\vfs\vmnt.c:36: panic("Thread %d still holds read locks on a vmnt (%d) call_nr=%d\n",
+M:\minix\servers\vfs\vmnt.c:55: if (count) panic("%d locked vmnts\n", count);
+M:\minix\servers\vfs\vmnt.c:56: #if 0
+M:\minix\servers\vfs\vnode.c:36: BADVP(v, __FILE__, __LINE__); panic("bad vp"); }
+M:\minix\servers\vfs\vnode.c:50: panic("Thread %d still holds vnode lock on vp %p call_nr=%d\n",
+M:\minix\servers\vfs\vnode.c:56: panic("Thread %d still holds read locks on a vnode (%d) call_nr=%d\n",
+M:\minix\servers\vfs\vnode.c:74: if (count) panic("%d locked vnodes\n", count);
+M:\minix\servers\vfs\vnode.c:75: #if 0
+M:\minix\servers\vfs\vnode.c:273: panic("put_vnode failed: bad v_ref_count %d\n", vp->v_ref_count);
+M:\minix\servers\vfs\vnode.c:277: panic("put_vnode failed: bad v_fs_count %d\n", vp->v_fs_count);
+M:\minix\servers\vfs\worker.c:28: panic("failed to initialize attribute");
+M:\minix\servers\vfs\worker.c:30: panic("couldn't set default thread stack size");
+M:\minix\servers\vfs\worker.c:32: panic("couldn't set default thread detach state");
+M:\minix\servers\vfs\worker.c:42: panic("failed to initialize mutex");
+M:\minix\servers\vfs\worker.c:44: panic("failed to initialize conditional variable");
+M:\minix\servers\vfs\worker.c:46: panic("unable to start thread");
+M:\minix\servers\vfs\worker.c:76: panic("Pending work inconsistency");
+M:\minix\servers\vfs\worker.c:255: panic("work cannot be both pending and active");
+M:\minix\servers\vfs\worker.c:259: panic("process has two calls (%x, %x)",
+M:\minix\servers\vfs\worker.c:264: panic("got two calls from PM (%x, %x)",
+M:\minix\servers\vfs\worker.c:271: #if 0
+M:\minix\servers\vfs\worker.c:279: panic("worker administration error");
+M:\minix\servers\vfs\worker.c:307: panic("unable to lock event mutex");
+M:\minix\servers\vfs\worker.c:309: panic("could not wait on conditional variable");
+M:\minix\servers\vfs\worker.c:311: panic("unable to unlock event mutex");
+M:\minix\servers\vfs\worker.c:323: panic("unable to lock event mutex");
+M:\minix\servers\vfs\worker.c:325: panic("unable to signal conditional variable");
+M:\minix\servers\vfs\worker.c:327: panic("unable to unlock event mutex");
+M:\minix\servers\vfs\worker.c:404: panic("reply storage consistency error");	/* Oh dear */
+M:\minix\servers\vfs\worker.c:461: panic("worker_set_proc: target process not idle");
+M:\minix\servers\vm\alloc.c:456: panic("alloc_mem: sys_memset failed: %d", s);
+M:\minix\servers\vm\alloc.c:472: panic("free_pages: sys_memset failed");
+M:\minix\servers\vm\exit.c:133: panic("VMPPARAM_CLEAR: pt_new failed");
+M:\minix\servers\vm\fdref.c:152: panic("fdref_deref: could not send close request");
+M:\minix\servers\vm\fork.c:92: panic("do_fork can't sys_fork: %d", r);
+M:\minix\servers\vm\fork.c:96: panic("fork can't pt_bind: %d", r);
+M:\minix\servers\vm\fork.c:105: panic("do_fork: handle_memory for child failed\n");
+M:\minix\servers\vm\fork.c:108: panic("do_fork: handle_memory for parent failed\n");
+M:\minix\servers\vm\main.c:103: panic("sef_receive_status() error: %d", r);
+M:\minix\servers\vm\main.c:112: panic("invalid caller %d", who_e);
+M:\minix\servers\vm\main.c:119: result = ENOSYS; /* Out of range or restricted calls return this. */
+M:\minix\servers\vm\main.c:167: panic("ipc_send() error");
+M:\minix\servers\vm\main.c:182: panic("vm: sys_safecopyfrom (rs) failed: %d", s);
+M:\minix\servers\vm\main.c:188: panic("unable to map service: %d", s);
+M:\minix\servers\vm\main.c:211: panic("proc: %d", ip->proc_nr);
+M:\minix\servers\vm\main.c:223: panic("no init_proc");
+M:\minix\servers\vm\main.c:251: panic("VM: exec: map_page_region for boot process failed");
+M:\minix\servers\vm\main.c:290: panic("VM: no new pagetable");
+M:\minix\servers\vm\main.c:293: panic("VM: pt_bind failed");
+M:\minix\servers\vm\main.c:297: panic("can't look at boot proc header");
+M:\minix\servers\vm\main.c:321: panic("vm: boot process load of process %s (ep=%d) failed\n",
+M:\minix\servers\vm\main.c:331: panic("vm: could not alloc stack for boot process %s (ep=%d)\n",
+M:\minix\servers\vm\main.c:338: panic("vm: could not map stack for boot process %s (ep=%d)\n",
+M:\minix\servers\vm\main.c:342: panic("vm: could not copy stack for boot process %s (ep=%d)\n",
+M:\minix\servers\vm\main.c:348: panic("vm: boot process exec of process %s (ep=%d) failed\n",
+M:\minix\servers\vm\main.c:353: panic("VMCTL_BOOTINHIBIT_CLEAR failed");
+M:\minix\servers\vm\main.c:380: panic("couldn't get bootinfo: %d", s);
+M:\minix\servers\vm\mem_anon.c:117: /* Shrinking not implemented; silently ignored.
+M:\minix\servers\vm\mem_anon_contig.c:49: panic("anon_contig_pagefault: pagefault cannot happen");
+M:\minix\servers\vm\mem_cache.c:105: if(vm_isokendpt(msg->m_source, &n) != OK) panic("bogus source");
+M:\minix\servers\vm\mem_cache.c:190: if(vm_isokendpt(msg->m_source, &n) != OK) panic("bogus source");
+M:\minix\servers\vm\mem_file.c:77: panic("cow_block: clearend failed\n");
+M:\minix\servers\vm\mem_file.c:127: #if 0
+M:\minix\servers\vm\mem_file.c:144: #if 0
+M:\minix\servers\vm\mem_shared.c:147: panic("missing region after pagefault handling");
+M:\minix\servers\vm\mem_shared.c:187: panic("initial getsrc failed");
+M:\minix\servers\vm\mem_shared.c:200: panic("copy: original getsrc failed");
+M:\minix\servers\vm\mmap.c:111: #if 0
+M:\minix\servers\vm\mmap.c:112: /* XXX ld.so relies on longer-than-file mapping */
+M:\minix\servers\vm\mmap.c:150: panic("bad ep %d from vfs", m->m_vm_vfs_mmap.who);
+M:\minix\servers\vm\mmap.c:174: #if 0   /* Noisy diagnostic for mmap() by ld.so */
+M:\minix\servers\vm\mmap.c:195: panic("VM: mmap_file_cont: ipc_send() failed");
+M:\minix\servers\vm\mmap.c:221: panic("do_mmap: message from strange source: %d",
+M:\minix\servers\vm\mmap.c:384: else panic("do_remap: can't be");
+M:\minix\servers\vm\mmap.c:508: panic("do_mmap: message from strange source: %d", m->m_source);
+M:\minix\servers\vm\pagefaults.c:87: panic("handle_pagefault: endpoint wrong: %d", ep);
+M:\minix\servers\vm\pagefaults.c:104: panic("sys_kill failed: %d", s);
+M:\minix\servers\vm\pagefaults.c:106: panic("do_pagefaults: sys_vmctl failed: %d", ep);
+M:\minix\servers\vm\pagefaults.c:115: panic("sys_kill failed: %d", s);
+M:\minix\servers\vm\pagefaults.c:117: panic("do_pagefaults: sys_vmctl failed: %d", ep);
+M:\minix\servers\vm\pagefaults.c:148: panic("sys_kill failed: %d", s);
+M:\minix\servers\vm\pagefaults.c:150: panic("do_pagefaults: sys_vmctl failed: %d", ep);
+M:\minix\servers\vm\pagefaults.c:158: panic("do_pagefaults: sys_vmctl failed: %d", ep);
+M:\minix\servers\vm\pagefaults.c:208: panic("handle_memory_continue: sys_vmctl failed: %d", r);
+M:\minix\servers\vm\pagefaults.c:222: panic("handle_memory_final: asynsend3 failed");
+M:\minix\servers\vm\pagefaults.c:310: panic("do_memory: bad endpoint: %d", who);
+M:\minix\servers\vm\pagetable.c:136: panic("pt_sanitycheck: passed pt not in any proc");
+M:\minix\servers\vm\pagetable.c:240: panic("vm_freepages: pt_writemap failed");
+M:\minix\servers\vm\pagetable.c:249: panic("VMCTL_FLUSHTLB failed");
+M:\minix\servers\vm\pagetable.c:314: panic("VMCTL_FLUSHTLB failed: %d", r);
+M:\minix\servers\vm\pagetable.c:349: else panic("%d pages", pages);
+M:\minix\servers\vm\pagetable.c:421: panic("vm_lockpage: pt_writemap failed");
+M:\minix\servers\vm\pagetable.c:425: panic("VMCTL_FLUSHTLB failed: %d", r);
+M:\minix\servers\vm\pagetable.c:530: | ARCH_VM_PDE_PRESENT | ARM_VM_PDE_DOMAIN; //LSC FIXME
+M:\minix\servers\vm\pagetable.c:749: panic("VMCTL_CLEARMAPCACHE failed");
+M:\minix\servers\vm\pagetable.c:791: /* FIXME
+M:\minix\servers\vm\pagetable.c:1085: panic("pt_init: sys_umap failed: %d", r);
+M:\minix\servers\vm\pagetable.c:1097: panic("reservedqueue_new for single pages failed");
+M:\minix\servers\vm\pagetable.c:1105: panic("pt_init: sys_umap failed: %d", r);
+M:\minix\servers\vm\pagetable.c:1134: panic("VM: too many kernel mappings: %d", pindex);
+M:\minix\servers\vm\pagetable.c:1169: panic("VM: addr unaligned: %lu", addr);
+M:\minix\servers\vm\pagetable.c:1171: panic("VM: len unaligned: %lu", len);
+M:\minix\servers\vm\pagetable.c:1174: panic("VM: reply failed");
+M:\minix\servers\vm\pagetable.c:1201: panic("no virt addr for vm mappings");
+M:\minix\servers\vm\pagetable.c:1213: | ARM_VM_PDE_DOMAIN; //LSC FIXME
+M:\minix\servers\vm\pagetable.c:1228: panic("vm pt_new failed");
+M:\minix\servers\vm\pagetable.c:1237: panic("VM: sys_vmctl_get_pdbr failed");
+M:\minix\servers\vm\pagetable.c:1245: panic("VM: sys_vircopy failed");
+M:\minix\servers\vm\pagetable.c:1262: panic("pt_ptalloc failed");
+M:\minix\servers\vm\pagetable.c:1277: panic("pt_init: abscopy failed");
+M:\minix\servers\vm\pagetable.c:1340: | ARCH_VM_PTE_USER; //LSC FIXME
+M:\minix\servers\vm\pb.c:126: panic("unref failed, %d", r);
+M:\minix\servers\vm\pb.c:154: panic("VM: abscopy failed\n");
+M:\minix\servers\vm\region.c:628: panic("process has no regions: %d", vmp->vm_endpoint);
+M:\minix\servers\vm\region.c:726: #if 0
+M:\minix\servers\vm\region.c:752: panic("map_pf: pt_checkrange failed: %d", r);
+M:\minix\servers\vm\region.c:793: panic("map_pin_memory: map_handle_memory failed: %d", r);
+M:\minix\servers\vm\region.c:1093: printf("VM: low-shrinking not implemented for %s\n",
+M:\minix\servers\vm\region.c:1161: printf("VM: split region not implemented for %s\n",
+M:\minix\servers\vm\rs.c:116: panic("ipc_send() error");
+M:\minix\servers\vm\rs.c:197: #if 0
+M:\minix\servers\vm\sanitycheck.h:17: panic("sanity check failed"); } } while(0)
+M:\minix\servers\vm\sanitycheck.h:44: panic("SLABSANE failed");	\
+M:\minix\servers\vm\slaballoc.c:332: panic("slaballoc: slabsane failed");
+M:\minix\servers\vm\slaballoc.c:416: panic("slabfree objstats failed");
+M:\minix\servers\vm\slaballoc.c:472: panic("slablock objstats failed");
+M:\minix\servers\vm\slaballoc.c:491: panic("slabunlock objstats failed");
+M:\minix\servers\vm\utility.c:59: /* XXX Any memory chunk in excess of NR_MEMS is silently ignored. */
+M:\minix\servers\vm\utility.c:329: panic("flushtlb failed");
+M:\minix\servers\vm\vfs.c:53: panic("VM: asynsend to VFS failed");
+M:\minix\drivers\audio\es1370\ak4531.c:45: #if 0
+M:\minix\drivers\audio\es1370\es1370.c:620: /* TODO: is this inw useful? */
+M:\minix\drivers\audio\es1371\AC97.c:58: #if 0
+M:\minix\drivers\audio\es1371\AC97.c:89: /* todo: why are we writing an undefined register? */
+M:\minix\drivers\audio\es1371\AC97.c:135: #if 0
+M:\minix\drivers\audio\es1371\AC97.c:156: /* todo: how do we solve the lock() problem? */
+M:\minix\drivers\audio\es1371\AC97.c:175: /* todo: why are we putting data in the mem page register??? */
+M:\minix\drivers\audio\es1371\codec.c:47: /* todo: why are we writing an undefined register? */
+M:\minix\drivers\audio\es1371\codec.c:112: /* todo: how do we solve the lock() problem? */
+M:\minix\drivers\audio\es1371\codec.c:131: /* todo: why are we putting data in the mem page register??? */
+M:\minix\drivers\audio\es1371\es1371.c:622: /* TODO: is this statement useful? */
+M:\minix\drivers\audio\sb16\sb16.c:437: panic("sys_inb() failed: %d", s);
+M:\minix\drivers\audio\sb16\sb16.c:448: panic("sys_outb() failed: %d", s);
+M:\minix\drivers\bus\i2c\README.txt:4: TODO: this probably belongs on the wiki
+M:\minix\drivers\bus\i2c\arch\earm\omap_i2c.c:825: panic("Unable to obtain i2c memory range privileges");
+M:\minix\drivers\bus\i2c\arch\earm\omap_i2c.c:833: panic("Unable to map i2c registers");
+M:\minix\drivers\bus\i2c\arch\earm\omap_i2c.c:862: panic("Don't know how to read i2c revision.");
+M:\minix\drivers\bus\pci\main.c:370: #if 0
+M:\minix\drivers\bus\pci\pci.c:120: #if 0
+M:\minix\drivers\bus\pci\pci.c:175: panic("PCI: Cannot use APIC mode without ACPI!\n");
+M:\minix\drivers\bus\pci\pci.c:186: panic("sys_safecopyfrom failed: %d", r);
+M:\minix\drivers\bus\pci\pci.c:191: panic("unable to map service: %d", r);
+M:\minix\drivers\bus\pci\pci.c:291: #if 0
+M:\minix\drivers\bus\pci\pci.c:313: #if 0
+M:\minix\drivers\bus\pci\pci.c:343: #if 0
+M:\minix\drivers\bus\pci\pci.c:698: #if 0
+M:\minix\drivers\bus\pci\pci.c:720: panic("too many PCI busses: %d", nr_pcibus);
+M:\minix\drivers\bus\pci\pci.c:789: panic("too many PCI devices: %d", nr_pcidev);
+M:\minix\drivers\bus\pci\pci.c:809: #if 0
+M:\minix\drivers\bus\pci\pci.c:920: #if 0
+M:\minix\drivers\bus\pci\pci.c:926: panic("too many PCI devices: %d", nr_pcidev);
+M:\minix\drivers\bus\pci\pci.c:965: panic("PCI: error %d while receiveing from ACPI\n", err);
+M:\minix\drivers\bus\pci\pci.c:1384: return width;	/* Reg. is not implemented */
+M:\minix\drivers\bus\pci\pci.c:1434: "complete_bridge: updating subordinate bus number not implemented\n");
+M:\minix\drivers\bus\pci\pci.c:1465: panic("can't get kinfo");
+M:\minix\drivers\bus\pci\pci.c:1516: panic(NULL);
+M:\minix\drivers\bus\pci\pci.c:1537: #if 0
+M:\minix\drivers\bus\pci\pci.c:1560: panic("iogap_high too low: %d", iogap_high);
+M:\minix\drivers\bus\pci\pci.c:1579: panic("memory base too low: %d", base);
+M:\minix\drivers\bus\pci\pci.c:1614: panic("I/O base too low: %d", base);
+M:\minix\drivers\bus\pci\pci.c:1672: "update_bridge4dev_io: not implemented for PCI bridges\n");
+M:\minix\drivers\bus\pci\pci.c:1676: panic("update_bridge4dev_io: strange bus type: %d", type);
+M:\minix\drivers\bus\pci\pci.c:1796: panic("unknown ISA bridge type: %d", type);
+M:\minix\drivers\bus\pci\pci.c:1813: "(warning) unsupported ISA bridge %04X:%04X for bus %d\n",
+M:\minix\drivers\bus\pci\pci.c:1836: panic("PCI: error %d while receiveing from ACPI\n", err);
+M:\minix\drivers\bus\pci\pci.c:1859: #if 0
+M:\minix\drivers\bus\pci\pci.c:1867: #if 0
+M:\minix\drivers\bus\pci\pci.c:1894: #if 0
+M:\minix\drivers\bus\pci\pci.c:1939: panic("too many PCI busses: %d", nr_pcibus);
+M:\minix\drivers\bus\pci\pci.c:1970: panic("unknown PCI-PCI bridge type: %d", type);
+M:\minix\drivers\bus\pci\pci.c:2010: panic("get_busind: can't find bus: %d", busnr);
+M:\minix\drivers\bus\pci\pci.c:2073: panic("too many PCI devices: %d", nr_pcidev);
+M:\minix\drivers\bus\pci\pci.c:2193: #if 0
+M:\minix\drivers\bus\pci\pci.c:2355: #if 0
+M:\minix\drivers\bus\pci\pci.c:2382: #if 0
+M:\minix\drivers\bus\pci\pci.c:2405: #if 0
+M:\minix\drivers\bus\pci\pci.c:2406: printf("pcibr_via_wsts(%d, 0x%X), devind= %d (not implemented)\n",
+M:\minix\drivers\bus\pci\pci.c:2440: #if 0
+M:\minix\drivers\bus\pci\pci.c:2462: #if 0
+M:\minix\drivers\bus\pci\pci.c:2484: #if 0
+M:\minix\drivers\bus\pci\pci.c:2504: #if 0
+M:\minix\drivers\bus\pci\pci.c:2528: #if 0
+M:\minix\drivers\bus\pci\pci.c:2552: #if 0
+M:\minix\drivers\bus\pci\pci.c:2705: #if 0
+M:\minix\drivers\bus\pci\pci.c:2736: #if 0
+M:\minix\drivers\bus\pci\pci.h:90: #if 0
+M:\minix\drivers\bus\pci\pci_table.c:270: #if 0
+M:\minix\drivers\bus\pci\pci_table.c:316: #if 0
+M:\minix\drivers\bus\ti1225\ti1225.c:60: panic("driver_receive failed: %d", r);
+M:\minix\drivers\bus\ti1225\ti1225.c:95: panic("tsc_calibrate failed: %d", r);
+M:\minix\drivers\bus\ti1225\ti1225.c:170: panic("hw_init: vm_map_phys failed");
+M:\minix\drivers\bus\ti1225\ti1225.c:201: panic("bad legacy-mode base address: %d", v32);
+M:\minix\drivers\bus\ti1225\ti1225.c:214: panic("sys_irqsetpolicy failed: %d", r);
+M:\minix\drivers\bus\ti1225\ti1225.c:244: panic("unable enable interrupts: %d", r);
+M:\minix\drivers\bus\ti1225\ti1225.c:431: panic("unable enable interrupts: %d", r);
+M:\minix\drivers\clock\readclock\arch\earm\arch_readclock.c:44: return ENOSYS;
+M:\minix\drivers\clock\readclock\arch\earm\omap_rtc.c:210: log_warn(&log, "unsupported processor\n");
+M:\minix\drivers\clock\readclock\arch\earm\omap_rtc.c:211: return ENOSYS;
+M:\minix\drivers\clock\readclock\arch\i386\arch_readclock.c:311: /* Not Implemented */
+M:\minix\drivers\clock\readclock\arch\i386\arch_readclock.c:312: return ENOSYS;
+M:\minix\drivers\hid\pckbd\pckbd.c:246: panic("kbc_read failed to complete");
+M:\minix\drivers\hid\pckbd\pckbd.c:264: panic("Couldn't set keyboard IRQ policy: %d", r);
+M:\minix\drivers\hid\pckbd\pckbd.c:266: panic("Couldn't enable keyboard IRQs: %d", r);
+M:\minix\drivers\hid\pckbd\pckbd.c:272: panic("Couldn't set AUX IRQ policy: %d", r);
+M:\minix\drivers\hid\pckbd\pckbd.c:274: panic("Couldn't enable AUX IRQs: %d", r);
+M:\minix\drivers\iommu\amddev\amddev.c:59: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:84: panic("driver_receive failed: %d", r);
+M:\minix\drivers\iommu\amddev\amddev.c:109: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:150: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:162: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:295: panic("malloc failed");
+M:\minix\drivers\iommu\amddev\amddev.c:334: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:347: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:421: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:442: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:453: #if 0
+M:\minix\drivers\iommu\amddev\amddev.c:458: #if 0
+M:\minix\drivers\net\atl2\atl2.c:142: #ifdef PCI_CAP_VPD	/* FIXME: just a guess at the future name */
+M:\minix\drivers\net\atl2\atl2.c:513: panic("unable to retrieve bar: %d", r);
+M:\minix\drivers\net\atl2\atl2.c:516: panic("invalid register bar");
+M:\minix\drivers\net\atl2\atl2.c:520: panic("unable to map in registers");
+M:\minix\drivers\net\atl2\atl2.c:523: panic("unable to allocate DMA buffers: %d", r);
+M:\minix\drivers\net\atl2\atl2.c:529: panic("unable to register IRQ: %d", r);
+M:\minix\drivers\net\atl2\atl2.c:532: panic("unable to reset hardware");
+M:\minix\drivers\net\atl2\atl2.c:535: panic("unable to enable IRQ: %d", r);
+M:\minix\drivers\net\atl2\atl2.c:739: panic("unable to reply: %d", r);
+M:\minix\drivers\net\atl2\atl2.c:788: panic("vector copy failed: %d", r);
+M:\minix\drivers\net\atl2\atl2.c:797: panic("safe copy failed: %d", r);
+M:\minix\drivers\net\atl2\atl2.c:886: panic("vector copy failed: %d", r);
+M:\minix\drivers\net\atl2\atl2.c:902: panic("safe copy failed: %d", r);
+M:\minix\drivers\net\atl2\atl2.c:910: panic("safe copy failed: %d", r);
+M:\minix\drivers\net\atl2\atl2.c:1010: panic("unable to enable IRQ: %d", r);
+M:\minix\drivers\net\atl2\atl2.c:1173: panic("no matching device found");
+M:\minix\drivers\net\atl2\atl2.c:1208: panic("unable to deregister IRQ: %d", r);
+M:\minix\drivers\net\atl2\atl2.c:1260: panic("netdriver_receive failed: %d", r);
+M:\minix\drivers\net\dec21140A\dec21140A.c:87: panic("netdriver_receive failed: %d", r);
+M:\minix\drivers\net\dec21140A\dec21140A.c:121: panic("illegal message: %d", m.m_type);
+M:\minix\drivers\net\dec21140A\dec21140A.c:181: panic("%s %d", str_CopyErrMsg, rc);
+M:\minix\drivers\net\dec21140A\dec21140A.c:186: panic("%s %d", str_StatErrMsg, rc);
+M:\minix\drivers\net\dec21140A\dec21140A.c:230: /* TODO CHECK PROMISC AND MULTI */
+M:\minix\drivers\net\dec21140A\dec21140A.c:257: panic("%s %d", str_SendErrMsg, mp->m_source);
+M:\minix\drivers\net\dec21140A\dec21140A.c:277: panic("%s %d", str_SendErrMsg, r);
+M:\minix\drivers\net\dec21140A\dec21140A.c:314: panic("de_probe: base address invalid: %d", dep->de_base_port);
+M:\minix\drivers\net\dec21140A\dec21140A.c:325: printf("%s: unsupported device\n", str_DevName);
+M:\minix\drivers\net\dec21140A\dec21140A.c:339: /* TODO: validate SROM content */
+M:\minix\drivers\net\dec21140A\dec21140A.c:451: /*TODO: multi-descr msgs...*/
+M:\minix\drivers\net\dec21140A\dec21140A.c:481: panic("%s %d", str_SizeErrMsg, size);
+M:\minix\drivers\net\dec21140A\dec21140A.c:486: /*TODO: Complain to MS */
+M:\minix\drivers\net\dec21140A\dec21140A.c:487: /*HACK: VPC2007 returns packet of invalid size. Ethernet standard
+M:\minix\drivers\net\dec21140A\dec21140A.c:497: incomplete frames to us, so this hack is safe
+M:\minix\drivers\net\dec21140A\dec21140A.c:503: /* End ugly hack */
+M:\minix\drivers\net\dec21140A\dec21140A.c:519: panic("%s %d", str_CopyErrMsg, r);
+M:\minix\drivers\net\dec21140A\dec21140A.c:615: if(r != OK) panic("umap failed: %d", r);
+M:\minix\drivers\net\dec21140A\dec21140A.c:630: if(r != OK) panic("%s %d", str_UmapErrMsg, r);
+M:\minix\drivers\net\dec21140A\dec21140A.c:634: if(r != OK) panic("%s %d", str_UmapErrMsg, r);
+M:\minix\drivers\net\dec21140A\dec21140A.c:647: panic("%s %d", str_UmapErrMsg, r);
+M:\minix\drivers\net\dec21140A\dec21140A.c:652: panic("%s 0x%lx", str_AlignErrMsg, temp);
+M:\minix\drivers\net\dec21140A\dec21140A.c:677: panic("Abnormal Int CSR5=: %d", val);
+M:\minix\drivers\net\dec21140A\dec21140A.c:784: panic("%s %d", str_CopyErrMsg, rc);
+M:\minix\drivers\net\dec21140A\dec21140A.c:812: panic("%s", str_BusyErrMsg);
+M:\minix\drivers\net\dec21140A\dec21140A.c:834: panic("%s %d", str_SizeErrMsg, size);
+M:\minix\drivers\net\dec21140A\dec21140A.c:848: panic("%s %d", str_CopyErrMsg, r);
+M:\minix\drivers\net\dec21140A\dec21140A.c:878: panic("should not happen: %d", 0);
+M:\minix\drivers\net\dp8390\3c503.c:99: if (irq < 2 || irq > 5) panic("bad 3c503 irq configuration: %d", irq);
+M:\minix\drivers\net\dp8390\dp8390.c:150: panic("unable enable interrupts: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:171: panic("dp8390: netdriver_receive failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:182: panic("dp8390: illegal notify from: %d",
+M:\minix\drivers\net\dp8390\dp8390.c:197: panic("dp8390: illegal message: %d", m.m_type);
+M:\minix\drivers\net\dp8390\dp8390.c:235: panic("A head which at this time has no name");
+M:\minix\drivers\net\dp8390\dp8390.c:265: #if 0
+M:\minix\drivers\net\dp8390\dp8390.c:277: #if XXX
+M:\minix\drivers\net\dp8390\dp8390.c:380: panic("dp8390: send already in progress");
+M:\minix\drivers\net\dp8390\dp8390.c:386: panic("dp8390: should not be sending");
+M:\minix\drivers\net\dp8390\dp8390.c:408: panic("dp8390: invalid packet size: %d", size);
+M:\minix\drivers\net\dp8390\dp8390.c:465: panic("dp8390: read already in progress");
+M:\minix\drivers\net\dp8390\dp8390.c:480: panic("dp8390: wrong packet size: %d", size);
+M:\minix\drivers\net\dp8390\dp8390.c:592: panic("do_getstat: ipc_send failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:608: panic("do_getstat: ipc_send failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:751: panic("sys_irqsetpolicy failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:756: panic("unable enable interrupts: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:785: if (i != 0 && i != 6) env_panic(eakey);	/* It's all or nothing */
+M:\minix\drivers\net\dp8390\dp8390.c:852: panic("dp8390: got premature interrupt");
+M:\minix\drivers\net\dp8390\dp8390.c:874: #if 0	/* Reserved in later manuals, should be ignored */
+M:\minix\drivers\net\dp8390\dp8390.c:948: #if 0
+M:\minix\drivers\net\dp8390\dp8390.c:970: #if 0
+M:\minix\drivers\net\dp8390\dp8390.c:1205: panic("dp_user2nic_s: sys_safecopyfrom failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:1258: panic("dp_pio8_user2nic_s: sys_safe_outsb failed: %d",
+M:\minix\drivers\net\dp8390\dp8390.c:1273: panic("dp8390: remote dma failed to complete");
+M:\minix\drivers\net\dp8390\dp8390.c:1330: panic("dp_pio16_user2nic: sys_safecopyfrom failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:1346: panic("dp_pio16_user2nic: sys_safe_outsw failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:1358: panic("dp_pio16_user2nic: sys_safecopyfrom failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:1378: panic("dp8390: remote dma failed to complete");
+M:\minix\drivers\net\dp8390\dp8390.c:1421: panic("dp_nic2user_s: sys_safecopyto failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:1471: panic("dp_pio8_nic2user_s: sys_safe_insb failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:1531: panic("dp_pio16_nic2user: sys_safecopyto failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:1546: panic("dp_pio16_nic2user: sys_safe_insw failed: %d",
+M:\minix\drivers\net\dp8390\dp8390.c:1561: panic("dp_pio16_nic2user: sys_safecopyto failed: %d",
+M:\minix\drivers\net\dp8390\dp8390.c:1619: /* XXX */ if (dep->de_linmem == 0) dep->de_linmem= 0xFFFF0000;
+M:\minix\drivers\net\dp8390\dp8390.c:1688: #if 0
+M:\minix\drivers\net\dp8390\dp8390.c:1699: panic("map_hw_buffer: vm_map_phys failed");
+M:\minix\drivers\net\dp8390\dp8390.c:1752: panic("dp8390: ipc_send failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:1766: panic("dp8390: unable to mess_reply");
+M:\minix\drivers\net\dp8390\dp8390.c:1784: panic("get_userdata: sys_safecopyfrom failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:1801: panic("put_userdata: sys_safecopyto failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:1813: panic("sys_inb failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:1825: panic("sys_inw failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:1835: panic("sys_outb failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:1844: panic("sys_outw failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:1863: panic("sys_sdevio failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.c:1872: panic("sys_sdevio failed: %d", r);
+M:\minix\drivers\net\dp8390\dp8390.h:186: #if 0
+M:\minix\drivers\net\dp8390\rtl8029.c:26: #if 0
+M:\minix\drivers\net\dp8390\rtl8029.c:67: panic("base address is not properly configured");
+M:\minix\drivers\net\dp8390\rtl8029.c:138: #if 0
+M:\minix\drivers\net\dp8390\rtl8029.c:144: #if 0
+M:\minix\drivers\net\dp8390\rtl8029.c:162: if (getenv("RTL8029XXX"))
+M:\minix\drivers\net\dp8390\rtl8029.c:175: #if 0
+M:\minix\drivers\net\dp8390\rtl8029.c:285: panic("set_ee_word: device remains busy");
+M:\minix\drivers\net\dpeth\3c501.c:154: panic("out of memory for Tx");
+M:\minix\drivers\net\dpeth\3c501.c:168: panic("should not be sending ");
+M:\minix\drivers\net\dpeth\3c501.c:171: if (from_int) panic("should not be sending ");
+M:\minix\drivers\net\dpeth\3c503.c:82: if (irq < 2 || irq > 5) panic("bad 3c503 irq configuration: %d", irq);
+M:\minix\drivers\net\dpeth\3c509.c:132: panic("el3_write_fifo: sys_safe_outsb failed: %d", r);
+M:\minix\drivers\net\dpeth\3c509.c:417: panic("Bad I/O port for Etherlink board");
+M:\minix\drivers\net\dpeth\3c509.c:421: if (ResCfgReg != dep->de_irq) panic("Bad IRQ for Etherlink board");
+M:\minix\drivers\net\dpeth\8390.c:26: #if 0
+M:\minix\drivers\net\dpeth\8390.c:31: #if 0
+M:\minix\drivers\net\dpeth\8390.c:77: panic("mem_getblock: not converted to safecopies");
+M:\minix\drivers\net\dpeth\8390.c:78: #if 0
+M:\minix\drivers\net\dpeth\8390.c:90: panic("mem_nic2user: not converted to safecopies");
+M:\minix\drivers\net\dpeth\8390.c:91: #if 0
+M:\minix\drivers\net\dpeth\8390.c:139: panic("mem_user2nic: not converted to safecopies");
+M:\minix\drivers\net\dpeth\8390.c:219: panic("pio_nic2user: sys_safe_insb failed: %d", 				r);
+M:\minix\drivers\net\dpeth\8390.c:231: panic("pio_nic2user: sys_safe_insb failed: %d", r);
+M:\minix\drivers\net\dpeth\8390.c:263: panic("pio_user2nic: sys_safe_outsb failed: %d", r);
+M:\minix\drivers\net\dpeth\8390.c:276: panic("%s", RdmaErrMsg);
+M:\minix\drivers\net\dpeth\8390.c:330: if (from_int) panic("should not be sending ");
+M:\minix\drivers\net\dpeth\8390.c:428: /* Hack: ignore packets of a given protocol */
+M:\minix\drivers\net\dpeth\8390.c:458: #if 0
+M:\minix\drivers\net\dpeth\8390.c:653: if (!phys_user) panic(UmapErrMsg);
+M:\minix\drivers\net\dpeth\8390.c:690: panic(RdmaErrMsg);
+M:\minix\drivers\net\dpeth\8390.c:726: if (!phys_user) panic(UmapErrMsg);
+M:\minix\drivers\net\dpeth\dp.c:72: panic(SendErrMsg, r);
+M:\minix\drivers\net\dpeth\dp.c:197: panic(CopyErrMsg, rc);
+M:\minix\drivers\net\dpeth\dp.c:221: panic("unable to set IRQ policy");
+M:\minix\drivers\net\dpeth\dp.c:307: panic(SendErrMsg, mp->m_source);
+M:\minix\drivers\net\dpeth\dp.c:363: panic("send already in progress ");
+M:\minix\drivers\net\dpeth\dp.c:373: panic(SizeErrMsg, size);
+M:\minix\drivers\net\dpeth\dp.c:401: panic("read already in progress");
+M:\minix\drivers\net\dpeth\dp.c:410: if (size < ETH_MAX_PACK_SIZE) panic(SizeErrMsg, size);
+M:\minix\drivers\net\dpeth\dp.c:414: #if 0
+M:\minix\drivers\net\dpeth\dp.c:441: panic(CopyErrMsg, rc);
+M:\minix\drivers\net\dpeth\dp.c:446: panic("do_getname: ipc_send failed: %d", rc);
+M:\minix\drivers\net\dpeth\dp.c:512: panic(RecvErrMsg, rc);
+M:\minix\drivers\net\dpeth\dp.c:533: panic(TypeErrMsg, m.m_type);
+M:\minix\drivers\net\dpeth\dp.c:554: panic(TypeErrMsg, m.m_type);
+M:\minix\drivers\net\dpeth\netbuff.c:124: panic("mem2user: sys_safecopyto failed: %d", r);
+M:\minix\drivers\net\dpeth\netbuff.c:154: panic("user2mem: sys_safecopyfrom failed: %d", r);
+M:\minix\drivers\net\e1000\e1000.c:76: panic("netdriver_receive failed: %d", r);
+M:\minix\drivers\net\e1000\e1000.c:99: panic("illegal message: %d", m.m_type);
+M:\minix\drivers\net\e1000\e1000.c:144: panic("tsc_calibrate failed: %d", r);
+M:\minix\drivers\net\e1000\e1000.c:293: panic("failed to reserve PCI device: %d", r);
+M:\minix\drivers\net\e1000\e1000.c:299: panic("failed to get PCI BAR (%d)", r);
+M:\minix\drivers\net\e1000\e1000.c:300: if (ioflag) panic("PCI BAR is not for memory");
+M:\minix\drivers\net\e1000\e1000.c:304: panic("failed to map hardware registers from PCI");
+M:\minix\drivers\net\e1000\e1000.c:307: /* FIXME: enable DMA bus mastering if necessary. This is disabled by
+M:\minix\drivers\net\e1000\e1000.c:336: panic("e1000: couldn't map in flash.");
+M:\minix\drivers\net\e1000\e1000.c:377: panic("sys_irqsetpolicy failed: %d", r);
+M:\minix\drivers\net\e1000\e1000.c:381: panic("sys_irqenable failed: %d", r);
+M:\minix\drivers\net\e1000\e1000.c:497: panic("failed to allocate RX descriptors");
+M:\minix\drivers\net\e1000\e1000.c:510: panic("failed to allocate RX buffers");
+M:\minix\drivers\net\e1000\e1000.c:526: panic("failed to allocate TX descriptors");
+M:\minix\drivers\net\e1000\e1000.c:539: panic("failed to allocate TX buffers");
+M:\minix\drivers\net\e1000\e1000.c:622: panic("sys_safecopyfrom() failed: %d", r);
+M:\minix\drivers\net\e1000\e1000.c:647: panic("sys_safecopyfrom() failed: %d", r);
+M:\minix\drivers\net\e1000\e1000.c:714: panic("sys_safecopyfrom() failed: %d", r);
+M:\minix\drivers\net\e1000\e1000.c:750: panic("sys_safecopyto() failed: %d", r);
+M:\minix\drivers\net\e1000\e1000.c:801: panic("e1000_getstat: ipc_send() failed: %d", r);
+M:\minix\drivers\net\e1000\e1000.c:823: panic("failed to re-enable IRQ");
+M:\minix\drivers\net\e1000\e1000.c:1193: panic("ipc_send() failed: %d", r);
+M:\minix\drivers\net\e1000\e1000.c:1206: panic("unable to send reply message");
+M:\minix\drivers\net\fxp\fxp.c:201: panic("unable enable interrupts: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:232: panic("netdriver_receive failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:243: panic(" illegal notify from: %d", m.m_source);
+M:\minix\drivers\net\fxp\fxp.c:257: panic(" illegal message: %d", m.m_type);
+M:\minix\drivers\net\fxp\fxp.c:302: panic("couldn't allocate table: %d", ENOMEM);
+M:\minix\drivers\net\fxp\fxp.c:307: panic("tsc_calibrate failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:457: panic("fxp_probe: base address is not properly configured");
+M:\minix\drivers\net\fxp\fxp.c:621: panic("fxp_conf_hw: bad device type: %d", fp->fxp_type);
+M:\minix\drivers\net\fxp\fxp.c:659: panic("sys_irqsetpolicy failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:665: panic("sys_irqenable failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:675: panic("sys_umap failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:728: panic("fxp_init_buf: unable to alloc_contig size: %d", 			alloc_bufsize);
+M:\minix\drivers\net\fxp\fxp.c:741: panic("sys_umap failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:744: #if 0
+M:\minix\drivers\net\fxp\fxp.c:758: panic("sys_umap failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:777: panic("sys_umap failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:788: panic("sys_umap failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:849: if (i != 0 && i != 6) env_panic(eakey);	/* It's all or nothing */
+M:\minix\drivers\net\fxp\fxp.c:871: panic("sys_umap failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:879: panic("fxp_confaddr: CU command failed to complete");
+M:\minix\drivers\net\fxp\fxp.c:881: panic("fxp_confaddr: CU command failed");
+M:\minix\drivers\net\fxp\fxp.c:1000: panic("fxp_writev: sys_safecopyfrom failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:1006: panic("fxp_writev: invalid packet size: %d", size + s);
+M:\minix\drivers\net\fxp\fxp.c:1012: panic("fxp_writev_s: sys_safecopyfrom failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:1019: panic("fxp_writev: invalid packet size: %d", size);
+M:\minix\drivers\net\fxp\fxp.c:1056: panic("fxp: should not be sending");
+M:\minix\drivers\net\fxp\fxp.c:1135: panic("fxp_readv_s: sys_safecopyfrom failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:1150: panic("fxp_readv: sys_safecopyto failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:1251: panic("sys_umap failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:1259: panic("fxp_do_conf: CU command failed to complete");
+M:\minix\drivers\net\fxp\fxp.c:1261: panic("fxp_do_conf: CU command failed");
+M:\minix\drivers\net\fxp\fxp.c:1284: panic("fxp_cu_ptr_cmd: CU is not idle");
+M:\minix\drivers\net\fxp\fxp.c:1302: panic("fxp_cu_ptr_cmd: CU does not accept command");
+M:\minix\drivers\net\fxp\fxp.c:1324: panic("fxp_ru_ptr_cmd: RU is not idle");
+M:\minix\drivers\net\fxp\fxp.c:1339: panic("fxp_ru_ptr_cmd: RU does not accept command");
+M:\minix\drivers\net\fxp\fxp.c:1369: panic("fxp_restart_ru: RU is in an unexpected state");
+M:\minix\drivers\net\fxp\fxp.c:1402: panic("fxp_getstat: CU command failed to complete");
+M:\minix\drivers\net\fxp\fxp.c:1404: panic("fxp_getstat: bad magic");
+M:\minix\drivers\net\fxp\fxp.c:1435: panic("fxp_getstat_s: sys_safecopyto failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:1440: panic("fxp_getstat_s: ipc_send failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:1947: panic("fxp: ipc_send failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:1961: panic("fxp: unable to mess_reply");
+M:\minix\drivers\net\fxp\fxp.c:2062: panic("eeprom_addrsize: failed");
+M:\minix\drivers\net\fxp\fxp.c:2099: panic("mii_read: MDI not ready");
+M:\minix\drivers\net\fxp\fxp.c:2111: panic("mii_read: MDI not ready after command");
+M:\minix\drivers\net\fxp\fxp.c:2126: panic("sys_inb failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:2137: panic("sys_inl failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:2147: panic("sys_outb failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:2156: panic("sys_outl failed: %d", r);
+M:\minix\drivers\net\fxp\fxp.c:2173: #if 0
+M:\minix\drivers\net\fxp\fxp.h:485: u32_t sc_rx_fcu;	/* Receive Flow Control Unsupported */
+M:\minix\drivers\net\lan8710a\lan8710a.c:73: panic("netdriver_receive failed: %d", r);
+M:\minix\drivers\net\lan8710a\lan8710a.c:97: panic("Illegal message: %d", m.m_type);
+M:\minix\drivers\net\lan8710a\lan8710a.c:176: panic("sys_irqenable failed: %d", r);
+M:\minix\drivers\net\lan8710a\lan8710a.c:181: panic("sys_irqenable failed: %d", r);
+M:\minix\drivers\net\lan8710a\lan8710a.c:328: panic("Unable to request permission to map memory");
+M:\minix\drivers\net\lan8710a\lan8710a.c:333: panic("lan8710a_state.regs_cp_per: vm_map_phys failed");
+M:\minix\drivers\net\lan8710a\lan8710a.c:338: panic("lan8710a_state.regs_cpdma_stram: vm_map_phys failed");
+M:\minix\drivers\net\lan8710a\lan8710a.c:343: panic("lan8710a_state.regs_cpsw_cpdma: vm_map_phys failed");
+M:\minix\drivers\net\lan8710a\lan8710a.c:348: panic("lan8710a_state.regs_cpsw_ale: vm_map_phys failed");
+M:\minix\drivers\net\lan8710a\lan8710a.c:353: panic("lan8710a_state.regs_cpsw_sl: vm_map_phys failed");
+M:\minix\drivers\net\lan8710a\lan8710a.c:358: panic("lan8710a_state.regs_cpsw_ss: vm_map_phys failed");
+M:\minix\drivers\net\lan8710a\lan8710a.c:363: panic("lan8710a_state.regs_cpsw_wr: vm_map_phys failed");
+M:\minix\drivers\net\lan8710a\lan8710a.c:368: panic("lan8710a_state.regs_ctrl_mod: vm_map_phys failed");
+M:\minix\drivers\net\lan8710a\lan8710a.c:373: panic("lan8710a_state.regs_intc: vm_map_phys failed");
+M:\minix\drivers\net\lan8710a\lan8710a.c:378: panic("lan8710a_state.regs_mdio: vm_map_phys failed");
+M:\minix\drivers\net\lan8710a\lan8710a.c:385: panic("Unable to request permission to map memory");
+M:\minix\drivers\net\lan8710a\lan8710a.c:392: panic("lan8710a_state.rx_desc: vm_map_phys failed");
+M:\minix\drivers\net\lan8710a\lan8710a.c:397: panic("lan8710a_state.tx_desc: vm_map_phys failed");
+M:\minix\drivers\net\lan8710a\lan8710a.c:404: panic("Unable to request permission to map memory");
+M:\minix\drivers\net\lan8710a\lan8710a.c:409: panic("lan8710a_state.regs_cpsw_stats: vm_map_phys failed");
+M:\minix\drivers\net\lan8710a\lan8710a.c:446: panic("lan8710a_getstat: ipc_send() failed: %d", r);
+M:\minix\drivers\net\lan8710a\lan8710a.c:476: panic("There are no free TX DMA channels.");
+M:\minix\drivers\net\lan8710a\lan8710a.c:549: panic("failed to allocate RX buffers.");
+M:\minix\drivers\net\lan8710a\lan8710a.c:571: panic("failed to allocate TX buffers");
+M:\minix\drivers\net\lan8710a\lan8710a.c:601: panic("sys_irqsetpolicy failed: %d", r);
+M:\minix\drivers\net\lan8710a\lan8710a.c:606: panic("sys_irqsetpolicy failed: %d", r);
+M:\minix\drivers\net\lan8710a\lan8710a.c:620: * appropriate pin muxing conf_xxx registers in the Control Module.
+M:\minix\drivers\net\lan8710a\lan8710a.c:863: panic("sys_safecopyfrom() failed: %d", r);
+M:\minix\drivers\net\lan8710a\lan8710a.c:873: panic("No available transmit descriptor.");
+M:\minix\drivers\net\lan8710a\lan8710a.c:882: panic("packet too long");
+M:\minix\drivers\net\lan8710a\lan8710a.c:895: panic("sys_safecopyfrom() failed: %d", r);
+M:\minix\drivers\net\lan8710a\lan8710a.c:960: panic("sys_safecopyfrom() failed: %d", r);
+M:\minix\drivers\net\lan8710a\lan8710a.c:1021: panic("sys_safecopyto() failed: %d", r);
+M:\minix\drivers\net\lan8710a\lan8710a.c:1198: panic("unable to send reply message");
+M:\minix\drivers\net\lan8710a\lan8710a.c:1244: panic("ipc_send() failed: %d", r);
+M:\minix\drivers\net\lance\lance.c:133: panic("sys_umap failed: %d", r);
+M:\minix\drivers\net\lance\lance.c:274: panic("netdriver_receive failed: %d", r);
+M:\minix\drivers\net\lance\lance.c:293: panic("illegal notify source: %d", m.m_source);
+M:\minix\drivers\net\lance\lance.c:315: panic("illegal message: %d", m.m_type);
+M:\minix\drivers\net\lance\lance.c:464: panic("alloc_contig failed: %d", LANCE_BUF_SIZE);
+M:\minix\drivers\net\lance\lance.c:575: /* XXX */ if (ec->ec_linmem == 0) ec->ec_linmem= 0xFFFF0000;
+M:\minix\drivers\net\lance\lance.c:684: panic("ipc_send failed: %d", r);
+M:\minix\drivers\net\lance\lance.c:699: panic("unable to mess_reply");
+M:\minix\drivers\net\lance\lance.c:798: panic("got premature interrupt");
+M:\minix\drivers\net\lance\lance.c:890: panic("got premature TX INT..");
+M:\minix\drivers\net\lance\lance.c:993: panic("wrong type: %d", ec->sendmsg.m_type);
+M:\minix\drivers\net\lance\lance.c:1016: panic("do_vread_s: sys_safecopyfrom failed: %d", r);
+M:\minix\drivers\net\lance\lance.c:1134: panic("do_vwrite_s: sys_safecopyfrom failed: %d", r);
+M:\minix\drivers\net\lance\lance.c:1208: panic("ec_user2nic: sys_safecopyfrom failed: %d", r);
+M:\minix\drivers\net\lance\lance.c:1248: panic("ec_nic2user: sys_safecopyto failed: %d", r);
+M:\minix\drivers\net\lance\lance.c:1299: panic("ec_next_iovec: sys_safecopyfrom failed: %d", r);
+M:\minix\drivers\net\lance\lance.c:1318: panic("do_getstat_s: sys_safecopyto failed: %d", r);
+M:\minix\drivers\net\lance\lance.c:1323: panic("do_getstat_s: send failed: %d", r);
+M:\minix\drivers\net\lance\lance.c:1573: panic("sys_inb failed: %d", r);
+M:\minix\drivers\net\lance\lance.c:1587: panic("sys_inw failed: %d", r);
+M:\minix\drivers\net\lance\lance.c:1601: panic("sys_outw failed: %d", r);
+M:\minix\drivers\net\orinoco\orinoco.c:189: panic("orinoco: netdriver_receive failed");
+M:\minix\drivers\net\orinoco\orinoco.c:205: panic("orinoco: illegal notify from: %d",
+M:\minix\drivers\net\orinoco\orinoco.c:227: panic("orinoco: illegal message: %d", m.m_type);
+M:\minix\drivers\net\orinoco\orinoco.c:292: /* TODO: send a signal to the card to shut it down */
+M:\minix\drivers\net\orinoco\orinoco.c:351: panic("orinoco: getuptime() failed: %d", r);
+M:\minix\drivers\net\orinoco\orinoco.c:387: * Not implemented yet                                                       *
+M:\minix\drivers\net\orinoco\orinoco.c:565: panic("map_hw_buffer: cannot malloc size: %d", size);
+M:\minix\drivers\net\orinoco\orinoco.c:571: #if 0
+M:\minix\drivers\net\orinoco\orinoco.c:575: r = ENOSYS;
+M:\minix\drivers\net\orinoco\orinoco.c:579: panic("map_hw_buffer: sys_vm_map failed: %d", r);
+M:\minix\drivers\net\orinoco\orinoco.c:609: panic("base address isn't properly configured");
+M:\minix\drivers\net\orinoco\orinoco.c:621: panic("Not implemented yet");
+M:\minix\drivers\net\orinoco\orinoco.c:900: * Set the desired receive mode, e.g. promiscuous mode. Not implemented yet   *
+M:\minix\drivers\net\orinoco\orinoco.c:903: /* TODO */
+M:\minix\drivers\net\orinoco\orinoco.c:1137: panic("orinoco: unable to mess_reply");
+M:\minix\drivers\net\orinoco\orinoco.c:1355: panic("orinoco: send failed: %d", r);
+M:\minix\drivers\net\orinoco\orinoco.c:1403: /* TODO: do something with the tallies structure */
+M:\minix\drivers\net\orinoco\orinoco.c:1610: panic("orinoco: warning: sys_safecopytp failed: %d", cps);
+M:\minix\drivers\net\orinoco\orinoco.c:1621: panic("orinoco: warning: sys_safecopy failed: %d", cps);
+M:\minix\drivers\net\orinoco\orinoco.c:1788: panic("or_getstat_s: sys_safecopyto failed: %d", r);
+M:\minix\drivers\net\orinoco\orinoco.c:1795: panic("orinoco: getstat_s failed: %d", r);
+M:\minix\drivers\net\rtl8139\rtl8139.c:90: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:129: panic("netdriver_receive failed: %d", r);
+M:\minix\drivers\net\rtl8139\rtl8139.c:158: panic("illegal notify from: %d",
+M:\minix\drivers\net\rtl8139\rtl8139.c:173: panic("illegal message: %d", m.m_type);
+M:\minix\drivers\net\rtl8139\rtl8139.c:443: panic("base address is not properly configured");
+M:\minix\drivers\net\rtl8139\rtl8139.c:515: panic("Couldn't allocate kernel buffer");
+M:\minix\drivers\net\rtl8139\rtl8139.c:600: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:605: panic("reset PHY failed to complete");
+M:\minix\drivers\net\rtl8139\rtl8139.c:644: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:651: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:667: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:720: if (i != 0 && i != 6) env_panic(eakey);	/* It's all or nothing */
+M:\minix\drivers\net\rtl8139\rtl8139.c:823: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:836: panic("received packet not OK");
+M:\minix\drivers\net\rtl8139\rtl8139.c:848: panic(NULL);
+M:\minix\drivers\net\rtl8139\rtl8139.c:851: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:879: panic("rl_readv_s: sys_safecopyfrom failed: %d",
+M:\minix\drivers\net\rtl8139\rtl8139.c:892: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:894: panic("umap_local failed");
+M:\minix\drivers\net\rtl8139\rtl8139.c:912: panic("rl_readv_s: sys_safecopyto failed: %d",
+M:\minix\drivers\net\rtl8139\rtl8139.c:919: panic("rl_readv_s: sys_safecopyto failed: %d", cps);
+M:\minix\drivers\net\rtl8139\rtl8139.c:928: panic("rl_readv_s: sys_safecopyto failed: %d", cps);
+M:\minix\drivers\net\rtl8139\rtl8139.c:949: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1044: panic("rl_writev_s: sys_safecopyfrom failed: %d", cps);
+M:\minix\drivers\net\rtl8139\rtl8139.c:1051: panic("invalid packet size");
+M:\minix\drivers\net\rtl8139\rtl8139.c:1056: panic("rl_writev_s: sys_safecopyfrom failed: %d",	cps);
+M:\minix\drivers\net\rtl8139\rtl8139.c:1063: panic("invalid packet size: %d", size);
+M:\minix\drivers\net\rtl8139\rtl8139.c:1085: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1098: panic("should not be sending");
+M:\minix\drivers\net\rtl8139\rtl8139.c:1110: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1484: panic("cannot disable receiver");
+M:\minix\drivers\net\rtl8139\rtl8139.c:1486: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1540: panic("rl_getstat_s: sys_safecopyto failed: %d", r);
+M:\minix\drivers\net\rtl8139\rtl8139.c:1545: panic("rl_getstat_s: ipc_send failed: %d", r);
+M:\minix\drivers\net\rtl8139\rtl8139.c:1573: panic("ipc_send failed: %d", r);
+M:\minix\drivers\net\rtl8139\rtl8139.c:1588: panic("unable to mess_reply");
+M:\minix\drivers\net\rtl8139\rtl8139.c:1591: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1713: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1766: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1795: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1810: panic("cannot disable transmitter");
+M:\minix\drivers\net\rtl8139\rtl8139.c:1931: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:1950: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:2014: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.c:2092: if (0 == sys_getkenv("RTL8029XXX",10+1, val, sizeof(val)))
+M:\minix\drivers\net\rtl8139\rtl8139.c:2209: panic("device remains busy");
+M:\minix\drivers\net\rtl8139\rtl8139.c:2254: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.h:104: #if 0
+M:\minix\drivers\net\rtl8139\rtl8139.h:352: #if 0
+M:\minix\drivers\net\rtl8169\rtl8169.c:256: panic("netdriver_receive failed: %d", r);
+M:\minix\drivers\net\rtl8169\rtl8169.c:282: panic("illegal notify from: %d",	m.m_type);
+M:\minix\drivers\net\rtl8169\rtl8169.c:295: panic("illegal message: %d", m.m_type);
+M:\minix\drivers\net\rtl8169\rtl8169.c:445: #if 0
+M:\minix\drivers\net\rtl8169\rtl8169.c:646: panic("base address is not properly configured");
+M:\minix\drivers\net\rtl8169\rtl8169.c:720: panic("Couldn't allocate kernel buffer");
+M:\minix\drivers\net\rtl8169\rtl8169.c:1082: env_panic(eakey);	/* It's all or nothing */
+M:\minix\drivers\net\rtl8169\rtl8169.c:1144: panic("netdriver_receive failed: %d", r);
+M:\minix\drivers\net\rtl8169\rtl8169.c:1218: panic(NULL);
+M:\minix\drivers\net\rtl8169\rtl8169.c:1236: panic("rl_readv_s: sys_safecopyfrom failed: %d", 				cps);
+M:\minix\drivers\net\rtl8169\rtl8169.c:1249: panic("rl_readv_s: sys_safecopyto failed: %d", cps);
+M:\minix\drivers\net\rtl8169\rtl8169.c:1373: panic("rl_writev_s: sys_safecopyfrom failed: %d", 				cps);
+M:\minix\drivers\net\rtl8169\rtl8169.c:1379: panic("invalid packet size");
+M:\minix\drivers\net\rtl8169\rtl8169.c:1384: panic("rl_writev_s: sys_safecopyfrom failed: %d", cps);
+M:\minix\drivers\net\rtl8169\rtl8169.c:1392: panic("invalid packet size: %d", size);
+M:\minix\drivers\net\rtl8169\rtl8169.c:1421: panic("should not be sending");
+M:\minix\drivers\net\rtl8169\rtl8169.c:1539: panic("rl_getstat_s: sys_safecopyto failed: %d", r);
+M:\minix\drivers\net\rtl8169\rtl8169.c:1544: panic("rl_getstat_s: ipc_send failed: %d", r);
+M:\minix\drivers\net\rtl8169\rtl8169.c:1572: panic("ipc_send failed: %d", r);
+M:\minix\drivers\net\rtl8169\rtl8169.c:1587: panic("unable to mess_reply");
+M:\minix\drivers\net\uds\ioc_uds.c:558: return ENOSYS;
+M:\minix\drivers\net\uds\ioc_uds.c:560: /* FIXME: actually shrink the buffer. */
+M:\minix\drivers\net\uds\ioc_uds.c:589: return ENOSYS;
+M:\minix\drivers\net\uds\ioc_uds.c:591: /* FIXME: actually shrink the buffer. */
+M:\minix\drivers\net\uds\uds.c:147: panic("connecting socket attached to non-server");
+M:\minix\drivers\net\uds\uds.c:286: panic("writer blocked on empty socket");
+M:\minix\drivers\net\uds\uds.c:428: panic("reader blocked on full socket");
+M:\minix\drivers\net\uds\uds.c:575: panic("IOCTL did not actually suspend?");
+M:\minix\drivers\net\uds\uds.c:633: panic("unknown suspension type %d", fdp->suspended);
+M:\minix\drivers\net\uds\uds.c:686: panic("unknown suspension type %d", fdp->suspended);
+M:\minix\drivers\net\virtio_net\virtio_net.c:38: /* TODO: This should be an argument to the driver and possibly also
+M:\minix\drivers\net\virtio_net\virtio_net.c:113: /* TODO: Features are pretty much ignored */
+M:\minix\drivers\net\virtio_net\virtio_net.c:318: panic("%s: ipc_send to %d failed (%d)", name, dst, r);
+M:\minix\drivers\net\virtio_net\virtio_net.c:329: panic("%s: iovec fail for %d (%d)", name, m->m_source, r);
+M:\minix\drivers\net\virtio_net\virtio_net.c:335: /* Hmm, this looks so similar to cpy_from_user... TODO */
+M:\minix\drivers\net\virtio_net\virtio_net.c:358: panic("%s: copy to %d failed (%d)", name,
+M:\minix\drivers\net\virtio_net\virtio_net.c:442: panic("%s: copy from %d failed", name, m->m_source);
+M:\minix\drivers\net\virtio_net\virtio_net.c:494: panic("%s: ipc_send to %d failed (%d)", name, m->m_source, r);
+M:\minix\drivers\net\virtio_net\virtio_net.c:517: panic("%s: ipc_send to %d failed (%d)", name, m->m_source, r);
+M:\minix\drivers\net\virtio_net\virtio_net.c:523: /* TODO: Add the multicast, broadcast filtering etc. */
+M:\minix\drivers\net\virtio_net\virtio_net.c:545: panic("%s: ipc_send to %d failed (%d)", name, m->m_source, r);
+M:\minix\drivers\net\virtio_net\virtio_net.c:561: panic("%s: copy to %d failed (%d)", name, m->m_source, r);
+M:\minix\drivers\net\virtio_net\virtio_net.c:564: panic("%s: ipc_send to %d failed (%d)", name, m->m_source, r);
+M:\minix\drivers\net\virtio_net\virtio_net.c:591: panic("%s: illegal message: %d", name, m->m_type);
+M:\minix\drivers\net\virtio_net\virtio_net.c:607: panic("%s: netdriver_receive failed: %d", name, r);
+M:\minix\drivers\net\virtio_net\virtio_net.c:647: panic("%s: No device found", name);
+M:\minix\drivers\net\virtio_net\virtio_net.c:650: panic("%s: No device found", name);
+M:\minix\drivers\net\virtio_net\virtio_net.c:653: panic("%s: Buffer allocation failed", name);
+M:\minix\drivers\net\virtio_net\virtio_net.h:28: #if 0
+M:\minix\drivers\power\acpi\acpi.c:146: printf("ACPI: ignoring unsupported request %d "
+M:\minix\drivers\power\acpi\osminixxf.c:261: panic("NOTIMPLEMENTED %s\n", __func__);
+M:\minix\drivers\power\acpi\osminixxf.c:285: panic("NOTIMPLEMENTED %s\n", __func__);
+M:\minix\drivers\power\acpi\osminixxf.c:307: panic("NOTIMPLEMENTED %s\n", __func__);
+M:\minix\drivers\power\acpi\osminixxf.c:383: panic("NOTIMPLEMENTED %s\n", __func__);
+M:\minix\drivers\power\acpi\osminixxf.c:674: panic("NOTIMPLEMENTED %s\n", __func__);
+M:\minix\drivers\power\acpi\osminixxf.c:695: panic("NOTIMPLEMENTED %s\n", __func__);
+M:\minix\drivers\power\acpi\osminixxf.c:895: /* FIXME this operation is ignored */
+M:\minix\drivers\power\acpi\osminixxf.c:922: /* FIXME this operation is ignored */
+M:\minix\drivers\power\acpi\osminixxf.c:952: panic("NOTIMPLEMENTED %s\n", __func__);
+M:\minix\drivers\power\acpi\osminixxf.c:1012: panic("NOT IMPLEMENTED\n");
+M:\minix\drivers\power\acpi\osminixxf.c:1060: panic("NOT IMPLEMENTED\n");
+M:\minix\drivers\power\acpi\pci.c:94: #if 0
+M:\minix\drivers\power\acpi\dispatcher\dsfield.c:185: /* For all other CreateXXXField operators, name is the 3rd argument */
+M:\minix\drivers\power\acpi\dispatcher\dsobject.c:352: * If we are evaluating a Named buffer object "Name (xxxx, Buffer)".
+M:\minix\drivers\power\acpi\dispatcher\dsobject.c:494: * If we are evaluating a Named package object "Name (xxxx, Package)",
+M:\minix\drivers\power\acpi\dispatcher\dsopcode.c:547: * PARAMETERS:  AmlOpcode       - CreateXxxField
+M:\minix\drivers\power\acpi\dispatcher\dsopcode.c:781: * CreateXxxField declaration
+M:\minix\drivers\power\acpi\dispatcher\dsopcode.c:827: /* All other, CreateXxxField opcodes */
+M:\minix\drivers\power\acpi\executer\exconvrt.c:799: * CreateXxxxField cases - we are storing the field object into the name
+M:\minix\drivers\power\acpi\executer\exdump.c:432: "ExDumpObject: Display not implemented for object type %s\n",
+M:\minix\drivers\power\acpi\executer\exfldio.c:374: "Region %s(0x%X) not implemented",
+M:\minix\drivers\power\acpi\executer\exoparg1.c:659: "%s is obsolete and not implemented",
+M:\minix\drivers\power\acpi\executer\exresnte.c:347: "Unsupported Reference type 0x%X",
+M:\minix\drivers\power\acpi\executer\exstoren.c:368: ACPI_WARNING ((AE_INFO, "Store into type %s not implemented",
+M:\minix\drivers\power\acpi\hardware\hwregs.c:190: "Unsupported address space: 0x%X", Reg->SpaceId));
+M:\minix\drivers\power\acpi\hardware\hwregs.c:202: "Unsupported register bit width: 0x%X", Reg->BitWidth));
+M:\minix\drivers\power\acpi\hardware\hwregs.c:211: "Unsupported register bit offset: 0x%X", Reg->BitOffset));
+M:\minix\drivers\power\acpi\include\acpredef.h:588: #if 0
+M:\minix\drivers\power\acpi\include\platform\acnetbsd.h:179: /* XXX */
+M:\minix\drivers\power\acpi\namespace\nsaccess.c:309: ACPI_ERROR ((AE_INFO, "Unsupported initial type value 0x%X",
+M:\minix\drivers\power\acpi\namespace\nspredef.c:1121: * Convert the object type (ACPI_TYPE_xxx) to a bitmapped object type.
+M:\minix\drivers\power\acpi\namespace\nsxfeval.c:383: * these types are essentially unsupported by this interface.
+M:\minix\drivers\power\acpi\parser\psloop.c:433: * Backup to beginning of CreateXXXfield declaration
+M:\minix\drivers\power\acpi\parser\psloop.c:613: * Check for an unsupported executable opcode at module
+M:\minix\drivers\power\acpi\parser\psloop.c:626: "Detected an unsupported executable opcode "
+M:\minix\drivers\power\acpi\parser\psloop.c:950: #if 0
+M:\minix\drivers\power\acpi\parser\psloop.c:1296: * Backup to beginning of CreateXXXfield declaration (1 for
+M:\minix\drivers\power\acpi\parser\psparse.c:449: #if 0
+M:\minix\drivers\power\acpi\resources\rsmisc.c:183: * First table entry must be ACPI_RSC_INITxxx and must contain the
+M:\minix\drivers\power\acpi\resources\rsmisc.c:441: * First table entry must be ACPI_RSC_INITxxx and must contain the
+M:\minix\drivers\power\acpi\resources\rsmisc.c:640: #if 0
+M:\minix\drivers\power\acpi\utilities\utcopy.c:287: /* All other reference types are unsupported */
+M:\minix\drivers\power\acpi\utilities\utcopy.c:320: "Unsupported object type, cannot convert to external object: %s",
+M:\minix\drivers\power\acpi\utilities\utcopy.c:592: "Unsupported object type, cannot convert to internal object: %s",
+M:\minix\drivers\power\acpi\utilities\utobject.c:674: "unsupported Reference Class [%s] 0x%X in object %p",
+M:\minix\drivers\power\acpi\utilities\utobject.c:686: "unsupported type [%s] 0x%X in object %p",
+M:\minix\drivers\power\tps65950\tps65950.c:338: reply_status = ENOSYS;
+M:\minix\drivers\printer\printer\printer.c:191: panic("sys_inb failed");
+M:\minix\drivers\printer\printer\printer.c:273: panic("do_probe: sys_readbios failed");
+M:\minix\drivers\printer\printer\printer.c:288: panic("do_initialize: sys_outb init failed");
+M:\minix\drivers\printer\printer\printer.c:293: panic("do_initialize: sys_outb select failed");
+M:\minix\drivers\printer\printer\printer.c:298: panic("do_initialize: irq enabling failed");
+M:\minix\drivers\printer\printer\printer.c:365: panic("sys_outb failed");
+M:\minix\drivers\printer\printer\printer.c:368: panic("sys_irqenable failed");
+M:\minix\drivers\printer\printer\printer.c:379: panic("sys_inb failed");
+M:\minix\drivers\printer\printer\printer.c:389: panic("sys_irqenable failed");
+M:\minix\drivers\printer\printer\printer.c:401: panic("sys_voutb failed");
+M:\minix\drivers\printer\printer\printer.c:411: panic("sys_irqenable failed");
+M:\minix\drivers\printer\printer\printer.c:422: panic("sys_irqenable failed");
+M:\minix\drivers\storage\ahci\ahci.c:454: dprintf(V_ERR, ("%s: unsupported ATAPI device\n",
+M:\minix\drivers\storage\ahci\ahci.c:546: dprintf(V_ERR, ("%s: unsupported ATA device\n",
+M:\minix\drivers\storage\ahci\ahci.c:1908: panic("unable to allocate port memory");
+M:\minix\drivers\storage\ahci\ahci.c:2057: panic("unable to reset HBA");
+M:\minix\drivers\storage\ahci\ahci.c:2071: panic("unable to retrieve BAR: %d", r);
+M:\minix\drivers\storage\ahci\ahci.c:2074: panic("invalid BAR type");
+M:\minix\drivers\storage\ahci\ahci.c:2080: panic("HBA memory size too small: %u", size);
+M:\minix\drivers\storage\ahci\ahci.c:2090: panic("unable to map HBA memory");
+M:\minix\drivers\storage\ahci\ahci.c:2097: panic("unable to register IRQ: %d", r);
+M:\minix\drivers\storage\ahci\ahci.c:2100: panic("unable to enable IRQ: %d", r);
+M:\minix\drivers\storage\ahci\ahci.c:2167: panic("unable to unmap HBA memory: %d", r);
+M:\minix\drivers\storage\ahci\ahci.c:2170: panic("unable to deregister IRQ: %d", r);
+M:\minix\drivers\storage\ahci\ahci.c:2219: panic("unable to enable IRQ: %d", r);
+M:\minix\drivers\storage\ahci\ahci.c:2327: panic("no matching device found");
+M:\minix\drivers\storage\ahci\ahci.c:2713: panic("device mapping for minor %d disappeared", minor);
+M:\minix\drivers\storage\at_wini\at_wini.c:209: panic("unable to allocate temporary buffer");
+M:\minix\drivers\storage\at_wini\at_wini.c:226: panic("no matching device found");
+M:\minix\drivers\storage\at_wini\at_wini.c:260: panic("atapi_debug");
+M:\minix\drivers\storage\at_wini\at_wini.c:380: panic("couldn't set native IRQ policy %d: %d", irq, r);
+M:\minix\drivers\storage\at_wini\at_wini.c:382: panic("couldn't enable native IRQ line %d: %d", irq, r);
+M:\minix\drivers\storage\at_wini\at_wini.c:403: panic("couldn't set compat(0) IRQ policy: %d", r);
+M:\minix\drivers\storage\at_wini\at_wini.c:405: panic("couldn't enable compat(0) IRQ line: %d", r);
+M:\minix\drivers\storage\at_wini\at_wini.c:434: panic("couldn't set compat(1) IRQ policy: %d", r);
+M:\minix\drivers\storage\at_wini\at_wini.c:436: panic("couldn't enable compat(1) IRQ line: %d", r);
+M:\minix\drivers\storage\at_wini\at_wini.c:585: panic("unable to read DMA status register");
+M:\minix\drivers\storage\at_wini\at_wini.c:679: panic("Call to sys_insw() failed: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:729: panic("Call to sys_insw() failed: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:808: panic("Couldn't switch back devices");
+M:\minix\drivers\storage\at_wini\at_wini.c:944: if (r != 0) panic("stop_dma: sys_outb failed: %d", r);
+M:\minix\drivers\storage\at_wini\at_wini.c:960: if (r != 0) panic("start_dma: sys_outb failed: %d", r);
+M:\minix\drivers\storage\at_wini\at_wini.c:976: if (r != 0) panic("w_transfer: sys_inb failed: %d", r);
+M:\minix\drivers\storage\at_wini\at_wini.c:1060: #if 0
+M:\minix\drivers\storage\at_wini\at_wini.c:1077: panic("couldn't get status");
+M:\minix\drivers\storage\at_wini\at_wini.c:1144: panic("Call to sys_insw() failed: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:1169: panic("Call to sys_insw() failed: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:1183: panic("Call to sys_outsw() failed: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:1239: panic("Couldn't write register to select drive: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:1263: panic("Couldn't write registers with sys_voutb(): %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:1290: panic("Couldn't write register to select drive: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:1317: panic("Couldn't write registers with sys_voutb(): %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:1360: panic("bad size in iov: 0x%lx", iov[i].iov_size);
+M:\minix\drivers\storage\at_wini\at_wini.c:1365: panic("can't map user buffer (VM_GRANT): %d", r);
+M:\minix\drivers\storage\at_wini\at_wini.c:1372: panic("can't map user buffer (VM_D): %d", r);
+M:\minix\drivers\storage\at_wini\at_wini.c:1414: panic("bad prdt index: %d", j);
+M:\minix\drivers\storage\at_wini\at_wini.c:1428: if (r != 0) panic("setup_dma: sys_inb failed: %d", r);
+M:\minix\drivers\storage\at_wini\at_wini.c:1430: panic("Bus master IDE active");
+M:\minix\drivers\storage\at_wini\at_wini.c:1433: panic("prdt not aligned: 0x%lx", prdt_phys);
+M:\minix\drivers\storage\at_wini\at_wini.c:1435: if (r != 0) panic("setup_dma: sys_outl failed: %d", r);
+M:\minix\drivers\storage\at_wini\at_wini.c:1439: if (r != 0) panic("setup_dma: sys_outb failed: %d", r);
+M:\minix\drivers\storage\at_wini\at_wini.c:1542: panic("Couldn't strobe reset bit: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:1545: panic("Couldn't strobe reset bit: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:1587: panic("driver_receive failed: %d", r);
+M:\minix\drivers\storage\at_wini\at_wini.c:1599: panic("sys_inb failed: %d", r);
+M:\minix\drivers\storage\at_wini\at_wini.c:1639: panic("Couldn't read register: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:1665: panic("Couldn't read register: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:1691: panic("Couldn't read register: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:1733: * SCSI layer that does all this stuff for ATAPI and SCSI devices (kjb). (XXX)
+M:\minix\drivers\storage\at_wini\at_wini.c:1744: /* Should unlock the device.  For now do nothing.  (XXX) */
+M:\minix\drivers\storage\at_wini\at_wini.c:1907: panic("Call to sys_insw() failed: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:1926: panic("Call to sys_insw() failed: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:1948: panic("Call to sys_insw() failed: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:1965: #if 0
+M:\minix\drivers\storage\at_wini\at_wini.c:1992: panic("Couldn't select master/ slave drive: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:2018: panic("Couldn't write registers with sys_voutb(): %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:2028: panic("sys_outsw() failed: %d", s);
+M:\minix\drivers\storage\at_wini\at_wini.c:2128: panic("couldn't ack irq on drive: %d", drive);
+M:\minix\drivers\storage\at_wini\at_wini.c:2200: panic("ATAPI failed sys_vinb(): %d", s);
+M:\minix\drivers\storage\fbd\fbd.c:61: panic("no driver label given");
+M:\minix\drivers\storage\fbd\fbd.c:64: panic("unable to resolve driver label");
+M:\minix\drivers\storage\fbd\fbd.c:67: panic("no or invalid driver minor given");
+M:\minix\drivers\storage\fbd\fbd.c:80: panic("getuptime failed (%d)\n", r);
+M:\minix\drivers\storage\fbd\fbd.c:157: panic("ipc_sendrec to driver failed (%d)\n", r);
+M:\minix\drivers\storage\fbd\fbd.c:160: panic("invalid reply from driver (%d)\n", m.m_type);
+M:\minix\drivers\storage\fbd\fbd.c:181: panic("ipc_sendrec to driver failed (%d)\n", r);
+M:\minix\drivers\storage\fbd\fbd.c:184: panic("invalid reply from driver (%d)\n", m.m_type);
+M:\minix\drivers\storage\fbd\fbd.c:222: panic("ipc_sendrec to driver failed (%d)\n", r);
+M:\minix\drivers\storage\fbd\fbd.c:225: panic("invalid reply from driver (%d)\n", m.m_type);
+M:\minix\drivers\storage\fbd\fbd.c:264: panic("ipc_sendrec to driver failed (%d)\n", r);
+M:\minix\drivers\storage\fbd\fbd.c:267: panic("invalid reply from driver (%d)\n", m.m_type);
+M:\minix\drivers\storage\fbd\fbd.c:321: panic("vsafecopy failed (%d)\n", r);
+M:\minix\drivers\storage\fbd\fbd.c:356: panic("ipc_sendrec to driver failed (%d)\n", r);
+M:\minix\drivers\storage\fbd\fbd.c:359: panic("invalid reply from driver (%d)\n", m.m_type);
+M:\minix\drivers\storage\fbd\fbd.c:389: panic("vsafecopy failed (%d)\n", r);
+M:\minix\drivers\storage\filter\driver.c:57: panic("invalid grant: %d", gid);
+M:\minix\drivers\storage\filter\driver.c:169: panic("unhandled driver_open failure");
+M:\minix\drivers\storage\filter\driver.c:178: panic("same driver: not tested");
+M:\minix\drivers\storage\filter\driver.c:190: panic("unhandled driver_open failure");
+M:\minix\drivers\storage\filter\driver.c:380: panic("invalid problem: %d", problem);
+M:\minix\drivers\storage\filter\driver.c:444: panic("RS request failed: %d", r);
+M:\minix\drivers\storage\filter\driver.c:463: panic("driver_receive returned error: %d", r);
+M:\minix\drivers\storage\filter\driver.c:540: panic("ipc_senda returned error: %d", r);
+M:\minix\drivers\storage\filter\driver.c:581: panic("driver_receive returned error: %d", r);
+M:\minix\drivers\storage\filter\driver.c:728: panic("message from unexpected source: %d",
+M:\minix\drivers\storage\filter\driver.c:821: panic("invalid grant: %d", grant);
+M:\minix\drivers\storage\filter\driver.c:835: panic("invalid grant: %d", *gid);
+M:\minix\drivers\storage\filter\main.c:380: panic("no memory available");
+M:\minix\drivers\storage\filter\main.c:389: panic("Filter: can't subscribe to driver events");
+M:\minix\drivers\storage\filter\sum.c:31: panic("no memory available");
+M:\minix\drivers\storage\filter\sum.c:95: panic("invalid checksum type: %d", SUM_TYPE);
+M:\minix\drivers\storage\filter\sum.c:255: panic("group_left assertion: %d", 0);
+M:\minix\drivers\storage\filter\sum.c:260: panic("gap assertion: %d", 0);
+M:\minix\drivers\storage\filter\util.c:24: panic("out of memory: %d", size);
+M:\minix\drivers\storage\filter\util.c:54: panic("sys_setalarm failed: %d", r);
+M:\minix\drivers\storage\filter\util.c:58: panic("clearing unset alarm: %d", r);
+M:\minix\drivers\storage\filter\util.c:62: panic("overwriting alarm: %d", r);
+M:\minix\drivers\storage\filter\util.c:64: panic("getuptime failed: %d", r);
+M:\minix\drivers\storage\floppy\floppy.c:339: panic("couldn't allocate dma buffer");
+M:\minix\drivers\storage\floppy\floppy.c:355: panic("Couldn't set IRQ policy: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:357: panic("Couldn't enable IRQs: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:377: panic("Sys_outb failed: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:484: #if 0	/* XXX hack to create a disk driver that crashes */
+M:\minix\drivers\storage\floppy\floppy.c:514: panic("sys_safecopyfrom failed: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:581: panic("Sys_outb failed: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:619: panic("sys_safecopyfrom failed: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:645: panic("sys_safecopyto failed: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:726: panic("Sys_voutb in dma_setup() failed: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:755: panic("Sys_outb in start_motor() failed: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:767: panic("Couldn't receive message: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:796: panic("Sys_outb in stop_motor() failed: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:843: panic("Couldn't receive message: %d", r);
+M:\minix\drivers\storage\floppy\floppy.c:930: #if 0
+M:\minix\drivers\storage\floppy\floppy.c:960: panic("Sys_inb in fdc_results() failed: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:966: panic("Sys_inb in fdc_results() failed: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:973: panic("Couldn't enable IRQs: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:981: panic("Couldn't enable IRQs: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:1030: panic("Sys_inb in fdc_out() failed: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:1034: panic("Sys_outb in fdc_out() failed: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:1115: panic("Sys_voutb in f_reset() failed: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:1122: panic("Couldn't receive message: %d", s);
+M:\minix\drivers\storage\floppy\floppy.c:1173: panic("Couldn't receive message: %d", r);
+M:\minix\drivers\storage\memory\memory.c:99: panic("memory: driver_receive failed (%d)", r);
+M:\minix\drivers\storage\memory\memory.c:135: #if 0
+M:\minix\drivers\storage\memory\memory.c:140: panic("Couldn't get kernel information: %d", s);
+M:\minix\drivers\storage\memory\memory.c:252: panic("vm_unmap_phys failed");
+M:\minix\drivers\storage\memory\memory.c:319: panic("unknown character device %d", minor);
+M:\minix\drivers\storage\memory\memory.c:353: panic("unknown character device %d", minor);
+M:\minix\drivers\storage\memory\memory.c:468: panic("I/O copy failed: %d", r);
+M:\minix\drivers\storage\memory\memory.c:564: panic("huge old ramdisk");
+M:\minix\drivers\storage\mmc\README.txt:50: * TODO removal
+M:\minix\drivers\storage\mmc\README.txt:51: The driver contains (quite a few) TODO's where the code need to be improved.
+M:\minix\drivers\storage\mmc\mmcblk.c:174: // * TODO: set card state to INVALID until removed? */
+M:\minix\drivers\storage\mmc\mmcblk.c:456: // TODO: add a check for card validity */
+M:\minix\drivers\storage\mmc\mmchost.h:35: //TODO Add more modes like INACTIVE STATE and such
+M:\minix\drivers\storage\mmc\mmchost.h:139: #if 0
+M:\minix\drivers\storage\mmc\mmchost.h:154: /* Hack done for driver registration */
+M:\minix\drivers\storage\mmc\mmchost_dummy.c:123: /* TODO:Set card state */
+M:\minix\drivers\storage\mmc\mmchost_dummy.c:165: // @TODO set initial card and slot state
+M:\minix\drivers\storage\mmc\mmchost_mmchs.c:137: panic("Unable to request permission to map memory");
+M:\minix\drivers\storage\mmc\mmchost_mmchs.c:146: panic("Unable to map MMC memory");
+M:\minix\drivers\storage\mmc\mmchost_mmchs.c:418: panic("driver_receive failed: %d", rr);
+M:\minix\drivers\storage\mmc\mmchost_mmchs.c:1008: #if 0
+M:\minix\drivers\storage\mmc\mmchost_mmchs.c:1108: /* @TODO implement proper card detect */
+M:\minix\drivers\storage\mmc\mmchost_mmchs.c:1224: /* TODO:Set card state */
+M:\minix\drivers\storage\mmc\mmchost_mmchs.c:1263: // @TODO set initial card and slot state
+M:\minix\drivers\storage\virtio_blk\virtio_blk.c:558: panic("%s: unknown status: %02x", name, status);
+M:\minix\drivers\storage\virtio_blk\virtio_blk.c:598: * FIXME: Besides the geometry, everything is just debug output
+M:\minix\drivers\storage\virtio_blk\virtio_blk.c:599: * FIXME2: magic numbers
+M:\minix\drivers\storage\virtio_blk\virtio_blk.c:703: panic("%s: No device found", name);
+M:\minix\drivers\storage\virtio_blk\virtio_blk.c:706: panic("%s: Not enough memory", name);
+M:\minix\drivers\storage\virtio_blk\virtio_blk.c:708: panic("%s: Unexpected failure (%d)", name, r);
+M:\minix\drivers\storage\virtio_blk\virtio_blk.h:28: #if 0
+M:\minix\drivers\system\random\random.c:71: #if 0
+M:\minix\drivers\system\random\random.c:75: panic("random_update: bad source: %d", source);
+M:\minix\drivers\system\random\random.c:158: #if 0
+M:\minix\drivers\system\random\random.c:164: #if 0
+M:\minix\drivers\tty\pty\tty.c:120: panic("driver_receive failed with: %d", r);
+M:\minix\drivers\tty\pty\tty.c:410: * the larger of the two. TODO: revisit queue sizes altogether.
+M:\minix\drivers\tty\pty\tty.c:1195: panic("Error; call to sys_kill failed: %d", status);
+M:\minix\drivers\tty\tty\tty.c:169: panic("driver_receive failed with: %d", r);
+M:\minix\drivers\tty\tty\tty.c:321: panic("Couldn't obtain kernel environment: %d", r);
+M:\minix\drivers\tty\tty\tty.c:427: panic("Don't know where to send kernel messages");
+M:\minix\drivers\tty\tty\tty.c:1502: panic("Error; call to sys_kill failed: %d", status);
+M:\minix\drivers\tty\tty\arch\earm\rs232.c:16: #if 0
+M:\minix\drivers\tty\tty\arch\earm\rs232.c:337: #if 0
+M:\minix\drivers\tty\tty\arch\earm\rs232.c:445: panic("unable to disable interrupts");
+M:\minix\drivers\tty\tty\arch\earm\rs232.c:474: panic("unable to enable interrupts");
+M:\minix\drivers\tty\tty\arch\earm\rs232.c:522: panic("Unable to request access to UART memory");
+M:\minix\drivers\tty\tty\arch\earm\rs232.c:528: panic("Unable to request access to UART memory");
+M:\minix\drivers\tty\tty\arch\earm\rs232.c:600: panic("unable to enable interrupts");
+M:\minix\drivers\tty\tty\arch\i386\console.c:141: #if 0
+M:\minix\drivers\tty\tty\arch\i386\console.c:501: /* Some of these things hack on screen RAM, so it had better be up to date */
+M:\minix\drivers\tty\tty\arch\i386\console.c:751: #if 0
+M:\minix\drivers\tty\tty\arch\i386\console.c:964: /* FIXME: How about error checking? What to do on failure??? */
+M:\minix\drivers\tty\tty\arch\i386\console.c:992: panic("Console couldn't map video memory");
+M:\minix\drivers\tty\tty\arch\i386\console.c:997: panic("Console couldn't map font memory");
+M:\minix\drivers\tty\tty\arch\i386\console.c:1010: if (nr_cons < 1) panic("no consoles");
+M:\minix\drivers\tty\tty\arch\i386\keyboard.c:177: panic("do_input called for unknown message type %x", msg->m_type);
+M:\minix\drivers\tty\tty\arch\i386\rs232.c:696: panic("TTY: sys_inb() failed: %d", s);
+M:\minix\drivers\tty\tty\arch\i386\rs232.c:737: #if 0	/* Enable this if you want serial input in the kernel */
+M:\minix\drivers\usb\usb_hub\urb_helper.c:69: panic("Unexpected buffer type!");
+M:\minix\drivers\usb\usb_hub\usb_hub.c:12: #include <minix/usb.h>			/* usb_ctrlrequest TODO: remove me */
+M:\minix\drivers\usb\usb_hub\usb_hub.c:21: /* TODO: these are missing from DDE header files */
+M:\minix\drivers\usb\usb_hub\usb_hub.c:243: panic("Initializing USB hub semaphore, failed!");
+M:\minix\drivers\usb\usb_hub\usb_hub.c:248: panic("Initializing USB hub thread failed!");
+M:\minix\drivers\usb\usb_hub\usb_hub.c:256: panic("Initializing ddekit_usb_thread failed!");
+M:\minix\drivers\usb\usb_hub\usb_hub.c:269: /* TODO: No ddekit_deinit for proper cleanup? */
+M:\minix\drivers\usb\usb_hub\usb_hub.c:311: /* TODO: Any signal means shutdown for now (it may be OK anyway) */
+M:\minix\drivers\usb\usb_hub\usb_hub.c:316: panic("Calling ddekit_shutdown failed!");
+M:\minix\drivers\usb\usb_hub\usb_hub.c:328: /* TODO: This call was meant to return 'int' but loops forever instead,
+M:\minix\drivers\usb\usb_hub\usb_hub.c:357: panic("HUB device driver can be connected only once!");
+M:\minix\drivers\usb\usb_hub\usb_hub.c:379: panic("HUB device driver was never connected!");
+M:\minix\drivers\usb\usb_hub\usb_hub.c:581: /* TODO: Add more checks when needed */
+M:\minix\drivers\usb\usb_storage\scsi.h:8: #if 0
+M:\minix\drivers\usb\usb_storage\urb_helper.c:69: panic("Unexpected buffer type!");
+M:\minix\drivers\usb\usb_storage\usb_storage.c:40: /* TODO: these are missing from DDE header files */
+M:\minix\drivers\usb\usb_storage\usb_storage.c:191: panic("Initializing mass_storage_sem failed!");
+M:\minix\drivers\usb\usb_storage\usb_storage.c:197: panic("Initializing mass_storage_thread failed!");
+M:\minix\drivers\usb\usb_storage\usb_storage.c:205: panic("Initializing ddekit_usb_thread failed!");
+M:\minix\drivers\usb\usb_storage\usb_storage.c:218: /* TODO: no ddekit_deinit for proper cleanup? */
+M:\minix\drivers\usb\usb_storage\usb_storage.c:422: bulk_setup.wIndex = 0x00; /* TODO: hard-coded interface 0 */
+M:\minix\drivers\usb\usb_storage\usb_storage.c:555: panic("Calling ddekit_shutdown failed!");
+M:\minix\drivers\usb\usb_storage\usb_storage.c:567: /* TODO: This call was meant to return 'int' but loops forever instead,
+M:\minix\drivers\usb\usb_storage\usb_storage.c:617: /* TODO: Only CSW failure should normally contribute to retry */
+M:\minix\drivers\usb\usb_storage\usb_storage.c:781: panic("Invalid block size used by USB device!");
+M:\minix\drivers\usb\usb_storage\usb_storage.c:1351: panic("sys_safecopyto failed!");
+M:\minix\drivers\usb\usb_storage\usb_storage.c:1402: /* TODO:PERIPH
+M:\minix\drivers\usb\usb_storage\usb_storage.c:1438: /* TODO:PERIPH
+M:\minix\drivers\usb\usb_storage\usb_storage.c:1537: /* TODO:PERIPH
+M:\minix\drivers\usb\usb_storage\usb_storage.c:1542: panic("Only one peripheral can be connected!");
+M:\minix\drivers\usb\usb_storage\usb_storage.c:1560: /* TODO:PERIPH
+M:\minix\drivers\usb\usb_storage\usb_storage.c:1610: setup_buf.wValue = UDESC_CONFIG << 8; /* TODO: configuration 0 */
+M:\minix\drivers\usb\usb_storage\usb_storage.h:10: /* TODO: no header for ddekit_usb_dev */
+M:\minix\drivers\usb\usbd\base\usbd.c:27: /* TODO: No headers for these... */
+M:\minix\drivers\usb\usbd\base\usbd.c:86: USB_MSG("Updating, not implemented");
+M:\minix\drivers\usb\usbd\base\usbd.c:90: USB_MSG("Restarting, not implemented");
+M:\minix\drivers\usb\usbd\hcd\hcd.c:50: /* TODO: This is not meant to be explicitly visible outside DDEKit library
+M:\minix\drivers\usb\usbd\hcd\hcd.c:58: /* TODO: This was added for compatibility with DDELinux drivers that
+M:\minix\drivers\usb\usbd\hcd\hcd.c:434: /* TODO: ENODEV selected for that */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:549: /* TODO: Always use first configuration, as there is no support for
+M:\minix\drivers\usb\usbd\hcd\hcd.c:576: /* TODO: magic numbers, no header for these */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:630: /* TODO: magic numbers, no header for these */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:691: /* TODO: Default configuration is hard-coded
+M:\minix\drivers\usb\usbd\hcd\hcd.c:693: /* TODO: magic numbers, no header for these */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:745: /* TODO: Default configuration is hard-coded
+M:\minix\drivers\usb\usbd\hcd\hcd.c:747: /* TODO: magic numbers, no header for these */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:813: /* TODO: magic numbers, no header for these */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:874: USB_MSG("Unsupported transfer type 0x%02X",
+M:\minix\drivers\usb\usbd\hcd\hcd.c:927: /* TODO: Only EP0 can have control transfer */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:1016: /* TODO: This was changed to allow software scheduler to work correctly
+M:\minix\drivers\usb\usbd\hcd\hcd.c:1019: #if 0
+M:\minix\drivers\usb\usbd\hcd\hcd.c:1093: /* TODO: magic number */
+M:\minix\drivers\usb\usbd\hcd\hcd.c:1142: /* TODO: Unimplemented OUT DATA stage */
+M:\minix\drivers\usb\usbd\hcd\hcd_common.c:195: /* TODO: Since it is not likely to be ever interrupted, we do not try
+M:\minix\drivers\usb\usbd\hcd\hcd_common.c:264: /* TODO: This should disconnect all the children if they exist */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:57: /* TODO: UNUSED for argument won't work */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:71: /* TODO: UNUSED for argument won't work */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:85: /* TODO: UNUSED for argument won't work */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:163: /* TODO: This was in 'ddekit/usb.h' header file, but is not used anywhere */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:164: #if 0
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:173: /* TODO: UNUSED for argument won't work */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:210: /* TODO: UNUSED for argument won't work */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:212: /* TODO: No driver will require this any time soon */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:274: /* TODO: Magic numbers like in ddekit/devman */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:389: /* TODO: Alignment of setup packet. Can DDE client guarantee that? */
+M:\minix\drivers\usb\usbd\hcd\hcd_ddekit.c:394: /* TODO: Sane size check? */
+M:\minix\drivers\usb\usbd\hcd\hcd_schedule.c:18: /* TODO: Like in DDEKit but power of 2 */
+M:\minix\drivers\usb\usbd\hcd\hcd_schedule.c:21: /* TODO: Structure to hold URBs in DDEKit is limited so this is no better
+M:\minix\drivers\usb\usbd\hcd\hcd_schedule.c:204: /* TODO: Not enough DDEKit thread priorities
+M:\minix\drivers\usb\usbd\hcd\hcd_schedule.c:292: /* TODO: Some priority checking may be here */
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:14: /* TODO: BeagleBone white uses USB0 for PC connection as peripheral,
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:123: #define AM335X_VAL_USBXIRQENABLEXXX0_EP0	HCD_BIT(0)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:124: #define AM335X_VAL_USBXIRQENABLEXXX0_TX_EP1	HCD_BIT(1)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:125: #define AM335X_VAL_USBXIRQENABLEXXX0_TX_EP2	HCD_BIT(2)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:126: #define AM335X_VAL_USBXIRQENABLEXXX0_TX_EP3	HCD_BIT(3)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:127: #define AM335X_VAL_USBXIRQENABLEXXX0_TX_EP4	HCD_BIT(4)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:128: #define AM335X_VAL_USBXIRQENABLEXXX0_TX_EP5	HCD_BIT(5)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:129: #define AM335X_VAL_USBXIRQENABLEXXX0_TX_EP6	HCD_BIT(6)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:130: #define AM335X_VAL_USBXIRQENABLEXXX0_TX_EP7	HCD_BIT(7)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:131: #define AM335X_VAL_USBXIRQENABLEXXX0_TX_EP8	HCD_BIT(8)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:132: #define AM335X_VAL_USBXIRQENABLEXXX0_TX_EP9	HCD_BIT(9)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:133: #define AM335X_VAL_USBXIRQENABLEXXX0_TX_EP10	HCD_BIT(10)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:134: #define AM335X_VAL_USBXIRQENABLEXXX0_TX_EP11	HCD_BIT(11)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:135: #define AM335X_VAL_USBXIRQENABLEXXX0_TX_EP12	HCD_BIT(12)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:136: #define AM335X_VAL_USBXIRQENABLEXXX0_TX_EP13	HCD_BIT(13)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:137: #define AM335X_VAL_USBXIRQENABLEXXX0_TX_EP14	HCD_BIT(14)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:138: #define AM335X_VAL_USBXIRQENABLEXXX0_TX_EP15	HCD_BIT(15)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:139: #define AM335X_VAL_USBXIRQENABLEXXX0_RX_EP1	HCD_BIT(17)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:140: #define AM335X_VAL_USBXIRQENABLEXXX0_RX_EP2	HCD_BIT(18)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:141: #define AM335X_VAL_USBXIRQENABLEXXX0_RX_EP3	HCD_BIT(19)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:142: #define AM335X_VAL_USBXIRQENABLEXXX0_RX_EP4	HCD_BIT(20)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:143: #define AM335X_VAL_USBXIRQENABLEXXX0_RX_EP5	HCD_BIT(21)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:144: #define AM335X_VAL_USBXIRQENABLEXXX0_RX_EP6	HCD_BIT(22)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:145: #define AM335X_VAL_USBXIRQENABLEXXX0_RX_EP7	HCD_BIT(23)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:146: #define AM335X_VAL_USBXIRQENABLEXXX0_RX_EP8	HCD_BIT(24)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:147: #define AM335X_VAL_USBXIRQENABLEXXX0_RX_EP9	HCD_BIT(25)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:148: #define AM335X_VAL_USBXIRQENABLEXXX0_RX_EP10	HCD_BIT(26)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:149: #define AM335X_VAL_USBXIRQENABLEXXX0_RX_EP11	HCD_BIT(27)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:150: #define AM335X_VAL_USBXIRQENABLEXXX0_RX_EP12	HCD_BIT(28)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:151: #define AM335X_VAL_USBXIRQENABLEXXX0_RX_EP13	HCD_BIT(29)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:152: #define AM335X_VAL_USBXIRQENABLEXXX0_RX_EP14	HCD_BIT(30)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:153: #define AM335X_VAL_USBXIRQENABLEXXX0_RX_EP15	HCD_BIT(31)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:155: #define AM335X_VAL_USBXIRQENABLEXXX1_SUSPEND		HCD_BIT(0)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:156: #define AM335X_VAL_USBXIRQENABLEXXX1_RESUME		HCD_BIT(1)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:157: #define AM335X_VAL_USBXIRQENABLEXXX1_RESET_BABBLE	HCD_BIT(2)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:158: #define AM335X_VAL_USBXIRQENABLEXXX1_SOF		HCD_BIT(3)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:159: #define AM335X_VAL_USBXIRQENABLEXXX1_CONNECTED		HCD_BIT(4)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:160: #define AM335X_VAL_USBXIRQENABLEXXX1_DISCONNECTED	HCD_BIT(5)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:161: #define AM335X_VAL_USBXIRQENABLEXXX1_SRP		HCD_BIT(6)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:162: #define AM335X_VAL_USBXIRQENABLEXXX1_VBUS		HCD_BIT(7)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:163: #define AM335X_VAL_USBXIRQENABLEXXX1_DRVVBUS		HCD_BIT(8)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:164: #define AM335X_VAL_USBXIRQENABLEXXX1_GENERIC		HCD_BIT(9)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:166: #define AM335X_VAL_USBXIRQENABLEXXX1_TX_FIFO_1		HCD_BIT(17)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:167: #define AM335X_VAL_USBXIRQENABLEXXX1_TX_FIFO_2		HCD_BIT(18)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:168: #define AM335X_VAL_USBXIRQENABLEXXX1_TX_FIFO_3		HCD_BIT(19)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:169: #define AM335X_VAL_USBXIRQENABLEXXX1_TX_FIFO_4		HCD_BIT(20)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:170: #define AM335X_VAL_USBXIRQENABLEXXX1_TX_FIFO_5		HCD_BIT(21)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:171: #define AM335X_VAL_USBXIRQENABLEXXX1_TX_FIFO_6		HCD_BIT(22)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:172: #define AM335X_VAL_USBXIRQENABLEXXX1_TX_FIFO_7		HCD_BIT(23)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:173: #define AM335X_VAL_USBXIRQENABLEXXX1_TX_FIFO_8		HCD_BIT(24)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:174: #define AM335X_VAL_USBXIRQENABLEXXX1_TX_FIFO_9		HCD_BIT(25)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:175: #define AM335X_VAL_USBXIRQENABLEXXX1_TX_FIFO_10		HCD_BIT(26)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:176: #define AM335X_VAL_USBXIRQENABLEXXX1_TX_FIFO_11		HCD_BIT(27)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:177: #define AM335X_VAL_USBXIRQENABLEXXX1_TX_FIFO_12		HCD_BIT(28)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:178: #define AM335X_VAL_USBXIRQENABLEXXX1_TX_FIFO_13		HCD_BIT(29)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:179: #define AM335X_VAL_USBXIRQENABLEXXX1_TX_FIFO_14		HCD_BIT(30)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:180: #define AM335X_VAL_USBXIRQENABLEXXX1_TX_FIFO_15		HCD_BIT(31)
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:410: /* TODO: DDEKit has no checks on NULL IRQ and may crash on detach
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:505: /* TODO: This function does nothing and is not needed by MUSB but
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:565: if (irqstat1 & AM335X_VAL_USBXIRQENABLEXXX1_CONNECTED) {
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:567: CLEAR_IRQ1(AM335X_VAL_USBXIRQENABLEXXX1_CONNECTED);
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:574: if (irqstat1 & AM335X_VAL_USBXIRQENABLEXXX1_DISCONNECTED) {
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:576: CLEAR_IRQ1(AM335X_VAL_USBXIRQENABLEXXX1_DISCONNECTED);
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:591: if (irqstat1 & AM335X_VAL_USBXIRQENABLEXXX1_SUSPEND) {
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:593: CLEAR_IRQ1(AM335X_VAL_USBXIRQENABLEXXX1_SUSPEND);
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:597: if (irqstat1 & AM335X_VAL_USBXIRQENABLEXXX1_RESUME) {
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:599: CLEAR_IRQ1(AM335X_VAL_USBXIRQENABLEXXX1_RESUME);
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:603: if (irqstat1 & AM335X_VAL_USBXIRQENABLEXXX1_RESET_BABBLE) {
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:605: CLEAR_IRQ1(AM335X_VAL_USBXIRQENABLEXXX1_RESET_BABBLE);
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:609: if (irqstat1 & AM335X_VAL_USBXIRQENABLEXXX1_SOF) {
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:611: CLEAR_IRQ1(AM335X_VAL_USBXIRQENABLEXXX1_SOF);
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:615: if (irqstat1 & AM335X_VAL_USBXIRQENABLEXXX1_SRP) {
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:617: CLEAR_IRQ1(AM335X_VAL_USBXIRQENABLEXXX1_SRP);
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:621: if (irqstat1 & AM335X_VAL_USBXIRQENABLEXXX1_VBUS) {
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:623: CLEAR_IRQ1(AM335X_VAL_USBXIRQENABLEXXX1_VBUS);
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:627: if (irqstat1 & AM335X_VAL_USBXIRQENABLEXXX1_GENERIC) {
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:629: CLEAR_IRQ1(AM335X_VAL_USBXIRQENABLEXXX1_GENERIC);
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:716: HCD_SET(intreg,	AM335X_VAL_USBXIRQENABLEXXX1_SUSPEND		|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:717: AM335X_VAL_USBXIRQENABLEXXX1_RESUME		|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:718: AM335X_VAL_USBXIRQENABLEXXX1_RESET_BABBLE	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:719: /* AM335X_VAL_USBXIRQENABLEXXX1_SOF		| */
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:720: AM335X_VAL_USBXIRQENABLEXXX1_CONNECTED		|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:721: AM335X_VAL_USBXIRQENABLEXXX1_DISCONNECTED	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:722: AM335X_VAL_USBXIRQENABLEXXX1_SRP		|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:723: AM335X_VAL_USBXIRQENABLEXXX1_VBUS		|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:724: AM335X_VAL_USBXIRQENABLEXXX1_DRVVBUS		|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:725: AM335X_VAL_USBXIRQENABLEXXX1_GENERIC);
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:730: intreg = AM335X_VAL_USBXIRQENABLEXXX0_EP0	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:731: AM335X_VAL_USBXIRQENABLEXXX0_TX_EP1	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:732: AM335X_VAL_USBXIRQENABLEXXX0_TX_EP2	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:733: AM335X_VAL_USBXIRQENABLEXXX0_TX_EP3	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:734: AM335X_VAL_USBXIRQENABLEXXX0_TX_EP4	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:735: AM335X_VAL_USBXIRQENABLEXXX0_TX_EP5	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:736: AM335X_VAL_USBXIRQENABLEXXX0_TX_EP6	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:737: AM335X_VAL_USBXIRQENABLEXXX0_TX_EP7	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:738: AM335X_VAL_USBXIRQENABLEXXX0_TX_EP8	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:739: AM335X_VAL_USBXIRQENABLEXXX0_TX_EP9	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:740: AM335X_VAL_USBXIRQENABLEXXX0_TX_EP10	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:741: AM335X_VAL_USBXIRQENABLEXXX0_TX_EP11	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:742: AM335X_VAL_USBXIRQENABLEXXX0_TX_EP12	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:743: AM335X_VAL_USBXIRQENABLEXXX0_TX_EP13	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:744: AM335X_VAL_USBXIRQENABLEXXX0_TX_EP14	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:745: AM335X_VAL_USBXIRQENABLEXXX0_TX_EP15	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:746: AM335X_VAL_USBXIRQENABLEXXX0_RX_EP1	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:747: AM335X_VAL_USBXIRQENABLEXXX0_RX_EP2	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:748: AM335X_VAL_USBXIRQENABLEXXX0_RX_EP3	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:749: AM335X_VAL_USBXIRQENABLEXXX0_RX_EP4	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:750: AM335X_VAL_USBXIRQENABLEXXX0_RX_EP5	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:751: AM335X_VAL_USBXIRQENABLEXXX0_RX_EP6	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:752: AM335X_VAL_USBXIRQENABLEXXX0_RX_EP7	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:753: AM335X_VAL_USBXIRQENABLEXXX0_RX_EP8	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:754: AM335X_VAL_USBXIRQENABLEXXX0_RX_EP9	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:755: AM335X_VAL_USBXIRQENABLEXXX0_RX_EP10	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:756: AM335X_VAL_USBXIRQENABLEXXX0_RX_EP11	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:757: AM335X_VAL_USBXIRQENABLEXXX0_RX_EP12	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:758: AM335X_VAL_USBXIRQENABLEXXX0_RX_EP13	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:759: AM335X_VAL_USBXIRQENABLEXXX0_RX_EP14	|
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:760: AM335X_VAL_USBXIRQENABLEXXX0_RX_EP15	;
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:210: /* TODO: Apparently, FIFO can only be read by:
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:257: /* TODO: Apparently, FIFO can only be written by:
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:500: USB_ASSERT(0, "Unsupported transfer type");
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:517: #if 0
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:530: /* TODO: One reusable FIFO, no double buffering */
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:531: /* TODO: With this, only one device/EP can work at a time. Should this
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:590: USB_ASSERT(0, "Unsupported transfer type");
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:607: #if 0
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:620: /* TODO: One reusable FIFO, no double buffering */
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:621: /* TODO: With this, only one device/EP can work at a time. Should this
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:637: /* TODO: May have no effect */
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:691: /* TODO: Not needed for enumeration but may be needed later, if
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:693: USB_ASSERT(0, "Setup packet's 'DATA OUT' stage not implemented");
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:804: /* TODO: ISO transfer */
+M:\minix\drivers\usb\usbd\include\usbd\hcd_common.h:13: /* TODO: usb.h is for DDEKit's IPC and should not be used here */
+M:\minix\drivers\usb\usbd\include\usbd\hcd_common.h:179: /* TODO: This has corresponding redefinition in hub driver */
+M:\minix\drivers\usb\usbd\include\usbd\hcd_interface.h:52: /* TODO: Only one port for each driver */
+M:\minix\drivers\usb\usbd\include\usbd\usbd_common.h:15: #if 0
+M:\minix\drivers\video\fb\arch\earm\fb_arch.c:87: .mmio_start	= 0,	/* Not implemented for char. special, so */
+M:\minix\drivers\video\fb\arch\earm\fb_arch.c:345: panic("Unable to request access to DSS(1) memory");
+M:\minix\drivers\video\fb\arch\earm\fb_arch.c:352: panic("Unable to request access to DSS(2) memory");
+M:\minix\drivers\video\fb\arch\earm\fb_arch.c:359: panic("Unable to request access to DISPC(1) memory");
+M:\minix\drivers\video\fb\arch\earm\fb_arch.c:366: panic("Unable to request access to DISPC(2) memory");
+M:\minix\drivers\video\fb\arch\earm\fb_arch.c:400: panic("Unable to allocate contiguous memory\n");
+M:\minix\drivers\vmm_guest\vbox\err.c:21: ENOSYS,		/*   -12: function not implemented */
+M:\minix\drivers\vmm_guest\vbox\err.c:106: EINVAL,		/*   -97: unsupported alignment */
+M:\minix\drivers\vmm_guest\vbox\hgcm.c:65: /* Unsupported negative codes are translated to EGENERIC; it is up to
+M:\minix\drivers\vmm_guest\vbox\hgcm.c:695: default:		r = ENOSYS;				break;
+M:\minix\drivers\vmm_guest\vbox\vbox.c:51: panic("device I/O failed: %d", r);
+M:\minix\drivers\vmm_guest\vbox\vbox.c:79: panic("backdoor device not found");
+M:\minix\drivers\vmm_guest\vbox\vbox.c:95: panic("unable to register IRQ: %d", r);
+M:\minix\drivers\vmm_guest\vbox\vbox.c:98: panic("unable to enable IRQ: %d", r);
+M:\minix\drivers\vmm_guest\vbox\vbox.c:101: panic("unable to allocate memory");
+M:\minix\drivers\vmm_guest\vbox\vbox.c:110: panic("backdoor device not functioning");
+M:\minix\drivers\vmm_guest\vbox\vbox.c:147: panic("unable to reenable IRQ: %d", r);
+M:\minix\drivers\vmm_guest\vbox\vbox.c:218: panic("driver_receive failed: %d", r);
+M:\minix\fs\ext2\balloc.c:82: panic("can't alloc block on read-only filesys.");
+M:\minix\fs\ext2\balloc.c:191: panic("can't get group_desc to alloc block");
+M:\minix\fs\ext2\balloc.c:244: panic("ext2: allocator failed to allocate a bit in bitmap\
+M:\minix\fs\ext2\balloc.c:287: panic("can't free bit on read-only filesys.");
+M:\minix\fs\ext2\balloc.c:291: panic("trying to free block %d beyond blocks scope.",
+M:\minix\fs\ext2\balloc.c:302: panic("can't get group_desc to alloc block");
+M:\minix\fs\ext2\balloc.c:312: panic("trying to deallocate \
+M:\minix\fs\ext2\balloc.c:319: panic("Tried to free unused block %d", bit_returned);
+M:\minix\fs\ext2\balloc.c:347: panic("ext2: block allocator tryed to return \
+M:\minix\fs\ext2\balloc.c:352: panic("ext2: allocator returned blocknum greater, than \
+M:\minix\fs\ext2\glo.h:43: /* Little hack for syncing group descriptors. */
+M:\minix\fs\ext2\ialloc.c:134: panic("can't alloc inode on read-only filesys.");
+M:\minix\fs\ext2\ialloc.c:155: panic("can't get group_desc to alloc block");
+M:\minix\fs\ext2\ialloc.c:174: panic("ext2: allocator returned inum greater, than\
+M:\minix\fs\ext2\ialloc.c:179: panic("ext2: allocator tryed to use reserved inode.\n");
+M:\minix\fs\ext2\ialloc.c:213: panic("can't free bit on read-only filesys.");
+M:\minix\fs\ext2\ialloc.c:220: panic("trying to free inode %d beyond inodes scope.", bit_returned);
+M:\minix\fs\ext2\ialloc.c:227: panic("can't get group_desc to alloc block");
+M:\minix\fs\ext2\ialloc.c:232: panic("Tried to free unused inode %d", bit_returned);
+M:\minix\fs\ext2\ialloc.c:262: panic("can't get group_desc to alloc inode");
+M:\minix\fs\ext2\ialloc.c:293: panic("can't get group_desc to alloc inode");
+M:\minix\fs\ext2\ialloc.c:314: panic("can't get group_desc to alloc inode");
+M:\minix\fs\ext2\ialloc.c:328: panic("can't get group_desc to alloc inode");
+M:\minix\fs\ext2\ialloc.c:349: panic("can't get group_desc to alloc inode");
+M:\minix\fs\ext2\ialloc.c:394: panic("can't get group_desc to alloc inode");
+M:\minix\fs\ext2\ialloc.c:430: panic("can't get group_desc to alloc inode");
+M:\minix\fs\ext2\inode.c:46: panic("fs_putnode failed");
+M:\minix\fs\ext2\inode.c:53: panic("fs_putnode failed");
+M:\minix\fs\ext2\inode.c:57: panic("fs_putnode failed");
+M:\minix\fs\ext2\inode.c:237: panic("put_inode: i_count already below 1: %d", rip->i_count);
+M:\minix\fs\ext2\inode.c:328: panic("can't get group_desc to read/write inode");
+M:\minix\fs\ext2\link.c:719: panic("zeroblock_range: no block");
+M:\minix\fs\ext2\link.c:722: panic("zeroblock_range: len too long: %lld", len);
+M:\minix\fs\ext2\main.c:189: panic("sef_receive failed: %d", r);
+M:\minix\fs\ext2\mount.c:65: panic("Can't allocate memory for superblock.");
+M:\minix\fs\ext2\mount.c:218: panic("ext2: couldn't find root inode");
+M:\minix\fs\ext2\open.c:174: panic("Dir disappeared: %d ", (int) rip->i_num);
+M:\minix\fs\ext2\open.c:265: panic("Symbolic link vanished");
+M:\minix\fs\ext2\path.c:331: panic("ltraverse: suffix does not start with a slash");
+M:\minix\fs\ext2\path.c:551: panic("get_block returned NO_BLOCK");
+M:\minix\fs\ext2\path.c:592: * @TODO: actually we could just reset it for
+M:\minix\fs\ext2\read.c:70: default: panic("odd request");
+M:\minix\fs\ext2\read.c:246: panic("rw_chunk: position too high");
+M:\minix\fs\ext2\read.c:292: panic("bp not valid in rw_chunk, this can't happen");
+M:\minix\fs\ext2\read.c:362: } else if (block_pos >= out_range_s) { /* TODO: do we need it? */
+M:\minix\fs\ext2\read.c:429: panic("rd_indir() on NULL");
+M:\minix\fs\ext2\read.c:430: /* TODO: use conv call */
+M:\minix\fs\ext2\read.c:502: panic("couldn't allocate read_q");
+M:\minix\fs\ext2\read.c:546: * The current solution below is a bit of a hack, it just reads blocks from
+M:\minix\fs\ext2\read.c:681: #if 0
+M:\minix\fs\ext2\read.c:737: panic("unexpected get_inode failure");
+M:\minix\fs\ext2\super.c:45: panic("request for super_block of NO_DEV");
+M:\minix\fs\ext2\super.c:47: panic("wrong superblock: 0x%x", (int) dev);
+M:\minix\fs\ext2\super.c:59: panic("request for block size of NO_DEV");
+M:\minix\fs\ext2\super.c:84: panic("request for super_block of NO_DEV");
+M:\minix\fs\ext2\super.c:122: /* TODO: this code is for revision 1 (but bw compatible with 0)
+M:\minix\fs\ext2\super.c:152: panic("can't allocate group desc array");
+M:\minix\fs\ext2\super.c:154: panic("can't allocate group desc array");
+M:\minix\fs\ext2\super.c:178: /* TODO: check descriptors we just read */
+M:\minix\fs\ext2\super.c:217: panic("can't write superblock on read-only filesys.");
+M:\minix\fs\ext2\super.c:220: panic("request to write super_block, but NO_DEV");
+M:\minix\fs\ext2\super.c:273: continue; /* TODO: fail? */
+M:\minix\fs\ext2\super.c:300: panic("ext2_max_size needs modification!");
+M:\minix\fs\ext2\super.c:306: ext2_debug("ext2_max_size: Unsupported block_size! \
+M:\minix\fs\ext2\super.c:311: #if 0
+M:\minix\fs\ext2\utility.c:70: panic("clock_time: getuptme2 failed: %d", k);
+M:\minix\fs\ext2\utility.c:100: file, line, #c); panic("sanity check " #c " failed: %d", __LINE__); }
+M:\minix\fs\ext2\utility.c:141: /* TODO: do we need to add 1? I saw a situation, when it was
+M:\minix\fs\ext2\utility.c:191: /* TODO: do we need to add 1? I saw a situation, when it was
+M:\minix\fs\ext2\write.c:87: } else if (block_pos >= out_range_s) { /* TODO: do we need it? */
+M:\minix\fs\ext2\write.c:283: panic("wr_indir() on NULL");
+M:\minix\fs\iso9660fs\main.c:135: panic("sef_receive failed: %d", s);
+M:\minix\fs\iso9660fs\read.c:28: default: panic("odd m_type");
+M:\minix\fs\iso9660fs\read.c:242: panic("fs_getdents: sys_safecopyto failed: %d", r);
+M:\minix\fs\iso9660fs\read.c:276: panic("fs_getdents: sys_safecopyto failed: %d", r);
+M:\minix\fs\iso9660fs\read.c:335: panic("bp not valid in rw_chunk; this can't happen");
+M:\minix\fs\iso9660fs\table.c:43: #if 0
+M:\minix\fs\mfs\inode.c:50: panic("fs_putnode failed");
+M:\minix\fs\mfs\inode.c:57: panic("fs_putnode failed");
+M:\minix\fs\mfs\inode.c:61: panic("fs_putnode failed");
+M:\minix\fs\mfs\inode.c:223: panic("put_inode: i_count already below 1: %d", rip->i_count);
+M:\minix\fs\mfs\main.c:153: panic("sef_receive failed: %d", r);
+M:\minix\fs\mfs\main.c:183: #if 0
+M:\minix\fs\mfs\mount.c:72: panic("couldn't bdev_close after found unclean FS");
+M:\minix\fs\mfs\mount.c:76: panic("couldn't bdev_open after found unclean FS");
+M:\minix\fs\mfs\mount.c:115: panic("mounting: couldn't write dirty superblock");
+M:\minix\fs\mfs\mount.c:171: panic("MFS: couldn't find root inode\n");
+M:\minix\fs\mfs\open.c:158: panic("Dir disappeared: %llu", rip->i_num);
+M:\minix\fs\mfs\open.c:237: panic("Symbolic link vanished");
+M:\minix\fs\mfs\path.c:318: panic("ltraverse: suffix does not start with a slash");
+M:\minix\fs\mfs\read.c:62: default: panic("odd request");
+M:\minix\fs\mfs\read.c:255: panic("rw_chunk: position too high");
+M:\minix\fs\mfs\read.c:427: panic("rd_indir() on NULL");
+M:\minix\fs\mfs\read.c:439: panic("check file system");
+M:\minix\fs\mfs\read.c:481: panic("couldn't allocate read_q");
+M:\minix\fs\mfs\read.c:526: * The current solution below is a bit of a hack, it just reads blocks from
+M:\minix\fs\mfs\read.c:706: panic("unexpected get_inode failure");
+M:\minix\fs\mfs\super.c:49: panic("can't allocate bit on read-only filesys");
+M:\minix\fs\mfs\super.c:127: panic("can't free bit on read-only filesys");
+M:\minix\fs\mfs\super.c:145: if (map == IMAP) panic("tried to free unused inode");
+M:\minix\fs\mfs\super.c:146: else panic("tried to free unused block: %u", bit_returned);
+M:\minix\fs\mfs\super.c:169: panic("request for super_block of NO_DEV");
+M:\minix\fs\mfs\super.c:172: panic("wrong superblock: 0x%x", (int) dev);
+M:\minix\fs\mfs\super.c:184: panic("request for block size of NO_DEV");
+M:\minix\fs\mfs\super.c:213: panic("request for super_block of NO_DEV");
+M:\minix\fs\mfs\super.c:227: panic("get_block of superblock failed");
+M:\minix\fs\mfs\super.c:351: printf("MFS: unsupported feature flags on this FS.\n"
+M:\minix\fs\mfs\super.c:365: panic("can't write superblock of readonly filesystem");
+M:\minix\fs\mfs\type.h:9: u16_t d2_nlinks;		/* how many links to this file. HACK! */
+M:\minix\fs\mfs\type.h:11: u16_t d2_gid;			/* group number HACK! */
+M:\minix\fs\mfs\utility.c:66: panic("clock_time: getuptme2 failed: %d", k);
+M:\minix\fs\mfs\utility.c:96: file, line, #c); panic("sanity check " #c " failed: %d", __LINE__); }
+M:\minix\fs\mfs\write.c:202: panic("wr_indir() on NULL");
+M:\minix\fs\pfs\inode.c:43: panic("fs_putnode failed");
+M:\minix\fs\pfs\inode.c:50: panic("fs_putnode failed");
+M:\minix\fs\pfs\inode.c:54: panic("fs_putnode failed");
+M:\minix\fs\pfs\inode.c:210: panic("put_inode: i_count already below 1: %d", rip->i_count);
+M:\minix\fs\pfs\main.c:121: panic("unable to drop privileges");
+M:\minix\fs\pfs\main.c:150: panic("sef_receive_status failed: %d", r);
+M:\minix\fs\pfs\open.c:38: r = EIO; /* Unsupported file type */
+M:\minix\fs\pfs\utility.c:31: panic("clock_time: getuptme2 failed: %d", r);
+M:\minix\fs\procfs\tree.c:444: panic("unable to get uptime: %d", r);
+M:\minix\lib\libasyn\asyn_special.c:13: * asyn_result() it is a set of brackets around a system call xxx that has
+M:\minix\lib\libasyn\asyn_special.c:14: * no asyn_xxx() for itself.  It can be used to build an asyn_accept() or
+M:\minix\lib\libasyn\asyn_special.c:17: * a myriad of calls that can't be given an asyn_xxx() counterpart each.)
+M:\minix\lib\libaudiodriver\audio_fw.c:157: /* TODO: execute the rest of this function only once
+M:\minix\lib\libaudiodriver\audio_fw.c:569: #if 0
+M:\minix\lib\libaudiodriver\audio_fw.c:622: #if 0
+M:\minix\lib\libaudiodriver\audio_fw.c:845: #if 0
+M:\minix\lib\libbdev\bdev.c:579: /* FIXME: we assume all reasonable ssize_t values can be stored in an int. */
+M:\minix\lib\libbdev\minor.c:21: * FIXME: if reopening fails with a non-IPC error, we should attempt to close
+M:\minix\lib\libblockdriver\driver.c:86: panic("out of slots for open devices");
+M:\minix\lib\libblockdriver\driver.c:110: panic("blockdriver_init: sys_statectl failed: %d", r);
+M:\minix\lib\libblockdriver\driver.c:115: panic("blockdriver_init: unable to get own label: %d", r);
+M:\minix\lib\libblockdriver\driver.c:119: panic("blockdriver_init: unable to publish driver up event: %d", r);
+M:\minix\lib\libblockdriver\driver_mt.c:76: panic("blockdriver_mt: enqueue failed (message queue full)");
+M:\minix\lib\libblockdriver\driver_mt.c:161: panic("blockdriver_mt: could not save local thread pointer");
+M:\minix\lib\libblockdriver\driver_mt.c:196: panic("blockdriver_mt: could not delete local thread pointer");
+M:\minix\lib\libblockdriver\driver_mt.c:225: panic("blockdriver_mt: could not initialize attributes (%d)", r);
+M:\minix\lib\libblockdriver\driver_mt.c:229: panic("blockdriver_mt: could not set stack size (%d)", r);
+M:\minix\lib\libblockdriver\driver_mt.c:233: panic("blockdriver_mt: could not start thread %d (%d)", worker_id, r);
+M:\minix\lib\libblockdriver\driver_mt.c:251: panic("blockdriver_mt: could not join thread %d", wp->worker_id);
+M:\minix\lib\libblockdriver\driver_mt.c:363: panic("blockdriver_mt: error initializing worker key");
+M:\minix\lib\libblockdriver\driver_mt.c:378: panic("blockdriver_mt: master thread cannot query thread ID\n");
+M:\minix\lib\libblockdriver\driver_mt.c:395: panic("blockdriver_mt: sef_receive_status() returned %d", r);
+M:\minix\lib\libblockdriver\driver_mt.c:459: panic("blockdriver_mt: master thread cannot sleep");
+M:\minix\lib\libblockdriver\driver_st.c:68: panic("blockdriver_receive_mq failed: %d", r);
+M:\minix\lib\libblockdriver\drvlib.c:48: panic("partition: unable to allocate temporary buffer");
+M:\minix\lib\libc\arch\i386\_cpuid.S:5: /* 0 for OK, nonzero for unsupported */
+M:\minix\lib\libc\gen\sethostname.c:23: strlcpy(name, "/tmp/hostname.XXXXX",sizeof(name));
+M:\minix\lib\libc\gen\uname.c:38: #if 0
+M:\minix\lib\libc\sys\_ucontext.c:213: # error "Unsupported platform"
+M:\minix\lib\libc\sys\bind.c:78: fprintf(stderr, "bind: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\bind.c:80: errno= ENOSYS;
+M:\minix\lib\libc\sys\connect.c:76: fprintf(stderr, "connect: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\connect.c:78: errno= ENOSYS;
+M:\minix\lib\libc\sys\getpeername.c:75: fprintf(stderr, "getpeername: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\getpeername.c:77: errno= ENOSYS;
+M:\minix\lib\libc\sys\getsockname.c:87: fprintf(stderr, "getsockname: not implemented for fd %d\n", socket);
+M:\minix\lib\libc\sys\getsockname.c:90: errno= ENOSYS;
+M:\minix\lib\libc\sys\getsockopt.c:79: fprintf(stderr, "getsockopt: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\getsockopt.c:175: errno= ENOSYS;
+M:\minix\lib\libc\sys\getsockopt.c:255: errno= ENOSYS;
+M:\minix\lib\libc\sys\listen.c:32: fprintf(stderr, "listen: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\listen.c:34: errno= ENOSYS;
+M:\minix\lib\libc\sys\poll.c:93: /* XXX: POLLHUP/POLLNVAL? */
+M:\minix\lib\libc\sys\recvfrom.c:121: fprintf(stderr, "recvfrom: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\recvfrom.c:137: fprintf(stderr, "recvfrom(tcp): flags not implemented\n");
+M:\minix\lib\libc\sys\recvfrom.c:139: errno= ENOSYS;
+M:\minix\lib\libc\sys\recvfrom.c:174: fprintf(stderr, "recvfrom(udp): flags not implemented\n");
+M:\minix\lib\libc\sys\recvfrom.c:176: errno= ENOSYS;
+M:\minix\lib\libc\sys\recvfrom.c:276: fprintf(stderr, "recvfrom(uds): flags not implemented\n");
+M:\minix\lib\libc\sys\recvfrom.c:278: errno= ENOSYS;
+M:\minix\lib\libc\sys\recvfrom.c:309: fprintf(stderr, "recvfrom(uds): flags not implemented\n");
+M:\minix\lib\libc\sys\recvfrom.c:311: errno= ENOSYS;
+M:\minix\lib\libc\sys\recvmsg.c:43: fprintf(stderr, "recvmsg: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\recvmsg.c:46: errno= ENOSYS;
+M:\minix\lib\libc\sys\recvmsg.c:56: fprintf(stderr, "recvmsg(uds): flags not implemented\n");
+M:\minix\lib\libc\sys\recvmsg.c:58: errno= ENOSYS;
+M:\minix\lib\libc\sys\recvmsg.c:97: fprintf(stderr, "recvmsg(uds): flags not implemented\n");
+M:\minix\lib\libc\sys\recvmsg.c:99: errno= ENOSYS;
+M:\minix\lib\libc\sys\sem.c:33: errno = ENOSYS;
+M:\minix\lib\libc\sys\sem.c:58: errno = ENOSYS;
+M:\minix\lib\libc\sys\sem.c:88: errno = ENOSYS;
+M:\minix\lib\libc\sys\sendmsg.c:44: fprintf(stderr, "sendmsg: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\sendmsg.c:47: errno= ENOSYS;
+M:\minix\lib\libc\sys\sendmsg.c:59: fprintf(stderr, "sendmsg(uds): flags not implemented\n");
+M:\minix\lib\libc\sys\sendmsg.c:61: errno= ENOSYS;
+M:\minix\lib\libc\sys\sendmsg.c:97: fprintf(stderr, "sendmsg(uds): flags not implemented\n");
+M:\minix\lib\libc\sys\sendmsg.c:99: errno= ENOSYS;
+M:\minix\lib\libc\sys\sendto.c:100: fprintf(stderr, "sendto: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\sendto.c:102: errno= ENOSYS;
+M:\minix\lib\libc\sys\sendto.c:112: fprintf(stderr, "sendto(tcp): flags not implemented\n");
+M:\minix\lib\libc\sys\sendto.c:114: errno= ENOSYS;
+M:\minix\lib\libc\sys\sendto.c:136: fprintf(stderr, "sendto(udp): flags not implemented\n");
+M:\minix\lib\libc\sys\sendto.c:138: errno= ENOSYS;
+M:\minix\lib\libc\sys\sendto.c:217: fprintf(stderr, "sendto(uds): flags not implemented\n");
+M:\minix\lib\libc\sys\sendto.c:219: errno= ENOSYS;
+M:\minix\lib\libc\sys\sendto.c:237: fprintf(stderr, "sendto(uds): flags not implemented\n");
+M:\minix\lib\libc\sys\sendto.c:239: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:75: fprintf(stderr, "setsockopt: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\setsockopt.c:99: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:117: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:134: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:154: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:175: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:185: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:197: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:243: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:260: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:271: errno= ENOSYS;
+M:\minix\lib\libc\sys\shmat.c:31: errno = ENOSYS;
+M:\minix\lib\libc\sys\shmat.c:53: errno = ENOSYS;
+M:\minix\lib\libc\sys\shmctl.c:30: errno = ENOSYS;
+M:\minix\lib\libc\sys\shmget.c:28: errno = ENOSYS;
+M:\minix\lib\libc\sys\shutdown.c:48: fprintf(stderr, "shutdown: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\shutdown.c:50: errno= ENOSYS;
+M:\minix\lib\libc\sys\shutdown.c:68: errno= ENOSYS;
+M:\minix\lib\libc\sys\stack_utils.c:33: * | XXXXXXXXXX | 0x0000_00000
+M:\minix\lib\libc\sys\syscall.c:17: /* XXX - strerror doesn't know all the codes */
+M:\minix\lib\libchardriver\chardriver.c:90: panic("out of slots for open devices");
+M:\minix\lib\libchardriver\chardriver.c:112: panic("chardriver_announce: sys_statectl failed: %d", r);
+M:\minix\lib\libchardriver\chardriver.c:116: panic("chardriver_announce: unable to get own label: %d", r);
+M:\minix\lib\libchardriver\chardriver.c:120: panic("chardriver_announce: unable to publish driver up event: %d", r);
+M:\minix\lib\libchardriver\chardriver.c:138: panic("chardriver: bad task reply: %d", r);
+M:\minix\lib\libchardriver\chardriver.c:162: panic("chardriver: bad select reply: %d", r);
+M:\minix\lib\libchardriver\chardriver.c:208: /* FIXME: we should be able to check FLAGS against
+M:\minix\lib\libchardriver\chardriver.c:213: #if 0
+M:\minix\lib\libchardriver\chardriver.c:215: panic("chardriver: cannot suspend nonblocking I/O");
+M:\minix\lib\libchardriver\chardriver.c:221: panic("chardriver: cannot suspend request %d", mess->m_type);
+M:\minix\lib\libchardriver\chardriver.c:226: panic("chardriver: SUSPEND should not be used anymore");
+M:\minix\lib\libchardriver\chardriver.c:270: panic("chardriver: unknown request %d", mess->m_type);
+M:\minix\lib\libchardriver\chardriver.c:563: panic("chardriver: sef_receive_status failed: %d", r);
+M:\minix\lib\libddekit\src\condvar.c:72: * Only used by ddefbsd, so not implemented
+M:\minix\lib\libddekit\src\dde.c:54: ddekit_panic("ddekit", "sef_receive failed", r);
+M:\minix\lib\libddekit\src\irq.c:31: static int next_notify_id = 0; /* TODO: This is only incremented and after
+M:\minix\lib\libddekit\src\irq.c:212: ddekit_panic("Failed to attach interrupt (ERROR %d)", err_code);
+M:\minix\lib\libddekit\src\irq.c:236: ddekit_panic("Failed to detach interrupt (ERROR %d)", err_code);
+M:\minix\lib\libddekit\src\irq.c:294: ddekit_panic("Failed to enable interrupt "
+M:\minix\lib\libddekit\src\lock.c:76: ddekit_panic("owner!=NULL: %s (I am %s)\n",
+M:\minix\lib\libddekit\src\mem.c:61: ddekit_panic("out of mem?");
+M:\minix\lib\libddekit\src\mem.c:85: ddekit_panic("out of mem?");
+M:\minix\lib\libddekit\src\mem.c:394: ddekit_panic("objects too big!");
+M:\minix\lib\libddekit\src\mem.c:421: ddekit_panic("no slab to free!");
+M:\minix\lib\libddekit\src\msg_queue.c:50: /* TODO: check for overlapping message ranges */
+M:\minix\lib\libddekit\src\msg_queue.c:100: /* XXX should reply to the sender with EIO or so, but for that
+M:\minix\lib\libddekit\src\panic.c:8: void ddekit_panic(char *fmt, ...)
+M:\minix\lib\libddekit\src\panic.c:18: panic("panicced");
+M:\minix\lib\libddekit\src\pci.c:89: ddekit_panic("ddekit_pci_init_only_one: "
+M:\minix\lib\libddekit\src\pci.c:340: * XXX: Those are neither used be DDEFBSD or DDELinux implement them
+M:\minix\lib\libddekit\src\pci.c:443: #if 0
+M:\minix\lib\libddekit\src\resource.c:58: ddekit_panic("unable to map IO memory from %p of size %d",
+M:\minix\lib\libddekit\src\resource.c:78: ddekit_panic("sys_inb failed.");
+M:\minix\lib\libddekit\src\resource.c:90: ddekit_panic("sys_inw failed.");
+M:\minix\lib\libddekit\src\resource.c:102: ddekit_panic("sys_outl failed.");
+M:\minix\lib\libddekit\src\resource.c:113: ddekit_panic("sys_outb failed.");
+M:\minix\lib\libddekit\src\resource.c:123: ddekit_panic("sys_outw failed.");
+M:\minix\lib\libddekit\src\resource.c:133: ddekit_panic("sys_outl failed.");
+M:\minix\lib\libddekit\src\semaphore.c:108: ddekit_panic("not implemented!");
+M:\minix\lib\libddekit\src\thread.c:144: panic("ddekit thread create thread getcontext error");
+M:\minix\lib\libddekit\src\thread.c:284: ddekit_panic("th==NULL!");
+M:\minix\lib\libddekit\src\thread.c:288: ddekit_panic("th->sleepsem==NULL! %p %s ", th, th->name);
+M:\minix\lib\libddekit\src\thread.c:310: ddekit_panic("thread running after exit!\n");
+M:\minix\lib\libddekit\src\thread.c:322: /* TODO: Whether or not this is an error, is to be decided.
+M:\minix\lib\libddekit\src\thread.c:325: ddekit_panic("Thread attempted termination of itself!\n");
+M:\minix\lib\libddekit\src\thread.c:404: panic("ddekit thread schedule getcontext error");
+M:\minix\lib\libddekit\src\thread.c:424: ddekit_panic("No runnable threads?!");
+M:\minix\lib\libddekit\src\thread.c:434: panic("ddekit threading setcontext error");
+M:\minix\lib\libddekit\src\thread.c:436: panic("unreachable code");
+M:\minix\lib\libddekit\src\usb_client.c:41: /* XXX: copy stuff back into d_urb */
+M:\minix\lib\libddekit\src\usb_server.c:18: #if 0
+M:\minix\lib\libddekit\src\usb_server.c:594: /* TODO: ERROR */
+M:\minix\lib\libddekit\src\usb_server.c:603: /* TODO: Error*/
+M:\minix\lib\libddekit\src\usb_server.c:640: /* TODO: error */
+M:\minix\lib\libdevman\generic.c:74: #if 0
+M:\minix\lib\libdevman\generic.c:85: entry->type = 0; /* TODO: use macro */
+M:\minix\lib\libdevman\generic.c:122: panic("devman_add_device: could not talk to devman: %d", res);
+M:\minix\lib\libdevman\generic.c:126: panic("devman_add_device: got illegal response from devman: %d",
+M:\minix\lib\libdevman\generic.c:131: panic("devman_add_device: could add device: %ld",
+M:\minix\lib\libdevman\generic.c:162: panic("devman_del_device: could not talk to devman: %d", res);
+M:\minix\lib\libdevman\generic.c:166: panic("devman_del_device: got illegal response from devman: %d",
+M:\minix\lib\libdevman\generic.c:171: panic("devman_del_device: could delete device: %ld",
+M:\minix\lib\libdevman\generic.c:201: panic("usb_init: ds_retrieve_label_endpt failed for 'devman': %d", res);
+M:\minix\lib\libdevman\usb.c:14: panic("Out of memory! (%s, line %d)", \
+M:\minix\lib\libdevman\usb.c:53: panic("add_device_attributes: sprintf failed");
+M:\minix\lib\libdevman\usb.c:59: panic("add_device_attributes: sprintf failed");
+M:\minix\lib\libdevman\usb.c:65: panic("add_device_attributes: sprintf failed");
+M:\minix\lib\libdevman\usb.c:71: panic("add_device_attributes: sprintf failed");
+M:\minix\lib\libdevman\usb.c:77: panic("add_device_attributes: sprintf failed");
+M:\minix\lib\libdevman\usb.c:102: panic("add_device_attributes: sprintf failed");
+M:\minix\lib\libdevman\usb.c:108: panic("add_device_attributes: sprintf failed");
+M:\minix\lib\libdevman\usb.c:114: panic("add_device_attributes: sprintf failed");
+M:\minix\lib\libdevman\usb.c:120: panic("add_device_attributes: sprintf failed");
+M:\minix\lib\libdevman\usb.c:126: panic("add_device_attributes: sprintf failed");
+M:\minix\lib\libdevman\usb.c:132: panic("add_device_attributes: sprintf failed");
+M:\minix\lib\libdevman\usb.c:235: panic("devman_usb_device_add(): devman_add_device failed.");
+M:\minix\lib\libdevman\usb.c:266: panic("devman_usb_device_add(): devman_add_device failed.");
+M:\minix\lib\libdevman\usb.c:285: panic("devman_usb_device_remove(): devman_del_device failed.");
+M:\minix\lib\libexec\exec_elf.c:72: #if 0
+M:\minix\lib\libfetch\common.c:132: case EISDIR: /* XXX */
+M:\minix\lib\libfetch\common.c:943: /* XXX not supported! */
+M:\minix\lib\libfetch\ftp.c:789: e = FTP_PROTOCOL_ERROR; /* XXX: error code should be prepared */
+M:\minix\lib\libfetch\ftp.c:874: e = FTP_PROTOCOL_ERROR; /* XXX: error code should be prepared */
+M:\minix\lib\libfetch\ftp.c:981: e = FTP_PROTOCOL_ERROR; /* XXX: error code should be prepared */
+M:\minix\lib\libfetch\ftp.c:1045: /* XXX FTP_AUTH, and maybe .netrc */
+M:\minix\lib\libfetch\ftp.c:1112: /* XXX proxy authentication! */
+M:\minix\lib\libfetch\ftp.c:1113: /* XXX connetion caching */
+M:\minix\lib\libfetch\ftp.c:1146: /* TODO: Request extended features supported, if any (RFC 3659). */
+M:\minix\lib\libfetch\ftp.c:1324: /* XXX What about proxies? */
+M:\minix\lib\libfetch\ftperr.h:7: { 202, FETCH_PROTO, "Command not implemented, superfluous at this site" },
+M:\minix\lib\libfetch\ftperr.h:33: { 502, FETCH_PROTO, "Command not implemented" },
+M:\minix\lib\libfetch\ftperr.h:35: { 504, FETCH_PROTO, "Command not implemented for that parameter" },
+M:\minix\lib\libfetch\http.c:560: /* XXX should add support for date-2 and date-3 */
+M:\minix\lib\libfetch\http.c:737: return (-1); /* XXX */
+M:\minix\lib\libfetch\http.c:785: /* XXX should set an error code */
+M:\minix\lib\libfetch\http.c:863: * XXX This function is way too long, the do..while loop should be split
+M:\minix\lib\libfetch\http.c:864: * XXX off into a separate function.
+M:\minix\lib\libfetch\http.c:1089: /* XXX too weak? */
+M:\minix\lib\libfetch\http.c:1115: /* XXX should set an error code */
+M:\minix\lib\libfetch\http.c:1126: /* XXX weak test*/
+M:\minix\lib\libfetch\http.c:1297: fprintf(stderr, "fetchPutHTTP(): not implemented\n");
+M:\minix\lib\libfetch\httperr.h:33: { 415, FETCH_PROTO, "Unsupported Media Type" },
+M:\minix\lib\libfetch\httperr.h:37: { 501, FETCH_PROTO, "Not Implemented" },
+M:\minix\lib\libgpio\gpio_omap.c:334: /* TODO: check if interrupt where enabled?? */
+M:\minix\lib\libgpio\gpio_omap.c:433: return EPERM;	/* fixme */
+M:\minix\lib\libgpio\gpio_omap.c:443: return EPERM;	/* fixme */
+M:\minix\lib\libhgfs\error.c:23: ENOSYS,			/* operation not supported */
+M:\minix\lib\libhgfs\time.c:20: /* FIXME: we currently do not take into account timezones. */
+M:\minix\lib\libi2cdriver\i2cdriver.c:25: panic("chardriver_init: sys_statectl failed: %d", r);
+M:\minix\lib\libi2cdriver\i2cdriver.c:31: panic("unable to get own label: %d\n", r);
+M:\minix\lib\libi2cdriver\i2cdriver.c:37: panic("unable to publish driver up event: %d\n", r);
+M:\minix\lib\libinputdriver\inputdriver.c:30: panic("libinputdriver: unable to retrieve own label: %d", r);
+M:\minix\lib\libinputdriver\inputdriver.c:34: panic("libinputdriver: unable to publish up event: %d", r);
+M:\minix\lib\libinputdriver\inputdriver.c:201: panic("libinputdriver: receive failed: %d", r);
+M:\minix\lib\liblwip\sys_arch.c:12: panic("getuptime() failed\n");
+M:\minix\lib\liblwip\api\api_lib.c:230: * @return TODO: return value is not set here...
+M:\minix\lib\liblwip\api\api_lib.c:373: /* @todo: this does not allow us to fetch data that has been put into recvmbox
+M:\minix\lib\liblwip\api\api_lib.c:394: /* TODO: Speedup: Don't block and wait for the answer here
+M:\minix\lib\liblwip\api\api_lib.c:536: /* TODO: Speedup: Don't block and wait for the answer here
+M:\minix\lib\liblwip\api\api_msg.c:289: /* @todo: implement connect timeout here? */
+M:\minix\lib\liblwip\api\api_msg.c:529: /* Unsupported netconn type, e.g. protocol disabled */
+M:\minix\lib\liblwip\api\api_msg.c:834: /* @todo TCP: abort running write/connect? */
+M:\minix\lib\liblwip\api\api_msg.c:881: /* @todo: this lets select make the socket readable and writable,
+M:\minix\lib\liblwip\api\api_msg.c:1106: /** @todo: should we drain the recvmbox here? */
+M:\minix\lib\liblwip\api\api_msg.c:1480: /* @todo: abort running write/connect? */
+M:\minix\lib\liblwip\api\netdb.c:288: * @todo?: currently, only ASCII integers (port numbers) are supported! */
+M:\minix\lib\liblwip\api\sockets.c:750: /* @todo: this does not work for IPv6, yet */
+M:\minix\lib\liblwip\api\sockets.c:884: /* @todo: split into multiple sendto's? */
+M:\minix\lib\liblwip\api\sockets.c:1024: LWIP_UNUSED_ARG(domain); /* @todo: check this */
+M:\minix\lib\liblwip\api\sockets.c:1493: /* @todo: this does not work for IPv6, yet */
+M:\minix\lib\liblwip\api\sockets.c:1676: /* @todo: this does not work for datagram sockets, yet */
+M:\minix\lib\liblwip\api\sockets.c:2132: /* @todo: this does not work for datagram sockets, yet */
+M:\minix\lib\liblwip\api\sockets.c:2519: sock_set_errno(sock, ENOSYS); /* not yet implemented */
+M:\minix\lib\liblwip\core\dhcp.c:45: * TODO:
+M:\minix\lib\liblwip\core\dhcp.c:128: @todo: move this into struct dhcp? */
+M:\minix\lib\liblwip\core\dhcp.c:132: @todo: move this into struct dhcp? */
+M:\minix\lib\liblwip\core\dhcp.c:1034: #if 0
+M:\minix\lib\liblwip\core\dhcp.c:1039: #if 0
+M:\minix\lib\liblwip\core\dhcp.c:1092: #if 0
+M:\minix\lib\liblwip\core\dhcp.c:1689: /* TODO: make link layer independent */
+M:\minix\lib\liblwip\core\dns.c:67: /** @todo: define good default values (rfc compliance) */
+M:\minix\lib\liblwip\core\dns.c:68: /** @todo: improve answer parsing, more checkings... */
+M:\minix\lib\liblwip\core\dns.c:69: /** @todo: check RFC1035 - 7.3. Processing responses */
+M:\minix\lib\liblwip\core\mem.c:453: * @todo we could leave out MIN_SIZE_ALIGNED. We would create an empty
+M:\minix\lib\liblwip\core\mem.c:560: * @todo we could leave out MIN_SIZE_ALIGNED. We would create an empty
+M:\minix\lib\liblwip\core\memp.c:155: /** This creates each memory pool. These are named memp_memory_XXX_base (where
+M:\minix\lib\liblwip\core\memp.c:156: * XXX is the name of the pool defined in memp_std.h).
+M:\minix\lib\liblwip\core\netif.c:364: /* TODO: Handling of obsolete pcbs */
+M:\minix\lib\liblwip\core\pbuf.c:528: #if 0
+M:\minix\lib\liblwip\core\pbuf.c:1019: /* @todo: what do we do now? */
+M:\minix\lib\liblwip\core\raw.c:277: /* @todo: why does IPv6 not filter broadcast with SOF_BROADCAST enabled? */
+M:\minix\lib\liblwip\core\tcp.c:265: /* @todo: When implementing SO_LINGER, this must be changed somehow:
+M:\minix\lib\liblwip\core\tcp.c:475: /* @todo: check accept_any_ip_version */
+M:\minix\lib\liblwip\core\tcp.c:1630: iss += tcp_ticks;       /* XXX */
+M:\minix\lib\liblwip\core\tcp_in.c:1184: What is done is really quite a nasty hack: the first pbuf in
+M:\minix\lib\liblwip\core\tcp_out.c:429: /* @todo: this could be sped up by keeping last_unsent in the pcb */
+M:\minix\lib\liblwip\core\udp.c:46: /* @todo Check the use of '(struct udp_pcb).chksum_len_rx'!
+M:\minix\lib\liblwip\core\udp.c:122: #if 0
+M:\minix\lib\liblwip\core\udp.c:846: /* TODO: must this be increased even if error occured? */
+M:\minix\lib\liblwip\core\udp.c:981: /** TODO: this functionality belongs in upper layers */
+M:\minix\lib\liblwip\core\udp.c:982: #ifdef LWIP_UDP_TODO
+M:\minix\lib\liblwip\core\udp.c:997: /** TODO: this will bind the udp pcb locally, to the interface which
+M:\minix\lib\liblwip\core\ipv4\autoip.c:173: /* TODO: close all TCP sessions */
+M:\minix\lib\liblwip\core\ipv4\autoip.c:184: /* TODO: close all TCP sessions */
+M:\minix\lib\liblwip\core\ipv4\icmp.c:40: is not implemented. */
+M:\minix\lib\liblwip\core\ipv4\igmp.c:441: LWIP_DEBUGF(IGMP_DEBUG, ("igmp_input: got an all hosts query with time== 0 - this is V1 and not implemented - treat as v2\n"));
+M:\minix\lib\liblwip\core\ipv4\igmp.c:563: /** @todo undo any other netif already joined */
+M:\minix\lib\liblwip\core\ipv4\ip4.c:214: /* @todo: send ICMP_DUR_NET? */
+M:\minix\lib\liblwip\core\ipv4\ip4.c:262: /* @todo: send ICMP Destination Unreacheable code 13 "Communication administratively prohibited"? */
+M:\minix\lib\liblwip\core\ipv4\ip4.c:512: /* unsupported protocol feature */
+M:\minix\lib\liblwip\core\ipv4\ip4.c:530: /* unsupported protocol feature */
+M:\minix\lib\liblwip\core\ipv4\ip4.c:591: LWIP_DEBUGF(IP_DEBUG | LWIP_DBG_LEVEL_SERIOUS, ("Unsupported transport protocol %"U16_F"\n", IPH_PROTO(iphdr)));
+M:\minix\lib\liblwip\core\ipv4\ip4.c:599: /* @todo: this is not really necessary... */
+M:\minix\lib\liblwip\core\ipv4\ip_frag.c:60: * @todo: work with IP header options
+M:\minix\lib\liblwip\core\ipv4\ip_frag.c:223: /* @todo Can't we simply remove the last datagram in the
+M:\minix\lib\liblwip\core\ipv4\ip_frag.c:294: /* @todo: no ip options supported? */
+M:\minix\lib\liblwip\core\ipv4\ip_frag.c:512: /* @todo: send ICMP time exceeded here? */
+M:\minix\lib\liblwip\core\ipv4\ip_frag.c:566: /* @todo: trim pbufs if fragments are overlapping */
+M:\minix\lib\liblwip\core\ipv4\ip_frag.c:581: /* @todo: do we need to set calculate the correct checksum? */
+M:\minix\lib\liblwip\core\ipv6\ethip6.c:125: * @TODO anycast addresses
+M:\minix\lib\liblwip\core\ipv6\ethip6.c:164: /* TODO anycast? */
+M:\minix\lib\liblwip\core\ipv6\ethip6.c:178: /* TODO should we send or queue if PROBE? send for now, to let unicast NS pass. */
+M:\minix\lib\liblwip\core\ipv6\icmp6.c:120: /* TODO implement router functionality */
+M:\minix\lib\liblwip\core\ipv6\icmp6.c:296: /* Special case, as ip6_current_xxx is either NULL, or points
+M:\minix\lib\liblwip\core\ipv6\ip6.c:206: /* TODO find longest matching prefix. */
+M:\minix\lib\liblwip\core\ipv6\ip6.c:350: #if 0 /*IP_ACCEPT_LINK_LAYER_ADDRESSING*/
+M:\minix\lib\liblwip\core\ipv6\ip6.c:351: @todo
+M:\minix\lib\liblwip\core\ipv6\ip6.c:700: LWIP_DEBUGF(IP6_DEBUG | LWIP_DBG_LEVEL_SERIOUS, ("ip6_input: Unsupported transport protocol %"U16_F"\n", IP6H_NEXTH(ip6hdr)));
+M:\minix\lib\liblwip\core\ipv6\ip6.c:805: /* TODO implement loopback for v6
+M:\minix\lib\liblwip\core\ipv6\ip6_frag.c:327: /* @todo: send ICMPv6 time exceeded here? */
+M:\minix\lib\liblwip\core\ipv6\ip6_frag.c:598: /* TODO we assume there are no options in the unfragmentable part (IPv6 header). */
+M:\minix\lib\liblwip\core\ipv6\mld6.c:246: /* TODO debug message */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:71: u32_t retrans_timer = LWIP_ND6_RETRANS_TIMER; /* TODO implement this value in timer */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:134: /* TODO debug message */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:151: /* TODO debug message */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:228: /* TODO debug message */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:257: /* TODO debug message */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:367: /* TODO debug message */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:408: /* TODO set default hop limit... */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:484: /* TODO implement preferred routes.
+M:\minix\lib\liblwip\core\ipv6\nd6.c:507: /* TODO debug message */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:755: /* TODO implement preferred and valid lifetimes. */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:768: /* TODO send max 1 NS per tmr call? enable return*/
+M:\minix\lib\liblwip\core\ipv6\nd6.c:1239: (void)ip6addr; /* TODO match preferred routes!! (must implement ND6_OPTION_TYPE_ROUTE_INFO) */
+M:\minix\lib\liblwip\core\ipv6\nd6.c:1241: /* TODO: implement default router preference */
+M:\minix\lib\liblwip\core\snmp\asn1_dec.c:5: * @todo not optimised (yet), favor correctness over speed, favor speed over size
+M:\minix\lib\liblwip\core\snmp\asn1_dec.c:214: /**  @todo: do we need to accept inefficient codings with many leading zero's? */
+M:\minix\lib\liblwip\core\snmp\asn1_enc.c:5: * @todo not optimised (yet), favor correctness over speed, favor speed over size
+M:\minix\lib\liblwip\core\snmp\mib2.c:272: /** @todo update maxlength when inserting / deleting from table
+M:\minix\lib\liblwip\core\snmp\mib2.c:1436: * @todo record sysuptime for _this_ route when it is installed
+M:\minix\lib\liblwip\core\snmp\mib2.c:2383: /** @todo this should be some sort of sizeof(struct netif.name) */
+M:\minix\lib\liblwip\core\snmp\mib2.c:2566: /** @todo add these counters! */
+M:\minix\lib\liblwip\core\snmp\mib2.c:2597: /** @todo add this counter! */
+M:\minix\lib\liblwip\core\snmp\mib2.c:2604: /** @todo figure out if this must be 0 (no queue) or 1? */
+M:\minix\lib\liblwip\core\snmp\mib2.c:2699: od->v_len = 6; /** @todo try to use netif::hwaddr_len */
+M:\minix\lib\liblwip\core\snmp\mib2.c:2737: #if LWIP_ARP /** @todo implement a netif_find_addr */
+M:\minix\lib\liblwip\core\snmp\mib2.c:2970: /** @todo can lwIP discard routes at all?? hardwire this to 0?? */
+M:\minix\lib\liblwip\core\snmp\mib2.c:3123: /* @todo The theoretical maximum is IP_REASS_MAX_PBUFS * size of the pbufs,
+M:\minix\lib\liblwip\core\snmp\mib2.c:3130: /** @todo returning MTU would be a bad thing and
+M:\minix\lib\liblwip\core\snmp\mib2.c:3333: /** @todo (sysuptime - timestamp last change) / 100
+M:\minix\lib\liblwip\core\snmp\mib2.c:3390: od->v_len = 6; /** @todo try to use netif::hwaddr_len */
+M:\minix\lib\liblwip\core\snmp\mib2.c:3428: #if LWIP_ARP /** @todo implement a netif_find_addr */
+M:\minix\lib\liblwip\core\snmp\mib2.c:3584: /** @todo tcp grp */
+M:\minix\lib\liblwip\core\snmp\mib2.c:3662: /* @todo not the actual value, a guess,
+M:\minix\lib\liblwip\core\snmp\mib2.c:3667: /* @todo not the actual value, a guess,
+M:\minix\lib\liblwip\core\snmp\mib2.c:3785: /** @todo find matching PCB */
+M:\minix\lib\liblwip\core\snmp\mib2.c:4140: /* @todo @fixme: which kind of pointer is 'value'? s32_t or u8_t??? */
+M:\minix\lib\liblwip\core\snmp\msg_in.c:628: /** @todo use set_value_pc() if toobig */
+M:\minix\lib\liblwip\core\snmp\msg_in.c:779: @todo do we need to return the actual value?
+M:\minix\lib\liblwip\core\snmp\msg_in.c:977: /** @todo: move this if we need to check more names */
+M:\minix\lib\liblwip\core\snmp\msg_in.c:1024: /* unsupported input PDU for this agent (no parse error) */
+M:\minix\lib\liblwip\core\snmp\msg_out.c:168: /** @todo do we need separate rx and tx pcbs for threaded case? */
+M:\minix\lib\liblwip\core\snmp\msg_out.c:174: /** @todo release some memory, retry and return tooBig? tooMuchHassle? */
+M:\minix\lib\liblwip\core\snmp\msg_out.c:232: /* @todo: what about IPv6? */
+M:\minix\lib\liblwip\core\snmp\msg_out.c:453: /* unsupported type */
+M:\minix\lib\liblwip\core\snmp\msg_out.c:669: /* unsupported type */
+M:\minix\lib\liblwip\include\arch\cc.h:26: #define LWIP_PLATFORM_ASSERT(x) panic(x)
+M:\minix\lib\liblwip\include\arch\cc.h:39: #define ENSRBADFAMILY           (_SIGN 168) /* Unsupported address family */
+M:\minix\lib\liblwip\include\arch\sys_arch.h:7: #define NOT_IMPLEMENTED panic("liblwip : %s NOT_IMPLEMENTED", __func__)
+M:\minix\lib\liblwip\include\ipv6\lwip\dhcp6.h:53: /*TODO: implement DHCP6*/
+M:\minix\lib\liblwip\include\ipv6\lwip\ip6.h:165: #define ip6_init() /* TODO should we init current addresses and header pointer? */
+M:\minix\lib\liblwip\include\ipv6\lwip\ip6_addr.h:204: /* TODO define get/set for well-know multicast addresses, e.g. ff02::1 */
+M:\minix\lib\liblwip\include\ipv6\lwip\mld6.h:102: #define mld6_init() /* TODO should we init tables? */
+M:\minix\lib\liblwip\include\ipv6\lwip\nd6.h:342: /* TODO make these static? and entries accessible through API? */
+M:\minix\lib\liblwip\include\ipv6\lwip\nd6.h:352: #define nd6_init() /* TODO should we init tables? */
+M:\minix\lib\liblwip\include\lwip\api.h:297: /** Set the blocking status of netconn calls (@todo: write/send is missing) */
+M:\minix\lib\liblwip\include\lwip\api.h:302: /** Get the blocking status of netconn calls (@todo: write/send is missing) */
+M:\minix\lib\liblwip\include\lwip\arch.h:116: #define  ENOSYS       38  /* Function not implemented */
+M:\minix\lib\liblwip\include\lwip\dhcp.h:60: /* @todo: LWIP_DHCP_BOOTP_FILE configuration option?
+M:\minix\lib\liblwip\include\lwip\dns.h:73: /* The size used for the next line is rather a hack, but it prevents including socket.h in all files
+M:\minix\lib\liblwip\include\lwip\ip.h:101: * Option flags per-socket. These are the same like SO_XXX.
+M:\minix\lib\liblwip\include\lwip\opt.h:1202: * @todo: TCP and IP-frag do not work with this, yet:
+M:\minix\lib\liblwip\include\lwip\opt.h:1809: * (XXX - these constants should simply be shared by lcp.c instead
+M:\minix\lib\liblwip\include\lwip\pbuf.h:47: /* @todo: We need a mechanism to prevent wasting memory in every pbuf
+M:\minix\lib\liblwip\include\lwip\snmp_structs.h:5: * @todo namespace prefixes
+M:\minix\lib\liblwip\include\lwip\tcp.h:120: * @param err An unused error code, always ERR_OK currently ;-) TODO!
+M:\minix\lib\liblwip\include\lwip\tcp.h:146: * @param err an error argument (TODO: that is current always ERR_OK?)
+M:\minix\lib\liblwip\include\lwip\tcp.h:211: s16_t sa, sv; /* @todo document this */
+M:\minix\lib\liblwip\include\lwip\tcp_impl.h:100: #if 0 /* see bug #10548 */
+M:\minix\lib\liblwip\include\netif\ppp_oe.h:157: #ifdef PPPOE_TODO
+M:\minix\lib\liblwip\include\netif\ppp_oe.h:160: #endif /* PPPOE_TODO */
+M:\minix\lib\liblwip\netif\etharp.c:667: /* @todo We could use ETHARP_FLAG_TRY_HARD if we think we are going to talk
+M:\minix\lib\liblwip\netif\etharp.c:826: * @todo How should we handle redundant (fail-over) interfaces? */
+M:\minix\lib\liblwip\netif\ethernetif.c:48: #if 0 /* don't build, this is only a skeleton, see previous comment */
+M:\minix\lib\liblwip\netif\ppp\auth.c:89: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:109: static int did_authup; /* @todo, we don't need this in lwip*/
+M:\minix\lib\liblwip\netif\ppp\auth.c:114: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:134: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:190: /* @todo, move this somewhere */
+M:\minix\lib\liblwip\netif\ppp\auth.c:205: #if 0
+M:\minix\lib\liblwip\netif\ppp\auth.c:215: #if 0 /* PAP_SUPPORT || CHAP_SUPPORT */
+M:\minix\lib\liblwip\netif\ppp\auth.c:230: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:282: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:324: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:349: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:415: /* XXX Do link down processing. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:535: /* XXX Do setup for peer authentication. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:565: /* @todo: add void start_networks(void) here (pppd 2.3.11) */
+M:\minix\lib\liblwip\netif\ppp\auth.c:779: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:817: ppp_panic("No auth secret");
+M:\minix\lib\liblwip\netif\ppp\auth.c:858: *  UPAP_AUTHACK: Authentication succeeded.
+M:\minix\lib\liblwip\netif\ppp\auth.c:864: #if 1 /* XXX Assume all entries OK. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:872: return UPAP_AUTHACK;     /* XXX Assume all entries OK. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:889: /* XXX Validate user name and password. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:890: ret = UPAP_AUTHACK;     /* XXX Assume all entries OK. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:904: /*ppp_panic("Excess Bad Logins");*/
+M:\minix\lib\liblwip\netif\ppp\auth.c:907: /* @todo: this was sleep(), i.e. seconds, not milliseconds
+M:\minix\lib\liblwip\netif\ppp\auth.c:932: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:946: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\auth.c:953: *  UPAP_AUTHACK: Login succeeded.
+M:\minix\lib\liblwip\netif\ppp\auth.c:984: /* XXX Fail until we decide that we want to support logins. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:1009: /* XXX Fail until we decide that we want to support logins. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:1028: @todo: This should be configured by the user, instead of being hardcoded here!
+M:\minix\lib\liblwip\netif\ppp\auth.c:1046: /* XXX Fail until we set up our passwords. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:1063: /* XXX Fail until we set up our passwords. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:1108: /* XXX Find secret. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:1133: #if 0 /* PAP_SUPPORT || CHAP_SUPPORT */
+M:\minix\lib\liblwip\netif\ppp\auth.c:1145: #if 0
+M:\minix\lib\liblwip\netif\ppp\auth.c:1182: static int /* @todo: integrate this funtion into auth_ip_addr()*/
+M:\minix\lib\liblwip\netif\ppp\auth.c:1194: /* XXX All other addresses allowed. */
+M:\minix\lib\liblwip\netif\ppp\auth.c:1211: #if 0 /* UNUSED */ /* PAP_SUPPORT || CHAP_SUPPORT */
+M:\minix\lib\liblwip\netif\ppp\chap.c:87: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\chap.c:750: char msg[256]; /* @todo: this can be a char*, no strcpy needed */
+M:\minix\lib\liblwip\netif\ppp\chpms.c:113: /* XXX Don't know what to do with these. */
+M:\minix\lib\liblwip\netif\ppp\chpms.c:152: #if 0
+M:\minix\lib\liblwip\netif\ppp\chpms.c:160: #if 0
+M:\minix\lib\liblwip\netif\ppp\chpms.c:181: #if 0
+M:\minix\lib\liblwip\netif\ppp\chpms.c:190: #if 0
+M:\minix\lib\liblwip\netif\ppp\chpms.c:210: #if 0
+M:\minix\lib\liblwip\netif\ppp\chpms.c:217: #if 0
+M:\minix\lib\liblwip\netif\ppp\chpms.c:296: #if 0
+M:\minix\lib\liblwip\netif\ppp\chpms.c:331: /* @todo: arg type - u_long* or u_int* ? */
+M:\minix\lib\liblwip\netif\ppp\chpms.c:373: #if 0
+M:\minix\lib\liblwip\netif\ppp\fsm.c:53: * TODO:
+M:\minix\lib\liblwip\netif\ppp\fsm.c:108: f->id = 0;        /* XXX Start with random id? */
+M:\minix\lib\liblwip\netif\ppp\fsm.c:250: #if 0 /* backport pppd 2.4.4b1; */
+M:\minix\lib\liblwip\netif\ppp\fsm.c:260: /* @todo */
+M:\minix\lib\liblwip\netif\ppp\ipcp.c:1192: #if 0
+M:\minix\lib\liblwip\netif\ppp\lcp.c:75: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\lcp.c:109: /* @todo: do we really need such a large buffer? The typical 1500 bytes seem too much. */
+M:\minix\lib\liblwip\netif\ppp\lcp.c:204: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\lcp.c:480: LCPDEBUG(LOG_WARNING, ("Protocol-Reject for unsupported protocol 0x%x\n", prot));
+M:\minix\lib\liblwip\netif\ppp\lcp.c:931: * If they Nak the reporting period, take their value XXX ?
+M:\minix\lib\liblwip\netif\ppp\lcp.c:1471: * XXX When should we Nak this, and what with?
+M:\minix\lib\liblwip\netif\ppp\md5.c:140: #if 0
+M:\minix\lib\liblwip\netif\ppp\pap.c:66: #if 0 /* UNUSED */
+M:\minix\lib\liblwip\netif\ppp\pap.c:126: static void upap_rauthack  (upap_state *, u_char *, int, int);
+M:\minix\lib\liblwip\netif\ppp\pap.c:371: case UPAP_AUTHACK:
+M:\minix\lib\liblwip\netif\ppp\pap.c:372: upap_rauthack(u, inp, id, len);
+M:\minix\lib\liblwip\netif\ppp\pap.c:379: default:        /* XXX Need code reject */
+M:\minix\lib\liblwip\netif\ppp\pap.c:409: upap_sresp(u, UPAP_AUTHACK, id, "", 0);  /* return auth-ack */
+M:\minix\lib\liblwip\netif\ppp\pap.c:443: /* lwip: currently retcode is always UPAP_AUTHACK */
+M:\minix\lib\liblwip\netif\ppp\pap.c:448: if (retcode == UPAP_AUTHACK) {
+M:\minix\lib\liblwip\netif\ppp\pap.c:463: * upap_rauthack - Receive Authenticate-Ack.
+M:\minix\lib\liblwip\netif\ppp\pap.c:466: upap_rauthack(upap_state *u, u_char *inp, int id, int len)
+M:\minix\lib\liblwip\netif\ppp\pap.c:473: UPAPDEBUG(LOG_INFO, ("pap_rauthack: Rcvd id %d s=%d\n", id, u->us_clientstate));
+M:\minix\lib\liblwip\netif\ppp\pap.c:475: if (u->us_clientstate != UPAPCS_AUTHREQ) { /* XXX */
+M:\minix\lib\liblwip\netif\ppp\pap.c:476: UPAPDEBUG(LOG_INFO, ("pap_rauthack: us_clientstate != UPAPCS_AUTHREQ\n"));
+M:\minix\lib\liblwip\netif\ppp\pap.c:484: UPAPDEBUG(LOG_INFO, ("pap_rauthack: ignoring missing msg-length.\n"));
+M:\minix\lib\liblwip\netif\ppp\pap.c:490: UPAPDEBUG(LOG_INFO, ("pap_rauthack: rcvd short packet.\n"));
+M:\minix\lib\liblwip\netif\ppp\pap.c:517: if (u->us_clientstate != UPAPCS_AUTHREQ) { /* XXX */
+M:\minix\lib\liblwip\netif\ppp\pap.c:605: "AuthReq", "AuthAck", "AuthNak"
+M:\minix\lib\liblwip\netif\ppp\pap.h:67: #define UPAP_AUTHACK 2 /* Authenticate-Ack */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:293: * @todo: smaller, slower implementation for lower memory footprint?
+M:\minix\lib\liblwip\netif\ppp\ppp.c:553: /* @todo: is this correct or do I overwrite something? */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:770: /* @todo: try to use pbuf_header() here! */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1200: /* @todo: does this work? ext_accm has been modified from pppd! */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1209: #if 0
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1219: return 0; /* XXX Currently no compression. */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1228: /* XXX */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1239: /* XXX */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1250: /* XXX */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1283: /* XXX
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1327: /* @todo: Initialize interface hostname */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1479: /* TODO: check how PPP handled the netMask, previously not set by ipSetDefault */
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1708: PPPDEBUG(LOG_INFO, ("pppInput[%d]: rejecting unsupported proto 0x%"X16_F" len=%d\n", pd, protocol, nb->len));
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1755: #if 0
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1805: /* XXX Note that this does not handle an escaped 0x5d character which
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1914: #if 0
+M:\minix\lib\liblwip\netif\ppp\ppp_impl.h:51: *  These are just here to minimise the use of the ugly "#if 0". */
+M:\minix\lib\liblwip\netif\ppp\ppp_impl.h:54: /** Some error checks to test for unsupported code */
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:195: #ifdef PPPOE_TODO
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:202: #endif /* PPPOE_TODO */
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:673: #ifdef PPPOE_TODO
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:674: int l1 = 0, l2 = 0; /* XXX: gcc */
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:675: #endif /* PPPOE_TODO */
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:683: #ifdef PPPOE_TODO
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:692: #endif /* PPPOE_TODO */
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:707: #ifdef PPPOE_TODO
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:713: #endif /* PPPOE_TODO */
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:717: #ifdef PPPOE_TODO
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:724: #endif /* PPPOE_TODO */
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:758: #if 0
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:894: #ifdef PPPOE_TODO
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:895: size_t l1 = 0; /* XXX: gcc */
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:896: #endif /* PPPOE_TODO */
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:903: #ifdef PPPOE_TODO
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:908: #endif /* PPPOE_TODO */
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:922: #ifdef PPPOE_TODO
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:928: #endif /* PPPOE_TODO */
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:1015: size_t len, l1 = 0;  /* XXX: gcc */
+M:\minix\lib\liblwip\netif\ppp\ppp_oe.c:1082: #if 0 /*def PFIL_HOOKS*/
+M:\minix\lib\liblwip\netif\ppp\randm.c:115: * XXX Why does he not just call churnRand() for each block?  Probably
+M:\minix\lib\liblwip\netif\ppp\randm.c:118: * XXX Why don't we preserve md5 between blocks and just update it with
+M:\minix\lib\liblwip\netif\ppp\randm.c:184: #if 0
+M:\minix\lib\liblwip\netif\ppp\randm.c:202: avRandomSeed += sys_jiffies(); /* XXX */
+M:\minix\lib\liblwip\netif\ppp\randm.c:227: avRandomSeed += (sys_jiffies() - last_jiffies); /* XXX */
+M:\minix\lib\libminc\Makefile:5: # LSC: TODO: Explaination of how this works
+M:\minix\lib\libminc\Makefile:254: # LSC FIXME: Try to get this out of the loop
+M:\minix\lib\libminc\errlist.c:84: "Function not implemented",		/* 78 - ENOSYS */
+M:\minix\lib\libminixfs\cache.c:171: panic("libminixfs: could not allocate block");
+M:\minix\lib\libminixfs\cache.c:201: panic("libminixfs cache: munmap failed");
+M:\minix\lib\libminixfs\cache.c:335: if ((bp = front) == NULL) panic("all buffers in use: %d", nr_bufs);
+M:\minix\lib\libminixfs\cache.c:404: panic("unexpected only_search value: %d", only_search);
+M:\minix\lib\libminixfs\cache.c:474: if(r == ENOSYS) {
+M:\minix\lib\libminixfs\cache.c:475: printf("libminixfs: ENOSYS, disabling VM calls\n");
+M:\minix\lib\libminixfs\cache.c:478: panic("libminixfs: setblock of %p dev 0x%llx off "
+M:\minix\lib\libminixfs\cache.c:599: panic("couldn't allocate dirty buf list");
+M:\minix\lib\libminixfs\cache.c:797: if(bp->lmfs_count != 0) panic("change blocksize with buffer in use");
+M:\minix\lib\libminixfs\cache.c:870: panic("couldn't allocate buf list (%d)", new_nr_bufs);
+M:\minix\lib\libminixfs\cache.c:875: panic("couldn't allocate buf hash list (%d)", new_nr_bufs);
+M:\minix\lib\libmthread\allocate.c:130: mthread_panic("Couldn't signal exit");
+M:\minix\lib\libmthread\allocate.c:148: if (!isokthreadid(thread)) mthread_panic("Invalid thread id");
+M:\minix\lib\libmthread\allocate.c:240: mthread_panic("Couldn't save state for main thread");
+M:\minix\lib\libmthread\allocate.c:284: mthread_panic("Couldn't initialize mutex to join\n");
+M:\minix\lib\libmthread\allocate.c:287: mthread_panic("Couldn't lock mutex to join\n");
+M:\minix\lib\libmthread\allocate.c:290: mthread_panic("Couldn't wait for join condition\n");
+M:\minix\lib\libmthread\allocate.c:293: mthread_panic("Couldn't unlock mutex to join\n");
+M:\minix\lib\libmthread\allocate.c:296: mthread_panic("Couldn't destroy mutex to join\n");
+M:\minix\lib\libmthread\allocate.c:372: mthread_panic("Could not initialize thread");
+M:\minix\lib\libmthread\allocate.c:378: mthread_panic("Failed to initialize context state");
+M:\minix\lib\libmthread\allocate.c:401: mthread_panic("Failed to allocate stack to thread");
+M:\minix\lib\libmthread\allocate.c:422: # error "Unsupported platform"
+M:\minix\lib\libmthread\allocate.c:426: mthread_panic("unable to unmap stack space for guard");
+M:\minix\lib\libmthread\allocate.c:447: if (!isokthreadid(thread)) mthread_panic("Invalid thread id");
+M:\minix\lib\libmthread\allocate.c:461: mthread_panic("unable to unmap memory");
+M:\minix\lib\libmthread\allocate.c:480: if (!isokthreadid(thread)) mthread_panic("Invalid thread id");
+M:\minix\lib\libmthread\allocate.c:490: mthread_panic("Could not destroy condition at thread deallocation\n");
+M:\minix\lib\libmthread\condition.c:128: return(ENOSYS);
+M:\minix\lib\libmthread\key.c:118: mthread_panic("Library state corrupt");
+M:\minix\lib\libmthread\misc.c:80: mthread_panic("Library state corrupt\n");
+M:\minix\lib\libmthread\misc.c:102: default: mthread_panic("Unknown state");
+M:\minix\lib\libmthread\mutex.c:99: return(ENOSYS);
+M:\minix\lib\libmthread\proto.h:26: #define mthread_panic(m) mthread_panic_f(__FILE__, __LINE__, (m))
+M:\minix\lib\libmthread\proto.h:32: # define mthread_panic(m) mthread_panic_s()
+M:\minix\lib\libmthread\queue.c:19: mthread_panic("Can't append invalid thread ID to a queue");
+M:\minix\lib\libmthread\scheduler.c:73: mthread_panic("Could not swap context");
+M:\minix\lib\libmthread\scheduler.c:107: if (state == MS_DEAD) mthread_panic("Shouldn't suspend with MS_DEAD state");
+M:\minix\lib\libmthread\scheduler.c:114: mthread_panic("Couldn't save current thread's context");
+M:\minix\lib\libmthread\scheduler.c:138: if (!isokthreadid(thread)) mthread_panic("Invalid thread id");
+M:\minix\lib\libmthread\scheduler.c:191: if (yield_all) mthread_panic("Deadlock: two threads trying to yield_all");
+M:\minix\lib\libnetdriver\netdriver.c:33: panic("driver_announce: unable to get own label: %d\n", r);
+M:\minix\lib\libnetdriver\netdriver.c:38: panic("driver_announce: unable to publish driver up event: %d\n", r);
+M:\minix\lib\libnetsock\socket.c:25: #if 0
+M:\minix\lib\libnetsock\socket.c:31: #if 0
+M:\minix\lib\libnetsock\socket.c:37: #define netsock_panic(str, ...) panic("%s : " str, NETSOCK_USER_NAME, \
+M:\minix\lib\libnetsock\socket.c:164: /* FIXME: shouldn't this return (!!mq) ? */
+M:\minix\lib\libnetsock\socket.c:286: netsock_panic("cannot happen!");
+M:\minix\lib\libnetsock\socket.c:518: /* FIXME we do not monitor error */
+M:\minix\lib\libnetsock\socket.c:529: /* FIXME generic packet socket never blocks on write */
+M:\minix\lib\libnetsock\socket.c:532: /* FIXME CDEV_OP_ERR is ignored, we do not generate exceptions */
+M:\minix\lib\libsffs\inode.c:121: panic("inode reference count wrapped");
+M:\minix\lib\libsffs\main.c:76: panic("receive failed: %d", r);
+M:\minix\lib\libsffs\main.c:145: err = ENOSYS;
+M:\minix\lib\libsffs\read.c:154: /* FIXME: what if the error is ENAMETOOLONG? */
+M:\minix\lib\libsffs\stat.c:162: /* XXX VFS should have time() into ACTIME, for compat; we trust it! */
+M:\minix\lib\libsffs\stat.c:178: /* XXX VFS should have time() into MODTIME, for compat; we trust it! */
+M:\minix\lib\libsffs\util.c:6: *   no_sys		handle file system calls that are not implemented
+M:\minix\lib\libsffs\util.c:63: return ENOSYS;
+M:\minix\lib\libsys\alloc_util.c:34: panic("sys_umap_data_fb failed");
+M:\minix\lib\libsys\assert.c:20: panic("assert failed");
+M:\minix\lib\libsys\asynsend.c:81: panic("asynsend: ipc_senda failed: %d", r);
+M:\minix\lib\libsys\asynsend.c:123: panic("asynsend: msgtable full");
+M:\minix\lib\libsys\env_panic.c:7: void env_panic(const char *key)
+M:\minix\lib\libsys\env_panic.c:13: printf("WARNING: env_get_param() failed in env_panic(): %d\n", s);
+M:\minix\lib\libsys\env_panic.c:15: panic("Bad environment setting: '%s = %s'\n", key, value);
+M:\minix\lib\libsys\env_parse.c:85: env_panic(env);
+M:\minix\lib\libsys\getsysinfo.c:24: return ENOSYS;
+M:\minix\lib\libsys\panic.c:21: void panic(const char *fmt, ...)
+M:\minix\lib\libsys\pci_attr_r16.c:25: panic("pci_attr_r16: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_attr_r16.c:28: panic("pci_attr_r16: got bad reply from PCI: %d", m.m_type);
+M:\minix\lib\libsys\pci_attr_r32.c:25: panic("pci_attr_r32: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_attr_r32.c:28: panic("pci_attr_r32: got bad reply from PCI: %d", m.m_type);
+M:\minix\lib\libsys\pci_attr_r8.c:25: panic("pci_attr_r8: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_attr_r8.c:28: panic("pci_attr_r8: got bad reply from PCI: %d", m.m_type);
+M:\minix\lib\libsys\pci_attr_w16.c:24: panic("pci_attr_w16: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_attr_w16.c:27: panic("pci_attr_w16: got bad reply from PCI: %d", m.m_type);
+M:\minix\lib\libsys\pci_attr_w32.c:24: panic("pci_attr_w32: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_attr_w32.c:27: panic("pci_attr_w32: got bad reply from PCI: %d", m.m_type);
+M:\minix\lib\libsys\pci_attr_w8.c:24: panic("pci_attr_w8: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_attr_w8.c:27: panic("pci_attr_w8: got bad reply from PCI: %d", m.m_type);
+M:\minix\lib\libsys\pci_del_acl.c:27: panic("pci_del_acl: ds_retrieve_label_endpt failed for 'pci': %d", r);
+M:\minix\lib\libsys\pci_del_acl.c:38: panic("pci_del_acl: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_dev_name.c:38: panic("pci_dev_name: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_dev_name.c:48: panic("pci_dev_name: got bad reply from PCI: %d", m.m_type);
+M:\minix\lib\libsys\pci_find_dev.c:24: panic("pci_find_dev: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_find_dev.c:34: panic("pci_find_dev: got bad reply from PCI: %d", m.m_type);
+M:\minix\lib\libsys\pci_first_dev.c:23: panic("pci_first_dev: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_first_dev.c:36: panic("pci_first_dev: got bad reply from PCI: %d", m.m_type);
+M:\minix\lib\libsys\pci_get_bar.c:28: panic("pci_get_bar: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_ids.c:25: panic("pci_ids: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_ids.c:28: panic("pci_ids: got bad reply from PCI: %d", m.m_type);
+M:\minix\lib\libsys\pci_init.c:21: panic("pci_init: unable to obtain label for 'pci': %d", r);
+M:\minix\lib\libsys\pci_init.c:26: panic("pci_init: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_init.c:28: panic("pci_init: got bad reply from PCI: %d", m.m_type);
+M:\minix\lib\libsys\pci_next_dev.c:25: panic("pci_next_dev: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_next_dev.c:32: #if 0
+M:\minix\lib\libsys\pci_next_dev.c:39: panic("pci_next_dev: got bad reply from PCI: %d", m.m_type);
+M:\minix\lib\libsys\pci_rescan_bus.c:22: panic("pci_rescan_bus: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_rescan_bus.c:26: panic("pci_rescan_bus: got bad reply from PCI: %d", m.m_type);
+M:\minix\lib\libsys\pci_reserve.c:23: panic("pci_reserve: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_reserve.c:26: panic("pci_reserve: got bad reply from PCI: %d", m.m_type);
+M:\minix\lib\libsys\pci_set_acl.c:28: panic("pci_set_acl: ds_retrieve_label_endpt failed for 'pci': %d", r);
+M:\minix\lib\libsys\pci_set_acl.c:49: panic("pci_set_acl: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_slot_name.c:38: panic("pci_slot_name: can't talk to PCI: %d", r);
+M:\minix\lib\libsys\pci_slot_name.c:41: panic("pci_slot_name: got bad reply from PCI: %d", m.m_type);
+M:\minix\lib\libsys\sef.c:76: panic("unable to update RS from instance %d to %d: %d",
+M:\minix\lib\libsys\sef.c:89: panic("RS unable to complete init: %d", r);
+M:\minix\lib\libsys\sef.c:106: panic("unable to ipc_receive from RS: %d", r);
+M:\minix\lib\libsys\sef.c:112: panic("unable to process init request: %d", r);
+M:\minix\lib\libsys\sef.c:215: panic("sef_self called before initialization");
+M:\minix\lib\libsys\sef_fi.c:19: return ENOSYS;
+M:\minix\lib\libsys\sef_gcov.c:15: return ENOSYS;
+M:\minix\lib\libsys\sef_init.c:175: return ENOSYS;
+M:\minix\lib\libsys\sef_init.c:183: return ENOSYS;
+M:\minix\lib\libsys\sef_init.c:200: panic("Simulating a crash at initialization time...");
+M:\minix\lib\libsys\sef_liveupdate.c:99: sef_lu_ready(ENOSYS);
+M:\minix\lib\libsys\sef_liveupdate.c:276: return ENOSYS;
+M:\minix\lib\libsys\sef_liveupdate.c:307: panic("Simulating a crash at update prepare time...");
+M:\minix\lib\libsys\sef_signal.c:37: panic("SEF: sys_getksig failed: %d", r);
+M:\minix\lib\libsys\sef_signal.c:61: panic("SEF: sys_endksig failed :%d", r);
+M:\minix\lib\libsys\sys_diagctl.c:24: panic("Unknown SYS_DIAGCTL request %d\n", code);
+M:\minix\lib\libsys\timers.c:38: panic("set_timer: couldn't get uptime");
+M:\minix\lib\libsys\timers.c:47: panic("set_timer: couldn't set alarm");
+M:\minix\lib\libsys\timers.c:65: panic("cancel_timer: couldn't set alarm");
+M:\minix\lib\libsys\timers.c:87: panic("expire_timers: couldn't set alarm");
+M:\minix\lib\libsys\vm_cache.c:19: panic("blocksize %d should be a multiple of pagesize %d\n",
+M:\minix\lib\libsys\vm_cache.c:23: panic("inode offset %lld should be a multiple of pagesize %d\n",
+M:\minix\lib\libsys\vm_cache.c:27: panic("dev offset offset %lld should be a multiple of pagesize %d\n",
+M:\minix\lib\libsys\arch\earm\spin.c:94: panic("spin_check: invalid state %d", s->s_state);
+M:\minix\lib\libsys\arch\i386\spin.c:96: panic("spin_check: invalid state %d", s->s_state);
+M:\minix\lib\libsys\arch\i386\timing.c:25: panic("restart timer?");
+M:\minix\lib\libsys\arch\i386\timing.c:40: panic("timer stopped but not started");
+M:\minix\lib\libsys\arch\i386\timing.c:76: panic("bin out of range: %d", bin);
+M:\minix\lib\libsys\arch\i386\tsc_util.c:25: panic("calibrate failed: %d", r); \
+M:\minix\lib\libusb\usb.c:54: panic("usb_send_urb: could not talk to hcd: %d", res);
+M:\minix\lib\libusb\usb.c:58: panic("usb_send_urb: got illegal response from hcd: %d", msg.m_type);
+M:\minix\lib\libusb\usb.c:62: panic("usb_send_urb: hcd could not enqueue URB: %ld", msg.USB_RESULT);
+M:\minix\lib\libusb\usb.c:86: panic("usb_send_urb: urb == NULL!");
+M:\minix\lib\libusb\usb.c:101: panic("usb_cancle_urb: could not talk to hcd: %d", res);
+M:\minix\lib\libusb\usb.c:105: panic("usb_cancle_urb: got illegal response from hcd: %d", msg.m_type);
+M:\minix\lib\libusb\usb.c:109: panic("usb_cancle_urb: got illegal response from hcd: %d", msg.m_type);
+M:\minix\lib\libusb\usb.c:130: panic("usb_init: ds_retrieve_label_endpt failed for 'usb': %d", res);
+M:\minix\lib\libusb\usb.c:140: panic("usb_init: can't talk to USB: %d", res);
+M:\minix\lib\libusb\usb.c:144: panic("usb_init: bad reply from USB: %d", msg.m_type);
+M:\minix\lib\libusb\usb.c:148: panic("usb_init: init failed: %ld", msg.USB_RESULT);
+M:\minix\lib\libusb\usb.c:184: #if 0
+M:\minix\lib\libusb\usb.c:222: panic("usb_handle_msg: bogus message from USB");
+M:\minix\lib\libusb\usb.c:245: panic("usb_send_info: could not talk to HCD: %d", res);
+M:\minix\lib\libusb\usb.c:248: panic("usb_send_info: got illegal response from HCD: %d", msg.m_type);
+M:\minix\lib\libusb\usb.c:251: panic("usb_send_info: got illegal response from HCD: %d", msg.m_type);
+M:\minix\lib\libvassert\vassert.h:27: * XXX: Document these, in coordination with the SDK docs.
+M:\minix\lib\libvassert\vassert.h:68: // XXX need to automatic de-register trigger page when the program quits
+M:\minix\lib\libvboxfs\dir.c:21: * the host as well).  This is currently not implemented, because the odds of
+M:\minix\lib\libvboxfs\link.c:38: /* FIXME: symbolic links are not supported at all yet */
+M:\minix\lib\libvboxfs\path.c:18: /* FIXME: missing UTF-8 conversion */
+M:\minix\lib\libvboxfs\path.c:40: /* FIXME: missing UTF-8 conversion */
+M:\minix\lib\libvirtio\virtio.c:22: #include <minix/sysutil.h>			/* panic(), at least */
+M:\minix\lib\libvirtio\virtio.c:501: panic("Could not clear indirect descriptor table ");
+M:\minix\lib\libvirtio\virtio.c:541: panic("No indirect descriptor tables left");
+M:\minix\lib\libvirtio\virtio.c:610: panic("%s: NULL data received queue %d", dev->name, qidx);
+M:\minix\lib\libvirtio\virtio.c:688: * FIXME: Protect from endless loop
+M:\minix\lib\libvirtio\virtio.c:743: panic("%s Unable to enable IRQ %d", dev->name, r);
+M:\minix\lib\libvirtio\virtio.c:751: panic("%s: Unable to disable IRQ %d", dev->name, r);
+M:\minix\lib\libvirtio\virtio.c:783: panic("%s: Unable to register IRQ %d", dev->name, r);
+M:\minix\lib\libvirtio\virtio.c:791: panic("%s: Unable to unregister IRQ %d", dev->name, r);
+M:\minix\lib\libvirtio\virtio.c:804: panic("%s: Feature not found bit=%d", dev->name, bit);
+M:\minix\lib\libvirtio\virtio.c:828: panic("%s: Read failed %d %d r=%d", dev->name,		\
+M:\minix\lib\libvirtio\virtio.c:847: panic("%s: Write failed %d %d r=%d", dev->name,		\
+M:\minix\lib\libvirtio\virtio.c:870: panic("%s: Read failed %d %d r=%d", dev->name,		\
+M:\minix\lib\libvirtio\virtio.c:894: panic("%s: Write failed %d %d r=%d", dev->name,		\
+M:\minix\lib\libvirtio\virtio_ring.h:148: #if 0
+M:\minix\lib\libvtreefs\utility.c:11: * defined, let it handle the call; otherwise return ENOSYS.
+M:\minix\lib\libvtreefs\utility.c:17: return ENOSYS;
+M:\minix\lib\libvtreefs\vtreefs.c:99: err = ENOSYS;
+M:\minix\lib\libvtreefs\vtreefs.c:118: panic("receive failed: %d", r);
+M:\minix\lib\libvtreefs\vtreefs.c:138: panic("unable to send reply: %d", r);
+M:\minix\tests\Makefile:27: # LSC FIXME: Compilation error for now on ARM with that!
+M:\minix\tests\t40d.c:120: #if 0
+M:\minix\tests\t40d.c:153: #if 0
+M:\minix\tests\t40d.c:372: * and fd_ap[1] for reading. (It is unsupported on Minix.) As such, it is not
+M:\minix\tests\t40e.c:79: #if 0
+M:\minix\tests\t40e.c:112: #if 0
+M:\minix\tests\t40e.c:151: #if 0
+M:\minix\tests\t40e.c:245: /* Reuse port number. Not implemented in Minix. */
+M:\minix\tests\test15.c:621: equal(one, "axxxefgh", 2);	/* Basic test. */
+M:\minix\tests\test15.c:624: equal(one, "axxxefgh", 3);	/* Zero-length set. */
+M:\minix\tests\test15.c:627: equal(one, "axxxe", 4);	/* Zero fill. */
+M:\minix\tests\test18.c:305: * HACK DEBUG FIXME: this appears to duplicate
+M:\minix\tests\test20.c:277: #if 0
+M:\minix\tests\test20.c:299: #if 0 /* XXX - see test7.c */
+M:\minix\tests\test20.c:308: #if 0 /* XXX - see test7.c */
+M:\minix\tests\test20.c:313: #if 0
+M:\minix\tests\test23.c:260: /* XXX - this comment was botched by 'pretty'. */
+M:\minix\tests\test28.c:227: #if 0
+M:\minix\tests\test29.c:122: #if 0 /* XXX - see test7.c */
+M:\minix\tests\test29.c:128: #if 0 /* XXX - see test7.c */
+M:\minix\tests\test37.c:472: #if 0
+M:\minix\tests\test41.c:121: /* test invalid and unsupported 'which' values */
+M:\minix\tests\test42.c:389: /* Quick hack to clean up detached children */
+M:\minix\tests\test42.c:906: #if 0
+M:\minix\tests\test42.c:907: /* FIXME: disabled until we can reliably determine PM's pid */
+M:\minix\tests\test47.c:150: #if 0
+M:\minix\tests\test48.c:343: { "XXX",       0, 0, 0,           (1 << EAI_SERVICE) }};
+M:\minix\tests\test5.c:289: unlink("XXX.test5");
+M:\minix\tests\test5.c:295: while (access("XXX.test5", 0) != 0) /* just wait */ ;
+M:\minix\tests\test5.c:297: unlink("XXX.test5");
+M:\minix\tests\test5.c:304: if (creat("XXX.test5", 0777) < 0) e(7);
+M:\minix\tests\test5.c:317: unlink("XXXxxxXXX");
+M:\minix\tests\test5.c:321: /* Wait until child has started and has created the XXXxxxXXX file. */
+M:\minix\tests\test5.c:322: while (access("XXXxxxXXX", 0) != 0) /* loop */ ;
+M:\minix\tests\test5.c:329: if (creat("XXXxxxXXX", 0777) < 0) e(5);
+M:\minix\tests\test5.c:333: unlink("XXXxxxXXX");
+M:\minix\tests\test54.c:23: char filename[] = "pwrite_test_XXXXXXX";
+M:\minix\tests\test55.c:22: char filename[] = "statvfs_test_XXXXXX";
+M:\minix\tests\test56.c:220: debug("Test socket() with an unsupported address family");
+M:\minix\tests\test56.c:605: * ENOSYS, and we used to test for ENOTTY here..
+M:\minix\tests\test56.c:638: if (!(rc == -1 && errno == ENOSYS)) {
+M:\minix\tests\test56.c:639: test_fail("shutdown() should have failed with ENOSYS");
+M:\minix\tests\test56.c:3383: /* Yes, you fucked up the fix for the FIXME below. */
+M:\minix\tests\test56.c:3391: * FIXME: currently UDS cannot distinguish between sockets that have
+M:\minix\tests\test56.c:3395: #if 0
+M:\minix\tests\test56.c:3469: * FIXME: currently UDS cannot distinguish between sockets that have
+M:\minix\tests\test56.c:3473: #if 0
+M:\minix\tests\test57.c:83: #if 0
+M:\minix\tests\test59.c:750: #error "Unsupported chip for this test"
+M:\minix\tests\test70.c:31: char template[30] = "tempfile.XXXXXXXX";
+M:\minix\tests\test72.c:219: panic(const char *fmt, ...)
+M:\minix\tests\test72.c:232: return ENOSYS;
+M:\minix\tests\test72.c:260: return ENOSYS;
+M:\minix\tests\test74.c:265: char fn_rw[] = "testfile_rw.XXXXXX", fn_ro[] = "testfile_ro.XXXXXX";
+M:\minix\tests\testcache.c:235: char tempfilename[] = "cachetest.XXXXXXXX";
+M:\minix\tests\testsh1.sh:147: grep -s "a" XXX_nonexistent_file_XXX >x
+M:\minix\tests\blocktest\blocktest.c:110: panic("unable to allocate %d bytes of memory", size);
+M:\minix\tests\blocktest\blocktest.c:309: panic("unable to allocate grant");
+M:\minix\tests\blocktest\blocktest.c:322: panic("unable to revoke grant");
+M:\minix\tests\blocktest\blocktest.c:354: panic("unable to allocate grant");
+M:\minix\tests\blocktest\blocktest.c:363: panic("unable to revoke grant");
+M:\minix\tests\blocktest\blocktest.c:391: panic("unable to allocate grant");
+M:\minix\tests\blocktest\blocktest.c:424: panic("unable to allocate grant");
+M:\minix\tests\blocktest\blocktest.c:480: panic("unable to allocate grant");
+M:\minix\tests\blocktest\blocktest.c:706: panic("unable to allocate grant");
+M:\minix\tests\blocktest\blocktest.c:730: panic("unable to allocate grant");
+M:\minix\tests\blocktest\blocktest.c:754: panic("unable to allocate grant");
+M:\minix\tests\blocktest\blocktest.c:911: panic("unable to allocate grant");
+M:\minix\tests\blocktest\blocktest.c:1172: panic("unable to allocate grant");
+M:\minix\tests\blocktest\blocktest.c:1185: panic("unable to revoke grant");
+M:\minix\tests\blocktest\blocktest.c:2684: panic("no driver label given");
+M:\minix\tests\blocktest\blocktest.c:2687: panic("unable to resolve driver label");
+M:\minix\tests\blocktest\blocktest.c:2690: panic("invalid or no driver minor given");
+M:\minix\tests\blocktest\blocktest.c:2693: panic("unable to get uptime: %d", r);
+M:\minix\tests\ddekit\ddekittest_driver.c:32: #if 0
+M:\minix\tests\ddekit\ddekittest_driver.c:41: #if 0
+M:\minix\tests\ipc\lib\libipc.c:39: #if 0
+M:\minix\tests\ipc\lib\libipc.c:93: #if 0
+M:\minix\tests\ipc\lib\libipc.c:112: #if 0
+M:\minix\tests\ipc\lib\tst_tmpdir.c:123: /* This is an AWEFUL hack to figure out if mkdtemp() is available */
+M:\minix\tests\ipc\lib\tst_tmpdir.c:155: snprintf(template, PATH_MAX, "%s/%.3sXXXXXX", env_tmpdir, TCID);
+M:\minix\tests\ipc\lib\tst_tmpdir.c:157: snprintf(template, PATH_MAX, "%s/%.3sXXXXXX", TEMPDIR, TCID);
+M:\minix\tests\ipc\semctl\semctl03.c:101: #if 0
+M:\minix\tests\kernel\sys_vumap\vumaprelay.c:69: panic("sef_receive failed (%d)\n", r);
+M:\minix\tests\kernel\sys_vumap\vumaptest.c:66: panic("unable to allocate temporary buffer");
+M:\minix\tests\kernel\sys_vumap\vumaptest.c:73: panic("unable to allocate buffer (2)");
+M:\minix\tests\kernel\sys_vumap\vumaptest.c:79: panic("unable to unmap buffer (%d)", errno);
+M:\minix\tests\kernel\sys_vumap\vumaptest.c:82: panic("unable to get physical address of buffer (%d)", r);
+M:\minix\tests\kernel\sys_vumap\vumaptest.c:101: panic("unable to allocate buffer, second try");
+M:\minix\tests\kernel\sys_vumap\vumaptest.c:104: panic("unable to get physical address of buffer (%d)", r);
+M:\minix\tests\kernel\sys_vumap\vumaptest.c:108: panic("unable to allocate noncontiguous range");
+M:\minix\tests\kernel\sys_vumap\vumaptest.c:154: panic("unable to unmap range (%d)", errno);
+M:\minix\tests\kernel\sys_vumap\vumaptest.c:671: panic("unable to allocate virtual vector");
+M:\minix\tests\kernel\sys_vumap\vumaptest.c:694: panic("unable to allocate physical vector");
+M:\minix\tests\kernel\sys_vumap\vumaptest.c:1381: panic("unable to obtain endpoint for 'vumaprelay' (%d)", r);
+M:\minix\tests\safecopy\inc.h:38: panic("FIFO_WAIT failed");                  \
+M:\minix\tests\safecopy\inc.h:43: panic("FIFO_NOTIFY failed");                \
+M:\releasetools\arm_sdimage.sh:185: # make the different file system. this part is *also* hacky. We first convert
+M:\releasetools\x86_hdimage.sh:127: # make the different file system. this part is *also* hacky. We first convert

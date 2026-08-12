@@ -1,0 +1,11 @@
+CC?=cc
+CFLAGS?=-O2 -std=c99 -Wall -Wextra -pedantic
+LDLIBS?=-lm
+
+all: ai_stage2_tiny_llm
+
+ai_stage2_tiny_llm: ai_stage2_tiny_llm.c
+	$(CC) $(CFLAGS) -o $@ $< $(LDLIBS)
+
+clean:
+	rm -f ai_stage2_tiny_llm *.o stage2-bad-magic.bin stage2-bad-count.bin stage2-truncated.bin

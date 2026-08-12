@@ -1,0 +1,346 @@
+
+============================================================
+MINIX LOG BASELINE
+============================================================
+Collection time:
+Fri Jul 31 03:18:41 GMT 2026
+
+Hostname:
+10.0.2.15
+
+Output file:
+/usr/src/docs/audit/logs/minix-baseline-20260731-031841.log
+
+============================================================
+SYSTEM VERSION
+============================================================
+$ uname -a
+Minix 10.0.2.15 3.3.0 Minix 3.3.0 (R-CODE-1) i386
+
+============================================================
+SYSTEM UPTIME
+============================================================
+$ uptime
+ 3:18AM  up  4:39, 2 users, load averages: 1.14, 0.55, 0.36
+
+============================================================
+CURRENT USER
+============================================================
+$ id
+uid=0(root) gid=0(operator) groups=0(operator)
+
+============================================================
+/var/log CONTENTS
+============================================================
+lrwxrwxrwx  1 root  operator  8 Jul 25 17:40 /var/log -> /usr/log
+
+============================================================
+KERNEL MESSAGE BUFFER
+============================================================
+dmesg command was not found.
+
+============================================================
+SYSTEM LOG: /var/log/messages
+============================================================
+Showing the last 1000 lines:
+Jul 25 17:59:33 10 syslogd: restart
+Jul 25 17:59:33 10 kernel: 
+Jul 25 17:59:33 10 kernel: MINIX 3.3.0. (588a35b)
+Jul 25 17:59:33 10 kernel: Copyright 2014, Vrije Universiteit, Amsterdam, The Netherlands
+Jul 25 17:59:33 10 kernel: MINIX is open source software, see http://www.minix3.org
+Jul 25 17:59:33 10 kernel: Started VFS: 9 worker thread(s)
+Jul 25 17:59:40 10 1 2026-07-25T17:59:40.083333+00:00 10.0.2.15 login - - - ROOT LOGIN (root) on tty console
+Jul 25 17:59:40 10 1 2026-07-25T17:59:40.083333+00:00 10.0.2.15 login - - - Cannot update lastlogx: Invalid argument
+Jul 25 17:59:40 10 1 2026-07-25T17:59:40.116666+00:00 10.0.2.15 login - - - ROOT LOGIN (root) ON console
+Jul 25 17:59:57 10 1 2026-07-25T17:59:57.966666+00:00 10.0.2.15 shutdown - - - halt by root: 
+Jul 25 18:00:06 10 syslogd: exiting on signal 15 - Undefined error: 0
+Jul 25 18:02:13 10 syslogd: restart
+Jul 25 18:02:13 10 kernel: 
+Jul 25 18:02:13 10 kernel: MINIX 3.3.0. (588a35b)
+Jul 25 18:02:13 10 kernel: Copyright 2014, Vrije Universiteit, Amsterdam, The Netherlands
+Jul 25 18:02:13 10 kernel: MINIX is open source software, see http://www.minix3.org
+Jul 25 18:02:13 10 kernel: Started VFS: 9 worker thread(s)
+Jul 25 18:02:36 10 1 2026-07-25T18:02:36.766666+00:00 10.0.2.15 login - - - ROOT LOGIN (root) on tty console
+Jul 25 18:02:36 10 1 2026-07-25T18:02:36.766666+00:00 10.0.2.15 login - - - Cannot update lastlogx: Invalid argument
+Jul 25 18:02:36 10 1 2026-07-25T18:02:36.800000+00:00 10.0.2.15 login - - - ROOT LOGIN (root) ON console
+Jul 25 18:06:35 10 1 2026-07-25T18:06:35.916666+00:00 10.0.2.15 sshd 405 - - Server listening on 0.0.0.0 port 22.
+Jul 25 18:06:35 10 1 2026-07-25T18:06:35.916666+00:00 10.0.2.15 sshd 405 - - error: Couldn't create pid file "/usr/pkg/var/run/sshd.pid": No such file or directory
+Jul 25 18:07:15 10 1 2026-07-25T18:07:15.583333+00:00 10.0.2.15 shutdown - - - halt by root: 
+Jul 25 18:07:23 10 syslogd: exiting on signal 15 - Undefined error: 0
+Jul 25 18:09:17 10 syslogd: restart
+Jul 25 18:09:17 10 kernel: 
+Jul 25 18:09:17 10 kernel: MINIX 3.3.0. (588a35b)
+Jul 25 18:09:17 10 kernel: Copyright 2014, Vrije Universiteit, Amsterdam, The Netherlands
+Jul 25 18:09:17 10 kernel: MINIX is open source software, see http://www.minix3.org
+Jul 25 18:09:17 10 kernel: Started VFS: 9 worker thread(s)
+Jul 25 18:09:28 10 1 2026-07-25T18:09:28.466666+00:00 10.0.2.15 sshd 192 - - Invalid user username from 10.0.2.2
+Jul 25 18:09:28 10 1 2026-07-25T18:09:28.466666+00:00 10.0.2.15 sshd 192 - - input_userauth_request: invalid user username
+Jul 25 18:09:28 10 1 2026-07-25T18:09:28.466666+00:00 10.0.2.15 sshd 192 - - Failed none for invalid user username from 10.0.2.2 port 50967 ssh2
+Jul 25 18:09:28 10 1 2026-07-25T18:09:28.466666+00:00 10.0.2.15 sshd 192 - - Failed keyboard-interactive for invalid user username from 10.0.2.2 port 50967 ssh2
+Jul 25 18:09:33 10 1 2026-07-25T18:09:33.683333+00:00 10.0.2.15 sshd 192 - - Failed password for invalid user username from 10.0.2.2 port 50967 ssh2
+Jul 25 18:09:34 10 1 2026-07-25T18:09:34.316666+00:00 10.0.2.15 sshd 192 - - Failed password for invalid user username from 10.0.2.2 port 50967 ssh2
+Jul 25 18:09:34 10 1 2026-07-25T18:09:34.583333+00:00 10.0.2.15 sshd 192 - - Failed password for invalid user username from 10.0.2.2 port 50967 ssh2
+Jul 25 18:09:34 10 1 2026-07-25T18:09:34.583333+00:00 10.0.2.15 sshd 192 - - fatal: Read from socket failed: Connection reset by peer
+Jul 25 18:09:42 10 1 2026-07-25T18:09:42.900000+00:00 10.0.2.15 sshd 193 - - Failed password for root from 10.0.2.2 port 50976 ssh2
+Jul 25 18:09:45 10 1 2026-07-25T18:09:45.633333+00:00 10.0.2.15 sshd 193 - - Failed password for root from 10.0.2.2 port 50976 ssh2
+Jul 25 18:09:46 10 1 2026-07-25T18:09:46.400000+00:00 10.0.2.15 sshd 193 - - Failed password for root from 10.0.2.2 port 50976 ssh2
+Jul 25 18:09:46 10 1 2026-07-25T18:09:46.400000+00:00 10.0.2.15 sshd 193 - - fatal: Read from socket failed: Connection reset by peer
+Jul 25 18:09:51 10 1 2026-07-25T18:09:51.216666+00:00 10.0.2.15 login - - - ROOT LOGIN (root) on tty console
+Jul 25 18:09:51 10 1 2026-07-25T18:09:51.216666+00:00 10.0.2.15 login - - - Cannot update lastlogx: Invalid argument
+Jul 25 18:09:51 10 1 2026-07-25T18:09:51.250000+00:00 10.0.2.15 login - - - ROOT LOGIN (root) ON console
+Jul 25 18:12:44 10 1 2026-07-25T18:12:44.050000+00:00 10.0.2.15 useradd 197 - - New user added: name=msmith, uid=1000, gid=100, home=/home/msmith, shell=/bin/sh
+Jul 25 18:12:56 10 1 2026-07-25T18:12:56.300000+00:00 10.0.2.15 passwd - - - user root (UID 0) successfully changed the local password of user msmith
+Jul 25 18:13:33 10 1 2026-07-25T18:13:33.566666+00:00 10.0.2.15 sshd 213 - - Accepted password for msmith from 10.0.2.2 port 51115 ssh2
+Jul 25 18:13:33 10 1 2026-07-25T18:13:33.600000+00:00 10.0.2.15 sshd 213 - - error: setsockopt TCP_NODELAY: Function not implemented
+Jul 25 18:13:33 10 1 2026-07-25T18:13:33.600000+00:00 10.0.2.15 sshd 213 - - error: setsockopt IP_TOS 16: Function not implemented:
+Jul 25 18:13:33 10 1 2026-07-25T18:13:33.600000+00:00 10.0.2.15 sshd 214 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 25 18:13:33 10 1 2026-07-25T18:13:33.616666+00:00 10.0.2.15 sshd 214 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 25 18:14:34 10 1 2026-07-25T18:14:34.383333+00:00 10.0.2.15 su - - - msmith to root on /dev/ttyp0
+Jul 25 18:16:16 10 1 2026-07-25T18:16:16.683333+00:00 10.0.2.15 login - - - ROOT LOGIN (root) on tty console
+Jul 25 18:16:16 10 1 2026-07-25T18:16:16.700000+00:00 10.0.2.15 login - - - Cannot update lastlogx: Invalid argument
+Jul 25 18:16:16 10 1 2026-07-25T18:16:16.716666+00:00 10.0.2.15 login - - - ROOT LOGIN (root) ON console
+Jul 25 18:29:17 10 -- MARK --
+Jul 25 18:33:32 10 1 2026-07-25T18:33:32.066666+00:00 10.0.2.15 sshd 213 - - Received disconnect from 10.0.2.2: 11: disconnected by user
+Jul 25 18:35:34 10 1 2026-07-25T18:35:34.533333+00:00 10.0.2.15 sshd 1614 - - Invalid user murray from 10.0.2.2
+Jul 25 18:35:34 10 1 2026-07-25T18:35:34.550000+00:00 10.0.2.15 sshd 1614 - - input_userauth_request: invalid user murray
+Jul 25 18:35:34 10 1 2026-07-25T18:35:34.550000+00:00 10.0.2.15 sshd 1614 - - Failed none for invalid user murray from 10.0.2.2 port 52060 ssh2
+Jul 25 18:35:34 10 1 2026-07-25T18:35:34.550000+00:00 10.0.2.15 sshd 1614 - - Failed keyboard-interactive for invalid user murray from 10.0.2.2 port 52060 ssh2
+Jul 25 18:35:39 10 1 2026-07-25T18:35:39.066666+00:00 10.0.2.15 sshd 1614 - - Failed password for invalid user murray from 10.0.2.2 port 52060 ssh2
+Jul 25 18:35:43 10 1 2026-07-25T18:35:43.966666+00:00 10.0.2.15 sshd 1614 - - Failed password for invalid user murray from 10.0.2.2 port 52060 ssh2
+Jul 25 18:35:44 10 1 2026-07-25T18:35:44.816666+00:00 10.0.2.15 sshd 1614 - - Failed password for invalid user murray from 10.0.2.2 port 52060 ssh2
+Jul 25 18:35:44 10 1 2026-07-25T18:35:44.816666+00:00 10.0.2.15 sshd 1614 - - fatal: Read from socket failed: Connection reset by peer
+Jul 25 18:36:04 10 1 2026-07-25T18:36:04.350000+00:00 10.0.2.15 sshd 1615 - - Accepted password for msmith from 10.0.2.2 port 52075 ssh2
+Jul 25 18:36:04 10 1 2026-07-25T18:36:04.350000+00:00 10.0.2.15 sshd 1615 - - error: setsockopt TCP_NODELAY: Function not implemented
+Jul 25 18:36:04 10 1 2026-07-25T18:36:04.350000+00:00 10.0.2.15 sshd 1615 - - error: setsockopt IP_TOS 8: Function not implemented:
+Jul 25 18:36:10 10 1 2026-07-25T18:36:10.316666+00:00 10.0.2.15 su - - - root to root on /dev/console
+Jul 25 18:36:51 10 1 2026-07-25T18:36:51.900000+00:00 10.0.2.15 sshd 1615 - - Received disconnect from 10.0.2.2: 11: disconnected by user
+Jul 25 18:45:17 10 1 2026-07-25T18:45:17.333333+00:00 10.0.2.15 shutdown - - - halt by root: 
+Jul 25 18:45:20 10 1 2026-07-25T18:45:20.533333+00:00 10.0.2.15 root - - - kadmind: WARNING: $kadmind is not set properly - see rc.conf(5).
+Jul 25 18:45:20 10 1 2026-07-25T18:45:20.550000+00:00 10.0.2.15 root - - - kcm: WARNING: $kcm is not set properly - see rc.conf(5).
+Jul 25 18:45:20 10 1 2026-07-25T18:45:20.566666+00:00 10.0.2.15 root - - - kdc: WARNING: $kdc is not set properly - see rc.conf(5).
+Jul 25 18:45:20 10 1 2026-07-25T18:45:20.566666+00:00 10.0.2.15 root - - - kpasswdd: WARNING: $kpasswdd is not set properly - see rc.conf(5).
+Jul 25 18:45:25 10 syslogd: exiting on signal 15 - Undefined error: 0
+Jul 25 18:46:28 10 syslogd: restart
+Jul 25 18:46:28 10 kernel: 
+Jul 25 18:46:28 10 kernel: MINIX 3.3.0. (588a35b)
+Jul 25 18:46:28 10 kernel: Copyright 2014, Vrije Universiteit, Amsterdam, The Netherlands
+Jul 25 18:46:28 10 kernel: MINIX is open source software, see http://www.minix3.org
+Jul 25 18:46:28 10 kernel: Started VFS: 9 worker thread(s)
+Jul 25 18:46:32 10 1 2026-07-25T18:46:32.233333+00:00 10.0.2.15 login - - - ROOT LOGIN (root) on tty console
+Jul 25 18:46:32 10 1 2026-07-25T18:46:32.233333+00:00 10.0.2.15 login - - - Cannot update lastlogx: Invalid argument
+Jul 25 18:46:32 10 1 2026-07-25T18:46:32.266666+00:00 10.0.2.15 login - - - ROOT LOGIN (root) ON console
+Jul 25 19:06:28 10 -- MARK --
+Jul 25 19:09:27 10 1 2026-07-25T19:09:27.050000+00:00 10.0.2.15 sshd 25384 - - Invalid user murray from 10.0.2.2
+Jul 25 19:09:27 10 1 2026-07-25T19:09:27.066666+00:00 10.0.2.15 sshd 25384 - - input_userauth_request: invalid user murray
+Jul 25 19:09:27 10 1 2026-07-25T19:09:27.066666+00:00 10.0.2.15 sshd 25384 - - Failed none for invalid user murray from 10.0.2.2 port 53345 ssh2
+Jul 25 19:09:27 10 1 2026-07-25T19:09:27.066666+00:00 10.0.2.15 sshd 25384 - - Failed keyboard-interactive for invalid user murray from 10.0.2.2 port 53345 ssh2
+Jul 25 19:09:28 10 1 2026-07-25T19:09:28.183333+00:00 10.0.2.15 sshd 25384 - - Failed password for invalid user murray from 10.0.2.2 port 53345 ssh2
+Jul 25 19:09:28 10 1 2026-07-25T19:09:28.366666+00:00 10.0.2.15 sshd 25384 - - Failed password for invalid user murray from 10.0.2.2 port 53345 ssh2
+Jul 25 19:09:28 10 1 2026-07-25T19:09:28.550000+00:00 10.0.2.15 sshd 25384 - - Failed password for invalid user murray from 10.0.2.2 port 53345 ssh2
+Jul 25 19:09:28 10 1 2026-07-25T19:09:28.566666+00:00 10.0.2.15 sshd 25384 - - fatal: Read from socket failed: Connection reset by peer
+Jul 25 19:09:49 10 1 2026-07-25T19:09:49.400000+00:00 10.0.2.15 sshd 28675 - - Accepted password for msmith from 10.0.2.2 port 53358 ssh2
+Jul 25 19:09:49 10 1 2026-07-25T19:09:49.483333+00:00 10.0.2.15 sshd 28675 - - error: setsockopt TCP_NODELAY: Function not implemented
+Jul 25 19:09:49 10 1 2026-07-25T19:09:49.483333+00:00 10.0.2.15 sshd 28675 - - error: setsockopt IP_TOS 16: Function not implemented:
+Jul 25 19:09:49 10 1 2026-07-25T19:09:49.483333+00:00 10.0.2.15 sshd 28897 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 25 19:09:49 10 1 2026-07-25T19:09:49.500000+00:00 10.0.2.15 sshd 28897 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 25 19:09:52 10 1 2026-07-25T19:09:52.666666+00:00 10.0.2.15 sshd 28675 - - Received disconnect from 10.0.2.2: 11: disconnected by user
+Jul 25 19:12:21 10 kernel: VFS dupvm: getfd failed
+Jul 25 19:12:21 10 last message repeated 2 times
+Jul 25 19:25:51 10 1 2026-07-25T19:25:51.366666+00:00 10.0.2.15 sshd 28680 - - Failed password for msmith from 10.0.2.2 port 54006 ssh2
+Jul 25 19:25:51 10 1 2026-07-25T19:25:51.366666+00:00 10.0.2.15 sshd 28680 - - Connection closed by 10.0.2.2
+Jul 25 19:26:08 10 1 2026-07-25T19:26:08.716666+00:00 10.0.2.15 sshd 29509 - - Accepted password for msmith from 10.0.2.2 port 54022 ssh2
+Jul 25 19:26:08 10 1 2026-07-25T19:26:08.733333+00:00 10.0.2.15 sshd 29509 - - error: setsockopt TCP_NODELAY: Function not implemented
+Jul 25 19:26:08 10 1 2026-07-25T19:26:08.733333+00:00 10.0.2.15 sshd 29509 - - error: setsockopt IP_TOS 8: Function not implemented:
+Jul 25 19:28:35 10 1 2026-07-25T19:28:35.050000+00:00 10.0.2.15 sshd 9642 - - Accepted password for msmith from 10.0.2.2 port 54124 ssh2
+Jul 25 19:28:35 10 1 2026-07-25T19:28:35.883333+00:00 10.0.2.15 sshd 10158 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 25 19:28:35 10 1 2026-07-25T19:28:35.883333+00:00 10.0.2.15 sshd 10158 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 25 19:28:35 10 1 2026-07-25T19:28:35.916666+00:00 10.0.2.15 sshd 9642 - - error: setsockopt TCP_NODELAY: Function not implemented
+Jul 25 19:28:35 10 1 2026-07-25T19:28:35.983333+00:00 10.0.2.15 sshd 9642 - - error: setsockopt IP_TOS 16: Function not implemented:
+Jul 25 19:28:38 10 kernel: VFS: exec: dynamic: open main exec failed pkg/bin/su (-13)
+Jul 25 19:28:38 10 1 2026-07-25T19:28:38.683333+00:00 10.0.2.15 su - - - msmith to root on /dev/ttyp0
+Jul 25 19:30:27 10 1 2026-07-25T19:30:27.750000+00:00 10.0.2.15 su - - - root to root on /dev/ttyp0
+Jul 25 19:31:43 10 1 2026-07-25T19:31:43.216666+00:00 10.0.2.15 sshd 9642 - - Received disconnect from 10.0.2.2: 11: disconnected by user
+Jul 25 19:33:22 10 1 2026-07-25T19:33:22.800000+00:00 10.0.2.15 sshd 28038 - - Accepted password for msmith from 10.0.2.2 port 54139 ssh2
+Jul 25 19:33:22 10 1 2026-07-25T19:33:22.850000+00:00 10.0.2.15 sshd 28038 - - error: setsockopt TCP_NODELAY: Function not implemented
+Jul 25 19:33:22 10 1 2026-07-25T19:33:22.850000+00:00 10.0.2.15 sshd 28038 - - error: setsockopt IP_TOS 16: Function not implemented:
+Jul 25 19:33:22 10 1 2026-07-25T19:33:22.850000+00:00 10.0.2.15 sshd 28039 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 25 19:33:22 10 1 2026-07-25T19:33:22.850000+00:00 10.0.2.15 sshd 28039 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 25 19:33:22 10 1 2026-07-25T19:33:22.900000+00:00 10.0.2.15 su - - - msmith to root on /dev/ttyp0
+Jul 25 19:33:24 10 1 2026-07-25T19:33:24.566666+00:00 10.0.2.15 sshd 28038 - - Received disconnect from 10.0.2.2: 11: disconnected by user
+Jul 25 19:37:20 10 1 2026-07-25T19:37:20.833333+00:00 10.0.2.15 sshd 16740 - - Accepted password for msmith from 10.0.2.2 port 54157 ssh2
+Jul 25 19:37:20 10 1 2026-07-25T19:37:20.883333+00:00 10.0.2.15 sshd 16740 - - error: setsockopt TCP_NODELAY: Function not implemented
+Jul 25 19:37:20 10 1 2026-07-25T19:37:20.883333+00:00 10.0.2.15 sshd 16740 - - error: setsockopt IP_TOS 16: Function not implemented:
+Jul 25 19:37:20 10 1 2026-07-25T19:37:20.900000+00:00 10.0.2.15 sshd 16741 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 25 19:37:20 10 1 2026-07-25T19:37:20.900000+00:00 10.0.2.15 sshd 16741 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 25 19:37:20 10 1 2026-07-25T19:37:20.933333+00:00 10.0.2.15 su - - - msmith to root on /dev/ttyp0
+Jul 25 19:46:14 10 1 2026-07-25T19:46:14.766666+00:00 10.0.2.15 sshd 16740 - - Received disconnect from 10.0.2.2: 11: disconnected by user
+Jul 25 19:57:58 10 1 2026-07-25T19:57:58.733333+00:00 10.0.2.15 sshd 13027 - - Accepted password for msmith from 10.0.2.2 port 54264 ssh2
+Jul 25 19:57:58 10 1 2026-07-25T19:57:58.800000+00:00 10.0.2.15 sshd 13027 - - error: setsockopt TCP_NODELAY: Function not implemented
+Jul 25 19:57:58 10 1 2026-07-25T19:57:58.800000+00:00 10.0.2.15 sshd 13027 - - error: setsockopt IP_TOS 16: Function not implemented:
+Jul 25 19:57:58 10 1 2026-07-25T19:57:58.800000+00:00 10.0.2.15 sshd 13028 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 25 19:57:58 10 1 2026-07-25T19:57:58.800000+00:00 10.0.2.15 sshd 13028 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 25 19:57:58 10 1 2026-07-25T19:57:58.850000+00:00 10.0.2.15 su - - - msmith to root on /dev/ttyp0
+Jul 25 20:18:45 10 1 2026-07-25T20:18:45.466666+00:00 10.0.2.15 sshd 13027 - - Received disconnect from 10.0.2.2: 11: disconnected by user
+Jul 25 20:29:11 10 1 2026-07-25T20:29:11.100000+00:00 10.0.2.15 reboot - - - rebooted by root
+Jul 25 20:29:11 10 syslogd: exiting on signal 15 - Undefined error: 0
+Jul 25 20:30:22 10 syslogd: restart
+Jul 25 20:30:22 10 kernel: 
+Jul 25 20:30:22 10 kernel: MINIX 3.3.0. Copyright 2014, Vrije Universiteit, Amsterdam, The Netherlands
+Jul 25 20:30:22 10 kernel: MINIX is open source software, see http://www.minix3.org
+Jul 25 20:30:22 10 kernel: Started VFS: 9 worker thread(s)
+Jul 25 20:30:27 10 1 2026-07-25T20:30:27.683333+00:00 10.0.2.15 login - - - ROOT LOGIN (root) on tty console
+Jul 25 20:30:27 10 1 2026-07-25T20:30:27.683333+00:00 10.0.2.15 login - - - Cannot update lastlogx: Invalid argument
+Jul 25 20:30:27 10 1 2026-07-25T20:30:27.716666+00:00 10.0.2.15 login - - - ROOT LOGIN (root) ON console
+Jul 25 20:31:10 10 1 2026-07-25T20:31:10.616666+00:00 10.0.2.15 sshd 215 - - Connection closed by 10.0.2.2
+Jul 25 20:31:56 10 1 2026-07-25T20:31:56.683333+00:00 10.0.2.15 sshd 220 - - Accepted password for msmith from 10.0.2.2 port 54363 ssh2
+Jul 25 20:31:59 10 1 2026-07-25T20:31:59.466666+00:00 10.0.2.15 sshd 220 - - error: setsockopt TCP_NODELAY: Function not implemented
+Jul 25 20:31:59 10 1 2026-07-25T20:31:59.466666+00:00 10.0.2.15 sshd 220 - - error: setsockopt IP_TOS 16: Function not implemented:
+Jul 25 20:31:59 10 1 2026-07-25T20:31:59.466666+00:00 10.0.2.15 sshd 221 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 25 20:31:59 10 1 2026-07-25T20:31:59.466666+00:00 10.0.2.15 sshd 221 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 25 20:32:06 10 1 2026-07-25T20:32:06.233333+00:00 10.0.2.15 sshd 220 - - Received disconnect from 10.0.2.2: 11: disconnected by user
+Jul 25 20:32:58 10 1 2026-07-25T20:32:58.583333+00:00 10.0.2.15 sshd 224 - - Accepted password for msmith from 10.0.2.2 port 54370 ssh2
+Jul 25 20:32:58 10 1 2026-07-25T20:32:58.600000+00:00 10.0.2.15 sshd 224 - - error: setsockopt TCP_NODELAY: Function not implemented
+Jul 25 20:32:58 10 1 2026-07-25T20:32:58.600000+00:00 10.0.2.15 sshd 224 - - error: setsockopt IP_TOS 8: Function not implemented:
+Jul 25 20:33:34 10 1 2026-07-25T20:33:34.266666+00:00 10.0.2.15 shutdown - - - halt by root: 
+Jul 25 20:33:37 10 1 2026-07-25T20:33:37.366666+00:00 10.0.2.15 root - - - kadmind: WARNING: $kadmind is not set properly - see rc.conf(5).
+Jul 25 20:33:37 10 1 2026-07-25T20:33:37.366666+00:00 10.0.2.15 root - - - kcm: WARNING: $kcm is not set properly - see rc.conf(5).
+Jul 25 20:33:37 10 1 2026-07-25T20:33:37.400000+00:00 10.0.2.15 root - - - kpasswdd: WARNING: $kpasswdd is not set properly - see rc.conf(5).
+Jul 25 20:33:42 10 syslogd: exiting on signal 15 - Undefined error: 0
+Jul 30 22:39:34 10 syslogd: restart
+Jul 30 22:39:34 10 kernel: 
+Jul 30 22:39:34 10 kernel: MINIX 3.3.0. Copyright 2014, Vrije Universiteit, Amsterdam, The Netherlands
+Jul 30 22:39:34 10 kernel: MINIX is open source software, see http://www.minix3.org
+Jul 30 22:39:34 10 kernel: Started VFS: 9 worker thread(s)
+Jul 30 22:39:35 10 1 2026-07-30T22:39:35.233333+00:00 10.0.2.15 root - - - kadmind: WARNING: $kadmind is not set properly - see rc.conf(5).
+Jul 30 22:39:35 10 1 2026-07-30T22:39:35.350000+00:00 10.0.2.15 root - - - kcm: WARNING: $kcm is not set properly - see rc.conf(5).
+Jul 30 22:39:35 10 1 2026-07-30T22:39:35.483333+00:00 10.0.2.15 root - - - kdc: WARNING: $kdc is not set properly - see rc.conf(5).
+Jul 30 22:39:35 10 1 2026-07-30T22:39:35.633333+00:00 10.0.2.15 root - - - kpasswdd: WARNING: $kpasswdd is not set properly - see rc.conf(5).
+Jul 30 22:39:37 10 1 2026-07-30T22:39:37.383333+00:00 10.0.2.15 sshd 217 - - Server listening on 0.0.0.0 port 22.
+Jul 30 22:39:37 10 1 2026-07-30T22:39:37.500000+00:00 10.0.2.15 sshd 217 - - error: Couldn't create pid file "/usr/pkg/var/run/sshd.pid": No such file or directory
+Jul 30 22:39:54 10 1 2026-07-30T22:39:54.300000+00:00 10.0.2.15 login - - - ROOT LOGIN (root) on tty console
+Jul 30 22:39:54 10 1 2026-07-30T22:39:54.416666+00:00 10.0.2.15 login - - - Cannot update lastlogx: Invalid argument
+Jul 30 22:39:54 10 1 2026-07-30T22:39:54.516666+00:00 10.0.2.15 login - - - ROOT LOGIN (root) ON console
+Jul 30 22:40:14 10 1 2026-07-30T22:40:14.133333+00:00 10.0.2.15 sshd 359 - - Accepted password for msmith from 10.0.2.2 port 50893 ssh2
+Jul 30 22:40:14 10 1 2026-07-30T22:40:14.150000+00:00 10.0.2.15 sshd 359 - - error: setsockopt TCP_NODELAY: Function not implemented
+Jul 30 22:40:14 10 1 2026-07-30T22:40:14.166666+00:00 10.0.2.15 sshd 359 - - error: setsockopt IP_TOS 8: Function not implemented:
+Jul 30 22:59:36 10 -- MARK --
+Jul 30 23:05:01 10 1 2026-07-30T23:05:01.883333+00:00 10.0.2.15 su - - - root to msmith on /dev/console
+Jul 30 23:06:10 10 1 2026-07-30T23:06:10.533333+00:00 10.0.2.15 sshd 372 - - Accepted password for msmith from 10.0.2.2 port 51354 ssh2
+Jul 30 23:06:10 10 1 2026-07-30T23:06:10.633333+00:00 10.0.2.15 sshd 372 - - error: setsockopt TCP_NODELAY: Function not implemented
+Jul 30 23:06:10 10 1 2026-07-30T23:06:10.633333+00:00 10.0.2.15 sshd 372 - - error: setsockopt IP_TOS 16: Function not implemented:
+Jul 30 23:06:10 10 1 2026-07-30T23:06:10.633333+00:00 10.0.2.15 sshd 373 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 30 23:06:10 10 1 2026-07-30T23:06:10.633333+00:00 10.0.2.15 sshd 373 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 30 23:07:18 10 kernel: VFS: exec: dynamic: open main exec failed pkg/bin/su (-13)
+Jul 30 23:07:18 10 1 2026-07-30T23:07:18.700000+00:00 10.0.2.15 su - - - msmith to root on /dev/ttyp0
+Jul 31 03:12:53 10 1 2026-07-31T03:12:53.100000+00:00 10.0.2.15 login - - - ROOT LOGIN (root) on tty console
+Jul 31 03:12:53 10 1 2026-07-31T03:12:53.116666+00:00 10.0.2.15 login - - - Cannot update lastlogx: Invalid argument
+Jul 31 03:12:53 10 1 2026-07-31T03:12:53.183333+00:00 10.0.2.15 login - - - ROOT LOGIN (root) ON console
+Jul 31 03:12:57 10 1 2026-07-31T03:12:57.566666+00:00 10.0.2.15 sshd 372 - - Received disconnect from 10.0.2.2: 11: disconnected by user
+Jul 31 03:14:15 10 1 2026-07-31T03:14:15.416666+00:00 10.0.2.15 sshd 392 - - Accepted password for msmith from 10.0.2.2 port 52439 ssh2
+Jul 31 03:14:15 10 1 2026-07-31T03:14:15.500000+00:00 10.0.2.15 sshd 392 - - error: setsockopt TCP_NODELAY: Function not implemented
+Jul 31 03:14:15 10 1 2026-07-31T03:14:15.500000+00:00 10.0.2.15 sshd 392 - - error: setsockopt IP_TOS 16: Function not implemented:
+Jul 31 03:14:15 10 1 2026-07-31T03:14:15.500000+00:00 10.0.2.15 sshd 393 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 31 03:14:15 10 1 2026-07-31T03:14:15.516666+00:00 10.0.2.15 sshd 393 - - lastlog_openseek: Couldn't stat /var/log/lastlog: No such file or directory
+Jul 31 03:18:41 10 kernel: VFS: exec: dynamic: open main exec failed pkg/bin/su (-13)
+Jul 31 03:18:41 10 1 2026-07-31T03:18:41.550000+00:00 10.0.2.15 su - - - msmith to root on /dev/ttyp0
+
+============================================================
+PROCESS LIST
+============================================================
+$ ps -ax
+  PID TTY  TIME CMD
+ (-5)   ?  0:00 asyncm
+ (-4)   ?  0:00 idle
+ (-3)   ?  0:00 clock
+ (-2)   ?  0:00 system
+ (-1)   ?  0:00 kernel
+    5   ? 21:59 pm
+    7   ? 45:16 vfs
+    4   ?  0:00 rs
+    8   ?  0:00 memory
+    6   ?  0:00 sched
+    9   ?  0:00 tty
+    3   ?  0:00 ds
+   11   ?  2:11 vm
+   12   ?  5:17 pfs
+    1   ?  0:00 init
+   17   ?  0:00 /service/pci
+   19   ?  0:00 /service/input
+   21   ?  0:00 /service/pckbd
+   29   ?  0:00 /service/floppy
+   32   ?  0:26 /service/at_wini
+   40   ?  0:00 /service/procfs
+   49   ?  1:48 /service/mfs /dev/c0d0p0s0 /
+   59   ?  0:00 /service/is
+   62   ?  0:00 /service/readclock.drv
+   73   ?  5:58 /service/mfs /dev/c0d0p0s2 /usr -o rw
+   76   ?  0:00 /service/mfs /dev/c0d0p0s1 /home -o rw
+   79   ?  0:00 /service/devman (null) /sys -o rw,rslabel=devman
+  118   ?  0:00 /service/random
+  134   ? 10:08 /service/lance instance=0
+  139   ? 18:30 /service/inet
+  143   ?  0:00 /service/pty
+  147   ?  0:00 /service/uds
+  151   ?  0:00 /service/ipc
+  155   ?  0:00 /service/log
+  164   ?  0:00 /service/vbox
+  107   ?  0:03 devmand -d /etc/devmand -d /usr/pkg/etc/devmand
+  359   ?  2h07 /usr/pkg/sbin/sshd -R
+  360   ?  0:00 sh -c /usr/pkg/libexec/sftp-server
+  361   ? 37:07 /usr/pkg/libexec/sftp-server
+  389  co  0:00 -sh
+  392   ?  0:01 /usr/pkg/sbin/sshd -R
+  393  p0  0:00 -sh
+  167   ?  0:00 update
+  169   ?  0:00 cron
+  402  p0  0:00 sh -c /usr/src/docs/log_audit.sh
+  403  p0  0:00 /bin/sh /usr/src/docs/log_audit.sh
+  176   ?  0:00 syslogd
+  177   ?  0:00 dhcpd
+  179   ?  0:00 nonamed -L
+  414  p0  0:00 ps -ax
+  217   ?  0:00 /usr/pkg/sbin/sshd
+  219  c1  0:00 /usr/libexec/getty default ttyc1
+  220  c2  0:00 /usr/libexec/getty default ttyc2
+  221  c3  0:00 /usr/libexec/getty default ttyc3
+
+============================================================
+FILESYSTEM USAGE
+============================================================
+$ df
+Filesystem    512-blocks       Used      Avail %Cap Mounted on
+/dev/c0d0p0s0     262144      76440     185704  29% /
+none                   0          0          0 100% /proc
+/dev/c0d0p0s2   53700256    5329184   48371072   9% /usr
+/dev/c0d0p0s1   13146112     788296   12357816   5% /home
+none                   0          0          0 100% /sys
+
+============================================================
+MOUNTED FILESYSTEMS
+============================================================
+$ mount
+/dev/c0d0p0s0 on / type mfs (rw)
+none on /proc type procfs (rw)
+/dev/c0d0p0s2 on /usr type mfs (rw)
+/dev/c0d0p0s1 on /home type mfs (rw)
+none on /sys type devman (rw)
+
+============================================================
+MEMORY INFORMATION
+============================================================
+The top command is installed.
+Interactive top output is not collected automatically.
+
+Boot environment:
+rootdevname=c0d0p0s0
+arch=i386
+board=X86-I586-GENERIC-GENERIC-GENERIC
+
+============================================================
+AUDIT COLLECTION COMPLETE
+============================================================
+Full log:
+/usr/src/docs/audit/logs/minix-baseline-20260731-031841.log
+
+Filtered log:
+/usr/src/docs/audit/logs/minix-baseline-20260731-031841-filtered.log

@@ -1,0 +1,202 @@
+﻿M:\minix\kernel\extracted-errno.h:73: IDENT(ENOSYS)
+M:\minix\servers\is\dmp_kernel.c:347: /* LSC FIXME: Not implemented for arm */
+M:\minix\servers\pm\main.c:100: result = ENOSYS;
+M:\minix\servers\pm\main.c:102: result = ENOSYS;
+M:\minix\servers\pm\misc.c:89: return EINVAL;	/* Unsupported field */
+M:\minix\servers\pm\profile.c:44: return ENOSYS;
+M:\minix\servers\pm\profile.c:72: return ENOSYS;
+M:\minix\servers\pm\time.c:38: return EINVAL; /* invalid/unsupported clock_id */
+M:\minix\servers\pm\time.c:61: return EINVAL; /* invalid/unsupported clock_id */
+M:\minix\servers\pm\time.c:83: return EINVAL; /* invalid/unsupported clock_id */
+M:\minix\servers\rs\error.c:16: { ENOSYS,     "service does not support the requested initialization type"  }
+M:\minix\servers\rs\error.c:22: { ENOSYS,     "service does not support live update"                        },
+M:\minix\servers\rs\main.c:115: result = ENOSYS;
+M:\minix\servers\rs\manager.c:1153: kill_service(rp, "file servers cannot be restarted yet", ENOSYS);
+M:\minix\servers\rs\memory.c:21: return ENOSYS;
+M:\minix\servers\sched\main.c:56: result = ENOSYS;
+M:\minix\servers\sched\utility.c:21: /* A system call number not implemented by PM has been requested. */
+M:\minix\servers\sched\utility.c:23: return(ENOSYS);
+M:\minix\servers\vfs\main.c:258: error = ENOSYS;
+M:\minix\servers\vfs\main.c:260: error = ENOSYS;
+M:\minix\servers\vfs\misc.c:379: return ENOSYS;
+M:\minix\servers\vm\main.c:119: result = ENOSYS; /* Out of range or restricted calls return this. */
+M:\minix\servers\vm\mem_anon.c:117: /* Shrinking not implemented; silently ignored.
+M:\minix\servers\vm\region.c:1093: printf("VM: low-shrinking not implemented for %s\n",
+M:\minix\servers\vm\region.c:1161: printf("VM: split region not implemented for %s\n",
+M:\minix\drivers\bus\pci\pci.c:1384: return width;	/* Reg. is not implemented */
+M:\minix\drivers\bus\pci\pci.c:1434: "complete_bridge: updating subordinate bus number not implemented\n");
+M:\minix\drivers\bus\pci\pci.c:1672: "update_bridge4dev_io: not implemented for PCI bridges\n");
+M:\minix\drivers\bus\pci\pci.c:1813: "(warning) unsupported ISA bridge %04X:%04X for bus %d\n",
+M:\minix\drivers\bus\pci\pci.c:2406: printf("pcibr_via_wsts(%d, 0x%X), devind= %d (not implemented)\n",
+M:\minix\drivers\clock\readclock\arch\earm\arch_readclock.c:44: return ENOSYS;
+M:\minix\drivers\clock\readclock\arch\earm\omap_rtc.c:210: log_warn(&log, "unsupported processor\n");
+M:\minix\drivers\clock\readclock\arch\earm\omap_rtc.c:211: return ENOSYS;
+M:\minix\drivers\clock\readclock\arch\i386\arch_readclock.c:311: /* Not Implemented */
+M:\minix\drivers\clock\readclock\arch\i386\arch_readclock.c:312: return ENOSYS;
+M:\minix\drivers\net\dec21140A\dec21140A.c:325: printf("%s: unsupported device\n", str_DevName);
+M:\minix\drivers\net\fxp\fxp.h:485: u32_t sc_rx_fcu;	/* Receive Flow Control Unsupported */
+M:\minix\drivers\net\orinoco\orinoco.c:387: * Not implemented yet                                                       *
+M:\minix\drivers\net\orinoco\orinoco.c:575: r = ENOSYS;
+M:\minix\drivers\net\orinoco\orinoco.c:621: panic("Not implemented yet");
+M:\minix\drivers\net\orinoco\orinoco.c:900: * Set the desired receive mode, e.g. promiscuous mode. Not implemented yet   *
+M:\minix\drivers\net\uds\ioc_uds.c:558: return ENOSYS;
+M:\minix\drivers\net\uds\ioc_uds.c:589: return ENOSYS;
+M:\minix\drivers\power\acpi\acpi.c:146: printf("ACPI: ignoring unsupported request %d "
+M:\minix\drivers\power\acpi\osminixxf.c:1012: panic("NOT IMPLEMENTED\n");
+M:\minix\drivers\power\acpi\osminixxf.c:1060: panic("NOT IMPLEMENTED\n");
+M:\minix\drivers\power\acpi\executer\exdump.c:432: "ExDumpObject: Display not implemented for object type %s\n",
+M:\minix\drivers\power\acpi\executer\exfldio.c:374: "Region %s(0x%X) not implemented",
+M:\minix\drivers\power\acpi\executer\exoparg1.c:659: "%s is obsolete and not implemented",
+M:\minix\drivers\power\acpi\executer\exresnte.c:347: "Unsupported Reference type 0x%X",
+M:\minix\drivers\power\acpi\executer\exstoren.c:368: ACPI_WARNING ((AE_INFO, "Store into type %s not implemented",
+M:\minix\drivers\power\acpi\hardware\hwregs.c:190: "Unsupported address space: 0x%X", Reg->SpaceId));
+M:\minix\drivers\power\acpi\hardware\hwregs.c:202: "Unsupported register bit width: 0x%X", Reg->BitWidth));
+M:\minix\drivers\power\acpi\hardware\hwregs.c:211: "Unsupported register bit offset: 0x%X", Reg->BitOffset));
+M:\minix\drivers\power\acpi\namespace\nsaccess.c:309: ACPI_ERROR ((AE_INFO, "Unsupported initial type value 0x%X",
+M:\minix\drivers\power\acpi\namespace\nsxfeval.c:383: * these types are essentially unsupported by this interface.
+M:\minix\drivers\power\acpi\parser\psloop.c:613: * Check for an unsupported executable opcode at module
+M:\minix\drivers\power\acpi\parser\psloop.c:626: "Detected an unsupported executable opcode "
+M:\minix\drivers\power\acpi\utilities\utcopy.c:287: /* All other reference types are unsupported */
+M:\minix\drivers\power\acpi\utilities\utcopy.c:320: "Unsupported object type, cannot convert to external object: %s",
+M:\minix\drivers\power\acpi\utilities\utcopy.c:592: "Unsupported object type, cannot convert to internal object: %s",
+M:\minix\drivers\power\acpi\utilities\utobject.c:674: "unsupported Reference Class [%s] 0x%X in object %p",
+M:\minix\drivers\power\acpi\utilities\utobject.c:686: "unsupported type [%s] 0x%X in object %p",
+M:\minix\drivers\power\tps65950\tps65950.c:338: reply_status = ENOSYS;
+M:\minix\drivers\storage\ahci\ahci.c:454: dprintf(V_ERR, ("%s: unsupported ATAPI device\n",
+M:\minix\drivers\storage\ahci\ahci.c:546: dprintf(V_ERR, ("%s: unsupported ATA device\n",
+M:\minix\drivers\usb\usbd\base\usbd.c:86: USB_MSG("Updating, not implemented");
+M:\minix\drivers\usb\usbd\base\usbd.c:90: USB_MSG("Restarting, not implemented");
+M:\minix\drivers\usb\usbd\hcd\hcd.c:874: USB_MSG("Unsupported transfer type 0x%02X",
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:500: USB_ASSERT(0, "Unsupported transfer type");
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:590: USB_ASSERT(0, "Unsupported transfer type");
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:693: USB_ASSERT(0, "Setup packet's 'DATA OUT' stage not implemented");
+M:\minix\drivers\video\fb\arch\earm\fb_arch.c:87: .mmio_start	= 0,	/* Not implemented for char. special, so */
+M:\minix\drivers\vmm_guest\vbox\err.c:21: ENOSYS,		/*   -12: function not implemented */
+M:\minix\drivers\vmm_guest\vbox\err.c:106: EINVAL,		/*   -97: unsupported alignment */
+M:\minix\drivers\vmm_guest\vbox\hgcm.c:65: /* Unsupported negative codes are translated to EGENERIC; it is up to
+M:\minix\drivers\vmm_guest\vbox\hgcm.c:695: default:		r = ENOSYS;				break;
+M:\minix\fs\ext2\super.c:306: ext2_debug("ext2_max_size: Unsupported block_size! \
+M:\minix\fs\mfs\super.c:351: printf("MFS: unsupported feature flags on this FS.\n"
+M:\minix\fs\pfs\open.c:38: r = EIO; /* Unsupported file type */
+M:\minix\lib\libc\arch\i386\_cpuid.S:5: /* 0 for OK, nonzero for unsupported */
+M:\minix\lib\libc\sys\_ucontext.c:213: # error "Unsupported platform"
+M:\minix\lib\libc\sys\bind.c:78: fprintf(stderr, "bind: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\bind.c:80: errno= ENOSYS;
+M:\minix\lib\libc\sys\connect.c:76: fprintf(stderr, "connect: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\connect.c:78: errno= ENOSYS;
+M:\minix\lib\libc\sys\getpeername.c:75: fprintf(stderr, "getpeername: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\getpeername.c:77: errno= ENOSYS;
+M:\minix\lib\libc\sys\getsockname.c:87: fprintf(stderr, "getsockname: not implemented for fd %d\n", socket);
+M:\minix\lib\libc\sys\getsockname.c:90: errno= ENOSYS;
+M:\minix\lib\libc\sys\getsockopt.c:79: fprintf(stderr, "getsockopt: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\getsockopt.c:175: errno= ENOSYS;
+M:\minix\lib\libc\sys\getsockopt.c:255: errno= ENOSYS;
+M:\minix\lib\libc\sys\listen.c:32: fprintf(stderr, "listen: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\listen.c:34: errno= ENOSYS;
+M:\minix\lib\libc\sys\recvfrom.c:121: fprintf(stderr, "recvfrom: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\recvfrom.c:137: fprintf(stderr, "recvfrom(tcp): flags not implemented\n");
+M:\minix\lib\libc\sys\recvfrom.c:139: errno= ENOSYS;
+M:\minix\lib\libc\sys\recvfrom.c:174: fprintf(stderr, "recvfrom(udp): flags not implemented\n");
+M:\minix\lib\libc\sys\recvfrom.c:176: errno= ENOSYS;
+M:\minix\lib\libc\sys\recvfrom.c:276: fprintf(stderr, "recvfrom(uds): flags not implemented\n");
+M:\minix\lib\libc\sys\recvfrom.c:278: errno= ENOSYS;
+M:\minix\lib\libc\sys\recvfrom.c:309: fprintf(stderr, "recvfrom(uds): flags not implemented\n");
+M:\minix\lib\libc\sys\recvfrom.c:311: errno= ENOSYS;
+M:\minix\lib\libc\sys\recvmsg.c:43: fprintf(stderr, "recvmsg: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\recvmsg.c:46: errno= ENOSYS;
+M:\minix\lib\libc\sys\recvmsg.c:56: fprintf(stderr, "recvmsg(uds): flags not implemented\n");
+M:\minix\lib\libc\sys\recvmsg.c:58: errno= ENOSYS;
+M:\minix\lib\libc\sys\recvmsg.c:97: fprintf(stderr, "recvmsg(uds): flags not implemented\n");
+M:\minix\lib\libc\sys\recvmsg.c:99: errno= ENOSYS;
+M:\minix\lib\libc\sys\sem.c:33: errno = ENOSYS;
+M:\minix\lib\libc\sys\sem.c:58: errno = ENOSYS;
+M:\minix\lib\libc\sys\sem.c:88: errno = ENOSYS;
+M:\minix\lib\libc\sys\sendmsg.c:44: fprintf(stderr, "sendmsg: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\sendmsg.c:47: errno= ENOSYS;
+M:\minix\lib\libc\sys\sendmsg.c:59: fprintf(stderr, "sendmsg(uds): flags not implemented\n");
+M:\minix\lib\libc\sys\sendmsg.c:61: errno= ENOSYS;
+M:\minix\lib\libc\sys\sendmsg.c:97: fprintf(stderr, "sendmsg(uds): flags not implemented\n");
+M:\minix\lib\libc\sys\sendmsg.c:99: errno= ENOSYS;
+M:\minix\lib\libc\sys\sendto.c:100: fprintf(stderr, "sendto: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\sendto.c:102: errno= ENOSYS;
+M:\minix\lib\libc\sys\sendto.c:112: fprintf(stderr, "sendto(tcp): flags not implemented\n");
+M:\minix\lib\libc\sys\sendto.c:114: errno= ENOSYS;
+M:\minix\lib\libc\sys\sendto.c:136: fprintf(stderr, "sendto(udp): flags not implemented\n");
+M:\minix\lib\libc\sys\sendto.c:138: errno= ENOSYS;
+M:\minix\lib\libc\sys\sendto.c:217: fprintf(stderr, "sendto(uds): flags not implemented\n");
+M:\minix\lib\libc\sys\sendto.c:219: errno= ENOSYS;
+M:\minix\lib\libc\sys\sendto.c:237: fprintf(stderr, "sendto(uds): flags not implemented\n");
+M:\minix\lib\libc\sys\sendto.c:239: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:75: fprintf(stderr, "setsockopt: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\setsockopt.c:99: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:117: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:134: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:154: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:175: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:185: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:197: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:243: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:260: errno= ENOSYS;
+M:\minix\lib\libc\sys\setsockopt.c:271: errno= ENOSYS;
+M:\minix\lib\libc\sys\shmat.c:31: errno = ENOSYS;
+M:\minix\lib\libc\sys\shmat.c:53: errno = ENOSYS;
+M:\minix\lib\libc\sys\shmctl.c:30: errno = ENOSYS;
+M:\minix\lib\libc\sys\shmget.c:28: errno = ENOSYS;
+M:\minix\lib\libc\sys\shutdown.c:48: fprintf(stderr, "shutdown: not implemented for fd %d\n", sock);
+M:\minix\lib\libc\sys\shutdown.c:50: errno= ENOSYS;
+M:\minix\lib\libc\sys\shutdown.c:68: errno= ENOSYS;
+M:\minix\lib\libddekit\src\condvar.c:72: * Only used by ddefbsd, so not implemented
+M:\minix\lib\libddekit\src\semaphore.c:108: ddekit_panic("not implemented!");
+M:\minix\lib\libfetch\ftperr.h:7: { 202, FETCH_PROTO, "Command not implemented, superfluous at this site" },
+M:\minix\lib\libfetch\ftperr.h:33: { 502, FETCH_PROTO, "Command not implemented" },
+M:\minix\lib\libfetch\ftperr.h:35: { 504, FETCH_PROTO, "Command not implemented for that parameter" },
+M:\minix\lib\libfetch\http.c:1297: fprintf(stderr, "fetchPutHTTP(): not implemented\n");
+M:\minix\lib\libfetch\httperr.h:33: { 415, FETCH_PROTO, "Unsupported Media Type" },
+M:\minix\lib\libfetch\httperr.h:37: { 501, FETCH_PROTO, "Not Implemented" },
+M:\minix\lib\libhgfs\error.c:23: ENOSYS,			/* operation not supported */
+M:\minix\lib\liblwip\api\api_msg.c:529: /* Unsupported netconn type, e.g. protocol disabled */
+M:\minix\lib\liblwip\api\sockets.c:2519: sock_set_errno(sock, ENOSYS); /* not yet implemented */
+M:\minix\lib\liblwip\core\ipv4\icmp.c:40: is not implemented. */
+M:\minix\lib\liblwip\core\ipv4\igmp.c:441: LWIP_DEBUGF(IGMP_DEBUG, ("igmp_input: got an all hosts query with time== 0 - this is V1 and not implemented - treat as v2\n"));
+M:\minix\lib\liblwip\core\ipv4\ip4.c:512: /* unsupported protocol feature */
+M:\minix\lib\liblwip\core\ipv4\ip4.c:530: /* unsupported protocol feature */
+M:\minix\lib\liblwip\core\ipv4\ip4.c:591: LWIP_DEBUGF(IP_DEBUG | LWIP_DBG_LEVEL_SERIOUS, ("Unsupported transport protocol %"U16_F"\n", IPH_PROTO(iphdr)));
+M:\minix\lib\liblwip\core\ipv6\ip6.c:700: LWIP_DEBUGF(IP6_DEBUG | LWIP_DBG_LEVEL_SERIOUS, ("ip6_input: Unsupported transport protocol %"U16_F"\n", IP6H_NEXTH(ip6hdr)));
+M:\minix\lib\liblwip\core\snmp\msg_in.c:1024: /* unsupported input PDU for this agent (no parse error) */
+M:\minix\lib\liblwip\core\snmp\msg_out.c:453: /* unsupported type */
+M:\minix\lib\liblwip\core\snmp\msg_out.c:669: /* unsupported type */
+M:\minix\lib\liblwip\include\arch\cc.h:39: #define ENSRBADFAMILY           (_SIGN 168) /* Unsupported address family */
+M:\minix\lib\liblwip\include\lwip\arch.h:116: #define  ENOSYS       38  /* Function not implemented */
+M:\minix\lib\liblwip\netif\ppp\lcp.c:480: LCPDEBUG(LOG_WARNING, ("Protocol-Reject for unsupported protocol 0x%x\n", prot));
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1708: PPPDEBUG(LOG_INFO, ("pppInput[%d]: rejecting unsupported proto 0x%"X16_F" len=%d\n", pd, protocol, nb->len));
+M:\minix\lib\liblwip\netif\ppp\ppp_impl.h:54: /** Some error checks to test for unsupported code */
+M:\minix\lib\libminc\errlist.c:84: "Function not implemented",		/* 78 - ENOSYS */
+M:\minix\lib\libminixfs\cache.c:474: if(r == ENOSYS) {
+M:\minix\lib\libminixfs\cache.c:475: printf("libminixfs: ENOSYS, disabling VM calls\n");
+M:\minix\lib\libmthread\allocate.c:422: # error "Unsupported platform"
+M:\minix\lib\libmthread\condition.c:128: return(ENOSYS);
+M:\minix\lib\libmthread\mutex.c:99: return(ENOSYS);
+M:\minix\lib\libsffs\main.c:145: err = ENOSYS;
+M:\minix\lib\libsffs\util.c:6: *   no_sys		handle file system calls that are not implemented
+M:\minix\lib\libsffs\util.c:63: return ENOSYS;
+M:\minix\lib\libsys\getsysinfo.c:24: return ENOSYS;
+M:\minix\lib\libsys\sef_fi.c:19: return ENOSYS;
+M:\minix\lib\libsys\sef_gcov.c:15: return ENOSYS;
+M:\minix\lib\libsys\sef_init.c:175: return ENOSYS;
+M:\minix\lib\libsys\sef_init.c:183: return ENOSYS;
+M:\minix\lib\libsys\sef_liveupdate.c:99: sef_lu_ready(ENOSYS);
+M:\minix\lib\libsys\sef_liveupdate.c:276: return ENOSYS;
+M:\minix\lib\libvboxfs\dir.c:21: * the host as well).  This is currently not implemented, because the odds of
+M:\minix\lib\libvtreefs\utility.c:11: * defined, let it handle the call; otherwise return ENOSYS.
+M:\minix\lib\libvtreefs\utility.c:17: return ENOSYS;
+M:\minix\lib\libvtreefs\vtreefs.c:99: err = ENOSYS;
+M:\minix\tests\t40d.c:372: * and fd_ap[1] for reading. (It is unsupported on Minix.) As such, it is not
+M:\minix\tests\t40e.c:245: /* Reuse port number. Not implemented in Minix. */
+M:\minix\tests\test41.c:121: /* test invalid and unsupported 'which' values */
+M:\minix\tests\test56.c:220: debug("Test socket() with an unsupported address family");
+M:\minix\tests\test56.c:605: * ENOSYS, and we used to test for ENOTTY here..
+M:\minix\tests\test56.c:638: if (!(rc == -1 && errno == ENOSYS)) {
+M:\minix\tests\test56.c:639: test_fail("shutdown() should have failed with ENOSYS");
+M:\minix\tests\test59.c:750: #error "Unsupported chip for this test"
+M:\minix\tests\test72.c:232: return ENOSYS;
+M:\minix\tests\test72.c:260: return ENOSYS;

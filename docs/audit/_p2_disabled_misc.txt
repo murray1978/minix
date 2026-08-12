@@ -1,0 +1,221 @@
+﻿M:\minix\kernel\debug.h:25: * are disabled.
+M:\minix\kernel\interrupt.c:172: if(irq_actids[hook->irq] & hook->id)  /* already disabled */
+M:\minix\kernel\main.c:302: DEBUGBASIC(("APIC disabled, disables SMP, using legacy PIC\n"));
+M:\minix\kernel\main.c:305: DEBUGBASIC(("SMP disabled, using legacy PIC\n"));
+M:\minix\kernel\system.c:184: * may be disabled or nonexistant. Then explicitly map known calls to their
+M:\minix\kernel\arch\earm\bsp\ti\omap_timer.c:216: /* Disable the module and wait for the module to be disabled */
+M:\minix\kernel\arch\earm\bsp\ti\omap_timer.c:218: CM_MODULEMODE_DISABLED);
+M:\minix\kernel\arch\earm\bsp\ti\omap_timer.c:287: /* disable the module and wait for the module to be disabled */
+M:\minix\kernel\arch\earm\bsp\ti\omap_timer.c:289: CM_MODULEMODE_DISABLED);
+M:\minix\kernel\arch\earm\bsp\ti\omap_timer.c:378: /* when the kernel itself is running interrupts are disabled. We
+M:\minix\kernel\arch\earm\bsp\ti\omap_timer_registers.h:101: #define CM_MODULEMODE_DISABLED     (0x0 << 0)
+M:\minix\kernel\arch\i386\apic.c:30: #define APIC_FOCUS_DISABLED	(1 << 9)
+M:\minix\kernel\arch\i386\apic.c:350: ioapic_enabled = 0; /* io apic, disabled */
+M:\minix\kernel\arch\i386\apic.c:704: val &= ~APIC_FOCUS_DISABLED;
+M:\minix\kernel\arch\i386\apic.h:5: #define APIC_FOCUS_DISABLED	(1 << 9)
+M:\minix\kernel\arch\i386\arch_system.c:274: DEBUGBASIC(("APIC disabled, using legacy PIC\n"));
+M:\minix\kernel\arch\i386\arch_system.c:403: printf("%s disabled\n", #flag);	\
+M:\minix\kernel\arch\i386\arch_system.c:514: /* make sure IF is on in FLAGS so that interrupts won't be disabled
+M:\minix\kernel\arch\i386\arch_watchdog.c:146: "failed! Disabled\n");
+M:\minix\kernel\arch\i386\i8259.c:31: /* Initialize the 8259s, finishing with all interrupts disabled.  */
+M:\minix\kernel\arch\i386\klib.S:411: * interrupt handlers make sure that the interrupts are disabled when we
+M:\minix\kernel\arch\i386\mpx.S:223: * interrupts are disabled.
+M:\minix\kernel\arch\i386\include\arch_smp.h:14: * in case apic or smp is disabled in boot monitor, we need to finish single cpu
+M:\minix\servers\ds\main.c:81: /* Finally send reply message, unless disabled. */
+M:\minix\servers\ds\main.c:99: /* No live update support for now. */
+M:\minix\servers\ipc\main.c:126: /* No live update support for now. */
+M:\minix\servers\is\main.c:65: /* Finally send reply message, unless disabled. */
+M:\minix\servers\pm\main.c:119: /* No live update support for now. */
+M:\minix\servers\rs\main.c:118: /* Finally send reply message, unless disabled. */
+M:\minix\servers\rs\manager.c:985: * disabled, we're going to assume we want to refresh a service upon
+M:\minix\servers\sched\main.c:120: /* No live update support for now. */
+M:\minix\servers\vfs\main.c:275: /* No live update support for now. */
+M:\minix\servers\vm\mmap.c:143: /* It might be disabled */
+M:\minix\servers\vm\mmap.c:256: /* File mapping might be disabled */
+M:\minix\drivers\audio\es1371\SRC.c:12: /* Clear all SRC RAM then init - keep SRC disabled until done */
+M:\minix\drivers\audio\es1371\sample_rate_converter.c:46: /* Clear all SRC RAM then init - keep SRC disabled until done */
+M:\minix\drivers\bus\i2c\arch\earm\omap_i2c.c:551: /* Ensure i2c module is disabled before setting prescalar & bus speed */
+M:\minix\drivers\bus\pci\pci.c:2035: printf("INT%c: disabled\n", 'A'+i);
+M:\minix\drivers\bus\pci\pci.c:2090: printf("INT%c: disabled\n", 'A'+i);
+M:\minix\drivers\bus\pci\pci.c:2120: if (irq & SIS_IRQ_DISABLED)
+M:\minix\drivers\bus\pci\pci.c:2123: printf("INT%c: disabled\n", 'A'+i);
+M:\minix\drivers\bus\pci\pci.c:2174: printf("INT%c: disabled\n", 'A'+i);
+M:\minix\drivers\bus\pci\pci_table.c:291: { 0x8086, 0x7192, },	/* Intel 82443BX - AGP disabled */
+M:\minix\drivers\net\dec21140A\dec21140A.c:201: if (dep->de_mode == DEM_DISABLED) {
+M:\minix\drivers\net\dec21140A\dec21140A.c:207: dep->de_mode = DEM_DISABLED;
+M:\minix\drivers\net\dec21140A\dec21140A.c:216: case DEM_DISABLED:
+M:\minix\drivers\net\dec21140A\dec21140A.c:418: case EP_OFF:	dep->de_mode = DEM_DISABLED;	break;
+M:\minix\drivers\net\dec21140A\dec21140A.h:101: #define DEM_DISABLED	0x0000
+M:\minix\drivers\net\dec21140A\dec21140A.h:225: #define  DES1_DPD 0x00800000 /* Disabled padding 23 */
+M:\minix\drivers\net\dp8390\dp8390.c:278: if (dep->de_mode == DEM_DISABLED)
+M:\minix\drivers\net\dp8390\dp8390.c:279: printf("dp8390 instance %d is disabled\n", de_instance);
+M:\minix\drivers\net\dp8390\dp8390.c:510: if (dep->de_mode == DEM_DISABLED)
+M:\minix\drivers\net\dp8390\dp8390.c:514: if (dep->de_mode == DEM_DISABLED)
+M:\minix\drivers\net\dp8390\dp8390.c:1602: dep->de_mode= DEM_DISABLED;	/* Superfluous */
+M:\minix\drivers\net\dp8390\dp8390.c:1615: dep->de_mode= DEM_DISABLED;
+M:\minix\drivers\net\dp8390\dp8390.c:1656: dep->de_mode= DEM_DISABLED;
+M:\minix\drivers\net\dp8390\dp8390.c:1660: dep->de_mode= DEM_ENABLED;	/* Might become disabled if
+M:\minix\drivers\net\dp8390\dp8390.h:152: #define RSR_DIS		0x40	/* Receiver Disabled                 */
+M:\minix\drivers\net\dp8390\dp8390.h:297: #define DEM_DISABLED	0x0
+M:\minix\drivers\net\dpeth\8390.h:155: #define RSR_DIS		0x40	/* Receiver Disabled */
+M:\minix\drivers\net\dpeth\dp.c:124: case EP_OFF:	dep->de_mode = DEM_DISABLED;	break;
+M:\minix\drivers\net\dpeth\dp.c:153: if (dep->de_mode == DEM_DISABLED) return;
+M:\minix\drivers\net\dpeth\dp.c:249: if (dep->de_mode == DEM_DISABLED) {
+M:\minix\drivers\net\dpeth\dp.c:260: dep->de_mode = DEM_DISABLED;
+M:\minix\drivers\net\dpeth\dp.c:269: case DEM_DISABLED:
+M:\minix\drivers\net\dpeth\dp.c:462: dep->de_mode = DEM_DISABLED;
+M:\minix\drivers\net\dpeth\dp.h:159: #define DEM_DISABLED	0x0000
+M:\minix\drivers\net\e1000\e1000.c:307: /* FIXME: enable DMA bus mastering if necessary. This is disabled by
+M:\minix\drivers\net\fxp\fxp.c:116: #define FM_DISABLED	0x0
+M:\minix\drivers\net\fxp\fxp.c:361: if (fp->fxp_mode == FM_DISABLED)
+M:\minix\drivers\net\fxp\fxp.c:365: if (fp->fxp_mode == FM_DISABLED)
+M:\minix\drivers\net\fxp\fxp.c:544: fp->fxp_mode= FM_DISABLED;	/* Superfluous */
+M:\minix\drivers\net\fxp\fxp.h:369: * be set to 1. All bits 1 (disabled)
+M:\minix\drivers\net\lan8710a\lan8710a.c:625: * CONF_MOD_PUDEN when 0 Pull* enabled, when 1 Pull* disabled
+M:\minix\drivers\net\lance\lance.c:401: if (ec->mode == EC_DISABLED)
+M:\minix\drivers\net\lance\lance.c:402: printf("lance instance %d is disabled\n", ec_instance);
+M:\minix\drivers\net\lance\lance.c:471: if (ec->mode == EC_DISABLED)
+M:\minix\drivers\net\lance\lance.c:484: if (ec->mode == EC_DISABLED)
+M:\minix\drivers\net\lance\lance.c:557: ec->mode= EC_DISABLED;     /* Superfluous */
+M:\minix\drivers\net\lance\lance.c:571: ec->mode= EC_DISABLED;
+M:\minix\drivers\net\lance\lance.c:601: ec->mode= EC_DISABLED;
+M:\minix\drivers\net\lance\lance.c:606: ec->mode= EC_ENABLED;      /* Might become disabled if
+M:\minix\drivers\net\lance\lance.c:1423: ec->mode=EC_DISABLED;
+M:\minix\drivers\net\lance\lance.c:1437: ec->mode=EC_DISABLED;
+M:\minix\drivers\net\lance\lance.h:3: #define EC_DISABLED    0x0
+M:\minix\drivers\net\orinoco\orinoco.c:52: #define		OR_M_DISABLED 0
+M:\minix\drivers\net\orinoco\orinoco.c:362: if(orp->or_mode == OR_M_DISABLED)
+M:\minix\drivers\net\orinoco\orinoco.c:363: printf("orinoco instance %d is disabled\n", or_instance);
+M:\minix\drivers\net\orinoco\orinoco.c:396: if(orp->or_mode == OR_M_DISABLED) {
+M:\minix\drivers\net\orinoco\orinoco.c:397: printf("%s is disabled\n", orp->or_name);
+M:\minix\drivers\net\orinoco\orinoco.c:432: if (orp->or_mode == OR_M_DISABLED) {
+M:\minix\drivers\net\orinoco\orinoco.c:435: if (orp->or_mode == OR_M_DISABLED) {
+M:\minix\drivers\net\orinoco\orinoco.c:659: orp->or_mode = OR_M_DISABLED;
+M:\minix\drivers\net\rtl8139\rtl8139.c:279: if (rep->re_mode == REM_DISABLED)
+M:\minix\drivers\net\rtl8139\rtl8139.c:280: printf("Realtek RTL 8139 instance %d is disabled\n",
+M:\minix\drivers\net\rtl8139\rtl8139.c:345: if (rep->re_mode == REM_DISABLED)
+M:\minix\drivers\net\rtl8139\rtl8139.c:349: if (rep->re_mode == REM_DISABLED)
+M:\minix\drivers\net\rtl8139\rtl8139.c:466: rep->re_mode= REM_DISABLED;	/* Superfluous */
+M:\minix\drivers\net\rtl8139\rtl8139.h:518: #define REM_DISABLED	0x0
+M:\minix\drivers\net\rtl8169\rtl8169.c:135: #define REM_DISABLED	0x0
+M:\minix\drivers\net\rtl8169\rtl8169.c:457: if (rep->re_mode == REM_DISABLED)
+M:\minix\drivers\net\rtl8169\rtl8169.c:458: printf("Realtek RTL 8169 instance %d is disabled\n",
+M:\minix\drivers\net\rtl8169\rtl8169.c:554: if (rep->re_mode == REM_DISABLED) {
+M:\minix\drivers\net\rtl8169\rtl8169.c:557: if (rep->re_mode == REM_DISABLED) {
+M:\minix\drivers\net\rtl8169\rtl8169.c:668: rep->re_mode = REM_DISABLED;		/* Superfluous */
+M:\minix\drivers\net\uds\uds.c:732: /* No live update support for now. */
+M:\minix\drivers\power\acpi\events\evevent.c:409: * disabled to prevent further interrupts.
+M:\minix\drivers\power\acpi\events\evgpe.c:207: * GPE will be immediately disabled by AcpiEvGpeDispatch the
+M:\minix\drivers\power\acpi\events\evgpe.c:677: * TBD: leave GPE disabled on error?
+M:\minix\drivers\power\acpi\events\evgpe.c:720: "Unable to queue handler for GPE[0x%2X] - event disabled",
+M:\minix\drivers\power\acpi\events\evgpe.c:737: * Disable the GPE. The GPE will remain disabled until a handler
+M:\minix\drivers\power\acpi\events\evgpeblk.c:431: *              the block are disabled at exit.
+M:\minix\drivers\power\acpi\events\evgpeblk.c:574: if (AcpiGbl_LeaveWakeGpesDisabled)
+M:\minix\drivers\power\acpi\events\evgpeblk.c:634: if (AcpiGbl_LeaveWakeGpesDisabled)
+M:\minix\drivers\power\acpi\events\evgpeinit.c:315: if (AcpiGbl_LeaveWakeGpesDisabled)
+M:\minix\drivers\power\acpi\events\evgpeinit.c:568: !AcpiGbl_LeaveWakeGpesDisabled)
+M:\minix\drivers\power\acpi\events\evxface.c:310: ACPI_DEBUG_PRINT ((ACPI_DB_INFO, "Disabled fixed event %X\n", Event));
+M:\minix\drivers\power\acpi\events\evxfevnt.c:233: ACPI_DEBUG_PRINT ((ACPI_DB_INIT, "ACPI mode disabled\n"));
+M:\minix\drivers\power\acpi\events\evxfevnt.c:461: *              removed, only then is the GPE disabled (for runtime GPEs), or
+M:\minix\drivers\power\acpi\events\evxfevnt.c:462: *              the GPE mask bit disabled (for wake GPEs)
+M:\minix\drivers\power\acpi\hardware\hwacpi.c:179: /* BIOS should have disabled ALL fixed and GP events */
+M:\minix\drivers\power\acpi\hardware\hwgpe.c:162: * PARAMETERS:  GpeEventInfo        - Info block for the GPE to be disabled
+M:\minix\drivers\power\acpi\hardware\hwgpe.c:460: /* NOTE: assumes that all GPEs are currently disabled */
+M:\minix\drivers\power\acpi\hardware\hwsleep.c:298: *              THIS FUNCTION MUST BE CALLED WITH INTERRUPTS DISABLED
+M:\minix\drivers\power\acpi\hardware\hwsleep.c:494: *              THIS FUNCTION MUST BE CALLED WITH INTERRUPTS DISABLED
+M:\minix\drivers\power\acpi\include\acconfig.h:129: *                        statements.  When disabled, all DEBUG_PRINT
+M:\minix\drivers\power\acpi\include\acglobal.h:181: UINT8       ACPI_INIT_GLOBAL (AcpiGbl_LeaveWakeGpesDisabled, TRUE);
+M:\minix\drivers\power\acpi\include\acmacros.h:463: * debug case if code optimzation is disabled.)
+M:\minix\drivers\power\acpi\include\acpixf.h:144: extern UINT8                AcpiGbl_LeaveWakeGpesDisabled;
+M:\minix\drivers\power\acpi\include\actbl2.h:813: #define ACPI_IVHD_ATS_DISABLED      (1<<31)
+M:\minix\drivers\power\acpi\include\actypes.h:733: #define ACPI_EVENT_FLAG_DISABLED        (ACPI_EVENT_STATUS) 0x00
+M:\minix\drivers\power\acpi\include\platform\aclinux.h:197: * The irqs_disabled() check is for resume from RAM.
+M:\minix\drivers\power\acpi\include\platform\aclinux.h:205: return kmalloc(size, irqs_disabled() ? GFP_ATOMIC : GFP_KERNEL);
+M:\minix\drivers\power\acpi\include\platform\aclinux.h:210: return kzalloc(size, irqs_disabled() ? GFP_ATOMIC : GFP_KERNEL);
+M:\minix\drivers\power\acpi\include\platform\aclinux.h:216: irqs_disabled() ? GFP_ATOMIC : GFP_KERNEL);
+M:\minix\drivers\power\acpi\include\platform\aclinux.h:227: if (!irqs_disabled()) \
+M:\minix\drivers\power\acpi\utilities\utdebug.c:265: * Stay silent if the debug level or component ID is disabled
+M:\minix\drivers\power\acpi\utilities\utmisc.c:1465: * Warning messages for this method/object will be disabled after the
+M:\minix\drivers\power\acpi\utilities\utmisc.c:1513: * Warning messages for this method/object will be disabled after the
+M:\minix\drivers\power\tps65950\README.txt:15: registers is disabled or enabled. The pin is driven by a GPIO on the SoC.
+M:\minix\drivers\printer\printer\printer.c:375: * processor interrupts are not disabled here, just printer interrupts.
+M:\minix\drivers\storage\at_wini\at_wini.c:269: printf("at_wini%ld: DMA for ATA devices is disabled.\n", w_instance);
+M:\minix\drivers\storage\filter\main.c:356: /* No live update support for now. */
+M:\minix\drivers\storage\mmc\omap_mmc.h:176: #define MMCHS_SD_CMD_BCE_DIS              (0x0 << 1)  /* Disabled block count for infinite transfer*/
+M:\minix\drivers\storage\mmc\omap_mmc.h:186: #define MMCHS_SD_PSTATE_BRE_DIS      (0x0 << 11) /* Read BLEN bytes disabled*/
+M:\minix\drivers\tty\pty\tty.c:192: /* No live update support for now. */
+M:\minix\drivers\tty\tty\tty.c:301: /* No live update support for now. */
+M:\minix\drivers\tty\tty\arch\i386\console.c:61: static int disabled_vc = -1;	/* Virtual console that was active when
+M:\minix\drivers\tty\tty\arch\i386\console.c:64: static int disabled_sm;	/* Scroll mode to be restored when re-enabling
+M:\minix\drivers\tty\tty\arch\i386\console.c:773: *				beep_disabled				     *
+M:\minix\drivers\tty\tty\arch\i386\console.c:775: static long beep_disabled(void)
+M:\minix\drivers\tty\tty\arch\i386\console.c:803: if (beep_disabled()) return;
+M:\minix\drivers\tty\tty\arch\i386\console.c:899: if (beep_disabled()) return;
+M:\minix\drivers\tty\tty\arch\i386\console.c:1089: if (disabled_vc != -1)
+M:\minix\drivers\tty\tty\arch\i386\console.c:1092: disabled_vc = ccurrent;
+M:\minix\drivers\tty\tty\arch\i386\console.c:1093: disabled_sm = softscroll;
+M:\minix\drivers\tty\tty\arch\i386\console.c:1107: if (disabled_vc == -1)
+M:\minix\drivers\tty\tty\arch\i386\console.c:1110: softscroll = disabled_sm;
+M:\minix\drivers\tty\tty\arch\i386\console.c:1111: select_console(disabled_vc);
+M:\minix\drivers\tty\tty\arch\i386\console.c:1112: disabled_vc = -1;
+M:\minix\drivers\tty\tty\arch\i386\rs232.c:477: *	  RS232 interrupts are guaranteed to be disabled now by the 8259
+M:\minix\drivers\usb\usbd\hcd\hcd_schedule.c:40: /* Makes URB schedule disabled */
+M:\minix\drivers\usb\usbd\hcd\musb\musb_am335x.c:15: * so this is disabled by default */
+M:\minix\drivers\usb\usbd\hcd\musb\musb_core.c:421: USB_DBG("High speed USB disabled");
+M:\minix\drivers\vmm_guest\vbox\err.c:91: EGENERIC,		/*   -82: preemption disabled */
+M:\minix\fs\Makefile:8: #LSC: Commented until the fixed version is ready to be merged in.
+M:\minix\fs\ext2\main.c:116: /* No live update support for now. */
+M:\minix\fs\hgfs\hgfs.c:56: printf("HGFS: shared folders are disabled\n");
+M:\minix\fs\iso9660fs\main.c:87: /* No live update support for now. */
+M:\minix\fs\mfs\main.c:93: /* No live update support for now. */
+M:\minix\fs\pfs\main.c:86: /* No live update support for now. */
+M:\minix\lib\libfetch\common.c:487: fprintf(stderr, "SSL support disabled\n");
+M:\minix\lib\libgpio\gpio_omap.c:62: int32_t disabled;
+M:\minix\lib\libgpio\gpio_omap.c:76: .disabled = 0,
+M:\minix\lib\libgpio\gpio_omap.c:86: .disabled = 0,
+M:\minix\lib\libgpio\gpio_omap.c:96: .disabled = 0,
+M:\minix\lib\libgpio\gpio_omap.c:106: .disabled = 0,
+M:\minix\lib\libgpio\gpio_omap.c:120: .disabled = 0,
+M:\minix\lib\libgpio\gpio_omap.c:129: .disabled = 0,
+M:\minix\lib\libgpio\gpio_omap.c:138: .disabled = 0,
+M:\minix\lib\libgpio\gpio_omap.c:147: .disabled = 0,
+M:\minix\lib\libgpio\gpio_omap.c:156: .disabled = 0,
+M:\minix\lib\libgpio\gpio_omap.c:165: .disabled = 0,
+M:\minix\lib\libgpio\gpio_omap.c:243: if (omap_gpio_bank_get(nr)->disabled == 1) {
+M:\minix\lib\libgpio\gpio_omap.c:244: log_warn(&log, "%s is claiming GPIO %d from disabled bank\n",
+M:\minix\lib\libgpio\gpio_omap.c:453: bank->disabled = 1;
+M:\minix\lib\libgpio\gpio_omap.c:455: bank->disabled = 0;
+M:\minix\lib\libhgfs\hgfs.c:35: * otherwise. If EAGAIN is returned, shared folders are disabled.
+M:\minix\lib\libhgfs\rpc.c:17: * particular, return EAGAIN if shared folders are disabled.
+M:\minix\lib\libhgfs\rpc.c:39: * disabled. In general, we make the assumption that the sender (= VMware)
+M:\minix\lib\libhgfs\rpc.c:76: * shared folders are disabled, or another negative error code upon error.
+M:\minix\lib\libinputdriver\inputdriver.c:110: printf("libinputdriver: no IDs given, driver disabled\n");
+M:\minix\lib\liblwip\api\api_msg.c:529: /* Unsupported netconn type, e.g. protocol disabled */
+M:\minix\lib\liblwip\api\sockets.c:1893: *(int*)optval = tcp_nagle_disabled(sock->conn->pcb.tcp);
+M:\minix\lib\liblwip\core\init.c:91: #if !MEMP_MEM_MALLOC /* MEMP_NUM_* checks are disabled when not using the pool allocator */
+M:\minix\lib\liblwip\core\pbuf.c:626: /* if assertions are disabled, proceed with debug output */
+M:\minix\lib\liblwip\core\pbuf.c:813: /* enforce invariant if assertion is disabled */
+M:\minix\lib\liblwip\core\snmp\mib2.c:793: static const u8_t snmpenableauthentraps_default = 2; /* disabled */
+M:\minix\lib\liblwip\core\snmp\msg_out.c:59: /* set to 0 when disabled, >0 when enabled */
+M:\minix\lib\liblwip\core\snmp\msg_out.c:78: * @param enable switch if 0 destination is disabled >0 enabled.
+M:\minix\lib\liblwip\include\ipv6\lwip\nd6.h:194: #define ND6_RA_PREFERENCE_DISABLED (0x10)
+M:\minix\lib\liblwip\include\lwip\opt.h:452: * spoofing. If disabled, lwIP will need to make a new ARP request if
+M:\minix\lib\liblwip\include\lwip\opt.h:474: * might be disabled
+M:\minix\lib\liblwip\include\lwip\opt.h:764: * a safe action and disabled when SNMP_SAFE_REQUESTS = 1).
+M:\minix\lib\liblwip\include\lwip\opt.h:765: * Unsafe requests are disabled by default!
+M:\minix\lib\liblwip\include\lwip\opt.h:1172: * sending for each netif (0 = disabled)
+M:\minix\lib\liblwip\include\lwip\tcp.h:335: #define          tcp_nagle_disabled(pcb)  (((pcb)->flags & TF_NODELAY) != 0)
+M:\minix\lib\liblwip\include\lwip\tcp_impl.h:275: /** Don't generate checksum on copy if CHECKSUM_GEN_TCP is disabled */
+M:\minix\lib\liblwip\include\netif\slipif.h:50: * If disabled, slipif_poll() polls the serila line (using sio_tryread()).
+M:\minix\lib\liblwip\include\netif\slipif.h:58: * If disabled, packets will be dropped if more than one packet is received.
+M:\minix\lib\liblwip\netif\ppp\ppp.c:1232: * ccp_fatal_error - returns 1 if decompression was disabled as a
+M:\minix\lib\liblwip\netif\ppp\ppp_impl.h:262: int  enabled_flag;      /* 0 if protocol is disabled */
+M:\minix\lib\libminixfs\cache.c:835: *	- use of it hasn't been disabled for this fs, and
+M:\minix\lib\libsffs\mount.c:48: printf("%s: shared folders disabled\n", sffs_name);
+M:\minix\lib\libsys\kputs.c:4: * in the format string, to puts() calls. While that "feature" can be disabled
+M:\minix\tests\t40g.c:47: if (retval != -1) em(2, "select call was expected to fail");
+M:\minix\tests\test42.c:907: /* FIXME: disabled until we can reliably determine PM's pid */
+M:\minix\tests\test56.c:603: /* Test on errno disabled here: there's currently no telling what this
+M:\minix\tests\test69.c:4: * should be disabled while running this test. This test takes ~40s to run.
+M:\minix\tests\blocktest\blocktest.c:1932: * by reading only, if writing is disabled.
+M:\minix\tests\blocktest\blocktest.c:2031: * by reading only, if writing is disabled.

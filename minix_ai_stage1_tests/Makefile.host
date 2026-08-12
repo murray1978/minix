@@ -1,0 +1,14 @@
+# Optional host-side build for comparison on Linux/BSD/macOS.
+
+CC ?= cc
+CFLAGS ?= -O2 -Wall -Wextra -std=c99
+LDFLAGS ?=
+LDLIBS ?= -lm
+
+all: ai_stage1_probe
+
+ai_stage1_probe: ai_stage1_probe.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ ai_stage1_probe.c $(LDLIBS)
+
+clean:
+	rm -f ai_stage1_probe *.o ai-stage1-*.bin
