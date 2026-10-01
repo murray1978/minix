@@ -354,12 +354,7 @@ static int load_adapter_runtime(const char *path,
 
     if (cfg->dim != 288 || cfg->vocab_size != 32000 ||
         (int)hdr.dim != cfg->dim ||
-        (int)hdr.vocab_size != cfg->vocab_size ||
-        (int)hdr.seq_len != cfg->seq_len ||
-        (int)hdr.n_heads != cfg->n_heads ||
-        (int)hdr.n_kv_heads != cfg->n_kv_heads ||
-        (int)hdr.hidden_dim != cfg->hidden_dim ||
-        (int)hdr.n_layers != cfg->n_layers) {
+        (int)hdr.vocab_size != cfg->vocab_size) {
         error = "adapter dimensions do not match required model configuration";
         goto fail;
     }

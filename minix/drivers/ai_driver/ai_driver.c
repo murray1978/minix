@@ -588,28 +588,30 @@ static int ai_handle_command(const char *line)
 		    "request=%lu\n"
 		    "backend_state=%d\n"
 		    "verbose=%s\n"
-		    "temperature=%.3f\n"
-		    "top_p=%.3f\n"
+		    "temperature=%u.%03u\n"
+		    "top_p=%u.%03u\n"
 		    "steps=%u\n"
 		    "seed=%llu\n"
 		    "generated_tokens=%u\n"
 		    "elapsed_ms=%u\n"
-		    "prompt_length=%zu\n"
-		    "response_length=%zu\n"
+		    "prompt_length=%lu\n"
+		    "response_length=%lu\n"
 		    "last_error=%d\n"
 		    "last_error_text=%s\n",
 		    state_name,
 		    ai_state.request_no,
 		    ai_state.backend_state,
 		    ai_state.verbose ? "on" : "off",
-		    (double)ai_state.temperature_milli / 1000.0,
-		    (double)ai_state.topp_milli / 1000.0,
+		    (unsigned)(ai_state.temperature_milli / 1000U),
+		    (unsigned)(ai_state.temperature_milli % 1000U),
+		    (unsigned)(ai_state.topp_milli / 1000U),
+		    (unsigned)(ai_state.topp_milli % 1000U),
 		    ai_state.steps,
 		    (unsigned long long)ai_state.seed,
 		    ai_state.last_generated_tokens,
 		    ai_state.last_elapsed_ms,
-		    strlen(ai_state.last_prompt),
-		    ai_state.response_len,
+		    (unsigned long)strlen(ai_state.last_prompt),
+		    (unsigned long)ai_state.response_len,
 		    ai_state.last_error_code,
 		    ai_state.last_error_text[0] != '\0' ? ai_state.last_error_text : "none");
 		if (r != OK)
@@ -641,8 +643,9 @@ static int ai_handle_command(const char *line)
 		ai_state.temperature_milli = parsed_u32;
 		ai_state.state = AI_STATE_DONE;
 		ai_clear_errors();
-		return ai_set_response_fmt("temperature=%.3f\n",
-			(double)ai_state.temperature_milli / 1000.0);
+		return ai_set_response_fmt("temperature=%u.%03u\n",
+			(unsigned)(ai_state.temperature_milli / 1000U),
+			(unsigned)(ai_state.temperature_milli % 1000U));
 	}
 
 	if (strncmp(line, "-p ", 3) == 0) {
@@ -652,8 +655,9 @@ static int ai_handle_command(const char *line)
 		ai_state.topp_milli = parsed_u32;
 		ai_state.state = AI_STATE_DONE;
 		ai_clear_errors();
-		return ai_set_response_fmt("top_p=%.3f\n",
-			(double)ai_state.topp_milli / 1000.0);
+		return ai_set_response_fmt("top_p=%u.%03u\n",
+			(unsigned)(ai_state.topp_milli / 1000U),
+			(unsigned)(ai_state.topp_milli % 1000U));
 	}
 
 	if (strncmp(line, "-n ", 3) == 0) {
