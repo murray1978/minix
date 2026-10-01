@@ -1,0 +1,239 @@
+Stage 4E-C1: Frozen-Base Target-Cache Format Design
+===================================================
+
+Status
+------
+Design only. No cache file, writer, reader, Makefile target, model run, or
+training run is part of this document.
+
+Implementation findings
+-----------------------
+The current adapter computation is in stage4_adapter_train.c:
+
+- stage4_adapter_forward_logits copies the supplied base_logits, computes
+  u = A * hidden, and adds scale * (B * u).
+- stage4_softmax_loss_and_dlogits needs the final vocabulary logits and target
+  token ID.
+- stage4_adapter_backward receives hidden and dlogits and accumulates A/B
+  gradients. It does not backpropagate into the frozen transformer.
+
+In stage4_train.c, stage4d_eval_record loops over token index k from 1 through
+sequence_count - 1. It calls forward with sequence_tokens[k - 1] at model
+position k - 1, then skips the loss if k is before first_target_index. At each
+supervised target index k it uses:
+
+- base_logits returned by forward;
+- tr.state.x as hidden;
+- sequence_tokens[k] as the target ID.
+
+The forward call occurs before the prompt-mask check, so a normal uncached
+record pass also computes frozen states for prompt positions needed to build
+the causal context. stage4d_train_steps calls stage4d_eval_record with
+accumulate_grad enabled on every optimizer step and may call it again for
+periodic evaluation. Thus the current implementation reruns frozen forward
+computation repeatedly; the transformer weights themselves are not updated.
+
+In minix_llama.c, forward applies final RMS normalization to state.x in place,
+then computes logits as matmul(state.logits, state.x, weights.wcls, dim,
+vocab_size). The checkpoint loader maps wcls either to the tied token
+embedding table or to the separate classifier matrix. Both are frozen
+checkpoint values. Consequently, for a fixed checkpoint, final-normalized
+hidden state h plus wcls is sufficient to reconstruct base_logits with the
+same classifier projection. To preserve the current numerical path, perform
+that projection in the existing matmul order: vocabulary rows in order, with
+each row accumulating its dim products in ascending input-dimension order into
+a float. Storing all 32,000 base logits per target is not required. The
+projection still costs dim * vocab_size multiply-accumulates per target, but
+avoids repeating the transformer layers.
+
+Stage4E compatibility caveat
+----------------------------
+The existing stage4_train.c executable is the Stage 4D one-record overfit
+trainer. Its record loader has a hard-coded canonical prompt/target check and
+its main routine trains one stage4d_record_t. It does not currently train the
+30-record approved Stage 4E corpus. The Stage 4E evaluators independently
+parse the approved records and prepare the Stage 4E canonical prompt/training
+sequences. The 156-position design below is for the stated Stage 4E dataset
+and existing Stage 4E sequence convention, not a claim that the Stage 4D
+trainer already consumes this cache. A later Stage 4E consumer must use the
+same prompt formatting, tokenization, target boundary, and terminal-token
+convention as the Stage 4E baseline evaluation path. That path appends a
+newline to its canonical training sequence; the stated 156 supervised target
+positions include the resulting newline target token for each record.
+
+Cached content per supervised target position
+----------------------------------------------
+Store these values for each Stage 4E supervised target prediction:
+
+- record_index: zero-based record ordinal in stage4e-approved.records;
+- input_position: model sequence position whose forward pass produced h;
+- target_token_id: the next token supervised at input_position + 1;
+- split_id: train=0, validation=1, test=2, regression=3;
+- hidden_state[288]: h, the final-RMS-normalized state.x from that forward.
+
+For the trainer indexing convention, if k is the target token index, the cache
+row stores input_position = k - 1 and target_token_id = sequence_tokens[k].
+Only positions k >= first_target_index are entries. Entries are ordered by
+record_index, then increasing input_position. The dataset SHA-256 binds record
+ordinals to the exact approved file; the reader resolves record_index against
+that same dataset rather than relying on a separately stored text ID.
+
+The target ID is inexpensive and explicitly stored so each row is directly
+usable and can be cross-checked against the dataset-derived token sequence.
+It could be re-derived from the dataset, but the cache reader must still have
+the exact dataset and tokenization contract to do so.
+
+Not cached
+----------
+- base_logits[32000]: reconstruct from cached h and frozen wcls. The classifier
+  projection is much smaller than rerunning all transformer layers and avoids
+  a 32,000-float payload per target.
+- final/corrected logits, u, softmax probabilities, dlogits, loss, and
+  gradients: these depend on current A/B adapter parameters or current
+  optimizer step and must be recomputed during training.
+- transformer intermediate activations and attention K/V: the frozen
+  transformer is run once while building the cache; only the final h needed
+  by the adapter is retained.
+- prompt-only positions: they are needed during the one-time causal forward
+  pass that creates target hidden states, but do not have supervised losses
+  and are not consumed by the adapter loss/backward path.
+
+Dimensions and dataset counts
+-----------------------------
+model_dim=288
+vocab_size=32000
+total_records=30
+cached_target_positions=156
+train_records=20
+validation_records=5
+test_records=5
+regression_records=0
+train_target_positions=111
+validation_target_positions=24
+test_target_positions=21
+regression_target_positions=0
+
+Proposed binary file layout
+---------------------------
+Use a fixed-layout native C format for the MINIX 3.3.0 x86 VM. The header
+contains only byte arrays and uint32_t fields, and each entry contains four
+uint32_t fields followed by 288 float values. With 4-byte alignment these
+layouts have no implicit padding; a future writer/reader must reject the build
+if sizeof checks do not match the sizes below. Write every field explicitly
+from a zero-initialized header; do not store timestamps, paths, or uninitialized
+reserved bytes.
+
+Header: 172 bytes, followed immediately by 156 fixed-size entries.
+
+Offset  Size  Field
+------  ----  -----
+0       8     magic bytes: ASCII "S4TCACH1"
+8       4     format_version = 1
+12      4     header_size = 172
+16      4     entry_size = 1168
+20      4     float_format = 1 (IEEE-754 binary32)
+24      4     byte_order = 1 (little-endian)
+28      4     model_dim = 288
+32      4     vocab_size = 32000
+36      4     total_record_count = 30
+40      4     cached_target_position_count = 156
+44      16    split_record_counts[4]: train, validation, test, regression
+60      16    split_target_position_counts[4]: train, validation, test,
+              regression
+76      32    dataset SHA-256, raw digest bytes
+108     32    base checkpoint SHA-256, raw digest bytes
+140     32    tokenizer SHA-256, raw digest bytes
+
+Split record counts are [20, 5, 5, 0]. Split target-position counts are
+[111, 24, 21, 0]. Hash fields contain the 32 digest bytes, not 64 ASCII hex
+characters. Header offsets and sizes are part of format version 1.
+
+Each entry: 1,168 bytes.
+
+Offset  Size  Field
+------  ----  -----
+0       4     record_index (zero-based approved-file order)
+4       4     input_position (zero-based transformer position)
+8       4     target_token_id (0 through 31,999)
+12      4     split_id (0=train, 1=validation, 2=test, 3=regression)
+16      1152  hidden_state[288], IEEE-754 binary32 values
+
+For an entry with input_position p, the supervised target is token sequence
+position p + 1. The hidden state is the state.x resulting from forward on the
+record token at sequence position p. Record index plus the matching
+hash-identified dataset provides the record ID, task, and canonical sequence.
+
+Endianness and floating-point assumptions
+------------------------------------------
+The existing checkpoint loader explicitly requires a little-endian host, and
+the target is the 32-bit x86 MINIX VM. Use little-endian uint32_t fields and
+little-endian IEEE-754 binary32 hidden-state values, matching the checkpoint
+and existing native float model data. The format is intentionally native to
+this target, not cross-endian portable. The reader must check the byte-order
+and float-format codes and sizeof(float) == 4 before interpreting payloads.
+
+Expected cache size
+-------------------
+Hidden states:
+    156 * 288 * 4 bytes = 179,712 bytes
+
+Per-entry metadata:
+    156 * (4 * 4) bytes = 2,496 bytes
+
+Entries:
+    179,712 + 2,496 = 182,208 bytes
+
+Header:
+    172 bytes
+
+Total file:
+    182,208 + 172 = 182,380 bytes (about 178.11 KiB)
+
+No per-record offset table or base-logit array is included. Record and
+sequence-position indices in each entry are sufficient to map each row back
+to the hash-bound dataset.
+
+Split coverage decision
+-----------------------
+Include train + validation + test entries. Stage 4E uses training positions
+for optimization, validation positions for monitoring/acceptance, and test
+positions for held-out reporting. Including all three splits lets one
+identity-bound cache support comparable split metrics without recomputing the
+frozen transformer. Test entries must remain evaluation-only: they must not
+contribute to gradients, optimizer updates, or model/adapter selection. The
+current approved dataset has zero regression records, so regression contributes
+zero entries.
+
+Later writer/reader validation requirements
+--------------------------------------------
+Before consuming any entry, require all of the following:
+
+- exact magic and supported format version;
+- header_size and entry_size equal the version-1 constants;
+- dataset, checkpoint, and tokenizer hashes equal the actual supplied inputs;
+- model_dim=288, vocab_size=32000, supported byte order, and float format;
+- total record and cached target counts equal the expected dataset-derived
+  counts; split record and target-position counts equal [20,5,5,0] and
+  [111,24,21,0];
+- checked arithmetic for expected file length, exactly 172 + 156 * 1168 bytes;
+- reject truncated files and any extra trailing byte;
+- every record_index is less than total_record_count;
+- every input_position is in range for that record and is a supervised
+  prediction position under the Stage 4E target boundary;
+- every target_token_id is in [0, vocab_size), and equals the target token
+  derived from the matching record sequence;
+- split_id is valid and matches the record's declared split;
+- each expected (record_index, input_position) pair occurs exactly once, with
+  no missing or duplicate target rows;
+- every hidden value is finite; optionally report the offending record and
+  position on failure.
+
+Determinism requirement
+----------------------
+Given identical checkpoint, tokenizer, approved dataset bytes, format version,
+and target platform, cache builds must have identical entry order and values,
+byte-identical output files, and identical SHA-256 values. The writer must not
+serialize timestamps, temporary paths, pointer values, compiler padding, or
+other nondeterministic metadata. Use fixed row ordering and initialized header
+bytes. Hash verification is in addition to the three source identity hashes;
+it does not replace them.

@@ -2,6 +2,37 @@
 
 This folder contains Stage 4-only training artifacts and utilities.
 
+## Stage 4E A4 accepted validation chain
+
+The accepted A4 dataset is `stage4e-approved.records`. The B/C baseline and
+cache-validation stages established the frozen-base metrics and validated the
+target cache. The accepted training validation chain then established:
+
+- D1: zero-update validation;
+- D2: one-step training validation;
+- D3: two-step training validation;
+- D4: deterministic 10-step trajectory;
+- D5: independent trajectory repeat with zero total mismatches;
+- D6: step-5 checkpoint round-trip with zero state-byte mismatches; and
+- D7: deterministic checkpoint resume, with resumed steps 6--10 matching the
+  continuous path and final adapter and Adam state bitwise identical.
+
+F1 is a fixed-horizon observation that starts at optimizer step 5 and ends at
+step 50. The validation threshold is first observed at step 15. The lowest
+observed validation loss is `8.328697455428` at step 20. By step 50, train
+loss has continued to decrease to `3.888226861341` while validation loss has
+regressed to `11.624778713258`. No single-token collapse was observed, and
+the final validation top-1 set contains 15 unique tokens.
+
+The test split remains sealed through F1. Step 20 is only the lowest observed
+validation loss in F1; no production adapter selection or export has occurred.
+
+Target cache binaries, checkpoint binaries, and native executables are
+generated artifacts and are normally excluded from Git. The accepted D6
+step-5 checkpoint SHA-256 is
+`ecb75d52881df04a0c47fcd4b852909a865c62cb54929ab33b230c7cf1e5ec89`; it can
+be reproduced by the accepted D6 procedure.
+
 Current utility:
 
 - stage4_train_adapter.c: initializes a standalone adapter sidecar file

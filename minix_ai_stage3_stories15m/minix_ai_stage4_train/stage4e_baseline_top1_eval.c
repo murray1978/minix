@@ -537,6 +537,12 @@ static int stage4e_argmax_token(const float *logits, int vocab)
 	return best;
 }
 
+#ifdef STAGE4E_FULL_CONTEXT_TOP1
+static int stage4e_top1_record0_context_check(Transformer *tr,
+	Tokenizer *tok,
+	stage4e_dataset_t *ds);
+#endif
+
 int main(int argc, char **argv)
 {
 	const char *checkpoint_path = NULL;
@@ -557,6 +563,9 @@ int main(int argc, char **argv)
 	stage4e_metric_t total;
 	stage4e_metric_t split_metrics[STAGE4E_SPLIT_COUNT];
 	stage4e_metric_t split_task_metrics[STAGE4E_SPLIT_COUNT][STAGE4E_TASK_COUNT];
+#ifdef STAGE4E_FULL_CONTEXT_TOP1
+	int record0_context_check = 0;
+#endif
 
 	memset(&ds, 0, sizeof(ds));
 	memset(&tr, 0, sizeof(tr));
@@ -578,6 +587,10 @@ int main(int argc, char **argv)
 			report_path = argv[++argi];
 		else if (strcmp(argv[argi], "-v") == 0)
 			verbose = 1;
+#ifdef STAGE4E_FULL_CONTEXT_TOP1
+		else if (strcmp(argv[argi], "--record0-context-check") == 0)
+			record0_context_check = 1;
+#endif
 		else
 			stage4e_usage(argv[0]);
 	}
@@ -604,6 +617,17 @@ int main(int argc, char **argv)
 	load_transformer(&tr, checkpoint_path);
 	load_tokenizer(&tok, tokenizer_path, tr.config.vocab_size);
 
+#ifdef STAGE4E_FULL_CONTEXT_TOP1
+	if (record0_context_check) {
+		int passed = stage4e_top1_record0_context_check(&tr, &tok, &ds);
+		stage4e_dataset_free(&ds);
+		free_tokenizer(&tok);
+		free_transformer(&tr);
+		printf("record0_prompt_context_check=%s\n", passed ? "PASS" : "FAIL");
+		return passed ? EXIT_SUCCESS : EXIT_FAILURE;
+	}
+#endif
+
 	for (i = 0; i < ds.count; i++) {
 		stage4e_record_t *r = &ds.items[i];
 		int split_idx;
@@ -629,9 +653,15 @@ int main(int argc, char **argv)
 			int target;
 			int pred;
 
+#ifdef STAGE4E_FULL_CONTEXT_TOP1
+			logits = forward(&tr, r->training_seq_tokens[k - 1], k - 1);
+			if (k < r->first_target_index)
+				continue;
+#else
 			if (k < r->first_target_index)
 				continue;
 			logits = forward(&tr, r->training_seq_tokens[k - 1], k - 1);
+#endif
 			target = r->training_seq_tokens[k];
 			if (!stage4e_loss_from_logits(logits, tr.config.vocab_size, target, &loss)) {
 				fprintf(stderr, "error:%d non-finite loss for id='%s'\n", r->begin_line, r->id);
@@ -678,7 +708,11 @@ int main(int argc, char **argv)
 		goto fail;
 	}
 
+#ifdef STAGE4E_FULL_CONTEXT_TOP1
+	fprintf(report, "mode=stage4e_unadapted_top1_full_context_baseline\n");
+#else
 	fprintf(report, "mode=stage4e_unadapted_top1_baseline\n");
+#endif
 	fprintf(report, "dataset_path=%s\n", dataset_path);
 	fprintf(report, "dataset_sha256=%s\n", dataset_sha);
 	fprintf(report, "dataset_bytes=%llu\n", (unsigned long long)dataset_bytes);
@@ -689,9 +723,20 @@ int main(int argc, char **argv)
 	fprintf(report, "adapter_loaded=no\n");
 	fprintf(report, "evaluation_updates_parameters=no\n");
 	fprintf(report, "test_split_used_for_selection=no\n");
+#ifdef STAGE4E_FULL_CONTEXT_TOP1
+	{
+		double validation_average_loss = split_metrics[1].loss_sum /
+		    (double)split_metrics[1].pred_tokens;
+		fprintf(report, "validation_baseline_loss=%.12f\n", validation_average_loss);
+		fprintf(report, "validation_required_relative_improvement=0.05\n");
+		fprintf(report, "validation_acceptance_loss_max=%.12f\n",
+		    validation_average_loss * 0.95);
+	}
+#else
 	fprintf(report, "validation_baseline_loss=9.153772893016\n");
 	fprintf(report, "validation_required_relative_improvement=0.05\n");
 	fprintf(report, "validation_acceptance_loss_max=8.696084248365\n");
+#endif
 	fprintf(report, "total_records=%llu\n", (unsigned long long)total.records);
 	fprintf(report, "target_prediction_count=%llu\n", (unsigned long long)total.pred_tokens);
 	fprintf(report, "total_target_loss=%.12f\n", total.loss_sum);
@@ -770,3 +815,75 @@ fail:
 	free_transformer(&tr);
 	return EXIT_FAILURE;
 }
+
+#ifdef STAGE4E_FULL_CONTEXT_TOP1
+static uint64_t stage4e_top1_kv_checksum(const Transformer *tr, int last_position)
+{
+	const Config *config = &tr->config;
+	const RunState *state = &tr->state;
+	size_t kv_dim = ((size_t)config->dim * (size_t)config->n_kv_heads) /
+	    (size_t)config->n_heads;
+	uint64_t hash = UINT64_C(1469598103934665603);
+	int layer;
+	int position;
+	size_t index;
+
+	for (layer = 0; layer < config->n_layers; layer++) {
+		size_t layer_offset = (size_t)layer * (size_t)config->seq_len * kv_dim;
+		for (position = 0; position <= last_position; position++) {
+			size_t position_offset = layer_offset + (size_t)position * kv_dim;
+			for (index = 0; index < kv_dim; index++) {
+				uint32_t key_bits;
+				uint32_t value_bits;
+				memcpy(&key_bits, &state->key_cache[position_offset + index], 4U);
+				memcpy(&value_bits, &state->value_cache[position_offset + index], 4U);
+				hash ^= key_bits;
+				hash *= UINT64_C(1099511628211);
+				hash ^= value_bits;
+				hash *= UINT64_C(1099511628211);
+			}
+		}
+	}
+	return hash;
+}
+
+static int stage4e_top1_record0_context_check(Transformer *tr,
+	Tokenizer *tok,
+	stage4e_dataset_t *ds)
+{
+	stage4e_record_t *record;
+	int position;
+	int calls = 0;
+	uint64_t checksum;
+
+	if (ds->count == 0 || strcmp(ds->items[0].id,
+	    "svc-status-basic-train-001") != 0) {
+		fprintf(stderr, "error: approved record 0 identity mismatch\n");
+		return 0;
+	}
+	record = &ds->items[0];
+	if (!stage4e_prepare_record_tokens(tok, tr, record))
+		return 0;
+	clear_run_state(tr);
+	for (position = 0; position < 15; position++) {
+		(void)forward(tr, record->training_seq_tokens[position], position);
+		calls++;
+	}
+	checksum = stage4e_top1_kv_checksum(tr, 14);
+	printf("record0.sequence_count=%d\n", record->training_seq_count);
+	printf("record0.first_target_index=%d\n", record->first_target_index);
+	printf("record0.forward_calls_before_position_15=%d\n", calls);
+	printf("record0.kv_checksum_before_position_15=%016llx\n",
+	    (unsigned long long)checksum);
+	(void)forward(tr, record->training_seq_tokens[15], 15);
+	calls++;
+	printf("record0.forward_calls_before_first_target=%d\n", calls);
+	printf("record0.first_supervised_input_position=15\n");
+	printf("record0.first_supervised_target_token_id=%d\n",
+	    record->training_seq_tokens[16]);
+	return record->training_seq_count == 19 &&
+	    record->first_target_index == 16 && calls == 16 &&
+	    record->training_seq_tokens[16] == 2669 &&
+	    checksum == UINT64_C(0xabb568d3ab418288);
+}
+#endif

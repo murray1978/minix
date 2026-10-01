@@ -339,18 +339,18 @@ priority 4
 %%END
 
 %%BEGIN
-id=sysconf-ai-model-quantum-val-022
-task=source_navigation
-source=source:/etc/system.conf:service ai_model
-source_unit=system-conf:ai-model-quantum
+id=sample-zero-temperature-val-031
+task=explanation
+source=source:/minix_ai_stage3_stories15m/minix_llama.c:sample_token
+source_unit=minix-llama:temperature-zero-greedy
 split=validation
 weight=1.0
 
 %%PROMPT
-In the ai_model service stanza, what quantum value is configured?
+What sampling behavior does sample_token use when the generation temperature is exactly zero?
 
 %%TARGET
-quantum 500
+It selects the maximum-logit token by greedy argmax.
 
 %%END
 

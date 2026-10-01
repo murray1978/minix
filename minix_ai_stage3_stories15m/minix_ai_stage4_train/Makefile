@@ -34,13 +34,77 @@ stage4eDatasetCheck: stage4e_dataset_check.c stage4_adapter_train.c stage4_adapt
 stage4eBaselineEval: stage4e_baseline_eval.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
 	${CC} ${CFLAGS} -o stage4e_baseline_eval stage4e_baseline_eval.c stage4_adapter_train.c ${LDADD}
 
+.PHONY: stage4eBaselineFullContextEval
+stage4eBaselineFullContextEval: stage4e_baseline_full_context_eval.c stage4e_baseline_eval.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
+	${CC} ${CFLAGS} -o stage4e_baseline_full_context_eval stage4e_baseline_full_context_eval.c stage4_adapter_train.c ${LDADD}
+
 .PHONY: stage4eBaselineTop1Eval
 stage4eBaselineTop1Eval: stage4e_baseline_top1_eval.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
 	${CC} ${CFLAGS} -o stage4e_baseline_top1_eval stage4e_baseline_top1_eval.c stage4_adapter_train.c ${LDADD}
 
+.PHONY: stage4eBaselineFullContextTop1Eval
+stage4eBaselineFullContextTop1Eval: stage4e_baseline_full_context_top1_eval.c stage4e_baseline_top1_eval.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
+	${CC} ${CFLAGS} -o stage4e_baseline_full_context_top1_eval stage4e_baseline_full_context_top1_eval.c stage4_adapter_train.c ${LDADD}
+
 .PHONY: stage4eBaselineGenerationEval
 stage4eBaselineGenerationEval: stage4e_baseline_unadapted_generation.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
 	${CC} ${CFLAGS} -o stage4e_baseline_unadapted_generation stage4e_baseline_unadapted_generation.c stage4_adapter_train.c ${LDADD}
+
+.PHONY: stage4eCacheBuild
+stage4eCacheBuild: stage4e_cache_build.c stage4e_baseline_unadapted_generation.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
+	${CC} ${CFLAGS} -o stage4e_cache_build stage4e_cache_build.c stage4_adapter_train.c ${LDADD}
+
+.PHONY: stage4eCacheBuildA4
+stage4eCacheBuildA4: stage4e_cache_build_a4.c stage4e_cache_build.c stage4e_baseline_unadapted_generation.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
+	${CC} ${CFLAGS} -o stage4e_cache_build_a4 stage4e_cache_build_a4.c stage4_adapter_train.c ${LDADD}
+
+.PHONY: stage4eCacheValidate
+stage4eCacheValidate: stage4e_cache_validate.c stage4e_baseline_unadapted_generation.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
+	${CC} ${CFLAGS} -o stage4e_cache_validate stage4e_cache_validate.c stage4_adapter_train.c ${LDADD}
+
+.PHONY: stage4eCacheValidateA4
+stage4eCacheValidateA4: stage4e_cache_validate_a4.c stage4e_cache_validate.c stage4e_baseline_unadapted_generation.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
+	${CC} ${CFLAGS} -o stage4e_cache_validate_a4 stage4e_cache_validate_a4.c stage4_adapter_train.c ${LDADD}
+
+.PHONY: stage4eCacheEquivalence
+stage4eCacheEquivalence: stage4e_cache_equivalence.c stage4e_baseline_unadapted_generation.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
+	${CC} ${CFLAGS} -o stage4e_cache_equivalence stage4e_cache_equivalence.c stage4_adapter_train.c ${LDADD}
+
+.PHONY: stage4eCacheEquivalenceA4
+stage4eCacheEquivalenceA4: stage4e_cache_equivalence_a4.c stage4e_cache_equivalence.c stage4e_baseline_unadapted_generation.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
+	${CC} ${CFLAGS} -o stage4e_cache_equivalence_a4 stage4e_cache_equivalence_a4.c stage4_adapter_train.c ${LDADD}
+
+.PHONY: stage4eD1A4ZeroUpdateTrainer
+stage4eD1A4ZeroUpdateTrainer: stage4e_d1_a4_zero_update_trainer.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
+	${CC} ${CFLAGS} -o stage4e_d1_a4_zero_update_trainer stage4e_d1_a4_zero_update_trainer.c stage4_adapter_train.c ${LDADD}
+
+.PHONY: stage4eD2A4OneStep
+stage4eD2A4OneStep: stage4e_d2_a4_one_step.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
+	${CC} ${CFLAGS} -o stage4e_d2_a4_one_step stage4e_d2_a4_one_step.c stage4_adapter_train.c ${LDADD}
+
+.PHONY: stage4eD3A4TwoStep
+stage4eD3A4TwoStep: stage4e_d3_a4_two_step.c stage4e_d2_a4_one_step.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
+	${CC} ${CFLAGS} -o stage4e_d3_a4_two_step stage4e_d3_a4_two_step.c stage4_adapter_train.c ${LDADD}
+
+.PHONY: stage4eD4A4Trajectory
+stage4eD4A4Trajectory: stage4e_d4_a4_trajectory.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
+	${CC} ${CFLAGS} -o stage4e_d4_a4_trajectory stage4e_d4_a4_trajectory.c stage4_adapter_train.c ${LDADD}
+
+.PHONY: stage4eD5A4Repeat
+stage4eD5A4Repeat: stage4e_d5_a4_repeat.c stage4e_d4_a4_trajectory.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
+	${CC} ${CFLAGS} -o stage4e_d5_a4_repeat stage4e_d5_a4_repeat.c stage4_adapter_train.c ${LDADD}
+
+.PHONY: stage4eD6A4Checkpoint
+stage4eD6A4Checkpoint: stage4e_d6_a4_checkpoint.c stage4e_d4_a4_trajectory.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
+	${CC} ${CFLAGS} -o stage4e_d6_a4_checkpoint stage4e_d6_a4_checkpoint.c stage4_adapter_train.c ${LDADD}
+
+.PHONY: stage4eD7A4Resume
+stage4eD7A4Resume: stage4e_d7_a4_resume.c stage4e_d6_a4_checkpoint.c stage4e_d5_a4_repeat.c stage4e_d4_a4_trajectory.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
+	${CC} ${CFLAGS} -o stage4e_d7_a4_resume stage4e_d7_a4_resume.c stage4_adapter_train.c ${LDADD}
+
+.PHONY: stage4eF1A4FixedHorizon
+stage4eF1A4FixedHorizon: stage4e_f1_a4_fixed_horizon.c stage4e_d6_a4_checkpoint.c stage4e_d5_a4_repeat.c stage4e_d4_a4_trajectory.c stage4_adapter_train.c stage4_adapter_train.h ../minix_llama.c
+	${CC} ${CFLAGS} -Wno-unused-function -o stage4e_f1_a4_fixed_horizon stage4e_f1_a4_fixed_horizon.c stage4_adapter_train.c ${LDADD}
 
 .PHONY: stage4eOneRecordTest
 stage4eOneRecordTest: stage4eDatasetCheck

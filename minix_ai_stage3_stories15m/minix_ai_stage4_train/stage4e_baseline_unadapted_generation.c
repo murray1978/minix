@@ -61,6 +61,7 @@ typedef struct {
 typedef struct {
 	uint64_t records;
 	uint64_t window_match;
+	uint64_t terminator_generated;
 	uint64_t term_match;
 	uint64_t exact_match;
 	stage4e_key_counts_t windows;
@@ -87,6 +88,7 @@ static const char *stage4e_task_names[STAGE4E_TASK_COUNT] = {
 	"continuation"
 };
 
+#ifndef STAGE4E_GENERATION_EMBEDDED
 static void stage4e_usage(const char *prog) NORETURN;
 
 static void stage4e_usage(const char *prog)
@@ -103,6 +105,7 @@ static void stage4e_usage(const char *prog)
 	    prog);
 	exit(EXIT_FAILURE);
 }
+#endif
 
 static int stage4e_split_index(const char *split)
 {
@@ -134,6 +137,7 @@ static int stage4e_task_index(const char *task)
 	return -1;
 }
 
+#ifndef STAGE4E_GENERATION_EMBEDDED
 static int stage4e_argmax_token(const float *logits, int vocab)
 {
 	int i;
@@ -147,6 +151,7 @@ static int stage4e_argmax_token(const float *logits, int vocab)
 	}
 	return best;
 }
+#endif
 
 static void stage4e_rtrim_newline(char *line)
 {
@@ -436,6 +441,7 @@ static int stage4e_prepare_record_tokens(Tokenizer *tok,
 	return 1;
 }
 
+#ifndef STAGE4E_GENERATION_EMBEDDED
 static void stage4e_key_counts_free(stage4e_key_counts_t *k)
 {
 	free(k->items);
@@ -480,6 +486,56 @@ static int stage4e_key_counts_max(const stage4e_key_counts_t *k)
 	return best;
 }
 
+static size_t stage4e_key_counts_mode_index(const stage4e_key_counts_t *k)
+{
+	size_t i;
+	size_t best = 0;
+	for (i = 1; i < k->count; i++) {
+		if (k->items[i].count > k->items[best].count)
+			best = i;
+	}
+	return best;
+}
+
+static void stage4e_write_generation_metrics(FILE *report,
+	const char *scope,
+	const stage4e_gen_metric_t *metrics)
+{
+	int most_common_count = 0;
+	const char *most_common_token = "none";
+	double denominator = metrics->records == 0 ? 1.0 : (double)metrics->records;
+
+	if (metrics->first_tokens.count > 0) {
+		size_t mode_index = stage4e_key_counts_mode_index(&metrics->first_tokens);
+		most_common_count = metrics->first_tokens.items[mode_index].count;
+		most_common_token = metrics->first_tokens.items[mode_index].key;
+	}
+	fprintf(report, "%s.record_count=%llu\n", scope,
+	    (unsigned long long)metrics->records);
+	fprintf(report, "%s.target_window_match_count=%llu\n", scope,
+	    (unsigned long long)metrics->window_match);
+	fprintf(report, "%s.target_window_match_rate=%.12f\n", scope,
+	    (double)metrics->window_match / denominator);
+	fprintf(report, "%s.terminator_generated_count=%llu\n", scope,
+	    (unsigned long long)metrics->terminator_generated);
+	fprintf(report, "%s.terminator_generated_rate=%.12f\n", scope,
+	    (double)metrics->terminator_generated / denominator);
+	fprintf(report, "%s.exact_response_match_count=%llu\n", scope,
+	    (unsigned long long)metrics->exact_match);
+	fprintf(report, "%s.exact_response_match_rate=%.12f\n", scope,
+	    (double)metrics->exact_match / denominator);
+	fprintf(report, "%s.distinct_generated_windows=%lu\n", scope,
+	    (unsigned long)metrics->windows.count);
+	fprintf(report, "%s.distinct_first_generated_tokens=%lu\n", scope,
+	    (unsigned long)metrics->first_tokens.count);
+	fprintf(report, "%s.most_common_first_generated_token_id=%s\n", scope,
+	    most_common_token);
+	fprintf(report, "%s.most_common_first_generated_token_count=%d\n", scope,
+	    most_common_count);
+	fprintf(report, "%s.most_common_first_generated_token_rate=%.12f\n", scope,
+	    (double)most_common_count / denominator);
+}
+
 static void stage4e_tokens_to_csv(const int *tokens, int count, char *out, size_t out_cap)
 {
 	int i;
@@ -494,7 +550,9 @@ static void stage4e_tokens_to_csv(const int *tokens, int count, char *out, size_
 		used += (size_t)n;
 	}
 }
+#endif
 
+#ifndef STAGE4E_GENERATION_EMBEDDED
 int main(int argc, char **argv)
 {
 	const char *checkpoint_path = NULL;
@@ -509,13 +567,17 @@ int main(int argc, char **argv)
 	Tokenizer tok;
 	size_t i;
 	FILE *report;
+	stage4e_gen_metric_t overall_metrics;
 	stage4e_gen_metric_t split_metrics[STAGE4E_SPLIT_COUNT];
 	stage4e_gen_metric_t split_task_metrics[STAGE4E_SPLIT_COUNT][STAGE4E_TASK_COUNT];
 	char dataset_sha[65];
+	char checkpoint_sha[65];
+	char tokenizer_sha[65];
 
 	memset(&ds, 0, sizeof(ds));
 	memset(&tr, 0, sizeof(tr));
 	memset(&tok, 0, sizeof(tok));
+	memset(&overall_metrics, 0, sizeof(overall_metrics));
 	memset(split_metrics, 0, sizeof(split_metrics));
 	memset(split_task_metrics, 0, sizeof(split_task_metrics));
 
@@ -544,7 +606,9 @@ int main(int argc, char **argv)
 
 	if (!stage4e_load_records(dataset_path, &ds) || ds.count == 0)
 		return EXIT_FAILURE;
-	if (!stage4_hash_file_sha256_hex(dataset_path, dataset_sha))
+	if (!stage4_hash_file_sha256_hex(dataset_path, dataset_sha) ||
+	    !stage4_hash_file_sha256_hex(checkpoint_path, checkpoint_sha) ||
+	    !stage4_hash_file_sha256_hex(tokenizer_path, tokenizer_sha))
 		return EXIT_FAILURE;
 
 	load_transformer(&tr, checkpoint_path);
@@ -557,10 +621,13 @@ int main(int argc, char **argv)
 	fprintf(report, "mode=stage4e_unadapted_generation_baseline\n");
 	fprintf(report, "dataset_path=%s\n", dataset_path);
 	fprintf(report, "dataset_sha256=%s\n", dataset_sha);
+	fprintf(report, "base_checkpoint_sha256=%s\n", checkpoint_sha);
+	fprintf(report, "tokenizer_sha256=%s\n", tokenizer_sha);
 	fprintf(report, "adapter_loaded=no\n");
 	fprintf(report, "generation_temperature=0\n");
 	fprintf(report, "newline_terminator_token_id=13\n");
 	fprintf(report, "max_visible_output_tokens=%d\n", max_visible_output_tokens);
+	fprintf(report, "prompt_context=full_causal_prefill\n");
 
 	for (i = 0; i < ds.count; i++) {
 		stage4e_record_t *r = &ds.items[i];
@@ -571,7 +638,9 @@ int main(int argc, char **argv)
 		int position = 0;
 		int gen_tokens[STAGE4E_MAX_GEN_TOKENS];
 		int gen_count = 0;
+		int visible_generated_count = 0;
 		int target_window_match = 0;
+		int terminator_generated = 0;
 		int term_match = 0;
 		int exact_match = 0;
 		char generated_visible_text[STAGE4E_MAX_TEXT * 2];
@@ -594,7 +663,8 @@ int main(int argc, char **argv)
 		generated_visible_text[0] = '\0';
 		token = r->prompt_tokens[0];
 
-		while (position < tr.config.seq_len && gen_count < max_visible_output_tokens) {
+		while (position < tr.config.seq_len &&
+		    visible_generated_count < max_visible_output_tokens) {
 			const float *logits = forward(&tr, token, position);
 			if (position < r->prompt_count - 1) {
 				next = r->prompt_tokens[position + 1];
@@ -607,6 +677,7 @@ int main(int argc, char **argv)
 			gen_tokens[gen_count++] = next;
 
 			if (next == 13) {
+				terminator_generated = 1;
 				termination_reason = "newline";
 				break;
 			}
@@ -624,11 +695,12 @@ int main(int argc, char **argv)
 					generated_visible_text[visible_text_len] = '\0';
 				}
 			}
+			visible_generated_count++;
 
 			position++;
 			token = next;
 		}
-		if (gen_count >= max_visible_output_tokens && strcmp(termination_reason, "newline") != 0 &&
+		if (visible_generated_count >= max_visible_output_tokens && strcmp(termination_reason, "newline") != 0 &&
 		    strcmp(termination_reason, "eos") != 0)
 			termination_reason = "max_visible_tokens";
 
@@ -649,17 +721,24 @@ int main(int argc, char **argv)
 		exact_match = (target_window_match && term_match &&
 		    gen_count == r->visible_target_count + 1);
 
+		overall_metrics.records++;
 		split_metrics[split_idx].records++;
 		split_task_metrics[split_idx][task_idx].records++;
 		if (target_window_match) {
+			overall_metrics.window_match++;
 			split_metrics[split_idx].window_match++;
 			split_task_metrics[split_idx][task_idx].window_match++;
+		}
+		if (terminator_generated) {
+			overall_metrics.terminator_generated++;
+			split_metrics[split_idx].terminator_generated++;
 		}
 		if (term_match) {
 			split_metrics[split_idx].term_match++;
 			split_task_metrics[split_idx][task_idx].term_match++;
 		}
 		if (exact_match) {
+			overall_metrics.exact_match++;
 			split_metrics[split_idx].exact_match++;
 			split_task_metrics[split_idx][task_idx].exact_match++;
 		}
@@ -676,28 +755,38 @@ int main(int argc, char **argv)
 		else
 			strncpy(first_token_key, "none", sizeof(first_token_key) - 1U);
 
-		snprintf(window_key, sizeof(window_key), "%s%s",
-		    generated_window_csv,
-		    (gen_count < r->visible_target_count) ? "|short" : "");
+		strncpy(window_key, generated_ids_csv, sizeof(window_key) - 1U);
+		window_key[sizeof(window_key) - 1U] = '\0';
 
-		if (!stage4e_key_counts_add(&split_metrics[split_idx].windows, window_key) ||
+		if (!stage4e_key_counts_add(&overall_metrics.windows, window_key) ||
+		    !stage4e_key_counts_add(&overall_metrics.first_tokens, first_token_key) ||
+		    !stage4e_key_counts_add(&split_metrics[split_idx].windows, window_key) ||
 		    !stage4e_key_counts_add(&split_metrics[split_idx].first_tokens, first_token_key) ||
 		    !stage4e_key_counts_add(&split_task_metrics[split_idx][task_idx].windows, window_key) ||
 		    !stage4e_key_counts_add(&split_task_metrics[split_idx][task_idx].first_tokens, first_token_key))
 			goto fail;
 
+		fprintf(report, "record.record_index=%lu\n", (unsigned long)i);
+		fprintf(report, "record.record_id=%s\n", r->id);
+		fprintf(report, "record.index=%lu\n", (unsigned long)i);
 		fprintf(report, "record.id=%s\n", r->id);
 		fprintf(report, "record.split=%s\n", r->split);
 		fprintf(report, "record.task=%s\n", r->task);
 		fprintf(report, "record.expected_visible_target=%s\n", r->target_visible);
+		fprintf(report, "record.expected_visible_target_token_ids=%s\n", expected_ids_csv);
 		fprintf(report, "record.expected_target_token_ids=%s\n", expected_ids_csv);
+		fprintf(report, "record.generated_text=%s\n", generated_visible_text);
 		fprintf(report, "record.generated_visible_text=%s\n", generated_visible_text);
 		fprintf(report, "record.generated_token_ids=%s\n", generated_ids_csv);
 		fprintf(report, "record.generated_target_window_token_ids=%s\n", generated_window_csv);
 		fprintf(report, "record.target_window_match=%s\n", target_window_match ? "yes" : "no");
+		fprintf(report, "record.terminator_generated=%s\n",
+		    terminator_generated ? "yes" : "no");
+		fprintf(report, "record.exact_response_match=%s\n", exact_match ? "yes" : "no");
 		fprintf(report, "record.response_termination_match=%s\n", term_match ? "yes" : "no");
 		fprintf(report, "record.response_exact_match=%s\n", exact_match ? "yes" : "no");
 		fprintf(report, "record.termination_reason=%s\n", termination_reason);
+		fprintf(report, "record.first_generated_token_id=%s\n", first_token_key);
 		fprintf(report, "record.first_generated_token=%s\n", first_token_key);
 
 		if (verbose) {
@@ -707,6 +796,11 @@ int main(int argc, char **argv)
 			    exact_match ? "yes" : "no");
 		}
 	}
+
+	stage4e_write_generation_metrics(report, "overall", &overall_metrics);
+	for (i = 0; i < 3; i++)
+		stage4e_write_generation_metrics(report, stage4e_split_names[i],
+		    &split_metrics[i]);
 
 	for (i = 0; i < STAGE4E_SPLIT_COUNT; i++) {
 		stage4e_gen_metric_t *m = &split_metrics[i];
@@ -795,3 +889,4 @@ fail:
 	free_transformer(&tr);
 	return EXIT_FAILURE;
 }
+#endif

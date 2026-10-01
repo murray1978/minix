@@ -1,0 +1,81 @@
+Stage 4E pre-C Semantic Audit: sysconf-ai-model-priority-val-021
+================================================================
+
+Dataset identity
+----------------
+approved_dataset_sha256=b8aa6dc1dbfad7ed144e19a351850189956f79571b05cb70324d21876db0ea78
+
+Current approved record (complete relevant record)
+-------------------------------------------------
+id=sysconf-ai-model-priority-val-021
+split=validation
+task=explanation
+source_type=source
+source_path=/etc/system.conf
+source_symbol_or_location=service ai_model
+source_unit=system-conf:ai-model-priority
+weight=1.0
+
+Prompt (verbatim):
+In the ai_model service stanza, what priority value is configured?
+
+Visible target (verbatim):
+priority 4
+
+Representative examples in the current dataset
+-----------------------------------------------
+Explanation:
+
+- driver-prompt-limit-train-013 asks: "What is the maximum accepted prompt length in ai_parse_prompt?" Its target is "768 bytes". This asks for a property/value of behavior.
+- driver-command-limit-train-014 asks: "What write-size limit does ai_write enforce before returning command too long?" Its target is "1024 bytes". This asks for an enforced behavioral limit.
+
+Source navigation:
+
+- sysconf-ai-model-quantum-val-022 asks for the configured quantum value in the same ai_model service stanza, with target "quantum 500".
+- sysconf-ai-driver-priority-val-023 asks for the configured priority value in the ai_driver service stanza, with target "priority 4".
+- model-default-checkpoint-train-016 asks which named compile-time constant stores a path, with target "AI_DEFAULT_CHECKPOINT".
+
+The audited prompt directly asks what exact priority value is configured in a named configuration stanza. It does not ask what priority means, why it is set, or how it affects behavior. The operation requested is retrieval of an exact value from a source/configuration location, matching the dataset's source_navigation examples.
+
+Historical candidate comparison
+-------------------------------
+The same record ID is present in stage4e-candidate.records. Its values are:
+
+id=sysconf-ai-model-priority-val-021
+task=source_navigation
+source=source:/etc/system.conf:service ai_model
+source_unit=system-conf:ai-model-priority
+split=validation
+prompt=In the ai_model service stanza, what priority value is configured?
+target=priority 4
+
+Comparison:
+- prompt: unchanged
+- target: unchanged
+- source type/path/location: unchanged
+- source_unit: unchanged
+- split: unchanged
+- task label: changed from source_navigation to explanation
+
+The current stage4e-candidate-to-approved.diff file describes a prior header-only comparison and does not reflect this record-level difference. The candidate and approved record blocks themselves show the task-label change above. No historical files were modified.
+
+Conclusion
+----------
+The requested operation is exact-value retrieval from configuration, so the current explanation label is not semantically supported under the supplied criterion. Source navigation is supported. The classification should be restored to source_navigation if a separate future task authorizes a dataset change; no dataset edit is made here.
+
+record_id=sysconf-ai-model-priority-val-021
+current_task=explanation
+historical_task=source_navigation
+
+prompt_semantics=Retrieves the exact configured priority value from the ai_model stanza in /etc/system.conf.
+
+explanation_semantically_supported=no
+source_navigation_semantically_supported=yes
+
+prompt_changed=no
+target_changed=no
+source_metadata_changed=no
+split_changed=no
+task_label_only_change=yes
+
+audit_conclusion=RESTORE_SOURCE_NAVIGATION
