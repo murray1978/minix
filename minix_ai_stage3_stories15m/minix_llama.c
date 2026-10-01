@@ -303,7 +303,7 @@ static void unload_adapter_runtime(void)
     memset(&g_adapter_runtime, 0, sizeof(g_adapter_runtime));
 }
 
-static void load_adapter_runtime(const char *path,
+static int load_adapter_runtime(const char *path,
     const Transformer *transformer, float scale)
 {
     FILE *file;
@@ -313,47 +313,55 @@ static void load_adapter_runtime(const char *path,
     size_t b_count;
     size_t total_count;
     uint64_t expected_data_bytes;
+    size_t i;
+    const char *error = NULL;
 
     unload_adapter_runtime();
 
-    if (path == NULL || path[0] == '\0')
-        return;
+    if (path == NULL || path[0] == '\0') {
+        fprintf(stderr, "ai_model: required adapter path is empty\n");
+        return 0;
+    }
 
     file = fopen(path, "rb");
-    if (file == NULL)
-        die_errno("opening adapter", path);
+    if (file == NULL) {
+        fprintf(stderr, "ai_model: cannot open required adapter '%s': %s\n",
+            path, strerror(errno));
+        return 0;
+    }
 
     if (!read_exact(file, &hdr, sizeof(hdr))) {
-        fclose(file);
-        die("cannot read adapter header");
+        error = "cannot read complete adapter header";
+        goto fail;
     }
 
     if (memcmp(hdr.magic, "MLAD", 4) != 0) {
-        fclose(file);
-        die("adapter has invalid magic");
+        error = "adapter has invalid magic";
+        goto fail;
     }
     if (hdr.version != 2U) {
-        fclose(file);
-        die("adapter version is unsupported");
+        error = "adapter format version is not 2";
+        goto fail;
     }
     if (hdr.layout_version != 1U) {
-        fclose(file);
-        die("adapter layout version is unsupported");
+        error = "adapter layout version is not 1";
+        goto fail;
     }
-    if (hdr.rank == 0 || hdr.rank > 4096U) {
-        fclose(file);
-        die("adapter rank is outside supported bounds");
+    if (hdr.rank != 8U) {
+        error = "adapter rank is not 8";
+        goto fail;
     }
 
-    if ((int)hdr.dim != cfg->dim ||
+    if (cfg->dim != 288 || cfg->vocab_size != 32000 ||
+        (int)hdr.dim != cfg->dim ||
         (int)hdr.vocab_size != cfg->vocab_size ||
         (int)hdr.seq_len != cfg->seq_len ||
         (int)hdr.n_heads != cfg->n_heads ||
         (int)hdr.n_kv_heads != cfg->n_kv_heads ||
         (int)hdr.hidden_dim != cfg->hidden_dim ||
         (int)hdr.n_layers != cfg->n_layers) {
-        fclose(file);
-        die("adapter dimensions do not match checkpoint configuration");
+        error = "adapter dimensions do not match required model configuration";
+        goto fail;
     }
 
     a_count = (size_t)hdr.rank * (size_t)cfg->dim;
@@ -367,33 +375,61 @@ static void load_adapter_runtime(const char *path,
         hdr.a_bytes != (uint64_t)(a_count * sizeof(float)) ||
         hdr.b_bytes != (uint64_t)(b_count * sizeof(float)) ||
         hdr.data_bytes != expected_data_bytes) {
-        fclose(file);
-        die("adapter tensor accounting does not match expected A/B layout");
+        error = "adapter tensor accounting does not match expected A/B layout";
+        goto fail;
     }
 
-    g_adapter_runtime.a = checked_calloc(a_count, sizeof(float),
-        "adapter A");
-    g_adapter_runtime.b = checked_calloc(b_count, sizeof(float),
-        "adapter B");
-    g_adapter_runtime.u = checked_calloc((size_t)hdr.rank, sizeof(float),
-        "adapter u vector");
+    g_adapter_runtime.a = calloc(a_count, sizeof(float));
+    g_adapter_runtime.b = calloc(b_count, sizeof(float));
+    g_adapter_runtime.u = calloc((size_t)hdr.rank, sizeof(float));
+    if (g_adapter_runtime.a == NULL || g_adapter_runtime.b == NULL ||
+        g_adapter_runtime.u == NULL) {
+        error = "cannot allocate persistent adapter tensors";
+        goto fail;
+    }
 
     if (!read_exact(file, g_adapter_runtime.a, a_count * sizeof(float)) ||
         !read_exact(file, g_adapter_runtime.b, b_count * sizeof(float))) {
-        fclose(file);
-        die("cannot read adapter payload");
+        error = "adapter payload is truncated";
+        goto fail;
     }
-    if (fgetc(file) != EOF) {
-        fclose(file);
-        die("adapter has trailing bytes");
+    if (fgetc(file) != EOF || ferror(file)) {
+        error = "adapter has trailing or unreadable data";
+        goto fail;
     }
 
-    if (fclose(file) != 0)
-        die_errno("closing adapter", path);
+    if (fclose(file) != 0) {
+        file = NULL;
+        error = "cannot close adapter file";
+        goto fail;
+    }
+    file = NULL;
+
+    for (i = 0; i < a_count; i++) {
+        if (!isfinite(g_adapter_runtime.a[i])) {
+            error = "adapter A contains a non-finite value";
+            goto fail;
+        }
+    }
+    for (i = 0; i < b_count; i++) {
+        if (!isfinite(g_adapter_runtime.b[i])) {
+            error = "adapter B contains a non-finite value";
+            goto fail;
+        }
+    }
 
     g_adapter_runtime.rank = (int)hdr.rank;
     g_adapter_runtime.scale = scale;
     g_adapter_runtime.enabled = 1;
+    return 1;
+
+fail:
+    if (file != NULL)
+        fclose(file);
+    unload_adapter_runtime();
+    fprintf(stderr, "ai_model: required adapter '%s' rejected: %s\n",
+        path, error != NULL ? error : "unknown validation failure");
+    return 0;
 }
 
 static void apply_adapter_correction(const Transformer *t,
@@ -1944,8 +1980,9 @@ int main(int argc, char **argv)
     load_transformer(&transformer, checkpoint_path);
     load_tokenizer(&tokenizer, tokenizer_path,
         transformer.config.vocab_size);
-    if (adapter_path != NULL)
-        load_adapter_runtime(adapter_path, &transformer, adapter_scale);
+    if (adapter_path != NULL &&
+        !load_adapter_runtime(adapter_path, &transformer, adapter_scale))
+        die("adapter initialization failed");
 
     if (verbose || check_only)
         print_model_info(&transformer, &tokenizer);

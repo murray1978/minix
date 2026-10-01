@@ -17,6 +17,10 @@
 #include "../../../minix_ai_stage3_stories15m/minix_llama.c"
 #undef main
 
+#define AI_REQUIRED_ADAPTER \
+	"/usr/src/minix_ai_stage3_stories15m/minix_ai_stage4_train/stage4g1-selected-step20.adapter.bin"
+#define AI_REQUIRED_ADAPTER_SCALE 1.0f
+
 static Transformer g_transformer;
 static Tokenizer g_tokenizer;
 static int g_ready;
@@ -79,10 +83,23 @@ int ai_infer_init(const char *checkpoint_path, const char *tokenizer_path)
 
 	load_transformer(&g_transformer, checkpoint_path);
 	load_tokenizer(&g_tokenizer, tokenizer_path, g_transformer.config.vocab_size);
+	if (!load_adapter_runtime(AI_REQUIRED_ADAPTER, &g_transformer,
+	    AI_REQUIRED_ADAPTER_SCALE)) {
+		free_tokenizer(&g_tokenizer);
+		free_transformer(&g_transformer);
+		return EINVAL;
+	}
+	printf("ai_model: adapter loaded format=2 rank=%d dim=%d vocab=%d scale=1\n",
+	    g_adapter_runtime.rank, g_transformer.config.dim,
+	    g_transformer.config.vocab_size);
 	if (g_diag_path[0] != '\0') {
 		if (minix_llama_set_diagnostic_output(g_diag_path,
-		    (int)g_diag_positions) != 0)
+		    (int)g_diag_positions) != 0) {
+			unload_adapter_runtime();
+			free_tokenizer(&g_tokenizer);
+			free_transformer(&g_transformer);
 			return EIO;
+		}
 	}
 
 	g_ready = TRUE;
@@ -95,6 +112,7 @@ void ai_infer_shutdown(void)
 	if (!g_ready)
 		return;
 
+	unload_adapter_runtime();
 	free_tokenizer(&g_tokenizer);
 	free_transformer(&g_transformer);
 	minix_llama_clear_diagnostic_output();
